@@ -1,0 +1,27 @@
+.variant-option-list {
+  li {
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    margin: 10px 15px;
+    a,
+    span {
+      padding: 1rem 1.5rem;
+      display: block;
+      text-align: center;
+    }
+    &.selected {
+      background-color: #72442f;
+      border-color: #72442f;
+      color: #fff;
+    }
+    &.un-available {
+      background-color: var(--border);
+      color: #fff;
+    }
+    &:nth-child(1){
+      margin-left: 0;
+    }
+  }
+}

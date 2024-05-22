@@ -1,0 +1,48 @@
+"""
+Represents a product.
+"""
+type Product {
+  productId: Int!
+  uuid: String!
+  name: String!
+  status: Int!
+  sku: String!
+  usefor: String!
+  powersource: String!
+  material: String!
+  itemweight: String!
+  brand: String!
+  color: String!
+  specialfeature: String!
+  specificusesforproduct: String!
+  productbenefits: String!
+  productdimensions: String!
+  companydetails: String!
+  video: String!
+  weight: Weight!
+  taxClass: Int
+  description: String
+  urlKey: String
+  metaTitle: String
+  metaDescription: String
+  metaKeywords: String
+  variantGroupId: ID
+  visibility: Int
+  groupId: ID
+  url: String
+}
+
+"""
+Returns a collection of products.
+"""
+type ProductCollection {
+  items: [Product]
+  currentPage: Int!
+  total: Int!
+  currentFilters: [Filter]
+}
+
+extend type Query {
+  product(id: ID): Product
+  products(filters: [FilterInput]): ProductCollection
+}

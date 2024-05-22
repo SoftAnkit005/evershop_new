@@ -1,0 +1,25 @@
+{
+  "shop" : {
+    "currency": "USD",
+    "language": "en",
+    "weightUnit": "kg",
+    "timezone": "UTC"
+  },
+  "system": {
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "database": "evershop",
+      "user": "admin",
+      "password": "123456"
+    },
+      "extensions": [
+        {
+            "name": "https://ksabsqjx.a2hosted.com/",
+            "resolve": "extensions/myExtension",
+            "enabled": true,
+            "priority": 10
+        }
+    ]
+  }
+}
