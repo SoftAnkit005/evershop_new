@@ -77,7 +77,7 @@ export const query = `
             }
           image {
             alt
-            url: listing
+            url: origin
           }
           url
         }

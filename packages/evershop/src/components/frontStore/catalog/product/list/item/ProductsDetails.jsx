@@ -3,7 +3,6 @@ import React from 'react';
 
 function ProductsDetails({ name, url }) {
   return (   
-
     <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
         <div className='products-info text-center'>
             <h1 className='products-title-white'>Auto Wellness Program</h1>

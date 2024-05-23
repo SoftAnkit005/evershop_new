@@ -16,6 +16,8 @@ export default function HomeSlider({ products = [], countPerRow = 3 }) {
     alt: p.name
   }));
 
+  console.log(images);
+
   return (
     <div className="carousel-slider">
       <MainBanner images={images} />
