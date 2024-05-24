@@ -3,10 +3,10 @@
 import ProductNoThumbnail from '@components/common/ProductNoThumbnail';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import './../../../../Styles/Styles.scss'
+import "../../../../Styles/Styles.scss"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './../../frontStore/categoryView/Index.scss'
+import "../categoryView/Index.scss"
 
 function Current({ image }) {
   const [height, setHeight] = useState();
@@ -101,7 +101,7 @@ Images.propTypes = {
     uuid: PropTypes.string.isRequired,
     image: PropTypes.shape({
       alt: PropTypes.string,
-      single: PropTypes.string.isRequired,
+      single: PropTypes.string.isRequired
     }),
     gallery: PropTypes.arrayOf(
       PropTypes.shape({

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Field } from '@components/common/form/Field';
 import { Form } from '@components/common/form/Form';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import Button from '@components/common/form/Button';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -37,9 +37,7 @@ function UpdateForm({ action, onSuccess, registerUrl }) {
 
   return (
 
-    <>
-
-      <section className='login-section'>
+    <section className='login-section'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
@@ -105,15 +103,13 @@ function UpdateForm({ action, onSuccess, registerUrl }) {
           </div>
         </div>
       </section>
-      
-    </>
   );
 }
 
 UpdateForm.propTypes = {
   action: PropTypes.string.isRequired,
   onSuccess: PropTypes.func.isRequired,
-  registerUrl: PropTypes.string.isRequired,
+  registerUrl: PropTypes.string.isRequired
 };
 
 export default function UpdatePasswordForm({ action, registerUrl }) {
@@ -134,7 +130,7 @@ export default function UpdatePasswordForm({ action, registerUrl }) {
 
 UpdatePasswordForm.propTypes = {
   action: PropTypes.string.isRequired,
-  registerUrl: PropTypes.string.isRequired,
+  registerUrl: PropTypes.string.isRequired
 };
 
 export const layout = {

@@ -16,7 +16,7 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
   return (
     <div className="toast-mini-cart">
       <div className="top-head grid grid-cols-2">
-        <div className="self-center">{_('JUST ADDED TO YOUR CART')}</div>
+        <div className="font-16 text-black pb-0">{_('JUST ADDED TO YOUR CART')}</div>
         <div className="self-center close flex justify-end">
           <a
             href="#"
@@ -36,13 +36,14 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
+                stroke="black"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </a>
         </div>
       </div>
-      <div className="item-line flex justify-between">
+      <div className="item-line flex justify-between align-items-center">
         <div className="popup-thumbnail flex justify-center">
           <img src={thumbnail} alt={name} />
         </div>
@@ -50,14 +51,14 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
           <div className="name">
             <span className="font-bold">{name}</span>
           </div>
-          <div>{_('QTY: ${qty}', { qty })}</div>
+          <div className='font-16 pb-0'>{_('QTY: ${qty}', { qty })}</div>
         </div>
       </div>
-      <a className="add-cart-popup-button" href={cartUrl}>
+      <a className="add-cart-popup-button btn-brown" href={cartUrl}>
         {_('VIEW CART (${count})', { count })}
       </a>
       <a
-        className="add-cart-popup-continue text-center underline block"
+        className="add-cart-popup-continue text-center underline block font-16 pb-0"
         href="#"
         onClick={(e) => {
           e.preventDefault();

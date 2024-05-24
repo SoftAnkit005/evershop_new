@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './General.scss';
 import { CKEditor } from '@components/common/CKEditor';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 

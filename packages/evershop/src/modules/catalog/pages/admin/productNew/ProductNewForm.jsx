@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import Area from '@components/common/Area';
 import { Form } from '@components/common/form/Form';
 import { get } from '@evershop/evershop/src/lib/util/get';
-import './../../../../Styles/Index.scss'
+import "../../../../Styles/Index.scss"
 
 export default function ProductNewForm({ action }) {
   const id = 'productForm';

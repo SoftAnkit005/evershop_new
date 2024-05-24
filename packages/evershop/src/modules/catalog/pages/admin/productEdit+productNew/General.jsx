@@ -11,8 +11,8 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
   console.log('Video  =====>', video?.value);
   
   return (
-    <div className="d-flex flex-wrap">
-      <div className='w-50 pe-4'>
+    <div className="flex flex-wrap">
+      <div className='w-33'>
         <Field
           id="sku"
           name="sku"
@@ -23,7 +23,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           validationRules={['notEmpty']}
         />
       </div>
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="price"
           name="price"
@@ -35,7 +35,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           suffix={setting.storeCurrency}
         />
       </div>
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="weight"
           name="weight"
@@ -47,7 +47,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           suffix={setting.weightUnit}
         />
       </div>
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="usefor"
           name="usefor"
@@ -59,7 +59,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="powersource"
           name="powersource"
@@ -71,7 +71,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="material"
           name="material"
@@ -83,7 +83,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="itemweight"
           name="itemweight"
@@ -95,7 +95,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="brand"
           name="brand"
@@ -107,7 +107,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
       
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="color"
           name="color"
@@ -119,7 +119,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="specialfeature"
           name="specialfeature"
@@ -131,7 +131,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="specificusesforproduct"
           name="specificusesforproduct"
@@ -143,7 +143,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="productbenefits"
           name="productbenefits"
@@ -155,7 +155,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
       
-      <div className='w-50 pe-4'>
+      <div className='w-33'>
         <Field
           id="productdimensions"
           name="productdimensions"
@@ -167,7 +167,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-100 pe-4'>
+      <div className='w-33'>
         <Field
           id="companydetails"
           name="companydetails"
@@ -179,7 +179,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-100 pe-4'>
+      <div className='w-33'>
         <Field
           id="video"
           name="video"
@@ -232,7 +232,7 @@ SKUPriceWeight.defaultProps = {
   productbenefits: undefined,
   productdimensions: undefined,
   companydetails: undefined,
-  video: undefined,
+  video: undefined
 };
 
 function Category({ product }) {
@@ -243,7 +243,7 @@ function Category({ product }) {
 
   return (
     <div className="mt-15 relative">
-      <div className="mb-1">Category</div>
+      <div className="font-20">Category</div>
       {category && (
         <div className="border rounded border-[#c9cccf] mb-1 p-1">
           {category.path.map((item, index) => (
@@ -332,7 +332,7 @@ export default function General({
   uploadApi,
   folderCreateApi,
   setting,
-  productTaxClasses: { items: taxClasses },
+  productTaxClasses: { items: taxClasses }
 }) 
 {
   return (
@@ -468,7 +468,7 @@ General.propTypes = {
         text: PropTypes.string
       })
     )
-  }),
+  })
 };
 
 General.defaultProps = {
@@ -487,7 +487,7 @@ General.defaultProps = {
   productbenefits: undefined,
   productdimensions: undefined,
   companydetails: undefined,
-  video: undefined,
+  video: undefined
 };
 
 export const layout = {

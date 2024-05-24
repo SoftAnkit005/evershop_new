@@ -61,11 +61,11 @@ export default function Sorting() {
     <div className="product-sorting mb-1">
       <div className="product-sorting-inner flex justify-end items-center space-x-05">
         <div>
-          <span>{_('Sort By')}:</span>
+          <span className='font-16'>{_('Sort By')}:</span>
         </div>
         <div style={{ width: '160px' }}>
           <Select
-            className="form-control"
+            className="form-control font-16"
             onChange={async (e) => {
               await onChangeSort(e);
             }}

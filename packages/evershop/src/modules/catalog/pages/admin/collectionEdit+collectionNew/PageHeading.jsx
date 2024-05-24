@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import PageHeading from '@components/admin/cms/PageHeading';
-import './../../../../Styles/Index.scss'
+import "../../../../Styles/Index.scss"
 
 export default function CollectionEditPageHeading({ backUrl, collection }) {
   return (

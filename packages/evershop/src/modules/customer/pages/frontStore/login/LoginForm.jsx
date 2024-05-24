@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Field } from '@components/common/form/Field';
 import { Form } from '@components/common/form/Form';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import Area from '@components/common/Area';
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +17,7 @@ export default function LoginForm({
   const [error, setError] = React.useState(null);
 
   return (
-    <>
-      <section className='login-section'>
+    <section className='login-section'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
@@ -90,8 +89,6 @@ export default function LoginForm({
           </div>
         </div>
       </section>
-
-    </>
   );
 }
 

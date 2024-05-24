@@ -6,15 +6,15 @@ function Price({ regular, special }) {
     <div className="card-footer">
       {regular.value === special.value && (
         <div>
-          <span className="sale-price font-semibold">{regular.text}</span>
+          <span className="font-16 text-black">{regular.text}</span>
         </div>
       )}
       {special.value < regular.value && (
         <div>
-          <span className="sale-price text-critical font-semibold">
+          <span className="font-16 text-black">
             {special.text}
           </span>{' '}
-          <span className="regular-price font-semibold">{regular.text}</span>
+          <span className="font-16 text-black">{regular.text}</span>
         </div>
       )}
     </div>

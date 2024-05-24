@@ -8,7 +8,7 @@ function Attributes({ product: { attributes } }) {
 
   return (
     <div className="pb-0">
-      <ul className="list-disc list-inside">
+      <ul className="list-disc list-inside border p-4 mb-5 rounded-4">
         {attributes.map((attribute) => (
           <li key={attribute.attributeCode} className='d-flex'>
             <strong className='font-18 text-black'>{attribute.attributeName}: </strong>{' '}

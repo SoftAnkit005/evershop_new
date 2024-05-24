@@ -3,7 +3,9 @@
   -webkit-transform: translate3d(0, 0, 9999px);
   position: fixed;
   width: 380px;
-  background-color: #fff;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 .Toastify__toast-container--top-left {
   top: 1em;
@@ -60,7 +62,7 @@
   position: relative;
   min-height: 64px;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   padding: 8px;
   border-radius: 5px;
   display: -ms-flexbox;

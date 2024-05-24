@@ -7,7 +7,7 @@ export default function FeaturedSlider({ collection }) {
     return null;
   }
   
-  console.log("collection: "+JSON.stringify(collection));
+  console.log(`collection: ${JSON.stringify(collection)}`);
   // console.log("collection : "+collection.products.items);
   return (
 

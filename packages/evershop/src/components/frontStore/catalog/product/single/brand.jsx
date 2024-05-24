@@ -32,10 +32,7 @@ export function brand({ usefor, powersource, material, itemweight, brand, color,
                         <li className='font-16 text-black w-50 text-start'>Brand</li>
                         <li className='font-16 text-black w-50 text-start'>{brand}</li>
                     </ul>
-                    <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
-                        <li className='font-16 text-black w-50 text-start'>Color</li>
-                        <li className='font-16 text-black w-50 text-start'>{color}</li>
-                    </ul>
+                   
                     <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
                         <li className='font-16 text-black w-50 text-start'>Special Feature</li>
                         <li className='font-16 text-black w-50 text-start'>{specialfeature}</li>
@@ -66,5 +63,5 @@ export function brand({ usefor, powersource, material, itemweight, brand, color,
 }
 
 brand.propTypes = {
-  brand: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired
 };

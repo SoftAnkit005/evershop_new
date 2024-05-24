@@ -1,20 +1,18 @@
 {
   "name": "@evershop/resend",
   "version": "1.0.0",
-  "description": "A Resend extension for EverShop.",
+  "description": "A Resend extension for Dr.Bwc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evershopcommerce/evershop/tree/main/packages/resend"
   },
   "keywords": [
-    "EverShop email",
-    "EverShop Resend"
+    "Dr.Bwc",
+    "Dr.Bwc"
   ],
-  "author": "The Nguyen (https://evershop.io/)",
+  "author": "The Nguyen (https://drbwc.com/)",
   "license": "GNU GENERAL PUBLIC LICENSE 3.0",
-  "bugs": {
-    "url": "https://github.com/evershopcommerce/evershop/issues"
-  },
+  
   "homepage": "https://github.com/evershopcommerce/evershop/tree/main/packages/resend",
   "dependencies": {
     "handlebars": "^4.7.8",

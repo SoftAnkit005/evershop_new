@@ -31,7 +31,7 @@ table {
   border-collapse: collapse;
   td,
   th {
-    border: 1px solid var(--divider);
+    border: 1px solid transparent;
     padding: 0.5rem;
     text-align: left;
   }
@@ -74,10 +74,10 @@ table {
   min-height: 100vh;
   .main-content {
     overflow: hidden;
-    margin-left: 24rem;
+    margin-left: 270px;
     .main-content-inner {
-      padding: 2rem 3rem;
-      min-height: 100vh;
+      max-width: 100%;
+      padding: 25px;
     }
   }
 }

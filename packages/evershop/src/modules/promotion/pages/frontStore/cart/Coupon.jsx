@@ -33,7 +33,7 @@ export default function CouponForm({ cart: { applyCouponApi } }) {
         }}
         id="couponForm"
       >
-        <p style={{ fontWeight: 600 }}>{_('Promotion code?')}</p>
+        <p className='font-16 text-black pb-0'>{_('Promotion code?')}</p>
         <div className="grid grid-cols-3 gap-2" style={{ width: '300px' }}>
           <div className="col-span-2">
             <Field

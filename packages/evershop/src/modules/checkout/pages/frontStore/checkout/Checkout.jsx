@@ -12,8 +12,8 @@ import './Checkout.scss';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './../../../../Styles/Styles.scss';
-import './../../../../catalog/pages/frontStore/categoryView/Index.scss';
+import "../../../../Styles/Styles.scss";
+import "../../../../catalog/pages/frontStore/categoryView/Index.scss";
 
 function Steps() {
   return (

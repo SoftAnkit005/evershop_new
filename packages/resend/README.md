@@ -1,8 +1,8 @@
-# Resend extension for EverShop
+# Resend extension for Dr.Bwc
 
-A Resend extension for EverShop. This extension is used to send email to customers.
+A Resend extension for Dr.Bwc. This extension is used to send email to customers.
 
-> **Note**: This extension requires EverShop version 1.0.0 or higher.
+> **Note**: This extension requires Dr.Bwc version 1.0.0 or higher.
 
 ## Installation
 

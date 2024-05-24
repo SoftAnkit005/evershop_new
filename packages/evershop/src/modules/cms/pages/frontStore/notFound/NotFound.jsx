@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Area from '@components/common/Area';
 import Button from '@components/common/form/Button';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 

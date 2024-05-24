@@ -1,20 +1,47 @@
 .variant-option-list {
   li {
-    border: 1px solid var(--divider);
-    border-radius: 8px;
-    background-color: #fff;
-    font-size: 14px;
-    margin: 10px 15px;
+    padding: 15px 34px;
+    background: rgba(114, 68, 47, 0.1);
+    border: 1px solid #72442F;
+    border-radius: 10px;
+    font-family: 'Katide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #72442F;
+    text-decoration: none;
+    text-decoration: none;
+    margin: 10px 10px 0;
     a,
     span {
-      padding: 1rem 1.5rem;
       display: block;
       text-align: center;
+      color: #72442F;
+      text-decoration: none;
     }
     &.selected {
       background-color: #72442f;
       border-color: #72442f;
-      color: #fff;
+      color: #fff !important;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        width: 22px;
+        height: 22px;
+        background-image: url('../Assets/Images/check.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+      a{
+        color: #FFF !important;
+      }
     }
     &.un-available {
       background-color: var(--border);

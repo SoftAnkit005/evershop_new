@@ -18,5 +18,5 @@ export function companydetails({ companydetails }) {
 }
 
 companydetails.propTypes = {
-    companydetails: PropTypes.string.isRequired,
+    companydetails: PropTypes.string.isRequired
 };

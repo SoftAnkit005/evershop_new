@@ -17,7 +17,7 @@ import QtyRow from '@components/admin/catalog/productGrid/rows/QtyRow';
 import SortableHeader from '@components/common/grid/headers/Sortable';
 import { Form } from '@components/common/form/Form';
 import { Field } from '@components/common/form/Field';
-import './../../../../Styles/Index.scss'
+import "../../../../Styles/Index.scss"
 
 function Actions({ products = [], selectedIds = [] }) {
   const { openAlert, closeAlert } = useAlertContext();

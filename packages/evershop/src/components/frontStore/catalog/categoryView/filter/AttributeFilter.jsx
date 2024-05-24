@@ -68,9 +68,9 @@ export function AttributeFilter({
       {availableAttributes.map((a) => (
         <div key={a.attributeCode} className="attribute-filter mt-2">
           <div className="filter-item-title">
-            <span className="font-medium">{a.attributeName}</span>
+            <span className="font-20">{a.attributeName}</span>
           </div>
-          <ul className="filter-option-list">
+          <ul className="filter-option-list ps-0">
             {a.options.map((o) => {
               const isChecked = currentFilters.find(
                 (f) =>
@@ -79,10 +79,10 @@ export function AttributeFilter({
               );
 
               return (
-                <li key={o.optionId} className="mt-4 mb-4">
+                <li key={o.optionId} className="mt-2">
                   <a
                     href="#"
-                    className="flex justify-start items-center"
+                    className="font-16 text-black d-flex align-items-center pb-0 text-decoration-none"
                     onClick={(e) => onChange(e, a.attributeCode, o.optionId)}
                   >
                     {isChecked && (

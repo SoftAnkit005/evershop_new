@@ -2,14 +2,14 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function FeaturedTestimonial() {
 
-    var settings = {
+    const settings = {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 1, 
@@ -18,27 +18,27 @@ export default function FeaturedTestimonial() {
             {
               breakpoint: 575,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 1
               }
             },
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1
                 }
             },
             {
                 breakpoint: 1199,
                 settings: {
-                  slidesToShow: 1,
+                  slidesToShow: 1
                 }
             },
             {
                 breakpoint: 1440,
                 settings: {
-                  slidesToShow: 1,
+                  slidesToShow: 1
                 }
-            },
+            }
         ]       
     };
 

@@ -1,13 +1,11 @@
 .admin-navigation {
-  width: 24rem;
+  width: 270px;
   float: left;
   height: 100vh;
-  border-right: 1px solid var(--divider);
+  background-color: #fff;
   position: fixed;
   left: 0;
   top: 5.6rem;
-  padding-right: 4px;
-  padding-bottom: 15rem;
   overflow-y: scroll;
 }
 .admin-navigation .top-bar {
@@ -33,39 +31,43 @@
   font-weight: 600;
 }
 .admin-nav .root-label {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 11px;
+  font-family: "katide" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px !important;
+  letter-spacing: .03em;
+  text-transform: capitalize;
 }
-.nav-item {
-  margin-top: 2px;
-}
+// .nav-item {
+//   margin: 15px 0;
+// }
 .nav-item > a,
 .nav-item .root-label {
   padding-left: 1rem;
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
 .nav-item > a:hover {
   background-color: #edeeef;
   border-radius: 4px;
 }
-.nav-item.active::before {
-  content: '';
-  width: 3.5px;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  border-radius: 0 4px 4px 0;
-  background-color: var(--primary);
-}
+// .nav-item.active::before {
+//   content: '';
+//   width: 3.5px;
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   border-radius: 0 4px 4px 0;
+//   background-color: var(--primary);
+// }
 .nav-item.active {
   position: relative;
   a {
-    color: var(--primary);
-    background-color: #edeeef;
+    color: #FFF;
+    background-color: #72442F;
     border-radius: 4px;
+    
   }
 }
 .admin-nav > ul > li {

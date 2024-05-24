@@ -10,7 +10,13 @@
   .item-group {
     .nav-item {
       > a {
-        padding-left: 2rem;
+        padding: 8px 15px;
+        font-family: "katide" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px !important;
+        letter-spacing: .03em;
+        text-transform: capitalize;
       }
     }
   }

@@ -6,7 +6,7 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function Logo({
   themeConfig: {
-    logo: { src, alt = 'Evershop', width = '128px', height = '128px' }
+    logo: { src, alt = 'Dr.Bwc', width = '128px', height = '128px' }
   }
 })
 
@@ -55,8 +55,7 @@ export default function Logo({
                 e.preventDefault();
                 setShowing(false);
               }}
-            >
-            </a>
+             />
             <Input
               prefix={
                 <svg
@@ -110,7 +109,7 @@ Logo.defaultProps = {
   themeConfig: {
     logo: {
       src: '',
-      alt: 'Evershop',
+      alt: 'Dr.Bwc',
       width: '128',
       height: '146'
     }

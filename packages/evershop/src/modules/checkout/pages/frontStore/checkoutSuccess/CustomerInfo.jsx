@@ -3,8 +3,8 @@ import React from 'react';
 import Button from '@components/common/form/Button';
 import { AddressSummary } from '@components/common/customer/address/AddressSummary';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
-import './../../../../Styles/Styles.scss';
-import './../../../../catalog/pages/frontStore/categoryView/Index.scss'
+import "../../../../Styles/Styles.scss";
+import "../../../../catalog/pages/frontStore/categoryView/Index.scss"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 

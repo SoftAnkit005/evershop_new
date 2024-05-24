@@ -1,20 +1,18 @@
 {
   "name": "@evershop/sendgrid",
   "version": "1.0.1",
-  "description": "A SendGrid extension for EverShop.",
+  "description": "Dr.Bwc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evershopcommerce/evershop/tree/main/packages/sendgrid"
   },
   "keywords": [
-    "EverShop email",
-    "EverShop SendGrid"
+    "Dr.Bwc",
+    "Dr.Bwc"
   ],
-  "author": "The Nguyen (https://evershop.io/)",
+  "author": "The Nguyen (https://drbwc.com/)",
   "license": "GNU GENERAL PUBLIC LICENSE 3.0",
-  "bugs": {
-    "url": "https://github.com/evershopcommerce/evershop/issues"
-  },
+ 
   "homepage": "https://github.com/evershopcommerce/evershop/tree/main/packages/sendgrid",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0"

@@ -5,7 +5,7 @@ import { Form } from '@components/common/form/Form';
 import './RegisterForm.scss';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import Area from '@components/common/Area';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -16,9 +16,7 @@ export default function RegisterForm({ action, homeUrl, loginApi, loginUrl }) {
 
   return (
 
-    <>
-
-      <section className='login-section'>
+    <section className='login-section'>
         <div className='container'>
           <div className='row align-items-center'>
             <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
@@ -137,8 +135,6 @@ export default function RegisterForm({ action, homeUrl, loginApi, loginUrl }) {
           </div>
         </div>
       </section>
-      
-    </>
   );
 }
 

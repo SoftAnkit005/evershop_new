@@ -1,7 +1,7 @@
 {
   "name": "create-evershop-app",
   "version": "2.2.0",
-  "description": "Create EverShop App",
+  "description": "Create Dr.Bwc App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +15,7 @@
   },
   "author": "The Nguyen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/evershopcommerce/evershop/issues"
-  },
+ 
   "homepage": "https://github.com/evershopcommerce/evershop#readme",
   "dependencies": {
     "boxen": "^5.1.2",

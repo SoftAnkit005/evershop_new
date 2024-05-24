@@ -17,7 +17,7 @@ module.exports = () => {
         templatePath: undefined // This is the path to the email template. Starting from the root of the project.
       },
       customer_registered: {
-        subject: 'Welcome to Evershop',
+        subject: 'Welcome to Dr.Bwc',
         enabled: true,
         templatePath: undefined // This is the path to the email template. Starting from the root of the project.
       }

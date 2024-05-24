@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function FranchiseOpportunity() {
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     centerPadding: "60px",
@@ -19,27 +19,27 @@ export default function FranchiseOpportunity() {
         {
           breakpoint: 575,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 1
           }
         },
         {
             breakpoint: 767,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 2
             }
         },
         {
             breakpoint: 1199,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 2
             }
         },
         {
             breakpoint: 1440,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 3
             }
-        },
+        }
     ]       
 };
 

@@ -29,7 +29,7 @@ function MainBanner({ images }) {
             aria-current={index === activeIndex ? 'true' : 'false'}
             aria-label={`Slide ${index + 1}`}
             onClick={() => handleIndicatorClick(index)}
-          ></button>
+           />
         ))}
       </div>
     </div>
@@ -40,9 +40,9 @@ MainBanner.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       imageUrl: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired
     })
-  ).isRequired,
+  ).isRequired
 };
 
 export { MainBanner };

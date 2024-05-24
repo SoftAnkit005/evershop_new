@@ -21,8 +21,8 @@ export function video({ video }) {
         width: '100%',
         height: '450',
         playerVars: {
-            autoplay: 1,
-          },
+            autoplay: 1
+          }
     }
 
   return (   
@@ -40,5 +40,5 @@ export function video({ video }) {
 }
 
 video.propTypes = {
-    video: PropTypes.string.isRequired,
+    video: PropTypes.string.isRequired
 };

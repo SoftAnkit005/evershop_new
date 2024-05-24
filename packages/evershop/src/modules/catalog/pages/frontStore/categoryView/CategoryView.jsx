@@ -2,7 +2,7 @@ import React from 'react';
 import Area from '@components/common/Area';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 
 export default function CategoryView() {
   return (

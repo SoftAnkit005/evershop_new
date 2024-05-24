@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '@components/common/form/Button';
-import './../../../../Styles/Index.scss'
+import "../../../../Styles/Index.scss"
 
 export default function NewProductButton({ newProductUrl }) {
   return <Button url={newProductUrl} title="New Product" />;
