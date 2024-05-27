@@ -1,8 +1,8 @@
-# Google authentication extension for EverShop
+# Google authentication extension for Dr.Bwc
 
-This extension allows customer to login to EverShop using your Google account.
+This extension allows customer to login to Dr.Bwc using your Google account.
 
-> **Note**: This extension requires EverShop version 1.0.0-rc.6 or higher.
+> **Note**: This extension requires Dr.Bwc version 1.0.0-rc.6 or higher.
 
 ## Installation guide
 
@@ -14,7 +14,7 @@ npm install @evershop/google_login
 
 ### Step 2: Enable the extension
 
-Edit the `config/default.json` file in the root directory of your EverShop installation and add the following line to the `extensions` section:
+Edit the `config/default.json` file in the root directory of your Dr.Bwc installation and add the following line to the `extensions` section:
 
 ```json
 {

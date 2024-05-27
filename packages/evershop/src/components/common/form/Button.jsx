@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import './Button.scss';
-import './../../../modules/Styles/Index.scss'
+import "../../../modules/Styles/Index.scss"
 
 function Button({
   title,

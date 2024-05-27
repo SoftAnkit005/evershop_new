@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -88,7 +88,7 @@ export default function ContactUs() {
                             <div className='col-12'>
                                 <div className='form-group mb-4'>
                                     <label className="font-16 pb-1 text-body">Your Message</label>
-                                    <textarea type='text' className='form-control' required rows='5'></textarea>
+                                    <textarea type='text' className='form-control' required rows='5' />
                                 </div>
                             </div>
                             <div className='col-12'>
@@ -101,7 +101,7 @@ export default function ContactUs() {
                 </div>
                 <div className='col-12'>
                     <div className='google-map'>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.3176925763364!2d72.7690224760006!3d21.13975168395564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0520158979483%3A0x5443480ea5b2a4be!2sVIP%20Road%2C%20Vesu%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1714726750319!5m2!1sen!2sin" width="100%" height="550" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.3176925763364!2d72.7690224760006!3d21.13975168395564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0520158979483%3A0x5443480ea5b2a4be!2sVIP%20Road%2C%20Vesu%2C%20Surat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1714726750319!5m2!1sen!2sin" width="100%" height="550" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                     </div>
                 </div>
             </div>

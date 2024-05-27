@@ -9,7 +9,7 @@ const port = normalizePort();
 module.exports = function onListening() {
   success(
     boxen(`Your website is running at "http://localhost:${port}"`, {
-      title: 'EverShop',
+      title: 'Dr.Bwc',
       titleAlignment: 'center',
       padding: 1,
       margin: 1,

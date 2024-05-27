@@ -2,12 +2,15 @@
   background-color: white;
   border-radius: 6px;
   &.subdued {
-    background-color: #fafbfb;
+    background-color: white;
   }
 }
 .card-title {
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 20px !important;
+  line-height: normal;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
 }
 .card-header {
   padding: 2rem;

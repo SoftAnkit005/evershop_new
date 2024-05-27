@@ -4,8 +4,8 @@ import React from 'react';
 function Name({ name, url }) {
   return (
     <div className="ps-4">
-      <a href={url}>
-        <span>{name}</span>
+      <a href={url} className='text-decoration-none'>
+        <span className='font-20'>{name}</span>
       </a>
     </div>
   );

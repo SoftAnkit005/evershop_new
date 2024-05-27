@@ -4,9 +4,6 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export function Total({ total, taxAmount, displayCheckoutPriceIncludeTax }) {
   return (
-    <>
-   
-
     <ul className='list-unstyled d-flex align-items-center justify-content-between'>
             <li className='font-18 text-black mb-0'>
             {(displayCheckoutPriceIncludeTax && (
@@ -26,7 +23,6 @@ export function Total({ total, taxAmount, displayCheckoutPriceIncludeTax }) {
             </li>
             <li className='font-18 text-black mb-0'>{total}</li>
         </ul>
-        </>
 
   );
 }

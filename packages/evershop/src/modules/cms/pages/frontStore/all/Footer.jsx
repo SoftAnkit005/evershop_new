@@ -180,14 +180,14 @@ function Footer({ themeConfig: { copyRight } }) {
 
 Footer.propTypes = {
     themeConfig: PropTypes.shape({
-        copyRight: PropTypes.string,
+        copyRight: PropTypes.string
 
     })
 };
 
 Footer.defaultProps = {
     themeConfig: {
-        copyRight: '© 2022 Evershop. All Rights Reserved.',
+        copyRight: '© 2022 Dr.Bwc. All Rights Reserved.'
     }
 };
 

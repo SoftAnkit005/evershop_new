@@ -51,7 +51,7 @@ module.exports = async function sendOrderConfirmationEmail(data) {
     // Send the email
     const msg = {
       to: emailDataFinal.email,
-      subject: customerRegistered.subject || `Welcome to Evershop`,
+      subject: customerRegistered.subject || `Welcome to Dr.Bwc`,
       from
     };
 

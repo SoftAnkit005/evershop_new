@@ -15,7 +15,7 @@ import DummyColumnHeader from '@components/common/grid/headers/Dummy';
 import SortableHeader from '@components/common/grid/headers/Sortable';
 import { Form } from '@components/common/form/Form';
 import { Field } from '@components/common/form/Field';
-import './../../../../Styles/Index.scss'
+import "../../../../Styles/Index.scss"
 
 function Actions({ collections = [], selectedIds = [] }) {
   const { openAlert, closeAlert } = useAlertContext();

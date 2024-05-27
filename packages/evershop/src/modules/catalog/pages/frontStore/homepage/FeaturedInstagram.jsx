@@ -2,14 +2,14 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
 export default function FeaturedInstagram() {
 
-    var settings = {
+    const settings = {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 4, 
@@ -18,27 +18,27 @@ export default function FeaturedInstagram() {
             {
               breakpoint: 575,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 1
               }
             },
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 1199,
                 settings: {
-                  slidesToShow: 3,
+                  slidesToShow: 3
                 }
             },
             {
                 breakpoint: 1440,
                 settings: {
-                  slidesToShow: 4,
+                  slidesToShow: 4
                 }
-            },
+            }
         ]       
     };
 

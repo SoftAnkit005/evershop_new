@@ -1,5 +1,5 @@
 import React from 'react';
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';

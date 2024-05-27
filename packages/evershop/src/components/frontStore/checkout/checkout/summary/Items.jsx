@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import './Items.scss';
 import ProductNoThumbnail from '@components/common/ProductNoThumbnail';
-import './../../../../../modules/Styles/Styles.scss';  
+import "../../../../../modules/Styles/Styles.scss";  
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 

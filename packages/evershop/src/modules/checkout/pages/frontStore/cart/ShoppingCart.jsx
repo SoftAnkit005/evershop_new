@@ -6,7 +6,7 @@ import { useAppState } from '@components/common/context/app';
 import Items from '@components/frontStore/checkout/cart/items/Items';
 import { Empty } from '@components/frontStore/checkout/cart/Empty';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
-import './../../../../Styles/Styles.scss';  
+import "../../../../Styles/Styles.scss";  
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 

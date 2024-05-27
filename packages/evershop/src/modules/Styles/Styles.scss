@@ -78,6 +78,8 @@
     src: url('/Assets/Fonts/Katide/ttf/katide_thin.ttf') format('truetype');
 }
 
+
+
 body{
     font-family: 'Aphasia_BT' !important;
     font-family: 'Katedryllon' !important;
@@ -2447,6 +2449,17 @@ ul.navbar-nav::after{
         object-position: center;
     }
 }
+
+select{
+    option{
+        @include font-16;
+    }
+}
+
+#couponForm input.form-control{
+    @include font-16;
+}
+
 
 @media screen and (max-width:575px) {
     .header .container-fluid{

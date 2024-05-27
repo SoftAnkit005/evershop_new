@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Katedryllon';
+    font-style: normal;
+    src: url(https://drbwc.com/Assets/Fonts/Katedryllon/Katedryllon.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Aphasia_BT';
+    font-style: normal;
+    src: url(https://drbwc.com/Assets/Fonts/Aphasia_BT/Aphasia_BT.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_bold.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 800;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_extra_bold.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 100;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_extra_light.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 800;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_heavy.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 200;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_light.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_medium.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_regular.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_semi_bold.ttf);
+}
+
+@font-face {
+    font-family: 'katide';
+    font-style: normal;
+    font-weight: 200;
+    src: url(https://drbwc.com/Assets/Fonts/Katide/ttf/katide_thin.ttf);
+}
+
+@mixin Katide{
+    font-family: 'katide' !important;
+    font-style: normal;
+}
+
+@mixin Katedryllon{
+    font-family: 'Katedryllon' !important;
+    font-style: normal;
+}
+
+@mixin Aphasia_BT{
+    font-family: 'Aphasia_BT' !important;
+    font-style: normal;
+}
+
+
+
+body{
+    font-family: 'Aphasia_BT' !important;
+    font-family: 'Katedryllon' !important;
+    font-family: 'katide' !important;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --black: #212121;
+    --white: #FFFFFF;
+    --yellow: #CDA646;
+    --brown: #72442F;
+}
+
+// admin css start
+#adminLoginForm .mb-4{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.search-box .field-prefix{
+    position: absolute !important;
+    right: 0;
+    top: 15px;
+}
+
+.btn-brown{
+    padding: 18px 45px !important;
+    background: var(--brown) !important;
+    border-radius: 10px !important;
+    @include Katide;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    text-transform: capitalize;
+    color: var(--white) !important;
+    text-decoration: none;
+}
+
+.header{
+    height: auto;
+    padding: 10px;
+}
+
+.admin-navigation{
+    top: 75px !important;
+}
+
+.w-33{
+    width: 33.3%;
+}
+
+
+.card-session-content .form-field-container{
+    padding: 15px 10px 0px 0px;
+    margin: 0;
+}
+
+.card-session-content .form-field-container label{
+    font-family: "katide" !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: 36px;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+}
+
+.card-session-content .form-field-container input[type="text"],
+.card-session-content .form-field-container textarea{
+    background-color: #f6f6f6;
+    padding: 13px 15px;
+    font-family: "katide" !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px !important;
+    line-height: normal;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+}
+
+#productForm .text-warning{
+    color: #ff574b;
+}
+
+.footer{
+    background-color: #72442F !important;
+    padding: 10px 0;
+    display: block;
+    margin: 25px !important;
+}
+
+.copyright{
+    font-family: "katide" !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px !important;
+    line-height: 36px;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.font-20{
+    font-family: "katide" !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px !important;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+}
+
+.text-interactive{
+    background-color: #f6f6f6;
+    padding: 15px;
+    font-family: "katide" !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px !important;
+    line-height: normal;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    margin: 12px 0;
+    display: block;
+    color: #000;
+}
+// admin css end

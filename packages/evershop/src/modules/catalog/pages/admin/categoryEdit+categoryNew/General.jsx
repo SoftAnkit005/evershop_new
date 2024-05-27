@@ -13,7 +13,7 @@ function ParentCategory({ currentId, parent }) {
 
   return (
     <div className="mt-15 relative">
-      <div className="mb-1">Parent category</div>
+      <div className="font-20">Parent category</div>
       {category && (
         <div className="border rounded border-[#c9cccf] mb-1 p-1">
           {category.path.map((item, index) => (

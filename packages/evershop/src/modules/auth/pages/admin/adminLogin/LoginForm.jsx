@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Field } from '@components/common/form/Field';
 import { Form } from '@components/common/form/Form';
 import './LoginForm.scss';
+import "../../../../Styles/admin.scss"
 
 export default function LoginForm({ authUrl, dashboardUrl }) {
   const [error, setError] = React.useState(null);
@@ -17,48 +18,49 @@ export default function LoginForm({ authUrl, dashboardUrl }) {
 
   const [finalURL, setFinalURL] = useState('');
 
-  useEffect(() => {
-      const currentURL = window.location.href;
-      const newURL = currentURL.replace(currentURL, '');
-      const pathStartIndex = newURL.indexOf('/', 8);
-      const newPath = newURL.substring(pathStartIndex);
-      const finalURL = window.location.origin + newPath;
-      setFinalURL(finalURL);
-  }, []);
+    useEffect(() => {
+        const currentURL = window.location.href;
+        const newURL = currentURL.replace(currentURL, '');
+        const pathStartIndex = newURL.indexOf('/', 8);
+        const newPath = newURL.substring(pathStartIndex);
+        const finalURL = window.location.origin + newPath;
+        setFinalURL(finalURL);
+    }, []);
 
   return (
     <div className="admin-login-form">
       <div className="flex items-center justify-center mb-3">
         <img
-         
-          alt="EverShop Admin Panel"
-          src={`${finalURL}/Assets/Images/footer_logo.svg`}
+          width={150}
+          height={150}
+          alt="Dr.Bwc"
+          src={`${finalURL}/Assets/Images/header_logo.svg`}
         />
       </div>
       {error && <div className="text-critical py-1">{error}</div>}
-      <Form
-        action={authUrl}
-        method="POST"
-        id="adminLoginForm"
-        isJSON
-        onSuccess={onSuccess}
-        btnText="SIGN IN"
-      >
-        <Field
-          name="email"
-          type="email"
-          label="Email"
-          placeholder="Email"
-          validationRules={['notEmpty', 'email']}
-        />
-        <Field
-          name="password"
-          type="password"
-          label="Password"
-          placeholder="Password"
-          validationRules={['notEmpty']}
-        />
-      </Form>
+        <Form
+          action={authUrl}
+          method="POST"
+          id="adminLoginForm"
+          isJSON
+          onSuccess={onSuccess}
+          btnText="SIGN IN"
+        >
+          <Field
+            name="email"
+            type="email"
+            label="Email"
+            placeholder="Email"
+            validationRules={['notEmpty', 'email']}
+          />
+          <Field
+            name="password"
+            type="password"
+            label="Password"
+            placeholder="Password"
+            validationRules={['notEmpty']}
+          />
+        </Form>
     </div>
   );
 }

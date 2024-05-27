@@ -260,7 +260,7 @@ webpackVendorPromise.then(async () => {
       spinner.succeed(
         green('Building completed!!!\n') +
           boxen(green('Please run "npm run start" to start your website'), {
-            title: 'EverShop',
+            title: 'Dr.Bwc',
             titleAlignment: 'center',
             padding: 1,
             margin: 1,

@@ -6,7 +6,7 @@ import React from 'react';
 
 
 
-import './../../../../Styles/Styles.scss';
+import "../../../../Styles/Styles.scss";
 // import './../../../../Styles/my_bootstrap.css';
 // import '../../../../Styles/my_bootstrap_js.js';
 
@@ -16,7 +16,6 @@ export default function FeaturedOffer() {
  
   return (
 
-    <>
     <section className='offer-section'>
             <div className='container'>
                 <div className='text-center'>
@@ -38,9 +37,6 @@ export default function FeaturedOffer() {
                 </div>
             </div>
         </section>
-
-   
-    </>
   );
 }
 export const layout = {

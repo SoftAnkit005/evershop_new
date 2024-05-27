@@ -1,8 +1,8 @@
-# SendGrid emailing for EverShop
+# SendGrid emailing for Dr.Bwc
 
-A SendGrid extension for EverShop. This extension is used to send email to customers.
+A SendGrid extension for Dr.Bwc. This extension is used to send email to customers.
 
-> **Note**: This extension requires EverShop version 1.0.0-rc.6 or higher.
+> **Note**: This extension requires Dr.Bwc version 1.0.0-rc.6 or higher.
 
 ## Installation
 

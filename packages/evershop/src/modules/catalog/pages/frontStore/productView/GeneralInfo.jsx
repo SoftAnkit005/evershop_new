@@ -53,7 +53,7 @@ export default function GeneralInfo({ product }) {
             specialfeature: product.specialfeature,
             specificusesforproduct: product.specificusesforproduct,
             productbenefits: product.productbenefits,
-            productdimensions: product.productdimensions,
+            productdimensions: product.productdimensions
           },
           sortOrder: 20,
           id: 'brand'
@@ -61,7 +61,7 @@ export default function GeneralInfo({ product }) {
         {
           component: { default: companydetails },
           props: {
-            companydetails: product.companydetails,
+            companydetails: product.companydetails
           },
           sortOrder: 20,
           id: 'brand'
@@ -69,7 +69,7 @@ export default function GeneralInfo({ product }) {
         {
           component: { default: video },
           props: {
-            video: product.video,
+            video: product.video
           },
           sortOrder: 20,
           id: 'brand'

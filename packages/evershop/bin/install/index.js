@@ -36,8 +36,8 @@ async function install() {
   var adminUser;
 
   success(
-    boxen(green('Welcome to EverShop - The open-source e-commerce platform'), {
-      title: 'EverShop',
+    boxen(green('Welcome to Dr.Bwc - The open-source e-commerce platform'), {
+      title: 'Dr.Bwc',
       titleAlignment: 'center',
       padding: 1,
       margin: 1,
@@ -191,7 +191,7 @@ async function install() {
 
   /* Start installation */
   const messages = [];
-  messages.push(`\n\n${green('EverShop is being installed ☕ ☕ ☕')}`);
+  messages.push(`\n\n${green('Dr.Bwc is being installed ☕ ☕ ☕')}`);
   messages.push('Creating .env file');
   const spinner = ora({
     text: green(messages.join('\n')),
@@ -270,7 +270,7 @@ DB_SSLMODE="${sslMode}"
         'Installation completed!. Run `npm run build` and `npm run start` to launch your store'
       ),
       {
-        title: 'EverShop',
+        title: 'Dr.Bwc',
         titleAlignment: 'center',
         padding: 1,
         margin: 1,

@@ -6,7 +6,7 @@ function Card({ title, actions = [], subdued = false, children }) {
   return (
     <div className={subdued ? 'card shadow subdued' : 'card shadow'}>
       {(title || actions.length > 0) && (
-        <div className="flex justify-between card-header">
+        <div className="flex justify-between card-header pb-0">
           {title && <h2 className="card-title">{title}</h2>}
           {actions.length > 0 && (
             <div className="flex space-x-075">
@@ -70,7 +70,7 @@ const Session = function Session({ actions = [], title, children }) {
     <div className="card-section border-b box-border">
       {(title || actions.length > 0) && (
         <div className="flex justify-between card-section-header mb-1">
-          {title && <h3 className="card-session-title">{title}</h3>}
+          {title && <h3 className="font-20">{title}</h3>}
           {actions.length > 0 && (
             <div className="flex space-x-075">
               {actions.map((action, index) => {

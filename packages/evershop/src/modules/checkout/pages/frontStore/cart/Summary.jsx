@@ -5,7 +5,7 @@ import Button from '@components/common/form/Button';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { Tax } from '@components/frontStore/checkout/checkout/summary/cart/Tax';
 import { Total } from '@components/frontStore/checkout/checkout/summary/cart/Total';
-import './../../../../Styles/Styles.scss'
+import "../../../../Styles/Styles.scss"
 
 function Subtotal({ subTotal }) {
   return (    

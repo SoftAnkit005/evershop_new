@@ -11,5 +11,5 @@ export function Sku({ sku }) {
 }
 
 Sku.propTypes = {
-  sku: PropTypes.string.isRequired,
+  sku: PropTypes.string.isRequired
 };

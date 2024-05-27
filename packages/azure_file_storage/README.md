@@ -1,8 +1,8 @@
-# Azure storage extension for EverShop
+# Azure storage extension for Dr.Bwc
 
-This extension allows you to store your EverShop files including product images, banners on Azure Blob Storage.
+This extension allows you to store your Dr.Bwc files including product images, banners on Azure Blob Storage.
 
-> **Note**: This extension requires EverShop version 1.0.0-rc.9 or higher.
+> **Note**: This extension requires Dr.Bwc version 1.0.0-rc.9 or higher.
 
 ## Installation guide
 
@@ -14,7 +14,7 @@ npm install @evershop/azure_file_storage
 
 ### Step 2: Enable the extension
 
-Edit the `config/default.json` file in the root directory of your EverShop installation and add the following line to the `extensions` section:
+Edit the `config/default.json` file in the root directory of your Dr.Bwc installation and add the following line to the `extensions` section:
 
 ```json
 {

@@ -250,7 +250,7 @@ module.exports.registerCartBaseFields = function registerCartBaseFields() {
           if (!this.getData('shipping_address_id')) {
             return null;
           }
-          // By default, EverShop supports free shipping and flat rate shipping method
+          // By default, Dr.Bwc supports free shipping and flat rate shipping method
           // Load shipping method from database
           const shippingMethodQuery = select().from('shipping_method');
           shippingMethodQuery
