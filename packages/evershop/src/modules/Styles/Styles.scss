@@ -6,76 +6,76 @@
 @font-face {
     font-family: 'Katedryllon';
     font-style: normal;
-    src: url(./../../Assets/Fonts/Katedryllon/Katedryllon.otf) format('truetype');
+    src: url('/Assets/Fonts/Katedryllon/Katedryllon.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Aphasia_BT';
     font-style: normal;
-    src: url(./../../Assets/Fonts/Aphasia_BT/Aphasia_BT.ttf);
+    src: url('/Assets/Fonts/Aphasia_BT/Aphasia_BT.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 700;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_bold.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 800;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_extra_bold.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_extra_bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 100;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_extra_light.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_extra_light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 800;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_heavy.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_heavy.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 200;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_light.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 500;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_medium.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 400;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_regular.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 600;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_semi_bold.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_semi_bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'katide';
     font-style: normal;
     font-weight: 200;
-    src: url(./../../Assets/Fonts/Katide/ttf/katide_thin.ttf);
+    src: url('/Assets/Fonts/Katide/ttf/katide_thin.ttf') format('truetype');
 }
 
 body{
@@ -277,7 +277,7 @@ ul.navbar-nav::after{
     top: 13px;
     width: 20px;
     height: 20px;
-    background-image: url('./../../Assets/Images/search_box.svg');
+    background-image: url('/Assets/Images/search_box.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -678,7 +678,7 @@ ul.navbar-nav::after{
 }
 
 .slick-next:before{
-    background-image: url('./../Assets/Images/next.svg');
+    background-image: url('/Assets/Images/next.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -689,7 +689,7 @@ ul.navbar-nav::after{
 }
 
 .slick-prev:before{
-    background-image: url('./../Assets/Images/prev.svg');
+    background-image: url('/Assets/Images/prev.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -857,7 +857,7 @@ ul.navbar-nav::after{
             top: 0;
             width: 20px;
             height: 20px;
-            background-image: url('../Assets/Images/left_white.svg');
+            background-image: url('/Assets/Images/left_white.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -895,7 +895,7 @@ ul.navbar-nav::after{
             top: 0;
             width: 20px;
             height: 20px;
-            background-image: url('../Assets/Images/right_white.svg');
+            background-image: url('/Assets/Images/right_white.svg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -1041,7 +1041,7 @@ ul.navbar-nav::after{
         top: 0;
         width: 24px;
         height: 24px;
-        background-image: url('../Assets/Images/star.svg');
+        background-image: url('/Assets/Images/star.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -1416,7 +1416,7 @@ ul.navbar-nav::after{
             top: -10px;
             width: 22px;
             height: 22px;
-            background-image: url('../Assets/Images/check.svg');
+            background-image: url('/Assets/Images/check.svg');
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -2142,13 +2142,13 @@ ul.navbar-nav::after{
         top: 60%;
     }
     .slick-prev:before{
-        background-image: url('../Assets/Images/left.svg');
+        background-image: url('/Assets/Images/left.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     .slick-next:before{
-        background-image: url('../Assets/Images/right.svg');
+        background-image: url('/Assets/Images/right.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -2461,7 +2461,7 @@ ul.navbar-nav::after{
     }
 
     .navbar-toggler-icon{
-        background-image: url('./../Assets/Images/menu.svg') !important;
+        background-image: url('/Assets/Images/menu.svg') !important;
     }
     .discount-coupon{
         display: block;
@@ -3157,7 +3157,7 @@ ul.navbar-nav::after{
     }
 
     .navbar-toggler-icon{
-        background-image: url('./../Assets/Images/menu.svg') !important;
+        background-image: url('/Assets/Images/menu.svg') !important;
     }
 
     .carousel-caption{
@@ -3741,7 +3741,7 @@ ul.navbar-nav::after{
     }
 
     .navbar-toggler-icon{
-        background-image: url('./../Assets/Images/menu.svg') !important;
+        background-image: url('/Assets/Images/menu.svg') !important;
     }
 
     .carousel-item{
