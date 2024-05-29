@@ -28,11 +28,8 @@
 }
 .root-nav-item {
   &:last-child {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 200px;
-    background-color: rgba(246, 246, 247, 0.9882352941);
-    padding-bottom: 2rem;
+    .root-label{
+      font-size: 16px !important;
+    }
   }
 }

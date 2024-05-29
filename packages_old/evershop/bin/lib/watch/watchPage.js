@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const touch = require('touch');
 const { resolve } = require('path');
 const { CONSTANTS } = require('@evershop/evershop/src/lib/helpers');

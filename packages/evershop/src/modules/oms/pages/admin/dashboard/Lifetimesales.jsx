@@ -7,40 +7,53 @@ import Dot from '@components/common/Dot';
 import { Card } from '@components/admin/cms/Card';
 import './Lifetimesales.scss';
 
-const COLORS = ['#aee9d1', '#fed3d1', '#a4e8f2'];
+const COLORS = ['#aee9d1', '#fed3d1', '#72442F'];
 
 export default function LifetimeSale({ api }) {
-  const [data, setData] = React.useState({});
+  const [data, setData] = React.useState({
+    orders: 0,
+    total: 0,
+    completed_percentage: 0,
+    cancelled_percentage: 0
+  });
   const [fetching, setFetching] = React.useState(true);
   const { orders, total, completed_percentage, cancelled_percentage } = data;
 
   const chartData = [
-    { name: 'Completed', value: completed_percentage },
-    { name: 'Cancelled', value: cancelled_percentage },
+    { name: 'Completed', value: completed_percentage || 0 },
+    { name: 'Cancelled', value: cancelled_percentage || 0 },
     {
       name: 'Others',
-      value: 100 - completed_percentage - cancelled_percentage
+      value: 100 - (completed_percentage || 0) - (cancelled_percentage || 0)
     }
   ];
 
   React.useEffect(() => {
-    if (window !== undefined) {
-      fetch(api, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then((response) => response.json())
-        .then((json) => {
+    let isMounted = true;
+
+    fetch(api, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        if (isMounted) {
           setData(json);
           setFetching(false);
-        })
-        .catch((error) => {
+        }
+      })
+      .catch((error) => {
+        if (isMounted) {
           toast.error(error.message);
-        });
-    }
-  }, []);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [api]);
 
   if (fetching) {
     return (
@@ -92,7 +105,7 @@ export default function LifetimeSale({ api }) {
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
-                  data={chartData}
+                  data={[chartData]} // wrap chartData in an array
                   labelLine={false}
                   fill="#8884d8"
                   dataKey="value"

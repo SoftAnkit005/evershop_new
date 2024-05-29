@@ -6,9 +6,7 @@ export default function FeaturedSlider({ collection }) {
   if (!collection) {
     return null;
   }
-  
-  console.log(`collection: ${JSON.stringify(collection)}`);
-  // console.log("collection : "+collection.products.items);
+
   return (
 
     <div className="mb-5">
@@ -16,7 +14,7 @@ export default function FeaturedSlider({ collection }) {
         <h3 className="mt-3 mb-3 text-center uppercase h5 tracking-widest d-none">
           {collection.name}
         </h3>
-        
+
         <HomeSlider products={collection.products.items} countPerRow={4} />
       </div>
     </div>

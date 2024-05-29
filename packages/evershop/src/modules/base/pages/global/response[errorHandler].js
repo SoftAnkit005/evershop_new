@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 /* eslint-disable global-require */
 /* eslint-disable guard-for-in */
 /* eslint-disable import/no-import-module-exports */
@@ -22,7 +23,7 @@ module.exports = async (request, response, delegate, next) => {
 
     /** If a rejected middleware called next(error) without throwing an error */
     if (isErrorHandlerTriggered(response)) {
-      return;
+
     } else {
       const route = request.currentRoute;
       // eslint-disable-next-line max-len

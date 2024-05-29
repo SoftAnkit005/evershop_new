@@ -1,8 +1,9 @@
+/* eslint-disable func-names */
 const { getConfig } = require('@evershop/evershop/src/lib/util/getConfig');
 const { getSetting } = require('../../../setting/services/setting');
 
 // eslint-disable-next-line no-unused-vars
-module.exports = async (request, response) => {
+module.exports = async function (request, response) {
   // Check if Paypal is enabled
   const paypalConfig = getConfig('system.paypal', {});
   let paypalStatus;

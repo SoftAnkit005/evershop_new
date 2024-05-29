@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
 const concat = require('concat-stream');

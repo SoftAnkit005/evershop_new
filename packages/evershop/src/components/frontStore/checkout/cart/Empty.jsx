@@ -16,35 +16,17 @@ export function Empty() {
         <div className="text-center">
           <h2>{_('Shopping cart')}</h2>
         </div>
-        <div className="mt-2 text-center">
-          <span>{_('Your cart is empty!')}</span>
+        <div className="mt-2 text-center mb-4">
+          <p className='font-16'>{_('Your cart is empty!')}</p>
         </div>
         <div className='w-100 text-center mt-4'>
           <Button
             url="/"
-            title={
-              <span className="flex space-x-1">
-                <span className="self-center">{_('CONTINUE SHOPPING')}</span>{' '}
-                <svg
-                  className="self-center"
-                  style={{ width: '2.5rem', height: '2.5rem' }}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
-            }
+            className="d-block"
+            title={_('CONTINUE SHOPPING')}
           />
         </div>
-        
+
       </div>
     </div>
   );

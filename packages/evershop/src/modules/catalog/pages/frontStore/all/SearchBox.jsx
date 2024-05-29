@@ -61,7 +61,7 @@ export default function SearchBox({ searchPageUrl }) {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ width: '1.8rem', height: '1.8rem' }}
-                  fill="none"
+                  fill="#FFF"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >

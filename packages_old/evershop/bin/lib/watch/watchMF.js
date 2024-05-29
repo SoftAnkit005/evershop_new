@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const { normalize, basename } = require('path');
 const { Handler } = require('@evershop/evershop/src/lib/middleware/Handler');
 const { error } = require('@evershop/evershop/src/lib/log/logger');

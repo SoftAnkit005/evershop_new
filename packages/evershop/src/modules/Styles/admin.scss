@@ -220,6 +220,70 @@ body{
     text-transform: capitalize;
     margin: 12px 0;
     display: block;
-    color: #000;
+    color: #000 !important;
+    border-radius: 10px;
+}
+
+.card{
+    border-radius: 16px !important;
+}
+
+.grid-thumbnail {
+    border-radius: 16px ;
+}
+
+.upload_img{
+    width: 65%;
+    margin: 0 auto;
+}
+
+#couponForm .form-group{
+    position: relative;
+}
+#couponForm .form-group input[name="user_condition[emails]"]{
+    padding-left: 35px;
+}
+#couponForm .form-group .field-suffix{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+#keyword, #name, #coupon{
+    font-size: 16px;
+}
+
+.category td{
+    padding: 2rem !important;
+}
+
+.attribute-group .form-field-container{
+    padding-top: 0 !important;
+}
+
+#attributeForm .card-session-content .form-field-container{
+    padding-top: 0 !important;
+}
+
+#storeSetting .card-session-content .form-field-container,
+#storeSetting .card-session-content .mt-2{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+#storeSetting .mt-4, #paymentSettingForm .mt-4, #taxBasicConfig .mt-4{
+    margin-top: 35px !important;
+}
+
+.order td .form-field-container{
+    text-align: center;
+}
+
+#paymentSettingForm h4{
+    font-size: 16px;
+}
+
+.category tbody.text-center .form-field-container{
+    text-align: center;
 }
 // admin css end

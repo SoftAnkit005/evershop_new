@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Area from '@components/common/Area';
 
-export default function ProductPageLayout() {  
+export default function ProductPageLayout() {
 
   return (
     <div className="product-detail mt-5 mb-0 pt-5">
@@ -11,7 +11,7 @@ export default function ProductPageLayout() {
           <Area id="productPageMiddleLeft" />
           <Area id="productPageMiddleRight" />
         </div>
-        
+
       </div>
       <Area id="productPageBottom" className="product-page-top" />
     </div>

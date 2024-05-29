@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const { addProcessor } = require('@evershop/evershop/src/lib/util/registry');
 const { azureFileUploader } = require('./services/azureFileUploader');
 const { azureFileDeleter } = require('./services/azureFileDeleter');
@@ -6,7 +7,7 @@ const { azureFileBrowser } = require('./services/azureFileBrowser');
 
 module.exports = () => {
   addProcessor('fileUploader', function (value) {
-    const {config} = this;
+    const { config } = this;
     if (config === 'azure') {
       return azureFileUploader;
     } else {
@@ -15,7 +16,7 @@ module.exports = () => {
   });
 
   addProcessor('fileDeleter', function (value) {
-    const {config} = this;
+    const { config } = this;
     if (config === 'azure') {
       return azureFileDeleter;
     } else {
@@ -24,7 +25,7 @@ module.exports = () => {
   });
 
   addProcessor('folderCreator', function (value) {
-    const {config} = this;
+    const { config } = this;
     if (config === 'azure') {
       return azureFolderCreator;
     } else {
@@ -33,7 +34,7 @@ module.exports = () => {
   });
 
   addProcessor('fileBrowser', function (value) {
-    const {config} = this;
+    const { config } = this;
     if (config === 'azure') {
       return azureFileBrowser;
     } else {

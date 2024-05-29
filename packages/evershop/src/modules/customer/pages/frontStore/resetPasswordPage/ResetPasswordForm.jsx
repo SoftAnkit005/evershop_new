@@ -32,70 +32,70 @@ function ResetForm({ action, onSuccess, registerUrl }) {
 
 
     <section className='login-section'>
-        <div className='container'>
-          <div className='row align-items-center'>
-            <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
-              <div className='login-wrapper'>
-                <div className='w-100'>
-                  <div className='text-center'>
-                    <h4 className="font-30 text-white">{_('Enter your email address')}</h4>
-                    <p className='font-16 text-white'>welcome to Dr.BWC</p>
-                    {error && <div className="text-critical mb-1">{error}</div>}
-                    <Form
-                      id="resetPasswordForm"
-                      action={action}
-                      isJSON
-                      method="POST"
-                      onStart={() => {
-                        setLoading(true);
+      <div className='container'>
+        <div className='row align-items-center'>
+          <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
+            <div className='login-wrapper'>
+              <div className='w-100'>
+                <div className='text-center'>
+                  <h4 className="font-30 text-white">{_('Enter your email address')}</h4>
+                  <p className='font-16 text-white'>welcome to Dr.BWC</p>
+                  {error && <div className="text-critical mb-1">{error}</div>}
+                  <Form
+                    id="resetPasswordForm"
+                    action={action}
+                    isJSON
+                    method="POST"
+                    onStart={() => {
+                      setLoading(true);
+                    }}
+                    onSuccess={(response) => {
+                      if (!response.error) {
+                        onSuccess();
+                      } else {
+                        setError(response.error.message);
+                      }
+                    }}
+                    onComplete={() => {
+                      setLoading(false);
+                    }}
+                    submitBtn={false}
+                  >
+                    <Field
+                      name="email"
+                      type="text"
+                      placeholder={_('Email')}
+                      validationRules={['notEmpty', 'email']}
+                    />
+                    <Button
+                      title={_('RESET PASSWORD')}
+                      type="submit"
+                      onAction={() => {
+                        document
+                          .getElementById('resetPasswordForm')
+                          .dispatchEvent(
+                            new Event('submit', { cancelable: true, bubbles: true })
+                          );
                       }}
-                      onSuccess={(response) => {
-                        if (!response.error) {
-                          onSuccess();
-                        } else {
-                          setError(response.error.message);
-                        }
-                      }}
-                      onComplete={() => {
-                        setLoading(false);
-                      }}
-                      submitBtn={false}
-                    >
-                      <Field
-                        name="email"
-                        type="text"
-                        placeholder={_('Email')}
-                        validationRules={['notEmpty', 'email']}
-                      />
-                      <Button
-                          title={_('RESET PASSWORD')}
-                          type="submit"
-                          onAction={() => {
-                            document
-                              .getElementById('resetPasswordForm')
-                              .dispatchEvent(
-                                new Event('submit', { cancelable: true, bubbles: true })
-                              );
-                          }}
-                          isLoading={loading}
-                        />
-                    </Form>
-                  </div>
+                      isLoading={loading}
+                    />
+                  </Form>
                 </div>
               </div>
             </div>
-            <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
-                <div className='register-info'>
-                    <h4 className="font-30 text-white mb-4">Reset Password</h4>
-                    <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
-                    <a className='btn-white w-50 text-center d-block ms-auto me-auto' href={registerUrl}>
-                      {_('Create an account')}
-                    </a>
-                </div>
+          </div>
+          <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
+            <div className='register-info'>
+              <h4 className="font-30 text-white mb-4">Reset Password</h4>
+              <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we wll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+              <a className='btn-white w-50 text-center d-block ms-auto me-auto' href={registerUrl}>
+                {_('Create an account')}
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
 
@@ -113,7 +113,7 @@ export default function ResetPasswordForm({ action, registerUrl }) {
   ) : (
     <ResetForm
       action={action}
-      registerUrl={registerUrl} 
+      registerUrl={registerUrl}
       onSuccess={() => {
         setSuccess(true);
       }}

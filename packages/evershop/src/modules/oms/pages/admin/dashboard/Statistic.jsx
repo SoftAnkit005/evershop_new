@@ -58,35 +58,35 @@ export default function SaleStatistic({ api }) {
       >
         <Card.Session>
           {data.length === 0 ? null : (
-		    <ResponsiveContainer width="100%" height={300}>
-				<AreaChart
-				  data={data}
-				  margin={{
-					top: 5,
-					right: 0,
-					left: -25,
-					bottom: 5
-				  }}
-				>
-				  <XAxis dataKey="time" />
-				  <YAxis />
-				  <Tooltip />
-				  <Area
-					type="monotone"
-					dataKey="value"
-					stackId="1"
-					stroke="#8884d8"
-					fill="#8884d8"
-				  />
-				  <Area
-					type="monotone"
-					dataKey="count"
-					stackId="1"
-					stroke="#82ca9d"
-					fill="#82ca9d"
-				  />
-				</AreaChart>
-			</ResponsiveContainer>
+            <ResponsiveContainer width="100%" height={300}>
+              <AreaChart
+                data={data}
+                margin={{
+                  top: 5,
+                  right: 0,
+                  left: -25,
+                  bottom: 5
+                }}
+              >
+                <XAxis dataKey="time" />
+                <YAxis />
+                <Tooltip />
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stackId="1"
+                  stroke="#8884d8"
+                  fill="#8884d8"
+                />
+                <Area
+                  type="monotone"
+                  dataKey="count"
+                  stackId="1"
+                  stroke="#72442F"
+                  fill="#72442F"
+                />
+              </AreaChart>
+            </ResponsiveContainer>
           )}
         </Card.Session>
       </Card>

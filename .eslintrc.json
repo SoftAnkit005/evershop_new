@@ -32,6 +32,13 @@
         ]
       }
     ],
+    "no-unused-expressions": "error",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["_isShown", "_element", "_backdrop", "_config"]
+      }
+    ],
     "import/no-dynamic-require": 0,
     "no-else-return": "off",
     "import/prefer-default-export": 0,

@@ -107,7 +107,7 @@ export default function CollectionGrid({
   const [selectedRows, setSelectedRows] = useState([]);
 
   return (
-    <div className="w-2/3" style={{ margin: '0 auto' }}>
+    <div className="" style={{ margin: '0 auto' }}>
       <Card>
         <Card.Session
           title={
@@ -147,11 +147,11 @@ export default function CollectionGrid({
               }
             }
           ]}
-         />
-        <table className="listing sticky">
+        />
+        <table className="listing sticky category">
           <thead>
             <tr>
-              <th className="align-bottom">
+              <th className="text-center">
                 <Checkbox
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -207,7 +207,7 @@ export default function CollectionGrid({
               />
             </tr>
           </thead>
-          <tbody>
+          <tbody className='text-center'>
             <Actions
               collections={collections}
               selectedIds={selectedRows}

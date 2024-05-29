@@ -164,10 +164,10 @@ export default function AttributeGrid({
           }
         ]}
       />
-      <table className="listing sticky">
+      <table className="listing sticky category">
         <thead>
           <tr>
-            <th className="align-bottom">
+            <th className="text-center">
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked)
@@ -239,7 +239,7 @@ export default function AttributeGrid({
             />
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-center">
           <Actions
             attributes={attributes}
             selectedIds={selectedRows}

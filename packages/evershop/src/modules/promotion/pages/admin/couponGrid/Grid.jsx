@@ -222,11 +222,11 @@ export default function CouponGrid({
             }
           }
         ]}
-       />
-      <table className="listing sticky">
+      />
+      <table className="listing sticky category">
         <thead>
           <tr>
-            <th className="align-bottom">
+            <th className="text-center">
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked)
@@ -296,7 +296,7 @@ export default function CouponGrid({
             />
           </tr>
         </thead>
-        <tbody>
+        <tbody className="text-center">
           <Actions
             coupons={coupons}
             selectedIds={selectedRows}

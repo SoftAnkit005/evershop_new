@@ -1,3 +1,4 @@
+/* eslint-disable react/default-props-match-prop-types */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Area from '@components/common/Area';
@@ -8,8 +9,7 @@ import CategoryTree from '@components/admin/catalog/productEdit/category/Categor
 
 function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video }) {
 
-  console.log('Video  =====>', video?.value);
-  
+
   return (
     <div className="flex flex-wrap">
       <div className='w-33'>
@@ -106,7 +106,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           validationRules={['notEmpty']}
         />
       </div>
-      
+
       <div className='w-33'>
         <Field
           id="color"
@@ -154,7 +154,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           validationRules={['notEmpty']}
         />
       </div>
-      
+
       <div className='w-33'>
         <Field
           id="productdimensions"
@@ -190,7 +190,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           validationRules={['notEmpty']}
         />
       </div>
-      
+
     </div>
   );
 }
@@ -333,8 +333,7 @@ export default function General({
   folderCreateApi,
   setting,
   productTaxClasses: { items: taxClasses }
-}) 
-{
+}) {
   return (
     <Card title="General">
       <Card.Session>

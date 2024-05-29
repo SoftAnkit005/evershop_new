@@ -1,7 +1,8 @@
+/* eslint-disable func-names */
 import React from 'react';
 import Sorting from '@components/frontStore/catalog/product/list/Sorting';
 
-export default function() {
+export default function () {
   return <Sorting />;
 };
 

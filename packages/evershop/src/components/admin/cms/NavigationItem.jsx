@@ -18,13 +18,13 @@ export default function NavigationItem({ Icon, url, title }) {
         setIsActive(true);
       }
     }
-  }, []);
+  }, [url]);
 
   return (
     <li className={isActive ? 'active nav-item' : 'nav-item'}>
       <a href={url} className="flex justify-left">
         <i className="menu-icon">
-          <Icon />
+          {Icon && <Icon />}
         </i>
         {title}
       </a>
@@ -33,7 +33,7 @@ export default function NavigationItem({ Icon, url, title }) {
 }
 
 NavigationItem.propTypes = {
-  Icon: PropTypes.node.isRequired,
+  Icon: PropTypes.elementType.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 };

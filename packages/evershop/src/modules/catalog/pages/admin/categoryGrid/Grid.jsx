@@ -145,11 +145,11 @@ export default function CategoryGrid({
             }
           }
         ]}
-       />
-      <table className="listing sticky">
+      />
+      <table className="listing sticky category">
         <thead>
           <tr>
-            <th className="align-bottom">
+            <th className="text-center">
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked) {

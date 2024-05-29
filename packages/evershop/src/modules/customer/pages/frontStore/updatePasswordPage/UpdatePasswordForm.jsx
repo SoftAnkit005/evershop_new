@@ -38,71 +38,71 @@ function UpdateForm({ action, onSuccess, registerUrl }) {
   return (
 
     <section className='login-section'>
-        <div className='container'>
-          <div className='row align-items-center'>
-            <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
-              <div className='login-wrapper'>
-                <div className='w-100'>
-                  <div className='text-center'>
-                    <h4 className="font-30 text-white">{_('Enter your new password')}</h4>
-                    <p className='font-16 text-white'>welcome to Dr.BWC</p>
-                    {error && <div className="text-critical mb-1">{error}</div>}
-                    <Form
-                      id="updatePasswordForm"
-                      action={action}
-                      isJSON
-                      method="POST"
-                      onStart={() => {
-                        setLoading(true);
-                      }}
-                      onComplete={() => {
-                        setLoading(false);
-                      }}
-                      onSuccess={(response) => {
-                        if (!response.error) {
-                          onSuccess();
-                        } else {
-                          setError(response.error.message);
-                        }
-                      }}
-                      submitBtn={false}
-                    >
-                      <Field
-                        name="password"
-                        type="password"
-                        placeholder={_('Password')}
-                        validationRules={['notEmpty']}
+      <div className='container'>
+        <div className='row align-items-center'>
+          <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
+            <div className='login-wrapper'>
+              <div className='w-100'>
+                <div className='text-center'>
+                  <h4 className="font-30 text-white">{_('Enter your new password')}</h4>
+                  <p className='font-16 text-white'>welcome to Dr.BWC</p>
+                  {error && <div className="text-critical mb-1">{error}</div>}
+                  <Form
+                    id="updatePasswordForm"
+                    action={action}
+                    isJSON
+                    method="POST"
+                    onStart={() => {
+                      setLoading(true);
+                    }}
+                    onComplete={() => {
+                      setLoading(false);
+                    }}
+                    onSuccess={(response) => {
+                      if (!response.error) {
+                        onSuccess();
+                      } else {
+                        setError(response.error.message);
+                      }
+                    }}
+                    submitBtn={false}
+                  >
+                    <Field
+                      name="password"
+                      type="password"
+                      placeholder={_('Password')}
+                      validationRules={['notEmpty']}
+                    />
+                    <Field name="token" type="hidden" value={token} />
+                    <div className="mt-1">
+                      <Button
+                        title={_('UPDATE PASSWORD')}
+                        type="submit"
+                        onAction={() => {
+                          document
+                            .getElementById('updatePasswordForm')
+                            .dispatchEvent(
+                              new Event('submit', { cancelable: true, bubbles: true })
+                            );
+                        }}
+                        isLoading={loading}
                       />
-                      <Field name="token" type="hidden" value={token} />
-                      <div className="mt-1">
-                        <Button
-                          title={_('UPDATE PASSWORD')}
-                          type="submit"
-                          onAction={() => {
-                            document
-                              .getElementById('updatePasswordForm')
-                              .dispatchEvent(
-                                new Event('submit', { cancelable: true, bubbles: true })
-                              );
-                          }}
-                          isLoading={loading}
-                        />
-                      </div>
-                    </Form>
-                  </div>
+                    </div>
+                  </Form>
                 </div>
               </div>
             </div>
-            <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
-              <div className='register-info'>
-                <h4 className="font-30 text-white mb-4">Register</h4>
-                <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
-                <a className="btn-white w-50 text-center d-block ms-auto me-auto" href={registerUrl}>Create an account</a>
-              </div>
+          </div>
+          <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
+            <div className='register-info'>
+              <h4 className="font-30 text-white mb-4">Register</h4>
+              <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we wll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+              <a className="btn-white w-50 text-center d-block ms-auto me-auto" href={registerUrl}>Create an account</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
 
@@ -120,7 +120,7 @@ export default function UpdatePasswordForm({ action, registerUrl }) {
   ) : (
     <UpdateForm
       action={action}
-      registerUrl={registerUrl} 
+      registerUrl={registerUrl}
       onSuccess={() => {
         setSuccess(true);
       }}

@@ -7,6 +7,12 @@ const config = {
     '<rootDir>/node_modules/',
     '<rootDir>/packages/core/node_modules/'
   ]
-}
+};
 
-module.exports = config;
+// Merge with additional Jest configuration
+module.exports = {
+  ...config,
+  testEnvironment: "node",
+  modulePathIgnorePatterns: ["<rootDir>/packages_old/"],
+  // Other configurations...
+};

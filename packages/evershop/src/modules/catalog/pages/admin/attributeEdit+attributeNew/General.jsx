@@ -75,7 +75,7 @@ function Groups({ groups, createGroupApi }) {
           />
         </div>
         <div className="grid gap-2 grid-cols-1">
-          <div>
+          <div className='attribute-group'>
             <Input
               type="text"
               placeholder="Create a new group"

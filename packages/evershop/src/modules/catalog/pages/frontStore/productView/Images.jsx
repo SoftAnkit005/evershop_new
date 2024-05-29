@@ -11,7 +11,7 @@ import "../categoryView/Index.scss"
 function Current({ image }) {
   const [height, setHeight] = useState();
 
-  
+
 
   useEffect(() => {
     setHeight(document.getElementById('product-current-image').offsetWidth);
@@ -44,18 +44,8 @@ export default function Images({ product: { uuid, image, gallery = [] } }) {
 
 
 
-  const [finalURL, setFinalURL] = useState('');
 
-  useEffect(() => {
-      const currentURL = window.location.href;
-      const newURL = currentURL.replace(currentURL, '');
-      const pathStartIndex = newURL.indexOf('/', 8);
-      const newPath = newURL.substring(pathStartIndex);
-      const finalURL = window.location.origin + newPath;
-      setFinalURL(finalURL);
-  }, []);
 
- 
 
   React.useEffect(() => {
     setCurrent(image);
@@ -69,8 +59,8 @@ export default function Images({ product: { uuid, image, gallery = [] } }) {
     });
   }, [uuid]);
 
-  
- 
+
+
 
   return (
     <div className="product-single-media">
@@ -90,8 +80,8 @@ export default function Images({ product: { uuid, image, gallery = [] } }) {
             </a>
           </li>
         ))}
-      </ul> 
-       
+      </ul>
+
     </div>
   );
 }

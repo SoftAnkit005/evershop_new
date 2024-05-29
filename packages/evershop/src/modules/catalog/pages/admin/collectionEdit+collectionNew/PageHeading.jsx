@@ -5,7 +5,7 @@ import "../../../../Styles/Index.scss"
 
 export default function CollectionEditPageHeading({ backUrl, collection }) {
   return (
-    <div className='w-2/3' style={{margin: '0 auto'}}>
+    <div className='' style={{ margin: '0 auto' }}>
       <PageHeading
         backUrl={backUrl}
         heading={collection ? `Editing ${collection.name}` : 'Create A New Collection'}

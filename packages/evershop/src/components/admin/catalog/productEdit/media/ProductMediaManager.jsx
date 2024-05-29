@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-undef */
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import uniqid from 'uniqid';
 import { toast } from 'react-toastify';
 import { get } from '@evershop/evershop/src/lib/util/get';
@@ -12,6 +12,7 @@ import Spinner from '@components/common/Spinner';
 
 function Upload({ addImage, productImageUploadUrl }) {
   const [uploading, setUploading] = React.useState(false);
+  const [finalURL, setFinalURL] = useState('');
 
   const onChange = (e) => {
     setUploading(true);
@@ -20,9 +21,8 @@ function Upload({ addImage, productImageUploadUrl }) {
     for (let i = 0; i < e.target.files.length; i += 1) {
       formData.append('images', e.target.files[i]);
     }
-    const targetPath = `catalog/${
-      Math.floor(Math.random() * (9999 - 1000)) + 1000
-    }/${Math.floor(Math.random() * (9999 - 1000)) + 1000}`;
+    const targetPath = `catalog/${Math.floor(Math.random() * (9999 - 1000)) + 1000
+      }/${Math.floor(Math.random() * (9999 - 1000)) + 1000}`;
     formData.append('targetPath', targetPath);
     fetch(productImageUploadUrl + targetPath, {
       method: 'POST',
@@ -63,6 +63,15 @@ function Upload({ addImage, productImageUploadUrl }) {
       });
   };
 
+  useEffect(() => {
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace(currentURL, '');
+    const pathStartIndex = newURL.indexOf('/', 8);
+    const newPath = newURL.substring(pathStartIndex);
+    const finalURL = window.location.origin + newPath;
+    setFinalURL(finalURL);
+  }, []);
+
   const id = uniqid();
   return (
     <div className="uploader grid-item">
@@ -71,19 +80,7 @@ function Upload({ addImage, productImageUploadUrl }) {
           {uploading ? (
             <Spinner width={25} height={25} />
           ) : (
-            <svg
-              style={{ width: '30px', height: '30px' }}
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="#FFF"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <img src={`${finalURL}/Assets/Images/upload_image.svg`} alt='Upload' className='upload_img' />
           )}
         </label>
       </div>

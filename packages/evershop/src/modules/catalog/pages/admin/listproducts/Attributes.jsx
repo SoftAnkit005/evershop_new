@@ -65,7 +65,7 @@ export default function Attributes({ product, groups: { items } }) {
       </Card.Session>
       <Card.Session title="Attributes">
         <table className="table table-auto">
-          <tbody>
+          <tbody className='text-center'>
             {currentGroup.attributes.items.map((attribute, index) => {
               const valueIndex = attributeIndex.find(
                 (idx) => idx.attributeId === attribute.attributeId

@@ -1,3 +1,4 @@
+/* eslint-disable no-lonely-if */
 const path = require('path');
 const fs = require('fs');
 

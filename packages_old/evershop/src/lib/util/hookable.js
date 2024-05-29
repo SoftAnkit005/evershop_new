@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const beforeHooks = new Map();
 const afterHooks = new Map();
 let locked = false;
@@ -48,49 +49,49 @@ function hookable(originalFunction, context) {
   return new Proxy(originalFunction, {
     apply: isAsyncFunction(originalFunction)
       ? async function (target, thisArg, argumentsList) {
-          const beforeHookFunctions = beforeHooks.get(funcName) || [];
-          const afterHookFunctions = afterHooks.get(funcName) || [];
+        const beforeHookFunctions = beforeHooks.get(funcName) || [];
+        const afterHookFunctions = afterHooks.get(funcName) || [];
 
-          for (
-            let index = 0;
-            index < beforeHookFunctions.length;
-            index += 1
-          ) {
-            const callbackFunc = beforeHookFunctions[index].callback;
-            await callbackFunc.call(context);
-          }
-          const result = await Reflect.apply(target, thisArg, argumentsList);
-
-          for (
-            let index = 0;
-            index < afterHookFunctions.length;
-            index += 1
-          ) {
-            const callbackFunc = afterHookFunctions[index].callback;
-            await callbackFunc.call({
-              ...context,
-              [funcName]: result
-            });
-          }
-
-          return result;
+        for (
+          let index = 0;
+          index < beforeHookFunctions.length;
+          index += 1
+        ) {
+          const callbackFunc = beforeHookFunctions[index].callback;
+          await callbackFunc.call(context);
         }
+        const result = await Reflect.apply(target, thisArg, argumentsList);
+
+        for (
+          let index = 0;
+          index < afterHookFunctions.length;
+          index += 1
+        ) {
+          const callbackFunc = afterHookFunctions[index].callback;
+          await callbackFunc.call({
+            ...context,
+            [funcName]: result
+          });
+        }
+
+        return result;
+      }
       : function (target, thisArg, argumentsList) {
-          const beforeHookFunctions = beforeHooks.get(funcName) || [];
-          const afterHookFunctions = afterHooks.get(funcName) || [];
+        const beforeHookFunctions = beforeHooks.get(funcName) || [];
+        const afterHookFunctions = afterHooks.get(funcName) || [];
 
-          beforeHookFunctions.forEach((hook) => {
-            hook.callback.call(context);
-          });
+        beforeHookFunctions.forEach((hook) => {
+          hook.callback.call(context);
+        });
 
-          const result = Reflect.apply(target, thisArg, argumentsList);
+        const result = Reflect.apply(target, thisArg, argumentsList);
 
-          afterHookFunctions.forEach((hook) => {
-            hook.callback.call({ ...context, [funcName]: result });
-          });
+        afterHookFunctions.forEach((hook) => {
+          hook.callback.call({ ...context, [funcName]: result });
+        });
 
-          return result;
-        }
+        return result;
+      }
   });
 }
 

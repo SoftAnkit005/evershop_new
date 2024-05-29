@@ -8,7 +8,7 @@ import './FormContent.scss';
 export default function FormContent({ gridUrl }) {
   const { state } = useFormContext();
   return (
-    <div className="w-2/3" style={{ margin: '0 auto' }}>
+    <div className="" style={{ margin: '0 auto' }}>
       <div className="grid gap-2">
         <Area id="collectionFormInner" noOuter />
       </div>

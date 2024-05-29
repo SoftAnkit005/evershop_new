@@ -17,8 +17,9 @@ module.exports = async function deleteUrlReWrite(data) {
       `DELETE FROM url_rewrite WHERE entity_type = 'category' AND entity_uuid = '${categoryUuid}'`
     );
 
+    // eslint-disable-next-line no-empty
     if (!urlRewrite) {
-      return;
+
     } else {
       // Delete all the url rewrite rule for the sub categories and products
       await execute(
