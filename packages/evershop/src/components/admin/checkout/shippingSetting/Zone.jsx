@@ -15,7 +15,7 @@ function Zone({ zone, countries, getZones }) {
       title={
         <div className="flex justify-between items-center gap-2">
           <div>{zone.name}</div>
-          <div className="flex justify-between gap-2">
+          <div className="flex justify-between gap-2 items-center">
             <a
               href="#"
               className="text-interactive"
