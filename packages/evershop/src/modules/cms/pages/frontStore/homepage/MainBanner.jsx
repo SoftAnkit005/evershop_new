@@ -1,38 +1,59 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
 import '@components/frontStore/catalog/product/list/item/Thumbnail.scss';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function MainBanner({ images }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleIndicatorClick = (index) => {
-    setActiveIndex(index);
+  const settings = {
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    customPaging: (i) => (
+      <div className="custom-dot">
+        {i + 1}
+      </div>
+    ),
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   };
 
   return (
-    <div className="carousel-slider">
-      <div className="carousel-inner">
-        {images.map((image, index) => (
-          <div key={index} className={`carousel-item ${index === activeIndex ? 'active' : ''}`}>
-            <img src={image.imageUrl} alt={image.alt} />
-          </div>
-        ))}
-      </div>
-      <div className="carousel-indicators">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to={index}
-            className={index === activeIndex ? 'active' : ''}
-            aria-current={index === activeIndex ? 'true' : 'false'}
-            aria-label={`Slide ${index + 1}`}
-            onClick={() => handleIndicatorClick(index)}
-           />
-        ))}
-      </div>
-    </div>
+    <Slider {...settings}>
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image.imageUrl} alt={image.alt} />
+        </div>
+      ))}
+    </Slider>
   );
 }
 

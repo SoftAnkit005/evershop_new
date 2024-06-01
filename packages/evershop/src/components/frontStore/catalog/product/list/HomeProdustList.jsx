@@ -3,7 +3,7 @@ import React from 'react';
 import { get } from '@evershop/evershop/src/lib/util/get';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
-export default function HomeProductList({ products = []}) {
+export default function HomeProductList({ products = [] }) {
 
   if (products.length === 0) {
     return (
@@ -23,7 +23,7 @@ export default function HomeProductList({ products = []}) {
                 <>
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                     <div className='products-img'>
-                      <img src={get(p, 'image.url')} alt={p.name}/>
+                      <img src={get(p, 'image.url')} alt={p.name} />
                     </div>
                   </div>
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
@@ -32,7 +32,7 @@ export default function HomeProductList({ products = []}) {
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
                       <div className='mt-5'>
-                          <a href='#' className='btn-white'>View All Products</a>
+                        <a href='#' className='btn-white'>View All Products</a>
                       </div>
                     </div>
                   </div>
@@ -45,13 +45,13 @@ export default function HomeProductList({ products = []}) {
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
                       <div className='mt-5'>
-                          <a href='#' className='btn-white'>View All Products</a>
+                        <a href='#' className='btn-white'>View All Products</a>
                       </div>
                     </div>
                   </div>
                   <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                     <div className='products-img'>
-                      <img src={get(p, 'image.url')} alt={p.name} className='w-100'/>
+                      <img src={get(p, 'image.url')} alt={p.name} className='w-100' />
                     </div>
                   </div>
                 </>

@@ -6,6 +6,7 @@ import ProductNoThumbnail from '@components/common/ProductNoThumbnail';
 function Thumbnail({ url, imageUrl, alt }) {
   return (
     <div className='card-body'>
+      <p className='static-note'>Best Seller</p>
       <div className="card-img">
         {imageUrl && (
           <a href={url}>

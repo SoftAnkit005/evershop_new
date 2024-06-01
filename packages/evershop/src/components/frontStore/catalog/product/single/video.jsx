@@ -4,7 +4,6 @@ import YouTube from 'react-youtube';
 
 export function video({ video }) {
 
-    console.log('Youtube Video  =====>', video);
 
     const getVideoId = (url) => {
         const match = url.match(/[?&]v=([^&]+)/);
@@ -14,7 +13,6 @@ export function video({ video }) {
     const videoId = getVideoId(video);
 
     if (!videoId) {
-        console.error('Invalid YouTube URL provided:', video);
         return null; // Render nothing if the URL is invalid
     }
     const opts = {
@@ -22,21 +20,21 @@ export function video({ video }) {
         height: '450',
         playerVars: {
             autoplay: 1
-          }
+        }
     }
 
-  return (   
+    return (
 
-    <section className='related-products'>
-        <div className='row align-items-center'>
-            <div className='col-12'>
-                <h4 className="font-20 pb-0 text-brawn mb-4">Video</h4>
-                <YouTube opts={opts} videoId={videoId}/>
-                <hr/>
+        <section className='related-products'>
+            <div className='row align-items-center'>
+                <div className='col-12'>
+                    <h4 className="font-20 pb-0 text-brawn mb-4">Video</h4>
+                    <YouTube opts={opts} videoId={videoId} />
+                    <hr />
+                </div>
             </div>
-        </div>
-    </section> 
-  );
+        </section>
+    );
 }
 
 video.propTypes = {

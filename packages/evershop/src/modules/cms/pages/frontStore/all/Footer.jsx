@@ -24,7 +24,7 @@ function Footer({ themeConfig: { copyRight } }) {
                     <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
                         <div className='footer-menu'>
                             <div className='footer-logo mb-4'>
-                                <img src={`${finalURL}/Assets/Images/footer_logo.svg`} alt='Footer Logo' />
+                                <img src={`${finalURL}/Assets/Images/header_logo.svg`} alt='Footer Logo' />
                             </div>
                             <p className='footer-link'>Wellness Care products are a result of an in-depth and voluminous research on various ancient Oriental Healing Practices.</p>
                             <div className='social-media'>
@@ -64,8 +64,8 @@ function Footer({ themeConfig: { copyRight } }) {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
-                        <div className='footer-menu'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
+                        <div className='footer-menu usefull-menu'>
                             <h5 className='footer-title'>Usefull links</h5>
                             <ul className='list-unstyled m-0 p-0'>
                                 <li>
@@ -89,8 +89,8 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
-                        <div className='footer-menu'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
+                        <div className='footer-menu categories-menu'>
                             <h5 className='footer-title'>Categories</h5>
                             <ul className='list-unstyled m-0 p-0'>
                                 <li>
@@ -123,20 +123,21 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>About Company</h5>
                             <p className='footer-link'>VIP Road,Vesu,Surat Gujrat,395007 India</p>
                         </div>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Email</h5>
-                            <p className='footer-link'>drbhanusalis@gmail.com</p>
+                            <p className='footer-link'>info@DrBWC.com</p>
                         </div>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Toll free number</h5>
                             <p className='footer-link'>18004195973</p>
                         </div>
                     </div>
+                    {/* 
                     <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Payment option</h5>
@@ -170,6 +171,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
+                */}
                 </div>
             </div>
             <p className='copyright'>{copyRight}</p>

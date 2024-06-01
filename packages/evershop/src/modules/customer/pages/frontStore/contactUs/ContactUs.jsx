@@ -33,7 +33,7 @@ export default function ContactUs() {
                                         <div className='contact-icon'>
                                             <img src='Assets/Images/gmail.svg' alt='Gmail' />
                                         </div>
-                                        <p className="font-16 text-dark mt-2"><b>drbhanusalis@gmail.com</b></p>
+                                        <p className="font-16 text-dark mt-2"><b>info@DrBWC.com</b></p>
                                     </div>
                                 </div>
                                 <div className='col-12 col-sm-6 col-md-6 col-lg-6'>
