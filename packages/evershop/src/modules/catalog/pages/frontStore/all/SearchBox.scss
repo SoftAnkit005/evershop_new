@@ -37,6 +37,11 @@
         input[type="text"]{
           font-size: 16px;
           padding: 12px 15px !important;
+          background: rgba(0,0,0,0.5) !important;
+          color: #FFF;
+        }
+        ::placeholder {
+          color: #FFF;
         }
       }
       .close-icon {
@@ -45,7 +50,7 @@
         right: 15px;
         font-size: 2rem;
         cursor: pointer;
-        color: #000;
+        color: #fff;
         z-index: 99;
       }
     }

@@ -83,7 +83,12 @@ ToastMessage.propTypes = {
 function AddToCart({ stockAvaibility, loading = false, error }) {
   return (
     <div className="add-to-cart mt-2">
-      <div className=''>
+      <div className='special-price'>
+        <h1 className='font-18 text-brawn'>special price</h1>
+        <p>In Stock</p>
+      </div>
+      <div className='d-flex align-items-center'>
+        <p className='font-16 pb-0 mb-0 text-black mt-4 me-4'>Quantity</p>
         <Field
           type="text"
           value="1"
@@ -95,7 +100,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
         />
       </div>
       {error && <div className="text-critical mt-1">{error}</div>}
-      <div className="mt-1">
+      <div className="mt-1 add-card">
         {stockAvaibility === true && (
           <Button
             title={_('ADD TO CART')}
@@ -111,7 +116,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
           />
         )}
         {stockAvaibility === false && (
-          <Button title={_('SOLD OUT')} onAction={() => {}} />
+          <Button title={_('SOLD OUT')} onAction={() => { }} />
         )}
       </div>
     </div>
@@ -152,7 +157,7 @@ export default function ProductForm({ product, action }) {
             qty={response.data.item.qty}
             count={response.data.count}
             cartUrl="/cart"
-            toastId={`${toastId  }-${  Math.random().toString(36).slice(2)}`}
+            toastId={`${toastId}-${Math.random().toString(36).slice(2)}`}
           />,
           { closeButton: false }
         )
@@ -206,8 +211,8 @@ ProductForm.propTypes = {
 };
 
 export const layout = {
-  areaId: 'productPageMiddleRight',
-  sortOrder: 20
+  areaId: 'productPagePrice',
+  sortOrder: 40
 };
 
 export const query = `

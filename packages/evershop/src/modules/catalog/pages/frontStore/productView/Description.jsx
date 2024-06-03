@@ -21,7 +21,7 @@ Description.propTypes = {
 
 export const layout = {
   areaId: 'productPageMiddleRight',
-  sortOrder: 50
+  sortOrder: 30
 };
 
 export const query = `

@@ -2,25 +2,19 @@
 /* eslint-disable react/no-array-index-key */
 import ProductNoThumbnail from '@components/common/ProductNoThumbnail';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "../../../../Styles/Styles.scss"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../categoryView/Index.scss"
 
 function Current({ image }) {
-  const [height, setHeight] = useState();
 
-
-
-  useEffect(() => {
-    setHeight(document.getElementById('product-current-image').offsetWidth);
-  }, []);
 
   return (
     <div
       id="product-current-image"
-      style={{ minHeight: height, background: '#f6f6f6' }}
+      style={{ background: '#f6f6f6' }}
       className="product-image product-single-page-image flex justify-center items-center"
     >
       {image && (

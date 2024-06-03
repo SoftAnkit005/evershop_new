@@ -28,37 +28,37 @@ export function companydetails({ companydetails }) {
       <div className='delivery-info'>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/warranty_care.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>3 Year Warranty Care</p>
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/quality_verified.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Quality <br />Verified</p>
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/assemble_available.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Assemble <br />Available</p>
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/drbwc_deliverd.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Dr.BWC <br />Deliverd</p>
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/free_delivery.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Free <br />Delivery</p>
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
-            <img src={`${finalURL}/Assets/Images/Wishlist.svg`} alt='Warranty' />
+            <img src={`${finalURL}/Assets/Images/secure_transaction.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Secure <br />Transaction</p>
         </div>

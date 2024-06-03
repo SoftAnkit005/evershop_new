@@ -45,8 +45,8 @@ export const query = `
 `;
 
 export const layout = {
-  areaId: 'productViewGeneralInfo',
-  sortOrder: 25
+  areaId: 'productPagePrice',
+  sortOrder: 45
 };
 
 export default Attributes;

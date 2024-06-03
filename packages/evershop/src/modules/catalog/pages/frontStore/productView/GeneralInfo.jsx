@@ -10,7 +10,7 @@ import { companydetails } from '@components/frontStore/catalog/product/single/co
 import { video } from '@components/frontStore/catalog/product/single/video';
 
 export default function GeneralInfo({ product }) {
-  
+
   return (
     <Area
       id="productViewGeneralInfo"

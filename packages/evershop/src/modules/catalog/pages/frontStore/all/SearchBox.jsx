@@ -1,17 +1,46 @@
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Input } from '@components/common/form/fields/Input';
 import XIcon from '@heroicons/react/solid/esm/XIcon';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import './SearchBox.scss';
 
+// Custom hook for typeable placeholder
+const useTypeablePlaceholder = (texts) => {
+  const [displayText, setDisplayText] = useState('');
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (charIndex < texts[placeholderIndex].length) {
+        setDisplayText((prev) => prev + texts[placeholderIndex][charIndex]);
+        setCharIndex(charIndex + 1);
+      } else {
+        setTimeout(() => {
+          setDisplayText('');
+          setCharIndex(0);
+          setPlaceholderIndex((placeholderIndex + 1) % texts.length);
+        }, 2000);
+      }
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, placeholderIndex, texts]);
+
+  return displayText;
+};
+
 export default function SearchBox({ searchPageUrl }) {
   const InputRef = useRef();
-  // Get the key from the URL
   const [keyword, setKeyword] = useState(null);
   const [showing, setShowing] = useState(false);
 
-  React.useEffect(() => {
+  // Placeholder texts for the typeable effect
+  const placeholderTexts = ["Welcome to Dr.Bwc", "Eco Friendly Products"];
+  const typeablePlaceholder = useTypeablePlaceholder(placeholderTexts);
+
+  useEffect(() => {
     const url = new URL(window.location.href);
     const key = url.searchParams.get('keyword');
     setKeyword(key);
@@ -33,7 +62,7 @@ export default function SearchBox({ searchPageUrl }) {
           style={{ width: '2.2rem', height: '2.2rem' }}
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="#CDA646"
         >
           <path
             strokeLinecap="round"
@@ -73,9 +102,9 @@ export default function SearchBox({ searchPageUrl }) {
                   />
                 </svg>
               }
-              placeholder={_('Search')}
+              placeholder={typeablePlaceholder}
               ref={InputRef}
-              value={keyword}
+              value={keyword || ''}
               onChange={(e) => {
                 setKeyword(e.target.value);
               }}

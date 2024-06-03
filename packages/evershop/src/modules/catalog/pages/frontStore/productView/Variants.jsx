@@ -177,7 +177,7 @@ Variants.propTypes = {
 };
 
 export const layout = {
-  areaId: 'productPageMiddleRight',
+  areaId: 'productPagePrice',
   sortOrder: 40
 };
 

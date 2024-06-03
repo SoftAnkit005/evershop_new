@@ -171,10 +171,10 @@ body{
 }
 
 .header-link{
-    @include font-16;
+    @include font-15;
     color: var(--white);
     text-decoration: none;
-    padding: 35px 10px 25px;
+    padding: 35px 20px 25px;
 }
 
 .header-link img{
@@ -235,10 +235,10 @@ body{
 }
 
 .discount-coupon{
-    background-color: var(--black);
+    background-color: #2d2d2d;
     @include d-flex();
     list-style: none;
-    padding: 20px;
+    padding: 10px;
     li{
         display: flex;
         align-items: center;
@@ -681,11 +681,11 @@ ul.navbar-nav::after{
     height: 48px !important;
 }
 
-.slick-prev{
+.testimonial  .slick-prev{
     left: -5% !important;
 }
 
-.slick-next{
+.testimonial  .slick-next{
     right: -5% !important;
 }
 
@@ -743,13 +743,12 @@ ul.navbar-nav::after{
     .copyright{
         @include Katide;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 16px !important;
         line-height: 16px;
         text-align: center;
         letter-spacing: 0.05em;
         text-transform: capitalize;
         color: var(--white);
-        background: rgba(255, 255, 255, 0.3);
         display: block;
         width: 100%;
         margin: 35px 0 0;
@@ -2454,7 +2453,7 @@ ul.navbar-nav::after{
     height: 750px;
     img{
         width: 100%;
-        height: 100%;
+        height: calc(100vh - 170px);
         object-fit: cover;
         object-position: center;
     }
@@ -2575,23 +2574,53 @@ select{
 
 .product-gallery{
     position: absolute;
-    left: -120px;
+    left: -85px;
     top: 0;
     margin: 0;
     padding: 0;
+    li{
+        a{
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
 }
 
 .delivery-info{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
     margin-top: 25px;
 }
 
+.add-card{
+    .btn-brown {
+        width: 100% !important;
+        padding: 13px !important;
+    }
+}
+
+.ck-content{
+    p{
+        font-family: "katide" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 35px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: #909090;
+        margin: 0;
+        padding: 0 0 15px 0;
+    }
+}
+
 .delivery-list{
-    width: 33.3%;
+    width: 15%;
     text-align: center;
 }
 
@@ -2601,10 +2630,83 @@ select{
     margin: 0 auto;
 }
 
+.auth-icon{
+    .mini-cart-icon, .self-center{
+        svg{
+            stroke: #CDA646
+        }
+    }
+}
+
+.navbar{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 10px;
+        left: 0;
+        background: linear-gradient(0.25turn, rgba(56,2,155,0), #CDA646, rgba(56,2,155,0));
+    }
+}
+
+.add-to-cart{
+    border: 1px solid #CCC;
+    padding: 20px;
+    border-radius: 20px;
+    .special-price{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        p{
+            font-family: 'Katide';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 16px;
+            color: #37A510;
+            background: rgba(55, 165, 16, 0.2);
+            border-radius: 5px;
+            margin: 0;
+            padding: 10px 20px;
+        }
+    }
+}
 
 #couponForm input.form-control{
     @include font-16;
 }
+
+.carousel-slider{
+    .slick-next{
+        right: 0px !important;
+        opacity: 0;
+    }
+    .slick-prev{
+        left: 0px !important;
+        opacity: 0;
+    }
+    .slick-dots{
+        bottom: 20%;
+        z-index: 999;
+        li.slick-active{
+            .custom-dot{
+                background-color: #FFF;
+            }
+        }
+        li .custom-dot{
+            width: 15px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            font-size: 0;
+        }
+    }
+    .slick-slide{
+        height: calc(100vh - 0px);
+    }
+} 
 
 
 @media screen and (max-width:575px) {
@@ -3243,7 +3345,7 @@ select{
     .self-center{
         padding: 0 5px;
     }
-    .product-detail{
+    .product-detail.mt-5.mb-0.pt-5{
         margin-top: 25px !important;
         padding-top: 0 !important;
     }
@@ -5260,11 +5362,22 @@ select{
         }
     }
 
+    .product-page-middle{
+        .container{
+            max-width: 85%;
+        }
+    }
+
 }
 
 @media screen and (min-width: 1890px) {
     .mobile-menu{
         display: none;
+    }
+    .product-page-middle{
+        .container{
+            max-width: 85%;
+        }
     }
     
 }
