@@ -72,6 +72,9 @@ function Footer({ themeConfig: { copyRight } }) {
                                     <a className='footer-link fade-left'>About Us</a>
                                 </li>
                                 <li>
+                                    <a href='/gallery' className='footer-link fade-left'>Gallery</a>
+                                </li>
+                                <li>
                                     <a href='/contact-us' className='footer-link fade-left'>Contact Us</a>
                                 </li>
                                 <li>

@@ -14,7 +14,7 @@ export default function GeneralInfo({ product }) {
   return (
     <Area
       id="productViewGeneralInfo"
-      className=""
+      className="products-wrapper"
       coreComponents={[
         {
           component: { default: Name },

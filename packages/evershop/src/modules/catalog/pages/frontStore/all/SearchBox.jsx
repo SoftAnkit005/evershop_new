@@ -35,15 +35,29 @@ export default function SearchBox({ searchPageUrl }) {
   const InputRef = useRef();
   const [keyword, setKeyword] = useState(null);
   const [showing, setShowing] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 575);
 
   // Placeholder texts for the typeable effect
   const placeholderTexts = ["Welcome to Dr.Bwc", "Eco Friendly Products"];
   const typeablePlaceholder = useTypeablePlaceholder(placeholderTexts);
 
+
   useEffect(() => {
     const url = new URL(window.location.href);
     const key = url.searchParams.get('keyword');
     setKeyword(key);
+  }, []);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 575);
+  };
+
+  // Add event listener for window resize
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -73,7 +87,7 @@ export default function SearchBox({ searchPageUrl }) {
         </svg>
       </a>
       {showing && (
-        <div className="search-input-container">
+        <div className={`search-input-container ${isMobile ? 'mobile-view' : ''}`}>
           <div className="search-input">
             <a
               href="#"
