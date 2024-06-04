@@ -47,10 +47,10 @@ export default function FeaturedInstagram() {
     return (
         <section className='testimonial'>
             <div className='container'>
-                <div className='text-center'>
+                {/* <div className='text-center'>
                     <h3 className='products-subtitle-black'>Instagram</h3>
-                    <p className='products-details-black'>Lorem Ipsumis simply dummy text of the printing and typesetting industry.</p>
-                </div>
+                    <p className='products-details-black'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div> */}
                 <div className='instagram-info'>
                     <img src='Assets/Images/instagram_id.svg' alt='Instagram ID' />
                     <h3>INSTAGRAM</h3>
@@ -59,28 +59,40 @@ export default function FeaturedInstagram() {
                 </div>
                 <Slider {...settings}>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_one.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_two.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_two.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_three.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_three.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_four.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_four.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_one.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_five.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_two.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_six.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_three.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_seven.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                     <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_four.png' alt='Instagram Post' className='w-100' />
+                        <img src='Assets/Images/insta_post_eight.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_nine.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_ten.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_eleven.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_twelve.jpg' alt='Instagram Post' className='w-100' />
                     </div>
                 </Slider>
             </div>

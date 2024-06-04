@@ -32,7 +32,7 @@ export default function HomeProductList({ products = [] }) {
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
                       <div className='mt-5'>
-                        <a href='#' className='btn-white'>View All Products</a>
+                        <a href='products' className='btn-white'>View All Products</a>
                       </div>
                     </div>
                   </div>
@@ -86,6 +86,5 @@ HomeProductList.propTypes = {
         listing: PropTypes.string
       })
     })
-  ).isRequired,
-  countPerRow: PropTypes.number.isRequired
+  ).isRequired
 };

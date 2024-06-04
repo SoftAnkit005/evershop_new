@@ -14,7 +14,7 @@ export default function TermsConditions() {
                     <div className='text-start'>
                         <h3 className='font-20 star'>Terms and Conditions</h3>
                         <p className='font-16'>Welcome to Bhanusali Wellness!</p>
-                        <p className='font-16'>These terms and conditions outline the rules and regulations for the use of Bhanusali Wellness Care’s Website, located at https://drbwc.com/.</p>
+                        <p className='font-16'>These terms and conditions outline the rules and regulations for the use of Bhanusali Wellness Care’s Website, located at https://DrBWC.com/</p>
                         <p className='font-16'>By accessing this website we assume you accept these terms and conditions. Do not continue to use Bhanusali Wellness if you do not agree to take all of the terms and conditions stated on this page.</p>
                         <p className='font-16'>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: “Client”, “You” and “Your” refers to you, the person log on this website and compliant to the Company’s terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company. “Party”, “Parties”, or “Us”, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
                         <hr />
@@ -36,6 +36,7 @@ export default function TermsConditions() {
                             <li className='font-16'>Redistribute content from Bhanusali Wellness</li>
                         </ul>
                         <p className='font-16'>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Bhanusali Wellness Care does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Bhanusali Wellness Care,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Bhanusali Wellness Care shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+                        <p className='font-16'>Bhanusali Wellness Care reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
                         <p className='font-16'>You warrant and represent that:</p>
                         <ul>
                             <li className='font-16'>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
@@ -80,7 +81,7 @@ export default function TermsConditions() {
                         <hr />
                     </div>
                     <div className='text-start mt-4'>
-                        <h3 className='font-20 star'>License</h3>
+                        <h3 className='font-20 star'>iFrames</h3>
                         <p className='font-16'>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
                         <hr />
                     </div>

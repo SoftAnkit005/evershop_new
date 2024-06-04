@@ -35,7 +35,7 @@ export default function FeaturedAbout() {
                         <div className='col-12 col-sm-12 col-md-12 col-lg-6 mt-5'>
                             <div className='products-info d-flex align-items-center'>
                                 <h1 className='about-title'>04</h1>
-                                <p className='products-details-white text-start pb-0'>You receive the highest warranty in the industry with an impeccable proficiency.</p>
+                                <p className='products-details-white text-start pb-0'>We offer the best and efficient after-sale services so that your massage chair is always tending to the ailments.</p>
                             </div>
                         </div>
                     </div>

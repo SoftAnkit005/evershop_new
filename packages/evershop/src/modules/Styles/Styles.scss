@@ -673,7 +673,15 @@ ul.navbar-nav::after{
 }
 
 .insta-slide {
-    padding: 25px;    
+    width: 320px !important;
+    height: 320px;
+    padding: 5px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }    
 }
 
 .slick-prev, .slick-next{
@@ -5796,6 +5804,14 @@ select{
         .slick-dots{
             bottom: 48px;
         }
+    }
+
+    .product-image {
+        width: 90%;
+        margin-left: auto;
+    }    
+    .product-gallery{
+        left: -45px;
     }
 }
 

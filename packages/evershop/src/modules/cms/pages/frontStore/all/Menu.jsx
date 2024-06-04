@@ -14,7 +14,7 @@ export default function Menu({ menu: { items } }) {
             {/* <a className={`header-link ${currentPath === item.url ? 'active' : ''}`} href={item.url}>
               {item.name}
             </a> */}
-             <a className="header-link" href={item.url}>
+            <a className="header-link" href={item.url}>
               {item.name}
             </a>
           </li>

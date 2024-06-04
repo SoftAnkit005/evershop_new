@@ -60,15 +60,15 @@ export default function FeaturedTestimonial() {
                         <div className='card'>
                             <div className='card-header'>
                                 <div className='card-name'>
-                                    <h3 className='client-name'>Nicholas Macejkovic</h3>
-                                    <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p>
+                                    <h3 className='client-name'>Slmon ningeri</h3>
+                                    {/* <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p> */}
                                 </div>
-                                <div className='card-img w-auto'>
+                                {/* <div className='card-img w-auto'>
                                     <img src='Assets/Images/liqnenergy.png' alt='Card One' />
-                                </div>
+                                </div> */}
                             </div>
                             <div className='card-body'>
-                                <p className='products-details-white text-start'>Quia quis molestiae vitae corrupti eveniet. Dolor qui necessitatibus voluptas sequi est. Suscipit exercitationem in est dignissimos ea. Ratione est nihil sit quos neque facilis ut aut laborum.</p>
+                                <p className='products-details-white text-start'>I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate.</p>
                             </div>
                         </div>
                     </div>
@@ -77,15 +77,15 @@ export default function FeaturedTestimonial() {
                         <div className='card'>
                             <div className='card-header'>
                                 <div className='card-name'>
-                                    <h3 className='client-name'>Nicholas Macejkovic</h3>
-                                    <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p>
+                                    <h3 className='client-name'>Vijay Accountant</h3>
+                                    {/* <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p> */}
                                 </div>
-                                <div className='card-img w-auto'>
-                                    <img src='Assets/Images/liqnenergy.png' alt='Card Two' />
-                                </div>
+                                {/* <div className='card-img w-auto'>
+                                    <img src='Assets/Images/liqnenergy.png' alt='Card One' />
+                                </div> */}
                             </div>
                             <div className='card-body'>
-                                <p className='products-details-white text-start'>Quia quis molestiae vitae corrupti eveniet. Dolor qui necessitatibus voluptas sequi est. Suscipit exercitationem in est dignissimos ea. Ratione est nihil sit quos neque facilis ut aut laborum.</p>
+                                <p className='products-details-white text-start'>I have purchase massage chair very happy with product and service. Very good company. Genuine person.</p>
                             </div>
                         </div>
                     </div>
@@ -94,15 +94,15 @@ export default function FeaturedTestimonial() {
                         <div className='card'>
                             <div className='card-header'>
                                 <div className='card-name'>
-                                    <h3 className='client-name'>Nicholas Macejkovic</h3>
-                                    <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p>
+                                    <h3 className='client-name'>Vandana Rawal</h3>
+                                    {/* <p className='products-details-white text-start m-0 p-0'>Lead Assurance Developer at LionEnergy</p> */}
                                 </div>
-                                <div className='card-img w-auto'>
-                                    <img src='Assets/Images/liqnenergy.png' alt='Card Three' />
-                                </div>
+                                {/* <div className='card-img w-auto'>
+                                    <img src='Assets/Images/liqnenergy.png' alt='Card One' />
+                                </div> */}
                             </div>
                             <div className='card-body'>
-                                <p className='products-details-white text-start'>Quia quis molestiae vitae corrupti eveniet. Dolor qui necessitatibus voluptas sequi est. Suscipit exercitationem in est dignissimos ea. Ratione est nihil sit quos neque facilis ut aut laborum.</p>
+                                <p className='products-details-white text-start'>Folding Massage Bed, Very Good product and I am happy and satisfied for sales and services.</p>
                             </div>
                         </div>
                     </div>

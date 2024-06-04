@@ -47,7 +47,7 @@ export default function ContactUs() {
                                 <div className='col-12 col-sm-6 col-md-6 col-lg-6'>
                                     <div className='contact-info'>
                                         <div className='contact-icon'>
-                                            <img src='Assets/Images/shipping.svg' alt='Free shipping' />
+                                            <img src='Assets/Images/free_shipping.svg' alt='Free shipping' />
                                         </div>
                                         <p className="font-16 text-dark mt-2"><b>Free shipping</b></p>
                                     </div>
