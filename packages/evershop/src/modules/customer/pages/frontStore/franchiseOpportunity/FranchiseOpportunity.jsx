@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import "../../../../Styles/Styles.scss";
@@ -53,7 +54,7 @@ export default function FranchiseOpportunity() {
                             <div className='franchise-info'>
                                 <h1 className='font-48 text-black'>become Dr BWC franchise owner</h1>
                                 <div className='mt-5'>
-                                    <a href='/thermal-heating-bed' className='btn-brown'>View all products</a>
+                                    <a href='/thermal-heating-bed' className='btn-brown'>Call Us Now</a>
                                 </div>
                             </div>
                         </div>
@@ -118,10 +119,10 @@ export default function FranchiseOpportunity() {
                         <div className='col-12 col-sm-12 col-md-12 col-lg-7'>
                             <div className='about-content text-start ms-5'>
                                 <h3 className="font-30 pb-3">about Dr.BWC</h3>
-                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
+                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
                                 <p className="products-details-black text-start text-body-tertiary">Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
-                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC goal is to convert the “i”llness to “We”llness for all .
-                                    The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
+                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC’s goal is to convert the  “i”llness to “We”llness for all .</p>
+                                <p className="products-details-black text-start text-body-tertiary">The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
                             </div>
                         </div>
                     </div>
@@ -196,7 +197,7 @@ export default function FranchiseOpportunity() {
                                 <h5>04</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Massage Chair</h4>
-                                    <p className='font-16 pb-0'>It is a complete solution for your body relaxation. Our chair massager has the 3D massage which helps in relieving the pain.</p>
+                                    <p className='font-16 pb-0'>It's a complete solution for your body relaxation. Our chair massager has the 3D massage which helps in relieving the pain.</p>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +259,7 @@ export default function FranchiseOpportunity() {
                 </div>
             </section>
             <section className='products-line-contact'>
-                <p className='font-30 mb-0 pb-0 text-white'>Choose from our Various Products Line <a href='/contact-us' className='btn-white ms-5'>contact us</a></p>
+                <p className='font-30 mb-0 pb-0 text-white'>Let Us Know Your Thoughts About Our Products. <a href='/contact-us' className='btn-white ms-5'>contact us</a></p>
             </section>
 
             <section className='need-relaxation mt-5 mb-5'>
@@ -345,7 +346,7 @@ export default function FranchiseOpportunity() {
                                 <h3 className="font-30 pb-3 lh-sm">Great earning opportunities to be partner with DR.BWC through franchises</h3>
                                 <ul className='m-0 ps-2'>
                                     <li className="products-details-black text-start text-body-tertiary">As we provide health & wellness solutions by proper tuning of natural resources at very affordable rates, lets spread this all over and become a part of a Healthy & Happy Life.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">We provide franchisees at a very low investment and handsome returns. In order to maintain affordable membership packages to visitors, but still not compromise our partners earnings, we have provided them with 2 other income sources through which they can earn good. There are overall 3 different ways through which franchisees can earn incomes with us as given below</li>
+                                    <li className="products-details-black text-start text-body-tertiary">We provide franchisees at a very low investment and handsome returns. In order to maintain affordable membership packages to visitors, but still not compromise our partners earnings, we have provided them with 2 other income sources through which they can earn good. There are overall 3 different ways through which franchisees can earn incomes with us as given below;</li>
                                     <li className="products-details-black text-start text-body-tertiary">1) Primarily, Our economically designed wellness membership package services to the visitors and people seeking relaxation.</li>
                                     <li className="products-details-black text-start text-body-tertiary">2) 10% to 30% margins in equipment selling.</li>
                                     <li className="products-details-black text-start text-body-tertiary">3) Franchisee referral income.</li>

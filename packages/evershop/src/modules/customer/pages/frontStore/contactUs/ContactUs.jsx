@@ -16,7 +16,7 @@ export default function ContactUs() {
                     <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
                         <div className='contact-details'>
                             <h4 className="font-20">about bhanusali wellness care</h4>
-                            <p className="font-16">In fact, it s kind of like herding cats. Demands change, deadlines shift, and projects always seem to be in a constant state of flux. If you want to make sure your clients feel appreciated through the daily ups and downs, and that you stay at the top of their list, we’ve got the perfect solution: the gift of massage Accessories.</p>
+                            <p className="font-16">DR.BWC is established in 2000 and has continued to grow and expand into India’s leading massage brands. Dr. BWC, The Brand represents value for money and strive for customers around the pan India. Network with best massage experience at affordable prices.</p>
                             <hr />
                             <h4 className="font-20">contact us</h4>
                             <div className='row'>
@@ -55,7 +55,7 @@ export default function ContactUs() {
                             </div>
                             <hr />
                             <p className="font-16 pb-0">Do you have questions about how we can help your company?</p>
-                            <p className="font-16 text-dark pb-0"><b>Send us an email and we ll get in touch shortly.</b></p>
+                            <p className="font-16 text-dark pb-0"><b>Send us an email and we’ll get in touch shortly.</b></p>
                         </div>
                     </div>
                     <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
@@ -94,7 +94,7 @@ export default function ContactUs() {
                                 </div>
                                 <div className='col-12'>
                                     <div className='form-group'>
-                                        <a href="#" className="btn btn-brown">Send Mail</a>
+                                        <a href="#" className="btn btn-brown">Ask A Question</a>
                                     </div>
                                 </div>
                             </div>

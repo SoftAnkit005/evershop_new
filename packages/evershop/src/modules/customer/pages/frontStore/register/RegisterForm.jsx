@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Field } from '@components/common/form/Field';
@@ -126,7 +127,7 @@ export default function RegisterForm({ action, homeUrl, loginApi, loginUrl }) {
           <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
             <div className='register-info'>
               <h4 className="font-30 text-white mb-4">Login</h4>
-              <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we wll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+              <p className='font-16 text-white mb-4'>Registering for this site allows you to access your order status and history. Just fill in the fields below, and we'll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
               <div className='d-block'>
                 <a className='btn-white w-50 text-center d-block ms-auto me-auto' href={loginUrl}>Login</a>
               </div>

@@ -78,7 +78,7 @@ export default function ShippingPolicy() {
                         <h5 className='font-18'>7.1 Sales Tax</h5>
                         <p className='font-16'>Sales tax has already been applied to the price of the goods as displayed on the website</p>
                         <h5 className='font-18'>7.2 Import Duties & Taxes</h5>
-                        <p className='font-16'>mport duties and taxes for international shipments may be liable to be paid upon arrival in destination country. This varies by country, and bhanusaliwellness encourage you to be aware of these potential costs before placing an order with us.</p>
+                        <p className='font-16'>Import duties and taxes for international shipments may be liable to be paid upon arrival in destination country. This varies by country, and bhanusaliwellness encourage you to be aware of these potential costs before placing an order with us.</p>
                         <p className='font-16'>If you refuse to to pay duties and taxes upon arrival at your destination country, the goods will be returned to bhanusaliwellness at the customers expense, and the customer will receive a refund for the value of goods paid, minus the cost of the return shipping. The cost of the initial shipping will not be refunded.</p>
                         <hr />
                     </div>

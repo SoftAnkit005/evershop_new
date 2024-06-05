@@ -31,32 +31,32 @@ function Footer({ themeConfig: { copyRight } }) {
                                 <h5 className='footer-title'>Follow Us On</h5>
                                 <ul className='list-unstyled m-0 p-0'>
                                     <li>
-                                        <a href='https://www.facebook.com/login/'>
+                                        <a href='https://www.facebook.com/DrBhanusaliwellnesscare'>
                                             <img src={`${finalURL}/Assets/Images/facebook.svg`} alt='Facebook' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://twitter.com/i/flow/login'>
+                                        <a href='https://x.com/BhanusaliW'>
                                             <img src={`${finalURL}/Assets/Images/twitter.svg`} alt='Twitter' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.instagram.com/accounts/login/?hl=en'>
+                                        <a href='https://www.instagram.com/dr.bhanusaliwellnesscare/'>
                                             <img src={`${finalURL}/Assets/Images/instagram.svg`} alt='Instagram' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.youtube.com/'>
+                                        <a href='https://www.youtube.com/channel/UC8y20B0YMniVdUqnfbwDjzg'>
                                             <img src={`${finalURL}/Assets/Images/youtube.svg`} alt='Youtube' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'>
+                                        <a href='https://www.linkedin.com/in/bhanusali-wellness-b72a25234/'>
                                             <img src={`${finalURL}/Assets/Images/linkedin.svg`} alt='Linkedin' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://web.whatsapp.com/'>
+                                        <a href='https://api.whatsapp.com/send?phone=919909993597&text=I%20come%20from%20drbwc.com'>
                                             <img src={`${finalURL}/Assets/Images/whatsapp.svg`} alt='Whatsapp' />
                                         </a>
                                     </li>
@@ -192,7 +192,7 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
     themeConfig: {
-        copyRight: '© 2022 Dr.Bwc. All Rights Reserved.'
+        copyRight: 'Copyright @ 2022 Bhanusaliwellness | Designed By Softieons'
     }
 };
 
