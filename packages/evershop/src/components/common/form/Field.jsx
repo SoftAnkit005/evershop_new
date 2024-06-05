@@ -1,4 +1,5 @@
-/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable consistent-return */
+/* eslint-disable no-param-reassign */
 import PropTypes from 'prop-types';
 import React from 'react';
 import PubSub from 'pubsub-js';
@@ -39,9 +40,19 @@ export function Field(props) {
   const { name, value, validationRules, onChange, type } = props;
   const context = useFormContext();
   const [fieldValue, setFieldValue] = React.useState(value);
+
+  // Defensive check for context.fields
+  if (!context || !context.fields) {
+    return null; // Return null to avoid rendering the field
+  }
+
   const field = context.fields.find((f) => f.name && f.name === name);
 
   React.useEffect(() => {
+    if (!context.addField || !context.removeField) {
+      return;
+    }
+
     context.addField(name, value, validationRules || []);
 
     return () => {
@@ -110,6 +121,7 @@ export function Field(props) {
         return Input;
     }
   })();
+
   return (
     <F
       {...props}

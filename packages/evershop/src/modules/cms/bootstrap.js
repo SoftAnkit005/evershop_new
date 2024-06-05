@@ -19,7 +19,7 @@ module.exports = () => {
       scripts: [],
       bases: []
     },
-    copyRight: `© 2022 Dr.Bwc. All Rights Reserved.`
+    copyRight: `Copyright @ 2022 Bhanusaliwellness | Designed By Softieons`
   };
   config.util.setModuleDefaults('themeConfig', themeConfig);
   config.util.setModuleDefaults('system', {

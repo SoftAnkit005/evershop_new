@@ -10,7 +10,8 @@ export default function CatalogMenuGroup({
   productGrid,
   categoryGrid,
   attributeGrid,
-  collectionGrid
+  collectionGrid,
+  tagGrid
 }) {
   return (
     <NavigationItemGroup
@@ -36,6 +37,11 @@ export default function CatalogMenuGroup({
           Icon: AttributeIcon,
           url: attributeGrid,
           title: 'Attributes'
+        },
+        {
+          Icon: ProductIcon,
+          url: tagGrid,
+          title: 'Tag'
         }
       ]}
     />
@@ -46,7 +52,8 @@ CatalogMenuGroup.propTypes = {
   attributeGrid: PropTypes.string.isRequired,
   categoryGrid: PropTypes.string.isRequired,
   collectionGrid: PropTypes.string.isRequired,
-  productGrid: PropTypes.string.isRequired
+  productGrid: PropTypes.string.isRequired,
+  tagGrid: PropTypes.string.isRequired
 };
 
 export const layout = {
@@ -60,5 +67,6 @@ export const query = `
     categoryGrid: url(routeId:"categoryGrid")
     attributeGrid: url(routeId:"attributeGrid")
     collectionGrid: url(routeId:"collectionGrid")
+    tagGrid: url(routeId:"tagGrid")
   }
 `;

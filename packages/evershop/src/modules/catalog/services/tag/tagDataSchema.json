@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "errorMessage": {
+        "type": "Name should not be empty"
+      }
+    },
+    "product_id": {
+      "type": ["string", "number", "null"],
+      "pattern": "^[0-9]+$"
+    }
+  },
+  "additionalProperties": true
+}

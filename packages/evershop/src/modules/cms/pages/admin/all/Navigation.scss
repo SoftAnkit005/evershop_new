@@ -1,12 +1,12 @@
 .admin-navigation {
   width: 270px;
   float: left;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background-color: #fff;
   position: fixed;
   left: 0;
   top: 5.6rem;
-  overflow-y: scroll;
+  overflow: auto;
 }
 .admin-navigation .top-bar {
   display: flex;
