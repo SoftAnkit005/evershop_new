@@ -1,66 +1,20 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Input } from '@components/common/form/fields/Input';
 import XIcon from '@heroicons/react/solid/esm/XIcon';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import './SearchBox.scss';
 
-// Custom hook for typeable placeholder
-const useTypeablePlaceholder = (texts) => {
-  const [displayText, setDisplayText] = useState('');
-  const [placeholderIndex, setPlaceholderIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (charIndex < texts[placeholderIndex].length) {
-        setDisplayText((prev) => prev + texts[placeholderIndex][charIndex]);
-        setCharIndex(charIndex + 1);
-      } else {
-        setTimeout(() => {
-          setDisplayText('');
-          setCharIndex(0);
-          setPlaceholderIndex((placeholderIndex + 1) % texts.length);
-        }, 2000);
-      }
-    }, 100);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, placeholderIndex, texts]);
-
-  return displayText;
-};
-
 export default function SearchBox({ searchPageUrl }) {
   const InputRef = useRef();
+  // Get the key from the URL
   const [keyword, setKeyword] = useState(null);
   const [showing, setShowing] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 575);
 
-  // Placeholder texts for the typeable effect
-  const placeholderTexts = ["Welcome to Dr.Bwc", "Eco Friendly Products"];
-  const typeablePlaceholder = useTypeablePlaceholder(placeholderTexts);
-
-
-  useEffect(() => {
+  React.useEffect(() => {
     const url = new URL(window.location.href);
     const key = url.searchParams.get('keyword');
     setKeyword(key);
-  }, []);
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 575);
-  };
-
-  // Add event listener for window resize
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
   }, []);
 
   return (
@@ -79,7 +33,7 @@ export default function SearchBox({ searchPageUrl }) {
           style={{ width: '2.2rem', height: '2.2rem' }}
           fill="none"
           viewBox="0 0 24 24"
-          stroke="#CDA646"
+          stroke="currentColor"
         >
           <path
             strokeLinecap="round"
@@ -90,7 +44,7 @@ export default function SearchBox({ searchPageUrl }) {
         </svg>
       </a>
       {showing && (
-        <div className={`search-input-container ${isMobile ? 'mobile-view' : ''}`}>
+        <div className="search-input-container">
           <div className="search-input">
             <a
               href="#"
@@ -107,7 +61,7 @@ export default function SearchBox({ searchPageUrl }) {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ width: '1.8rem', height: '1.8rem' }}
-                  fill="#FFF"
+                  fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
@@ -119,9 +73,9 @@ export default function SearchBox({ searchPageUrl }) {
                   />
                 </svg>
               }
-              placeholder={typeablePlaceholder}
+              placeholder={_('Search')}
               ref={InputRef}
-              value={keyword || ''}
+              value={keyword}
               onChange={(e) => {
                 setKeyword(e.target.value);
               }}
