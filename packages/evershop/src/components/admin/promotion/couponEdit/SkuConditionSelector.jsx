@@ -1,5 +1,7 @@
+// SkuConditionSelector.jsx
+
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import { useModal } from '@components/common/modal/useModal';
 import ProductSkuSelector from '@components/admin/promotion/couponEdit/ProductSkuSelector';
 
@@ -9,7 +11,7 @@ export default function SkuConditionSelector({
   isMulti
 }) {
   const skus = Array.isArray(condition.value) ? condition.value : [];
-  const [selectedSKUs, setSelectedSKUs] = React.useState(skus || []);
+  const [selectedSKUs, setSelectedSKUs] = useState(skus || []);
   const modal = useModal();
 
   const closeModal = () => {

@@ -46,14 +46,14 @@ function ProductSkuSelector({
     variables: {
       filters: inputValue
         ? [
-            { key: 'keyword', operation: 'eq', value: inputValue },
-            { key: 'page', operation: 'eq', value: page.toString() },
-            { key: 'limit', operation: 'eq', value: limit.toString() }
-          ]
+          { key: 'keyword', operation: 'eq', value: inputValue },
+          { key: 'page', operation: 'eq', value: page.toString() },
+          { key: 'limit', operation: 'eq', value: limit.toString() }
+        ]
         : [
-            { key: 'limit', operation: 'eq', value: limit.toString() },
-            { key: 'page', operation: 'eq', value: page.toString() }
-          ]
+          { key: 'limit', operation: 'eq', value: limit.toString() },
+          { key: 'page', operation: 'eq', value: page.toString() }
+        ]
     },
     pause: true
   });

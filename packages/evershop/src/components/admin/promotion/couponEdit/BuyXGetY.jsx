@@ -44,7 +44,7 @@ function SkuSelector({ product, updateProduct }) {
                     sku
                   });
                 }}
-                onUnSelect={() => {}}
+                onUnSelect={() => { }}
                 closeModal={closeModal}
               />
             </div>
