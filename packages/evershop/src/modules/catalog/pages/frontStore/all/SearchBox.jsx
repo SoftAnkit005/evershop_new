@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import { Input } from '@components/common/form/fields/Input';
