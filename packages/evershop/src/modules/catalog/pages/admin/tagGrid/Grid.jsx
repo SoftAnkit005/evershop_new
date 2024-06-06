@@ -6,13 +6,18 @@ import Button from '@components/common/form/Button';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 function Grid() {
-  const [name, setName] = useState('')
+  const [selectedOption, setSelectedOption] = useState('');
+  const [name, setName] = useState('');
   const [condition, setCondition] = useState({
     key: 'sku'
 
   })
 
-  console.log('condition ========================,', condition, name);
+  const handleTagSubmit = () => {
+    console.log('condition ========================,', condition);
+    console.log('name ========================,', name);
+    console.log('selectedOption ========================,', selectedOption);
+  }
 
   return (
     <div className="grid grid-cols-4 gap-1">
@@ -21,8 +26,25 @@ function Grid() {
           <div className="form-field-container">
             <div className="form-group mb-3">
               <p className='pb-1'>Name</p>
-              <input type="text" name="name" placeholder="Name" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+              <select className='form-control' value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)}>
+                <option value="Premium tag">Premium tag</option>
+                <option value="Dr.Bwc Choice">Dr.Bwc Choice</option>
+                <option value="Customize">Customize</option>
+              </select>
             </div>
+            {selectedOption === 'Customize' && (
+              <div className="form-group mb-3">
+                <p className='pb-1'>Name</p>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  className="form-control"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+            )}
             <div className="form-group mb-3">
               <p className='pb-1'>Select Products</p>
               <SkuConditionSelector
@@ -33,16 +55,7 @@ function Grid() {
             <div className="col-span-1">
               <Button
                 title={_('Apply')}
-                onAction={() => {
-                  const tagForm = document.getElementById('tagForm');
-                  if (tagForm) {
-                    tagForm.dispatchEvent(
-                      new Event('submit', { cancelable: true, bubbles: true })
-                    );
-                  } else {
-                    console.error("Element with ID 'tagForm' not found.");
-                  }
-                }}
+                onAction={handleTagSubmit}
               />
             </div>
           </div>
