@@ -19,6 +19,11 @@ module.exports = exports = async (connection) => {
 )`
   );
 
+  await execute(connection, `CREATE TABLE \`tag\` (
+    "name" varchar NOT NULL,
+    "product_id" INT NOT NULL,
+  `);
+
   const color = await insert('attribute')
     .given({
       attribute_code: 'color',
@@ -681,4 +686,6 @@ module.exports = exports = async (connection) => {
     EXECUTE PROCEDURE delete_variant_group_after_attribute_type_changed();
     `
   );
+
+
 };
