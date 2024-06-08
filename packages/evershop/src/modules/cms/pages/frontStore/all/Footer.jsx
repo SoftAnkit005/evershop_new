@@ -69,7 +69,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             <h5 className='footer-title'>Usefull links</h5>
                             <ul className='list-unstyled m-0 p-0'>
                                 <li>
-                                    <a className='footer-link fade-left'>About Us</a>
+                                    <a href='/about' className='footer-link fade-left'>About Us</a>
                                 </li>
                                 <li>
                                     <a href='/gallery' className='footer-link fade-left'>Gallery</a>
