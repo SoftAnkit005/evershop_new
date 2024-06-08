@@ -41,7 +41,7 @@ export default function CatalogMenuGroup({
         {
           Icon: ProductIcon,
           url: tagGrid,
-          title: 'Tag'
+          title: 'Tags'
         }
       ]}
     />

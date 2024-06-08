@@ -191,6 +191,7 @@ export default function CustomerGrid({
                     setSelectedRows(customers.map((c) => c.uuid));
                   else setSelectedRows([]);
                 }}
+                aria-label="Select All Customers"
               />
             </th>
             <Area
@@ -273,6 +274,7 @@ export default function CustomerGrid({
                       );
                     }
                   }}
+                  aria-label={`Select customer ${c.uuid}`}
                 />
               </td>
               <Area

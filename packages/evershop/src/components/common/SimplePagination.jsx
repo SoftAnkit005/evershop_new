@@ -20,6 +20,7 @@ export function SimplePageination({ total, count, page, hasNext, setPage }) {
               e.preventDefault();
               setPage(page - 1);
             }}
+            aria-label="Previous Page"
           >
             <ChevronDoubleLeftIcon width={15} height={15} />
           </a>
@@ -37,6 +38,7 @@ export function SimplePageination({ total, count, page, hasNext, setPage }) {
               e.preventDefault();
               setPage(page + 1);
             }}
+            aria-label="Next Page"
           >
             <ChevronDoubleRightIcon width={15} height={15} />
           </a>

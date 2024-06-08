@@ -24,6 +24,7 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
               e.preventDefault();
               toast.dismiss(toastId);
             }}
+            aria-label="Dismiss toast"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

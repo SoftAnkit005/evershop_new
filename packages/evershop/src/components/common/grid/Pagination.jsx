@@ -87,12 +87,12 @@ export default function Pagination({ total, limit, page }) {
           {page > 1 && (
             <>
               <div className="first self-center">
-                <a href="#" onClick={(e) => onFirst(e)}>
+                <a href="#" onClick={(e) => onFirst(e)} aria-label="Go to First Page">
                   <ChevronDoubleLeftIcon width={20} height={20} />
                 </a>
               </div>
               <div className="prev self-center">
-                <a href="#" onClick={(e) => onPrev(e)}>
+                <a href="#" onClick={(e) => onPrev(e)} aria-label="Previous">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -130,7 +130,7 @@ export default function Pagination({ total, limit, page }) {
           {page * limit < total && (
             <>
               <div className="next self-center">
-                <a href="#" onClick={(e) => onNext(e)}>
+                <a href="#" onClick={(e) => onNext(e)} aria-label="Next">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -148,7 +148,7 @@ export default function Pagination({ total, limit, page }) {
                 </a>
               </div>
               <div className="last self-center">
-                <a href="#" onClick={(e) => onLast(e)}>
+                <a href="#" onClick={(e) => onLast(e)} aria-label="Go to Last Page">
                   <ChevronDoubleRightIcon width={20} height={20} />
                 </a>
               </div>

@@ -13,7 +13,7 @@ function HomeThumbnailImg({ url, imageUrl, alt }) {
           </a>
         )}
         {!imageUrl && (
-          <a href={url}>
+          <a href={url} aria-label="View Product Details">
             <ProductNoThumbnail width={100} height={100} />
           </a>
         )}

@@ -172,7 +172,7 @@ export default function OrderGrid({
       <table className="listing sticky category">
         <thead>
           <tr>
-            <th className="text-center">
+            <th className="text-center" aria-label="Select All Orders">
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked) {
@@ -272,7 +272,7 @@ export default function OrderGrid({
           />
           {orders.map((o) => (
             <tr key={o.orderId}>
-              <td>
+              <td aria-label="Select Order">
                 <Checkbox
                   isChecked={selectedRows.includes(o.uuid)}
                   onChange={(e) => {

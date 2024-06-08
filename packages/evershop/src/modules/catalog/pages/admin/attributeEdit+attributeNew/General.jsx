@@ -89,6 +89,7 @@ function Groups({ groups, createGroupApi }) {
                     e.preventDefault();
                     createGroup();
                   }}
+                  aria-label="Create group"
                 >
                   <svg
                     width="1.5rem"

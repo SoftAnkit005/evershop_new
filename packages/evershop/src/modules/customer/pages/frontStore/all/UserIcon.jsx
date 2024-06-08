@@ -5,7 +5,7 @@ import Icon from '@heroicons/react/outline/UserIcon';
 export default function UserIcon({ customer, accountUrl, loginUrl }) {
   return (
     <div className="self-center">
-      <a href={customer ? accountUrl : loginUrl}>
+      <a href={customer ? accountUrl : loginUrl} aria-label={customer ? "Go to account" : "Log in"}>
         <Icon width={25} height={25} />
       </a>
     </div>

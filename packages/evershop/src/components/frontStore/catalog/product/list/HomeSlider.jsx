@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { MainBanner } from '@default-theme/cms/frontStore/homepage/MainBanner';
 
-export default function HomeSlider({ products = [], countPerRow = 3 }) {
+export default function HomeSlider({ products = [] }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
@@ -16,7 +16,6 @@ export default function HomeSlider({ products = [], countPerRow = 3 }) {
     alt: p.name
   }));
 
-  console.log(images);
 
   return (
     <div className="carousel-slider">
@@ -33,6 +32,5 @@ HomeSlider.propTypes = {
         url: PropTypes.string.isRequired
       }).isRequired
     }).isRequired
-  ).isRequired,
-  countPerRow: PropTypes.number.isRequired
+  ).isRequired
 };

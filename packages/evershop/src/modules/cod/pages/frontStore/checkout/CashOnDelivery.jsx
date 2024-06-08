@@ -61,6 +61,7 @@ export default function CashOnDeliveryMethod() {
                 })
               );
             }}
+            aria-label="Select Cash on Delivery payment method"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

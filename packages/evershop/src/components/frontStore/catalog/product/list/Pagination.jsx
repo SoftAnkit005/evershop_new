@@ -74,6 +74,7 @@ export function Pagination({ total, limit, currentPage }) {
               type="button"
               className="link-button page-link"
               onClick={(e) => onPrev(e)}
+              aria-label="Previous Page"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,6 +129,7 @@ export function Pagination({ total, limit, currentPage }) {
               type="button"
               className="page-link link-button"
               onClick={(e) => onNext(e)}
+              aria-label="Next Page"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

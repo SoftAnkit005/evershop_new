@@ -19,6 +19,7 @@ function File({ file, select }) {
             e.preventDefault();
             select(file);
           }}
+          aria-label='filename'
         >
           <img src={file.url} alt="" />
         </a>
@@ -236,6 +237,7 @@ function FileBrowser({
             href="#"
             onClick={(e) => close(e)}
             className="text-interactive fill-current"
+            aria-label="Close"
           >
             <svg
               style={{ width: '2rem' }}
@@ -430,6 +432,7 @@ export default function CkeditorField({
             e.preventDefault();
             setFileBrowser(true);
           }}
+          aria-label="Open File Browser"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

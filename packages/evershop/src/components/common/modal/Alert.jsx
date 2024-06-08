@@ -99,6 +99,7 @@ function Alert({ children }) {
                   type="button"
                   className="modal-close-button text-icon"
                   onClick={() => dispatch({ type: 'closing' })}
+                  aria-label="Close Modal"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -117,17 +118,17 @@ function Alert({ children }) {
                   <Card.Session>{alert.content}</Card.Session>
                   {(alert.primaryAction !== undefined ||
                     alert.secondaryAction !== undefined) && (
-                    <Card.Session>
-                      <div className="flex justify-end space-x-1">
-                        {alert.primaryAction && (
-                          <Button {...alert.primaryAction} />
-                        )}
-                        {alert.secondaryAction && (
-                          <Button {...alert.secondaryAction} />
-                        )}
-                      </div>
-                    </Card.Session>
-                  )}
+                      <Card.Session>
+                        <div className="flex justify-end space-x-1">
+                          {alert.primaryAction && (
+                            <Button {...alert.primaryAction} />
+                          )}
+                          {alert.secondaryAction && (
+                            <Button {...alert.secondaryAction} />
+                          )}
+                        </div>
+                      </Card.Session>
+                    )}
                 </Card>
               </div>
             </div>

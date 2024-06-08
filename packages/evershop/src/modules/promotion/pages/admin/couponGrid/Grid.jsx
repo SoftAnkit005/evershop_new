@@ -233,6 +233,7 @@ export default function CouponGrid({
                     setSelectedRows(coupons.map((c) => c.uuid));
                   else setSelectedRows([]);
                 }}
+                aria-label="Select All Coupons"
               />
             </th>
             <Area
@@ -304,7 +305,7 @@ export default function CouponGrid({
           />
           {coupons.map((c) => (
             <tr key={c.couponId}>
-              <td>
+              <td aria-label="Select Coupon">
                 <Checkbox
                   isChecked={selectedRows.includes(c.uuid)}
                   onChange={(e) => {

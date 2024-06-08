@@ -27,6 +27,7 @@ export default function SearchBox({ searchPageUrl }) {
           setShowing(!showing);
           InputRef.current.focus();
         }}
+        aria-label="Toggle search"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +54,7 @@ export default function SearchBox({ searchPageUrl }) {
                 e.preventDefault();
                 setShowing(false);
               }}
+              aria-label="Close"
             >
               <XIcon width="2rem" height="2rem" />
             </a>

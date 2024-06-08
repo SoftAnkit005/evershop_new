@@ -206,7 +206,7 @@ export default function ProductGrid({
       <table className="listing sticky category">
         <thead>
           <tr>
-            <th className="text-center">
+            <th className="text-center" aria-label="Select all products">
               <Checkbox
                 onChange={(e) => {
                   if (e.target.checked) {
@@ -301,7 +301,7 @@ export default function ProductGrid({
           />
           {products.map((p) => (
             <tr key={p.uuid}>
-              <td>
+              <td aria-label={`Select product with UUID ${p.uuid}`}>
                 <Checkbox
                   isChecked={selectedRows.includes(p.uuid)}
                   onChange={(e) => {

@@ -151,7 +151,7 @@ export default function CollectionGrid({
         <table className="listing sticky category">
           <thead>
             <tr>
-              <th className="text-center">
+              <th className="text-center" aria-label="Select all collections">
                 <Checkbox
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -226,6 +226,7 @@ export default function CollectionGrid({
                           selectedRows.filter((r) => r !== c.uuid)
                         );
                     }}
+                    aria-label={`Select item with UUID ${c.uuid}`}
                   />
                 </td>
                 <Area

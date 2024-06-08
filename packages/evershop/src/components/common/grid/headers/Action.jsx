@@ -14,6 +14,7 @@ export default function ActionColumnHeader({ gridOriginalUrl = undefined }) {
               className="text-danger"
               title="Clear filter"
               href={gridOriginalUrl}
+              aria-label="Clear filter"
             >
               <i className="fa fa-filter" />
               <i className="fa fa-slash" style={{ marginLeft: '-13px' }} />

@@ -158,6 +158,7 @@ export default function CategoryGrid({
                     setSelectedRows([]);
                   }
                 }}
+                aria-label="Select all categories"
               />
             </th>
             <Area
@@ -222,6 +223,7 @@ export default function CategoryGrid({
                     else
                       setSelectedRows(selectedRows.filter((r) => r !== c.uuid));
                   }}
+                  aria-label={`Select category ${c.name}`}
                 />
               </td>
               <Area

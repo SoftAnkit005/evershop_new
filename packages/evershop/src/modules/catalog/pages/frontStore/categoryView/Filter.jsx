@@ -84,9 +84,8 @@ export default function Filter({
   return (
     <FilterDispatch.Provider value={contextValue}>
       <div
-        className={`product-filter-tool hidden md:block ${
-          isOpen ? 'opening' : 'closed'
-        }`}
+        className={`product-filter-tool hidden md:block ${isOpen ? 'opening' : 'closed'
+          }`}
       >
         <div className="filter-heading">
           <span className="font-16">{_('SHOP BY')}</span>
@@ -127,6 +126,7 @@ export default function Filter({
             e.preventDefault();
             setIsOpen(!isOpen);
           }}
+          aria-label="Toggle filter"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -151,6 +151,7 @@ export default function Filter({
           e.preventDefault();
           setIsOpen(!isOpen);
         }}
+        aria-label="Toggle filter"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

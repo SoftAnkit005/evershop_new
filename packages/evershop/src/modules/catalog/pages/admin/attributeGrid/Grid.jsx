@@ -174,6 +174,7 @@ export default function AttributeGrid({
                     setSelectedRows(attributes.map((a) => a.uuid));
                   else setSelectedRows([]);
                 }}
+                aria-label="Select all attributes"
               />
             </th>
             <Area
@@ -257,6 +258,7 @@ export default function AttributeGrid({
                       setSelectedRows(selectedRows.filter((r) => r !== a.uuid));
                     }
                   }}
+                  aria-label={`Select attribute ${a.name}`}
                 />
               </td>
               <Area

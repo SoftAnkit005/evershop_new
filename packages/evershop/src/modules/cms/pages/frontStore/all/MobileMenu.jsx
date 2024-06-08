@@ -14,6 +14,7 @@ export default function MobileMenu({ menu: { items } }) {
           e.preventDefault();
           setShow(!show);
         }}
+        aria-label="Toggle menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
