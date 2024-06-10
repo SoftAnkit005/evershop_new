@@ -71,7 +71,7 @@ export default function Layout({ searchPageUrl }) {
       </div>
       <header className='header'>
         <div className='container-fluid'>
-          <div className="navbar navbar-expand-lg pt-3 pb-3">
+          <div className="navbar navbar-expand-lg pb-3">
             <Area
               id="header"
               noOuter

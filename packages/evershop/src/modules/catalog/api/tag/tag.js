@@ -5,8 +5,8 @@ const createTag = require('../../services/tag/createTag');
 
 // eslint-disable-next-line no-unused-vars
 module.exports = async (request, response, delegate, next) => {
-
-
+  const result = "test dayta";
+  return result;
   try {
     const { body: { name, product_id } } = request;
     // Insert the comment into the database

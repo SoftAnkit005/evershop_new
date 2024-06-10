@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function FranchiseOpportunity() {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 3,
@@ -119,10 +119,10 @@ export default function FranchiseOpportunity() {
                         <div className='col-12 col-sm-12 col-md-12 col-lg-7'>
                             <div className='about-content text-start ms-5'>
                                 <h3 className="font-30 pb-3">about Dr.BWC</h3>
-                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
-                                <p className="products-details-black text-start text-body-tertiary">Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
-                                <p className="products-details-black text-start text-body-tertiary">Dr. BWC’s goal is to convert the  “i”llness to “We”llness for all .</p>
-                                <p className="products-details-black text-start text-body-tertiary">The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
+                                <p className="products-details-black text-start text-black fw-semibold">Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
+                                <p className="products-details-black text-start text-black fw-semibold">Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
+                                <p className="products-details-black text-start text-black fw-semibold">Dr. BWC’s goal is to convert the  “i”llness to “We”llness for all .</p>
+                                <p className="products-details-black text-start text-black fw-semibold">The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ export default function FranchiseOpportunity() {
                                 <h5>01</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Head & Eye Massager</h4>
-                                    <p className='font-16 pb-0'>imulation of human massage technique, Fully relax your head muscles, Pressure massage, enhance comfort, help relax the muscles.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>imulation of human massage technique, Fully relax your head muscles, Pressure massage, enhance comfort, help relax the muscles.</p>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@ export default function FranchiseOpportunity() {
                                 <h5>02</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Neck & Shoulder Massager</h4>
-                                    <p className='font-16 pb-0'>Powerful Kneading and shiatsu massage for effective relief of neck, shoulder, lumber, abdomen, and leg aches.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>Powerful Kneading and shiatsu massage for effective relief of neck, shoulder, lumber, abdomen, and leg aches.</p>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@ export default function FranchiseOpportunity() {
                                 <h5>03</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Massage Pad</h4>
-                                    <p className='font-16 pb-0'>The rays not only benefit the muscles on the surface of the body but deeper parts of our body.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>The rays not only benefit the muscles on the surface of the body but deeper parts of our body.</p>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ export default function FranchiseOpportunity() {
                                 <h5>04</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Massage Chair</h4>
-                                    <p className='font-16 pb-0'>It's a complete solution for your body relaxation. Our chair massager has the 3D massage which helps in relieving the pain.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>It's a complete solution for your body relaxation. Our chair massager has the 3D massage which helps in relieving the pain.</p>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ export default function FranchiseOpportunity() {
                                 <h5>05</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Wireless Massage Gun</h4>
-                                    <p className='font-16 pb-0'>Four interchangeable massage heads, an ergonomic portable massage gun the most powerful can soothe your stiff muscles in minutes.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>Four interchangeable massage heads, an ergonomic portable massage gun the most powerful can soothe your stiff muscles in minutes.</p>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +215,7 @@ export default function FranchiseOpportunity() {
                                 <h5>06</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Unique Palm Massager</h4>
-                                    <p className='font-16 pb-0'>It is a handheld electric body massager that helps to relieve body pain and promotes blood circulation.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>It is a handheld electric body massager that helps to relieve body pain and promotes blood circulation.</p>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@ export default function FranchiseOpportunity() {
                                 <h5>07</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Electro Thermal Water Bag</h4>
-                                    <p className='font-16 pb-0'>An electric hot water pouch is a pouch filled & sealed with special gel, used to provide warmth.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>An electric hot water pouch is a pouch filled & sealed with special gel, used to provide warmth.</p>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@ export default function FranchiseOpportunity() {
                                 <h5>08</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Knee Massager</h4>
-                                    <p className='font-16 pb-0'>Through the air bag extrusion on both sides to accelerate blood ciculation and relieve knee pain</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>Through the air bag extrusion on both sides to accelerate blood ciculation and relieve knee pain</p>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,7 @@ export default function FranchiseOpportunity() {
                                 <h5>09</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Foot Massager</h4>
-                                    <p className='font-16 pb-0'>Innovative feet massaging features that focus on giving relief for achy, cold this machine offers deep kneading Shiatsu massage that soothes your feet</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>Innovative feet massaging features that focus on giving relief for achy, cold this machine offers deep kneading Shiatsu massage that soothes your feet</p>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ export default function FranchiseOpportunity() {
                                 <h5>10</h5>
                                 <div className='text-center'>
                                     <h4 className='font-18 text-black'>Full Body Shaper & Massager</h4>
-                                    <p className='font-16 pb-0'>This massager is one of the powerful massager which can also be used for fat reduction from different parts of the body.</p>
+                                    <p className='font-16 pb-0 text-black fw-semibold'>This massager is one of the powerful massager which can also be used for fat reduction from different parts of the body.</p>
                                 </div>
                             </div>
                         </div>
@@ -269,10 +269,10 @@ export default function FranchiseOpportunity() {
                             <div className='relaxation-content text-start ms-5'>
                                 <h3 className="font-30 pb-3">Why do we need Relaxation ?</h3>
                                 <ul className='m-0 ps-2'>
-                                    <li className="products-details-black text-start text-body-tertiary">In a world of go-go-go, there’s not much time left to relax between work and endless to-do lists.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">To some people, it may seem like a waste of time, but putting in that little bit of effort can make those few minutes of relaxation well worth it</li>
-                                    <li className="products-details-black text-start text-body-tertiary">Take a look at why relaxing is important and how you can enjoy these benefits. Without relaxation you can remain tired, stressed, unhealthy and get sick more often.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">Many say rest is as important as the work we do day to day as without it, we wouldn’t be effective.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">In a world of go-go-go, there’s not much time left to relax between work and endless to-do lists.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">To some people, it may seem like a waste of time, but putting in that little bit of effort can make those few minutes of relaxation well worth it</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">Take a look at why relaxing is important and how you can enjoy these benefits. Without relaxation you can remain tired, stressed, unhealthy and get sick more often.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">Many say rest is as important as the work we do day to day as without it, we wouldn’t be effective.</li>
                                 </ul>
                             </div>
                         </div>
@@ -345,11 +345,11 @@ export default function FranchiseOpportunity() {
                             <div className='great-earning-content text-start ms-5'>
                                 <h3 className="font-30 pb-3 lh-sm">Great earning opportunities to be partner with DR.BWC through franchises</h3>
                                 <ul className='m-0 ps-2'>
-                                    <li className="products-details-black text-start text-body-tertiary">As we provide health & wellness solutions by proper tuning of natural resources at very affordable rates, lets spread this all over and become a part of a Healthy & Happy Life.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">We provide franchisees at a very low investment and handsome returns. In order to maintain affordable membership packages to visitors, but still not compromise our partners earnings, we have provided them with 2 other income sources through which they can earn good. There are overall 3 different ways through which franchisees can earn incomes with us as given below;</li>
-                                    <li className="products-details-black text-start text-body-tertiary">1) Primarily, Our economically designed wellness membership package services to the visitors and people seeking relaxation.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">2) 10% to 30% margins in equipment selling.</li>
-                                    <li className="products-details-black text-start text-body-tertiary">3) Franchisee referral income.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">As we provide health & wellness solutions by proper tuning of natural resources at very affordable rates, lets spread this all over and become a part of a Healthy & Happy Life.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">We provide franchisees at a very low investment and handsome returns. In order to maintain affordable membership packages to visitors, but still not compromise our partners earnings, we have provided them with 2 other income sources through which they can earn good. There are overall 3 different ways through which franchisees can earn incomes with us as given below;</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">1) Primarily, Our economically designed wellness membership package services to the visitors and people seeking relaxation.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">2) 10% to 30% margins in equipment selling.</li>
+                                    <li className="products-details-black text-start text-black fw-semibold">3) Franchisee referral income.</li>
                                 </ul>
                             </div>
                         </div>

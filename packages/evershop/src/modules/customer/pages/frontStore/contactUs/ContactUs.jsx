@@ -16,7 +16,7 @@ export default function ContactUs() {
                     <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
                         <div className='contact-details'>
                             <h4 className="font-20">about bhanusali wellness care</h4>
-                            <p className="font-16">DR.BWC is established in 2000 and has continued to grow and expand into India’s leading massage brands. Dr. BWC, The Brand represents value for money and strive for customers around the pan India. Network with best massage experience at affordable prices.</p>
+                            <p className="font-16 text-black fw-semibold">DR.BWC is established in 2000 and has continued to grow and expand into India’s leading massage brands. Dr. BWC, The Brand represents value for money and strive for customers around the pan India. Network with best massage experience at affordable prices.</p>
                             <hr />
                             <h4 className="font-20">contact us</h4>
                             <div className='row'>
@@ -54,7 +54,7 @@ export default function ContactUs() {
                                 </div>
                             </div>
                             <hr />
-                            <p className="font-16 pb-0">Do you have questions about how we can help your company?</p>
+                            <p className="font-16 pb-0 text-black fw-semibold">Do you have questions about how we can help your company?</p>
                             <p className="font-16 text-dark pb-0"><b>Send us an email and we’ll get in touch shortly.</b></p>
                         </div>
                     </div>
@@ -64,31 +64,31 @@ export default function ContactUs() {
                             <div className='row'>
                                 <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                                     <div className='form-group mb-4'>
-                                        <label className="font-16 pb-1 text-body">Your Name</label>
+                                        <label className="font-16 pb-1 text-black fw-semibold">Your Name</label>
                                         <input type='text' className='form-control' />
                                     </div>
                                 </div>
                                 <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                                     <div className='form-group mb-4'>
-                                        <label className="font-16 pb-1 text-body">Your Email</label>
+                                        <label className="font-16 pb-1 text-black fw-semibold">Your Email</label>
                                         <input type='email' className='form-control' />
                                     </div>
                                 </div>
                                 <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                                     <div className='form-group mb-4'>
-                                        <label className="font-16 pb-1 text-body">Phone Number</label>
+                                        <label className="font-16 pb-1 text-black fw-semibold">Phone Number</label>
                                         <input type='number' className='form-control' />
                                     </div>
                                 </div>
                                 <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                                     <div className='form-group mb-4'>
-                                        <label className="font-16 pb-1 text-body">Company</label>
+                                        <label className="font-16 pb-1 text-black fw-semibold">Company</label>
                                         <input type='text' className='form-control' />
                                     </div>
                                 </div>
                                 <div className='col-12'>
                                     <div className='form-group mb-4'>
-                                        <label className="font-16 pb-1 text-body">Your Message</label>
+                                        <label className="font-16 pb-1 text-black fw-semibold">Your Message</label>
                                         <textarea type='text' className='form-control' required rows='5' />
                                     </div>
                                 </div>

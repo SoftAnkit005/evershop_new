@@ -53,10 +53,10 @@ export default function About() {
             <div className='col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7'>
               <div className='text-left'>
                 <h3 className='font-30'>about Dr.BWC</h3>
-                <p className='font-16'>Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
-                <p className='font-16'>Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
-                <p className='font-16'>Dr. BWC’s goal is to convert the “i”llness to “We”llness for all .</p>
-                <p className='font-16'>The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
+                <p className='font-16 text-black fw-semibold'>Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
+                <p className='font-16 text-black fw-semibold'>Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
+                <p className='font-16 text-black fw-semibold'>Dr. BWC’s goal is to convert the “i”llness to “We”llness for all .</p>
+                <p className='font-16 text-black fw-semibold'>The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function About() {
         <div className='container'>
           <div className='instagram-info bg-transparent'>
             <h3>Happy customers</h3>
-            <p>Convallis ullamcorper aliquet ultrices orci cum vestibulum lobortis erat.</p>
+            <p className='text-black fw-semibold'>Convallis ullamcorper aliquet ultrices orci cum vestibulum lobortis erat.</p>
           </div>
           <Slider {...settings}>
             <div className='insta-slide'>

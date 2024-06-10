@@ -1,5 +1,5 @@
 {
   "methods": ["POST"],
-  "path": "/tag",
-  "access": "private"
+  "path": "/tagdata",
+  "access": "public"
 }

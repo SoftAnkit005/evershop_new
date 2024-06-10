@@ -11,7 +11,10 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
-        <div className="text-center">{_('There is no product to display')}</div>
+        <div>
+          <img src='Assets/Images/no_data.svg' alt='No data' className='mb-5 mt-5 m-auto' />
+        </div>
+        <div className="text-center font-16 text-black">{_('There is no product to display')}</div>
       </div>
     );
   }
@@ -30,7 +33,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
     default:
       className = 'row wishlist-section';
   }
-  
+
 
   return (
     <div className={className}>

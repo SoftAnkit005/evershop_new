@@ -63,10 +63,10 @@ export const layout = {
 
 export const query = `
   query Query {
-    productGrid: url(routeId:"productGrid")
-    categoryGrid: url(routeId:"categoryGrid")
-    attributeGrid: url(routeId:"attributeGrid")
-    collectionGrid: url(routeId:"collectionGrid")
-    tagGrid: url(routeId:"tagGrid")
+    productGrid: url(routeId: "productGrid")
+    categoryGrid: url(routeId: "categoryGrid")
+    attributeGrid: url(routeId: "attributeGrid")
+    collectionGrid: url(routeId: "collectionGrid")
+    tagGrid: url(routeId: "tagGrid")
   }
 `;

@@ -6,7 +6,7 @@ export default function HomeSlider({ products = [] }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
-        <div className="text-center">There is no product to display</div>
+        <div className="text-center font-16 text-black">There is no product to display</div>
       </div>
     );
   }

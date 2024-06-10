@@ -12,7 +12,7 @@ export default function FeaturedProducts({ collection }) {
         <h3 className="mt-3 mb-3 text-center uppercase h5 tracking-widest d-none">
           {collection.name}
         </h3>
-        
+
         <HomeProductList products={collection.products.items} countPerRow={4} />
       </div>
     </div>
@@ -28,6 +28,7 @@ FeaturedProducts.propTypes = {
         PropTypes.shape({
           productId: PropTypes.number.isRequired,
           sku: PropTypes.string.isRequired,
+          companydetails: PropTypes.string.isRequired,
           name: PropTypes.string.isRequired,
           price: PropTypes.shape({
             regular: PropTypes.shape({
@@ -65,6 +66,7 @@ export const query = `
           productId
           name
           sku
+          companydetails
           price {
             regular {
               value

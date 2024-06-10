@@ -73,7 +73,7 @@ export default function FeaturedTestimonial() {
                         </div>
                     </div>
                     <div className='testimonial-slide'>
-                        <img src='Assets/Images/client_one.png' alt='Testimonial Post' className='client-img' />
+                        <img src='Assets/Images/client_two.png' alt='Testimonial Post' className='client-img' />
                         <div className='card'>
                             <div className='card-header'>
                                 <div className='card-name'>
@@ -90,7 +90,7 @@ export default function FeaturedTestimonial() {
                         </div>
                     </div>
                     <div className='testimonial-slide'>
-                        <img src='Assets/Images/client_one.png' alt='Testimonial Post' className='client-img' />
+                        <img src='Assets/Images/client_three.png' alt='Testimonial Post' className='client-img' />
                         <div className='card'>
                             <div className='card-header'>
                                 <div className='card-name'>

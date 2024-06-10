@@ -8,7 +8,7 @@ export default function HomeProductList({ products = [] }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
-        <div className="text-center">{_('There is no product to display')}</div>
+        <div className="text-center font-16 text-black">{_('There is no product to display')}</div>
       </div>
     );
   }
@@ -31,6 +31,7 @@ export default function HomeProductList({ products = [] }) {
                       <h1 className='products-title-white'>Auto Wellness Program</h1>
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
+                      <p className='font-16 text-white'>{p.companydetails}</p>
                       <div className='mt-5'>
                         <a href='products' className='btn-white'>View All Products</a>
                       </div>

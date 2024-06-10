@@ -3,87 +3,14 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: 'Katedryllon';
-    font-style: normal;
-    src: url('/Assets/Fonts/Katedryllon/Katedryllon.otf') format('opentype');
-}
 
-@font-face {
-    font-family: 'Aphasia_BT';
-    font-style: normal;
-    src: url('/Assets/Fonts/Aphasia_BT/Aphasia_BT.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/Assets/Fonts/Katide/ttf/katide_bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/Assets/Fonts/Katide/ttf/katide_extra_bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 100;
-    src: url('/Assets/Fonts/Katide/ttf/katide_extra_light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/Assets/Fonts/Katide/ttf/katide_heavy.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/Assets/Fonts/Katide/ttf/katide_light.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/Assets/Fonts/Katide/ttf/katide_medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/Assets/Fonts/Katide/ttf/katide_regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/Assets/Fonts/Katide/ttf/katide_semi_bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'katide';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/Assets/Fonts/Katide/ttf/katide_thin.ttf') format('truetype');
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
 body{
-    font-family: 'Aphasia_BT' !important;
-    font-family: 'Katedryllon' !important;
-    font-family: 'katide' !important;
+    font-family: "Nunito", sans-serif !important;
+    font-optical-sizing: auto;
+    font-style: normal;
     scroll-behavior: smooth;
 }
 
@@ -94,20 +21,6 @@ body{
     --brown: #72442F;
 }
 
-@mixin Katide{
-    font-family: 'katide' !important;
-    font-style: normal;
-}
-
-@mixin Katedryllon{
-    font-family: 'Katedryllon' !important;
-    font-style: normal;
-}
-
-@mixin Aphasia_BT{
-    font-family: 'Aphasia_BT' !important;
-    font-style: normal;
-}
 
 @mixin d-flex{
     display: flex;
@@ -312,7 +225,6 @@ ul.navbar-nav::after{
   }
 
 .slider-subtitle{
-    @include Katedryllon;
     font-weight: 400;
     font-size: 50px;
     line-height: 50px;
@@ -323,7 +235,6 @@ ul.navbar-nav::after{
 }
 
 .slider-title{
-    @include Katide;
     font-weight: 900;
     font-size: 180px;
     line-height: 180px;
@@ -384,7 +295,6 @@ ul.navbar-nav::after{
             }
         }
         a{
-            @include Katide;
             font-weight: 400;
             font-size: 16px;
             line-height: 18px;
@@ -493,7 +403,7 @@ ul.navbar-nav::after{
 }
 
 .products-title-white{
-    @include Katedryllon;
+    
     font-weight: 400;
     font-size: 48px;
     line-height: 48px;
@@ -504,7 +414,7 @@ ul.navbar-nav::after{
 }
 
 .doc-name-white{
-    @include Aphasia_BT;
+    
     font-weight: 400;
     font-size: 36px;
     line-height: 48px;
@@ -515,7 +425,7 @@ ul.navbar-nav::after{
 }
 
 .products-subtitle-white{
-    @include Katide;
+    
     font-weight: 700;
     font-size: 30px;
     line-height: 30px;
@@ -526,7 +436,7 @@ ul.navbar-nav::after{
 }
 
 .products-details-white{
-    @include Katide;
+    
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
@@ -539,7 +449,7 @@ ul.navbar-nav::after{
 }
     
 .btn-white{
-    @include Katide;
+    
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
@@ -553,8 +463,8 @@ ul.navbar-nav::after{
 }
 
 .products-title-black{
-    @include Katedryllon;
-    font-weight: 400;
+    
+    font-weight: 600;
     font-size: 48px;
     line-height: 48px;
     text-transform: capitalize;
@@ -564,8 +474,8 @@ ul.navbar-nav::after{
 }
 
 .doc-name-black{
-    @include Aphasia_BT;
-    font-weight: 400;
+    
+    font-weight: 700;
     font-size: 36px;
     line-height: 48px;
     text-transform: capitalize;
@@ -575,8 +485,8 @@ ul.navbar-nav::after{
 }
 
 .products-subtitle-black{
-    @include Katide;
-    font-weight: 700;
+    
+    font-weight: 500;
     font-size: 30px;
     line-height: 30px;
     text-transform: capitalize;
@@ -586,7 +496,7 @@ ul.navbar-nav::after{
 }
 
 .products-details-black{
-    @include Katide;
+    
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
@@ -599,7 +509,7 @@ ul.navbar-nav::after{
 }
     
 .btn-black{
-    @include Katide;
+    
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
@@ -617,7 +527,7 @@ ul.navbar-nav::after{
 }
 
 .about-title{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 80px;
     line-height: 80px;
@@ -646,7 +556,7 @@ ul.navbar-nav::after{
             display: block;
         }
         h3{
-            @include Katide;
+            
             font-weight: 700;
             font-size: 18px;
             line-height: 18px;
@@ -658,7 +568,7 @@ ul.navbar-nav::after{
             padding: 25px 0 0;
         }
         p{
-            @include Katide;
+            
             font-weight: 400;
             font-size: 18px;
             line-height: 30px;
@@ -722,8 +632,6 @@ ul.navbar-nav::after{
 .accreditation{
     margin: 48px 0 0;
     .accreditation-item{
-        @include flex-between;
-        flex-wrap: wrap;
         width: 100%;
         .accreditation-image{
             width: 250px;
@@ -735,8 +643,18 @@ ul.navbar-nav::after{
                 height: 80%;
                 object-fit: cover;
                 object-position: center;
+                background: var(--white);
+                box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.2);
             }
         }
+    }
+    .slick-next{
+        right: -25px;
+        top: 40%;
+    }
+    .slick-prev{
+        left: -65px;
+        top: 40%;
     }
 }
 
@@ -749,7 +667,7 @@ ul.navbar-nav::after{
         margin: 0 auto;
     }
     .copyright{
-        @include Katide;
+        
         font-weight: 400;
         font-size: 16px !important;
         line-height: 16px;
@@ -763,7 +681,7 @@ ul.navbar-nav::after{
         padding: 20px 0;
     }
     .footer-title{
-        @include Katide;
+        
         font-weight: 700;
         font-size: 18px;
         line-height: 35px;
@@ -773,7 +691,7 @@ ul.navbar-nav::after{
         color: #E5BA51;
     }
     .footer-link{
-        @include Katide;
+        
         font-weight: 300;
         font-size: 18px;
         line-height: 36px;
@@ -861,7 +779,6 @@ ul.navbar-nav::after{
             border-radius: 0px;
             color: var(--white) !important;
             content: "Prev";
-            font-family: "katide" !important;
             font-style: normal;
             font-weight: 400;
             font-size: 18px !important;
@@ -899,7 +816,6 @@ ul.navbar-nav::after{
             border-radius: 0px;
             color: var(--white) !important;
             content: "Next";
-            font-family: "katide" !important;
             font-style: normal;
             font-weight: 400;
             font-size: 18px !important;
@@ -945,7 +861,7 @@ ul.navbar-nav::after{
             width: 100%;
             margin: 20px 0 0;
             .client-name{
-                @include Katide;
+                
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 18px;
@@ -976,7 +892,7 @@ ul.navbar-nav::after{
 }
 
 .font-16{
-    @include Katide;
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 35px;
@@ -988,7 +904,7 @@ ul.navbar-nav::after{
 }
 
 .font-20{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
@@ -999,7 +915,7 @@ ul.navbar-nav::after{
 }
 
 .font-24{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 24px;
     line-height: 24px;
@@ -1007,7 +923,7 @@ ul.navbar-nav::after{
 }
 
 .font-30{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 30px;
     line-height: normal;
@@ -1018,7 +934,7 @@ ul.navbar-nav::after{
 }
 
 .font-36{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 36px;
     line-height: 36px;
@@ -1026,7 +942,7 @@ ul.navbar-nav::after{
 }
 
 .font-48{
-    @include Katide;
+    
     font-weight: 700;
     font-size: 48px;
     line-height: 69px;
@@ -1035,14 +951,14 @@ ul.navbar-nav::after{
 }
 
 .font-18{
-    @include Katide;
+    
     font-weight: 600;
     font-size: 18px;
     line-height: 18px;
     display: flex;
     align-items: center;
     text-transform: capitalize;
-    color: rgba(114, 68, 47, 0.5);
+    color: rgb(114, 68, 47);
     margin: 15px 0;
     padding: 0;
 }
@@ -1086,7 +1002,7 @@ ul.navbar-nav::after{
     padding: 18px 45px !important;
     background: var(--brown) !important;
     border-radius: 10px !important;
-    @include Katide;
+    
     font-weight: 500 !important;
     font-size: 16px !important;
     line-height: 20px !important;
@@ -1136,7 +1052,7 @@ ul.navbar-nav::after{
             margin-left: 25px;
             width: 100%;
             .products-name{
-                @include Katide;
+                
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 22px;
@@ -1148,7 +1064,7 @@ ul.navbar-nav::after{
                 width: 100%;
                 margin-top: 15px;
                 p{
-                    @include Katide;
+                    
                     font-weight: 600;
                     font-size: 22px;
                     line-height: 28px;
@@ -1196,7 +1112,7 @@ ul.navbar-nav::after{
     .saving-order{
         background: rgba(114, 68, 47, 0.1);
         border-radius: 10px;
-        @include Katide;
+        
         font-weight: 500;
         font-size: 18px;
         line-height: 18px;
@@ -1225,7 +1141,7 @@ ul.navbar-nav::after{
 }
 
 .btn-checkout{
-    @include Katide;
+    
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
@@ -1405,7 +1321,7 @@ ul.navbar-nav::after{
         background: rgba(114, 68, 47, 0.1);
         border: 1px solid var(--brown);
         border-radius: 10px;
-        @include Katide;
+        
         font-weight: 400;
         font-size: 18px;
         line-height: 20px;
@@ -1420,7 +1336,7 @@ ul.navbar-nav::after{
         background: var(--brown);
         border: 1px solid var(--brown);
         border-radius: 10px;
-        @include Katide;
+        
         font-weight: 400;
         font-size: 18px;
         line-height: 20px;
@@ -1462,7 +1378,7 @@ ul.navbar-nav::after{
                     border-right: 1px solid #E7E7E7;
                     margin-right: 20px;
                     a{
-                        @include Katide;
+                        
                         font-weight: 500;
                         font-size: 16px;
                         line-height: 18px;
@@ -1492,7 +1408,6 @@ ul.navbar-nav::after{
     background: rgba(114, 68, 47, 0.1);
     border: 1px solid var(--brown);
     border-radius: 10px;
-    font-family: "katide" !important;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -1539,7 +1454,7 @@ ul.navbar-nav::after{
 }
 
 .btn-filter{
-    @include Katide;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
@@ -1586,7 +1501,7 @@ ul.navbar-nav::after{
             }
             li{
                 &:first-child{
-                    @include Katide;
+                    
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -1597,7 +1512,7 @@ ul.navbar-nav::after{
                     padding: 0 0 10px 0;
                 }
                 &:last-child{
-                    @include Katide;
+                    
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 20px;
@@ -1625,7 +1540,7 @@ ul.navbar-nav::after{
             }
             .order-status{
                 p{
-                    @include Katide;
+                    
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 20px;
@@ -1633,7 +1548,7 @@ ul.navbar-nav::after{
                     text-transform: capitalize;
                     color: #969696;
                     span.btn-danger{
-                        @include Katide;
+                        
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 14px;
@@ -1692,7 +1607,7 @@ ul.navbar-nav::after{
                             margin: 10px;
                             &:nth-child(3){                                
                                 a{  
-                                    @include Katide;
+                                    
                                     font-weight: 600;
                                     font-size: 13px;
                                     line-height: 11px;
@@ -1728,7 +1643,7 @@ ul.navbar-nav::after{
             padding: 55px 15px 20px 15px;
             margin: -48px 0 0 0;
             h6{
-                @include Katide;
+                
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 15px;
@@ -1738,7 +1653,7 @@ ul.navbar-nav::after{
                 padding: 0;
             }
             h5{
-                @include Katide;
+                
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 17px;
@@ -1748,7 +1663,7 @@ ul.navbar-nav::after{
                 padding: 20px 0;
             }
             h4{
-                @include Katide;
+                
                 font-weight: 600;
                 font-size: 18px;
                 line-height: 17px;
@@ -1789,7 +1704,7 @@ ul.navbar-nav::after{
             border-right: 1px solid #e7e7e7;
             margin-right: 25px;
             label{
-                @include Katide;
+                
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 18px;
@@ -1803,7 +1718,7 @@ ul.navbar-nav::after{
                     color: var(--white);
                 }
                 a{
-                    @include Katide;
+                    
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 18px;
@@ -1954,7 +1869,7 @@ ul.navbar-nav::after{
         height: 100%;
         overflow: auto;
         h5{
-            @include Katide;
+            
             font-weight: 600;
             font-size: 40px;
             line-height: 50px;
@@ -2157,8 +2072,13 @@ ul.navbar-nav::after{
         background: radial-gradient(50% 50% at 50% 50%, #6A4D3C 0%, #2E1C14 100%), #D9D9D9;
         z-index: -1;
     }
-    .slick-prev, .slick-next{
-        top: 60%;
+    .slick-prev{
+        top: 65%;
+        left: -65px;
+    }
+    .slick-next{
+        top: 65%;
+        right: -55px;
     }
     .slick-prev:before{
         background-image: url('/Assets/Images/left.svg');
@@ -2259,7 +2179,7 @@ ul.navbar-nav::after{
                     align-items: center;
                     margin: 0 15px 0 0;
                     span{
-                        @include Katide;
+                        
                         font-weight: 600;
                         font-size: 20px;
                         line-height: normal;
@@ -2291,7 +2211,7 @@ ul.navbar-nav::after{
                 width: 100%;
                 margin-bottom: 35px;
                 p{
-                    @include Katide;
+                    
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 16px;
@@ -2608,7 +2528,6 @@ select{
 
 .ck-content{
     p{
-        font-family: "katide" !important;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -2663,7 +2582,6 @@ select{
         justify-content: space-between;
         width: 100%;
         p{
-            font-family: 'Katide';
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
@@ -2758,7 +2676,6 @@ select{
         margin: 48px auto 25px auto;
         padding-bottom: 10px;
         h3{
-            font-family: "katide" !important;
             font-style: normal;
             font-weight: 600;
             font-size: 30px;
@@ -2769,7 +2686,6 @@ select{
             padding: 0 0 15px 0;
         }
         p{
-            font-family: "katide" !important;
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
@@ -2786,7 +2702,6 @@ select{
 .about-team{
     .team-title{
         h3{
-            font-family: "katide" !important;
             font-style: normal;
             font-weight: 600;
             font-size: 30px;
@@ -2838,6 +2753,11 @@ select{
     }
 }
 
+.logo-icon{
+    img{
+        width: 80%;
+    }
+}
 
 @media screen and (max-width:575px) {
     .header .container-fluid{
@@ -3704,6 +3624,29 @@ select{
     .content{
         margin-top: 15px;
     }
+
+    .accreditation{
+        .accreditation-item{
+            .accreditation-image{
+                img{
+                    width: 40%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+        .slick-next{
+            right: 0px !important;
+            z-index: 9;
+        }
+        .slick-prev{
+            left: 0px !important;
+            z-index: 9;
+        }
+    }
     
 }
 
@@ -4394,6 +4337,29 @@ select{
 
     .content{
         margin-top: 15px;
+    }
+
+    .accreditation{
+        .accreditation-item{
+            .accreditation-image{
+                img{
+                    width: auto;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+        .slick-next{
+            right: -40px !important;
+            z-index: 9;
+        }
+        .slick-prev{
+            left: -40px !important;
+            z-index: 9;
+        }
     }
 }
 
@@ -5635,6 +5601,31 @@ select{
     .discount-coupon{
         padding-bottom: 0;
     }
+
+    .accreditation{
+        .accreditation-item{
+            .accreditation-image{
+                img{
+                    width: auto;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+        .slick-next{
+            right: -20px !important;
+            z-index: 9;
+        }
+        .slick-prev{
+            left: -20px !important;
+            z-index: 9;
+        }
+    }
+
+
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1440.98px) {
