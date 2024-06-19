@@ -1,0 +1,6 @@
+{
+    "methods": ["GET"],
+    "path": "/getproducttag/:id",
+    "access": "private"
+}
+  

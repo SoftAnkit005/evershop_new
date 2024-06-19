@@ -1,7 +1,7 @@
 {
   "type": "object",
   "properties": {
-    "description": {
+    "name": {
       "type": "string",
       "skipEscape": true
     }

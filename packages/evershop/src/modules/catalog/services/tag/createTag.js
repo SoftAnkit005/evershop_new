@@ -40,7 +40,10 @@ function validateTagDataBeforeInsert(data) {
 
 
 async function insertTagData(data, connection) {
-  const tag = await insert('tag').given(data).execute(connection);
+
+
+  const tag = await insert('tags').given(data).execute(connection);
+  // return tag;
 
 
   return {
@@ -54,11 +57,12 @@ async function insertTagData(data, connection) {
  * @param {Object} context
  */
 async function createTag(data, context) {
+
   const connection = await getConnection();
   await startTransaction(connection);
   try {
     const tagData = await getValue('tagDataBeforeCreate', data);
-
+   
     // Validate Tag data
     validateTagDataBeforeInsert(tagData);
 
@@ -67,7 +71,7 @@ async function createTag(data, context) {
       connection,
       ...context
     })(tagData, connection);
-
+  
     await commit(connection);
     return tag;
   } catch (e) {

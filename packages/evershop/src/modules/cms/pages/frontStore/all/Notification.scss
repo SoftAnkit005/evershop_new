@@ -178,7 +178,7 @@
 .Toastify__progress-bar--dark {
   background: #bb86fc;
 }
-@keyframes Toastify__bounceInRight {
+@keyframes Toastify__bounceUSDight {
   from,
   60%,
   75%,
@@ -336,7 +336,7 @@
 }
 .Toastify__bounce-enter--top-right,
 .Toastify__bounce-enter--bottom-right {
-  animation-name: Toastify__bounceInRight;
+  animation-name: Toastify__bounceUSDight;
 }
 .Toastify__bounce-enter--top-center {
   animation-name: Toastify__bounceInDown;
@@ -431,7 +431,7 @@
   animation-name: Toastify__flipOut;
 }
 
-@keyframes Toastify__slideInRight {
+@keyframes Toastify__slideUSDight {
   from {
     transform: translate3d(110%, 0, 0);
     visibility: visible;
@@ -509,7 +509,7 @@
 }
 .Toastify__slide-enter--top-right,
 .Toastify__slide-enter--bottom-right {
-  animation-name: Toastify__slideInRight;
+  animation-name: Toastify__slideUSDight;
 }
 .Toastify__slide-enter--top-center {
   animation-name: Toastify__slideInDown;

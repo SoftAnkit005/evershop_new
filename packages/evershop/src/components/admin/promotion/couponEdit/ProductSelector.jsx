@@ -30,7 +30,7 @@ const SearchQuery = `
   }
 `;
 
-function ProductSkuSelector({
+function ProductSelector({
   onSelect,
   onUnSelect,
   selectedChecker,
@@ -40,34 +40,35 @@ function ProductSkuSelector({
   const [inputValue, setInputValue] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
   const [page, setPage] = React.useState(1);
+
   const [result, reexecuteQuery] = useQuery({
     query: SearchQuery,
     variables: {
       filters: inputValue
         ? [
-          { key: 'keyword', operation: 'eq', value: inputValue },
-          { key: 'page', operation: 'eq', value: page.toString() },
-          { key: 'limit', operation: 'eq', value: limit.toString() }
-        ]
+            { key: 'keyword', operation: 'eq', value: inputValue },
+            { key: 'page', operation: 'eq', value: page.toString() },
+            { key: 'limit', operation: 'eq', value: limit.toString() }
+          ]
         : [
-          { key: 'limit', operation: 'eq', value: limit.toString() },
-          { key: 'page', operation: 'eq', value: page.toString() }
-        ]
+            { key: 'limit', operation: 'eq', value: limit.toString() },
+            { key: 'page', operation: 'eq', value: page.toString() }
+          ]
     },
     pause: true
   });
 
-  const selectProduct = async (sku, uuid, productId) => {
+  const selectProduct = async (productId,uuid) => {
     try {
-      await onSelect(sku, uuid, productId);
+      await onSelect(productId, uuid);
     } catch (e) {
       toast.error(e.message);
     }
   };
 
-  const unSelectProduct = async (sku, uuid, productId) => {
+  const unSelectProduct = async (productId, uuid) => {
     try {
-      await onUnSelect(sku, uuid, productId);
+      await onUnSelect(productId, uuid);
     } catch (e) {
       toast.error(e.message);
     }
@@ -147,7 +148,7 @@ function ProductSkuSelector({
                     </div>
                     <div className="col-span-5">
                       <h3>{product.name}</h3>
-                      <p>{product.sku}</p>
+                      <p>{product.productId}</p>
                     </div>
                     <div className="col-span-2 text-right">
                       {!selectedChecker(product) && (
@@ -157,9 +158,9 @@ function ProductSkuSelector({
                           onClick={async (e) => {
                             e.preventDefault();
                             await selectProduct(
-                              product.sku,
-                              product.uuid,
-                              product.productId
+                              product.productId,
+                              product.uuid
+                              
                             );
                           }}
                         >
@@ -173,9 +174,8 @@ function ProductSkuSelector({
                           onClick={(e) => {
                             e.preventDefault();
                             unSelectProduct(
-                              product.sku,
-                              product.uuid,
-                              product.productId
+                              product.productId,
+                              product.uuid
                             );
                           }}
                         >
@@ -206,11 +206,11 @@ function ProductSkuSelector({
   );
 }
 
-ProductSkuSelector.propTypes = {
+ProductSelector.propTypes = {
   onSelect: PropTypes.func.isRequired,
   onUnSelect: PropTypes.func.isRequired,
   selectedChecker: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired
 };
 
-export default ProductSkuSelector;
+export default ProductSelector;

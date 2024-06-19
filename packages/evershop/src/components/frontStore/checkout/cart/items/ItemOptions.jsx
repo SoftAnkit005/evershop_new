@@ -7,7 +7,7 @@ export function ItemOptions({ options = [] }) {
   if (options.length === 0) {
     return null;
   }
-  const currency = get(useAppState(), 'currency', 'USD');
+  const currency = get(useAppState(), 'currency', 'INR');
   const language = get(useAppState(), 'language', 'en');
 
   return (

@@ -3,41 +3,41 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useModal } from '@components/common/modal/useModal';
-import ProductSkuSelector from '@components/admin/promotion/couponEdit/ProductSkuSelector';
+import ProductSelector from '@components/admin/promotion/couponEdit/ProductSelector';
 
-export default function SkuConditionSelector({
+export default function ProductConditionSelector({
   condition,
   setCondition
   // isMulti
 }) {
-  const skus = Array.isArray(condition.value) ? condition.value : [];
-  const [selectedSKUs, setSelectedSKUs] = useState(skus || []);
+  const productIds = Array.isArray(condition.value) ? condition.value : [];
+  const [selectedProducts, setSelectedProducts] = useState(productIds || []);
   const modal = useModal();
 
   const closeModal = () => {
     modal.closeModal();
   };
 
-  const onSelect = (sku) => {
-    setSelectedSKUs([sku]);
+  const onSelect = (productId) => {
+    setSelectedProducts([productId]);
     // if (!isMulti) {
     //   return;
     // }
     // setSelectedSKUs([sku, ...selectedSKUs]);
   };
 
-  const onUnSelect = (sku) => {
-    setSelectedSKUs(selectedSKUs.filter((s) => s !== sku));
+  const onUnSelect = (productId) => {
+    setSelectedProducts(selectedProducts.filter((p) => p !== productId));
   };
 
   React.useEffect(() => {
     setCondition({
       ...condition,
-      value: selectedSKUs
+      value: selectedProducts
     });
-  }, [selectedSKUs]);
+  }, [selectedProducts]);
 
-  if (condition.key !== 'sku') {
+  if (condition.key !== 'productId') {
     return null;
   }
 
@@ -51,13 +51,13 @@ export default function SkuConditionSelector({
           modal.openModal();
         }}
       >
-        {selectedSKUs.map((sku, index) => (
-          <span key={sku}>
-            {index === 0 && <span className="italic">&lsquo;{sku}&rsquo;</span>}
-            {index === 1 && <span> and {selectedSKUs.length - 1} more</span>}
+        {selectedProducts.map((productId, index) => (
+          <span key={productId}>
+            {index === 0 && <span className="italic">&lsquo;{productId}&rsquo;</span>}
+            {index === 1 && <span> and {selectedProducts.length - 1} more</span>}
           </span>
         ))}
-        {selectedSKUs.length === 0 && <span>Choose SKUs</span>}
+        {selectedProducts.length === 0 && <span>Choose Products</span>}
       </a>
       {modal.state.showing && (
         <div className={modal.className} onAnimationEnd={modal.onAnimationEnd}>
@@ -67,10 +67,10 @@ export default function SkuConditionSelector({
             role="dialog"
           >
             <div className="modal">
-              <ProductSkuSelector
+              <ProductSelector
                 onSelect={onSelect}
                 onUnSelect={onUnSelect}
-                selectedChecker={({ sku }) => selectedSKUs.includes(sku)}
+                selectedChecker={({ productId }) => selectedProducts.includes(productId)}
                 closeModal={closeModal}
               />
             </div>
@@ -81,7 +81,7 @@ export default function SkuConditionSelector({
   );
 }
 
-SkuConditionSelector.propTypes = {
+ProductConditionSelector.propTypes = {
   condition: PropTypes.shape({
     key: PropTypes.string,
     value: PropTypes.oneOfType([

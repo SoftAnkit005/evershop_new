@@ -2180,7 +2180,7 @@ img,video {
     background: #bb86fc
 }
 
-@keyframes Toastify__bounceInRight {
+@keyframes Toastify__bounceUSDight {
     from,60%,75%,90%,to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
     }
@@ -2353,7 +2353,7 @@ img,video {
 }
 
 .Toastify__bounce-enter--top-right,.Toastify__bounce-enter--bottom-right {
-    animation-name: Toastify__bounceInRight
+    animation-name: Toastify__bounceUSDight
 }
 
 .Toastify__bounce-enter--top-center {
@@ -2464,7 +2464,7 @@ img,video {
     animation-name: Toastify__flipOut
 }
 
-@keyframes Toastify__slideInRight {
+@keyframes Toastify__slideUSDight {
     from {
         transform: translate3d(110%, 0, 0);
         visibility: visible
@@ -2557,7 +2557,7 @@ img,video {
 }
 
 .Toastify__slide-enter--top-right,.Toastify__slide-enter--bottom-right {
-    animation-name: Toastify__slideInRight
+    animation-name: Toastify__slideUSDight
 }
 
 .Toastify__slide-enter--top-center {

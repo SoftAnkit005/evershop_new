@@ -21,7 +21,7 @@ module.exports = {
       }
     },
     storeLanguage: () => getConfig('shop.language', 'en'),
-    storeCurrency: () => getConfig('shop.currency', 'USD'),
+    storeCurrency: () => getConfig('shop.currency', 'INR'),
     storeTimeZone: (setting) => {
       const storeTimeZone = setting.find((s) => s.name === 'storeTimeZone');
       if (storeTimeZone) {

@@ -35,7 +35,7 @@ module.exports = async function lifetimeSales(
       cancelled += 1;
     }
   });
-  const currency = getConfig('shop.currency', 'USD');
+  const currency = getConfig('shop.currency', 'INR');
   const language = getConfig('shop.language', 'en');
   const formatedTotal = new Intl.NumberFormat(language, {
     style: 'currency',

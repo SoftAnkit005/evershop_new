@@ -11,6 +11,7 @@ A SendGrid extension for Dr.Bwc. This extension is used to send email to custome
 ```javascript
 npm install @evershop/sendgrid
 ```
+
 ### Step 2: Register the extension by adding it to the config file
 
 ```javascript
@@ -63,10 +64,11 @@ npm install @evershop/sendgrid
 
 ```javascript
 // .env
-SENDGRID_API_KEY=your_api_key
+SENDGRID_API_KEY = your_api_key;
 ```
 
 This extension now supports 3 events:
+
 1. order_placed: This event is fired when a customer places an order. Send an email to confirm the order.
 2. reset_password: This event is fired when a customer requests to reset password. Send an email with a link to reset password.
 3. customer_registered: This event is fired when a customer registers an account. Send a customer welcome email.
@@ -85,7 +87,7 @@ Below is the data you can use in your email template
   "sid": "d991f3b4-a403-46cd-84fe-59e11a83560a",
   "order_number": "12072",
   "cart_id": 26274,
-  "currency": "CAD",
+  "currency": "INR",
   "customer_id": 12684,
   "customer_email": "evetwo@yopmail.com",
   "customer_full_name": "David",
@@ -188,4 +190,3 @@ Below is the data you can use in your email template
   "email": "david@evershop.io"
 }
 ```
-
