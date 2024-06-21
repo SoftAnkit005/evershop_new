@@ -7,9 +7,9 @@ export default function FeaturedProducts({ collection }) {
     return null;
   }
   return (
-    <div className="pt-3">
+    <div className="">
       <div className="products">
-        <h3 className="mt-3 mb-3 text-center uppercase h5 tracking-widest d-none">
+        <h3 className="fae-head">
           {collection.name}
         </h3>
 

@@ -13,14 +13,14 @@
 
 .button:hover {
     text-decoration: none;
-    background-color: rgba(201,204,207,.05)
+    background-color: rgba(201, 204, 207, .05)
 }
 
 .button.primary {
     background-color: var(--primary);
     border: 0;
     color: #fff;
-    box-shadow: 0 1px 0 rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.2)
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .2)
 }
 
 .button.primary:hover {
@@ -31,7 +31,7 @@
     background-color: var(--critical);
     border: 0;
     color: #fff;
-    box-shadow: 0 1px 0 rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.2)
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .2)
 }
 
 .button.critical:hover {
@@ -48,7 +48,7 @@
 }
 
 .button.outline.critical {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     border-color: var(--critical);
     color: var(--critical)
@@ -87,7 +87,7 @@
     display: flex;
     justify-content: center;
     z-index: 1001;
-    background-color: rgba(17,18,19,.3);
+    background-color: rgba(17, 18, 19, .3);
     -webkit-animation-duration: .25s;
     animation-duration: .25s
 }
@@ -226,7 +226,12 @@
     text-decoration: underline
 }
 
-html input[type=text],html input[type=email],html input[type=password],html input[type=tel],html select,html textarea {
+html input[type=text],
+html input[type=email],
+html input[type=password],
+html input[type=tel],
+html select,
+html textarea {
     background: none;
     padding: .5rem 1.2rem;
     display: block;
@@ -235,16 +240,26 @@ html input[type=text],html input[type=email],html input[type=password],html inpu
     width: 100%;
     position: relative;
     z-index: 10;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     margin: 1px;
     border-radius: 4px
 }
 
-html input[type=text]:focus,html input[type=email]:focus,html input[type=password]:focus,html input[type=tel]:focus,html select:focus,html textarea:focus {
+html input[type=text]:focus,
+html input[type=email]:focus,
+html input[type=password]:focus,
+html input[type=tel]:focus,
+html select:focus,
+html textarea:focus {
     outline: none
 }
 
-html input[type=text]:focus+.field-border:after,html input[type=email]:focus+.field-border:after,html input[type=password]:focus+.field-border:after,html input[type=tel]:focus+.field-border:after,html select:focus+.field-border:after,html textarea:focus+.field-border:after {
+html input[type=text]:focus+.field-border:after,
+html input[type=email]:focus+.field-border:after,
+html input[type=password]:focus+.field-border:after,
+html input[type=tel]:focus+.field-border:after,
+html select:focus+.field-border:after,
+html textarea:focus+.field-border:after {
     box-shadow: 0 0 0 2px #458fff
 }
 
@@ -264,7 +279,8 @@ input[type=radio] {
     appearance: none
 }
 
-input[type=radio]+.radio-checked,input[type=radio]+.radio-unchecked {
+input[type=radio]+.radio-checked,
+input[type=radio]+.radio-unchecked {
     border: 2px solid var(--formFieldBorder);
     border-radius: 100%;
     width: 1.9rem;
@@ -295,7 +311,8 @@ input[type=checkbox] {
     appearance: none
 }
 
-input[type=checkbox]+.checkbox-checked,input[type=checkbox]+.checkbox-unchecked {
+input[type=checkbox]+.checkbox-checked,
+input[type=checkbox]+.checkbox-unchecked {
     border: 2px solid var(--formFieldBorder);
     border-radius: 4px;
     width: 1.8rem;
@@ -332,7 +349,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 }
 
 .field-wrapper.radio-field {
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .field-wrapper .field-border {
@@ -400,7 +417,8 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     background-color: #fff4f4
 }
 
-.field-prefix,.field-suffix {
+.field-prefix,
+.field-suffix {
     position: relative;
     z-index: 10;
     padding: 0 1.25rem;
@@ -408,7 +426,8 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     display: inline-flex
 }
 
-.dropdown .field-prefix,.dropdown .field-suffix {
+.dropdown .field-prefix,
+.dropdown .field-suffix {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -427,12 +446,14 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     padding-right: 0 1rem 0 0
 }
 
-.form-control[disabled]+.field-border,input[readonly]+.field-border {
+.form-control[disabled]+.field-border,
+input[readonly]+.field-border {
     background-color: #e2e2e2;
     cursor: not-allowed
 }
 
-.form-control[disabled]+.field-border:after,input[readonly]+.field-border:after {
+.form-control[disabled]+.field-border:after,
+input[readonly]+.field-border:after {
     box-shadow: none
 }
 
@@ -468,7 +489,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 
 @media screen and (min-width: 768px) {
     .main-menu-mobile {
-        display:none
+        display: none
     }
 }
 
@@ -572,7 +593,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 }
 
 .ck-content code {
-    background-color: rgba(199,199,199,.3);
+    background-color: rgba(199, 199, 199, .3);
     padding: .15em;
     border-radius: 2px
 }
@@ -610,12 +631,12 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 
 .ck-content .pen-red {
     color: var(--ck-highlight-pen-red);
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .ck-content .pen-green {
     color: var(--ck-highlight-pen-green);
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(0, 0, 0, 0)
 }
 
 .ck-content .image.image_resized {
@@ -657,17 +678,20 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     display: flex
 }
 
-.ck-content .image-inline picture,.ck-content .image-inline img {
+.ck-content .image-inline picture,
+.ck-content .image-inline img {
     flex-grow: 1;
     flex-shrink: 1;
     max-width: 100%
 }
 
-.ck-content .image-style-block-align-left,.ck-content .image-style-block-align-right {
+.ck-content .image-style-block-align-left,
+.ck-content .image-style-block-align-right {
     max-width: calc(100% - var(--ck-image-style-spacing))
 }
 
-.ck-content .image-style-align-left,.ck-content .image-style-align-right {
+.ck-content .image-style-align-left,
+.ck-content .image-style-align-right {
     clear: none
 }
 
@@ -702,11 +726,14 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     margin-right: auto
 }
 
-.ck-content p+.image-style-align-left,.ck-content p+.image-style-align-right,.ck-content p+.image-style-side {
+.ck-content p+.image-style-align-left,
+.ck-content p+.image-style-align-right,
+.ck-content p+.image-style-side {
     margin-top: 0
 }
 
-.ck-content .image-inline.image-style-align-left,.ck-content .image-inline.image-style-align-right {
+.ck-content .image-inline.image-style-align-left,
+.ck-content .image-inline.image-style-align-right {
     margin-top: var(--ck-inline-image-style-spacing);
     margin-bottom: var(--ck-inline-image-style-spacing)
 }
@@ -769,7 +796,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     height: 100%;
     border: 1px solid #333;
     border-radius: 2px;
-    transition: 250ms ease-in-out box-shadow,250ms ease-in-out background,250ms ease-in-out border
+    transition: 250ms ease-in-out box-shadow, 250ms ease-in-out background, 250ms ease-in-out border
 }
 
 .ck-content .todo-list .todo-list__label>input::after {
@@ -783,7 +810,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     width: calc(var(--ck-todo-list-checkmark-size)/5.3);
     height: calc(var(--ck-todo-list-checkmark-size)/2.6);
     border-style: solid;
-    border-color: rgba(0,0,0,0);
+    border-color: rgba(0, 0, 0, 0);
     border-width: 0 calc(var(--ck-todo-list-checkmark-size)/8) calc(var(--ck-todo-list-checkmark-size)/8) 0;
     transform: rotate(45deg)
 }
@@ -868,12 +895,12 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     text-transform: uppercase;
     border: 1px solid #c4c4c4;
     border-radius: 2px;
-    font-family: Helvetica,Arial,Tahoma,Verdana,Sans-Serif;
+    font-family: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
     font-size: .75em;
     font-weight: bold;
     color: #333;
     background: #fff;
-    box-shadow: 2px 2px 1px rgba(0,0,0,.15);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -900,7 +927,8 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     overflow: hidden
 }
 
-.ck-content .table td,.ck-content .table th {
+.ck-content .table td,
+.ck-content .table th {
     position: relative
 }
 
@@ -917,7 +945,8 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     border: 1px double #b3b3b3
 }
 
-.ck-content .table table td,.ck-content .table table th {
+.ck-content .table table td,
+.ck-content .table table th {
     min-width: 2em;
     padding: .4em;
     border: 1px solid #bfbfbf
@@ -925,7 +954,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 
 .ck-content .table table th {
     font-weight: bold;
-    background: rgba(0,0,0,.05)
+    background: rgba(0, 0, 0, .05)
 }
 
 .ck-content[dir=rtl] .table th {
@@ -939,7 +968,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 .ck-content pre {
     padding: 1em;
     color: #353535;
-    background: rgba(199,199,199,.3);
+    background: rgba(199, 199, 199, .3);
     border: 1px solid #c4c4c4;
     border-radius: 2px;
     text-align: left;
@@ -1029,7 +1058,9 @@ input[type=range] {
     outline: none
 }
 
-input[type=range],input[type=range]::-webkit-slider-runnable-track,input[type=range]::-webkit-slider-thumb {
+input[type=range],
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: auto;
@@ -1084,7 +1115,8 @@ input[type=range]:nth-child(1)::-webkit-slider-thumb {
     margin-right: -5px
 }
 
-.filter-opener,.filter-closer {
+.filter-opener,
+.filter-closer {
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -1092,23 +1124,25 @@ input[type=range]:nth-child(1)::-webkit-slider-thumb {
     height: 35px
 }
 
-.filter-opener,.filter-closer {
+.filter-opener,
+.filter-closer {
     z-index: 998;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     justify-content: center;
     align-items: center
 }
 
-.filter-opener svg,.filter-closer svg {
+.filter-opener svg,
+.filter-closer svg {
     width: 20px;
     height: 20px
 }
 
 @media(max-width: 639px) {
     .product-filter-tool.opening {
-        display:block;
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -1120,7 +1154,8 @@ input[type=range]:nth-child(1)::-webkit-slider-thumb {
         box-sizing: border-box
     }
 
-    .filter-opener,.filter-closer {
+    .filter-opener,
+    .filter-closer {
         display: flex
     }
 }
@@ -1182,7 +1217,7 @@ input[type=range]:nth-child(1)::-webkit-slider-thumb {
 
 .product-thumbnail-listing {
     background-color: #f6f6f6;
-    color: rgba(51,17,51,.0666666667);
+    color: rgba(51, 17, 51, .0666666667);
     min-height: 250px;
     display: flex;
     justify-content: center;
@@ -1230,7 +1265,12 @@ html {
     font-size: 62.5%
 }
 
-html input[type=email],html input[type=password],html input[type=tel],html input[type=text],html select,html textarea {
+html input[type=email],
+html input[type=password],
+html input[type=tel],
+html input[type=text],
+html select,
+html textarea {
     padding: 1rem 1.2rem
 }
 
@@ -1250,104 +1290,127 @@ p {
 
 @media screen and (max-width: 767px) {
     body {
-        font-size:1.4rem;
+        font-size: 1.4rem;
         line-height: 1.25
     }
 
-    body .h1,body h1 {
+    body .h1,
+    body h1 {
         font-size: 2.94rem
     }
 
-    body .h2,body h2 {
+    body .h2,
+    body h2 {
         font-size: 2.66rem
     }
 
-    body .h3,body h3 {
+    body .h3,
+    body h3 {
         font-size: 2.31rem
     }
 
-    body .h4,body h4 {
+    body .h4,
+    body h4 {
         font-size: 2.03rem
     }
 
-    body .h5,body h5 {
+    body .h5,
+    body h5 {
         font-size: 1.61rem
     }
 
-    body .h6,body h6 {
+    body .h6,
+    body h6 {
         font-size: 1.4rem
     }
 }
 
 @media(min-width: 768px)and (max-width: 1535px) {
     body {
-        font-size:1.4rem;
+        font-size: 1.4rem;
         line-height: 1.5
     }
 
-    body .h1,body h1 {
+    body .h1,
+    body h1 {
         font-size: 2.94rem
     }
 
-    body .h2,body h2 {
+    body .h2,
+    body h2 {
         font-size: 2.66rem
     }
 
-    body .h3,body h3 {
+    body .h3,
+    body h3 {
         font-size: 2.31rem
     }
 
-    body .h4,body h4 {
+    body .h4,
+    body h4 {
         font-size: 2.03rem
     }
 
-    body .h5,body h5 {
+    body .h5,
+    body h5 {
         font-size: 1.61rem
     }
 
-    body .h6,body h6 {
+    body .h6,
+    body h6 {
         font-size: 1.4rem
     }
 }
 
 @media(min-width: 1536px) {
     body {
-        font-size:1.6rem;
+        font-size: 1.6rem;
         line-height: 2
     }
 
-    body .h1,body h1 {
+    body .h1,
+    body h1 {
         font-size: 3.36rem
     }
 
-    body .h2,body h2 {
+    body .h2,
+    body h2 {
         font-size: 3.04rem
     }
 
-    body .h3,body h3 {
+    body .h3,
+    body h3 {
         font-size: 2.64rem
     }
 
-    body .h4,body h4 {
+    body .h4,
+    body h4 {
         font-size: 2.32rem
     }
 
-    body .h5,body h5 {
+    body .h5,
+    body h5 {
         font-size: 1.84rem
     }
 
-    body .h6,body h6 {
+    body .h6,
+    body h6 {
         font-size: 1.6rem
     }
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600
 }
 
 @media only screen and (min-width: 1200px) {
     .header {
-        padding-left:50px;
+        padding-left: 50px;
         padding-right: 50px
     }
 }
@@ -1364,7 +1427,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (min-width: 1200px) {
     .page-width {
-        padding:0 55px;
+        padding: 0 55px;
         max-width: 80%;
     }
 }
@@ -1373,7 +1436,8 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #f6f6f6;
     // margin-top: 9rem;
     padding-top: 1rem;
-    padding-block-end:1rem;border-top: 1px solid #ddd
+    padding-block-end: 1rem;
+    border-top: 1px solid #ddd
 }
 
 .footer .card-icons svg {
@@ -1389,7 +1453,8 @@ table {
     border-collapse: collapse
 }
 
-table td,table th {
+table td,
+table th {
     border: 1px solid var(--divider);
     padding: .5rem;
     text-align: left
@@ -1399,7 +1464,8 @@ table th {
     vertical-align: top
 }
 
-table.listing td,table.listing th {
+table.listing td,
+table.listing th {
     border-left: 0;
     border-right: 0;
     padding: 1rem
@@ -1415,14 +1481,17 @@ button.outline {
     outline: none
 }
 
-*,::after,::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: currentColor
 }
 
-::after,::before {
+::after,
+::before {
     --tw-content: ''
 }
 
@@ -1432,7 +1501,7 @@ html {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: Helvetica,Helvetica Neue,Arial,Lucida Grande,sans-serif;
+    font-family: Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif;
     font-feature-settings: normal
 }
 
@@ -1452,7 +1521,12 @@ abbr:where([title]) {
     text-decoration: underline dotted
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit
 }
@@ -1462,12 +1536,16 @@ a {
     text-decoration: inherit
 }
 
-b,strong {
+b,
+strong {
     font-weight: bolder
 }
 
-code,kbd,pre,samp {
-    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+code,
+kbd,
+pre,
+samp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 1em
 }
 
@@ -1475,7 +1553,8 @@ small {
     font-size: 80%
 }
 
-sub,sup {
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -1496,7 +1575,11 @@ table {
     border-collapse: collapse
 }
 
-button,input,optgroup,select,textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     font-family: inherit;
     font-size: 100%;
     font-weight: inherit;
@@ -1506,11 +1589,15 @@ button,input,optgroup,select,textarea {
     padding: 0
 }
 
-button,select {
+button,
+select {
     text-transform: none
 }
 
-[type=button],[type=reset],[type=submit],button {
+[type=button],
+[type=reset],
+[type=submit],
+button {
     -webkit-appearance: button;
     background-color: transparent;
     background-image: none
@@ -1528,7 +1615,8 @@ progress {
     vertical-align: baseline
 }
 
-::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
     height: auto
 }
 
@@ -1550,7 +1638,19 @@ summary {
     display: list-item
 }
 
-blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre {
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
     margin: 0
 }
 
@@ -1563,7 +1663,9 @@ legend {
     padding: 0
 }
 
-menu,ol,ul {
+menu,
+ol,
+ul {
     list-style: none;
     margin: 0;
     padding: 0
@@ -1573,17 +1675,20 @@ textarea {
     resize: vertical
 }
 
-input::-moz-placeholder,textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
     opacity: 1;
     color: #9ca3af
 }
 
-input::placeholder,textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     opacity: 1;
     color: #9ca3af
 }
 
-[role=button],button {
+[role=button],
+button {
     cursor: pointer
 }
 
@@ -1591,12 +1696,20 @@ input::placeholder,textarea::placeholder {
     cursor: default
 }
 
-audio,canvas,embed,iframe,img,object,svg,video {
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
     display: block;
     vertical-align: middle
 }
 
-img,video {
+img,
+video {
     max-width: 100%;
     height: auto
 }
@@ -1605,7 +1718,9 @@ img,video {
     display: none
 }
 
-*,::after,::before {
+*,
+::after,
+::before {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
     --tw-pan-x: ;
@@ -1672,56 +1787,56 @@ img,video {
 }
 
 .\!container {
-    width: 100%!important
+    width: 100% !important
 }
 
 @media (min-width: 640px) {
     .container {
-        max-width:640px
+        max-width: 640px
     }
 
     .\!container {
-        max-width: 640px!important
+        max-width: 640px !important
     }
 }
 
 @media (min-width: 768px) {
     .container {
-        max-width:768px
+        max-width: 768px
     }
 
     .\!container {
-        max-width: 768px!important
+        max-width: 768px !important
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        max-width:1024px
+        max-width: 1024px
     }
 
     .\!container {
-        max-width: 1024px!important
+        max-width: 1024px !important
     }
 }
 
 @media (min-width: 1280px) {
     .container {
-        max-width:1280px
+        max-width: 1280px
     }
 
     .\!container {
-        max-width: 1280px!important
+        max-width: 1280px !important
     }
 }
 
 @media (min-width: 1536px) {
     .container {
-        max-width:1536px
+        max-width: 1536px
     }
 
     .\!container {
-        max-width: 1536px!important
+        max-width: 1536px !important
     }
 }
 
@@ -1791,11 +1906,11 @@ img,video {
 }
 
 .grid-cols-1 {
-    grid-template-columns: repeat(1,minmax(0,1fr))
+    grid-template-columns: repeat(1, minmax(0, 1fr))
 }
 
 .grid-cols-2 {
-    grid-template-columns: repeat(2,minmax(0,1fr))
+    grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
 .items-center {
@@ -1907,9 +2022,9 @@ img,video {
 }
 
 .shadow {
-    --tw-shadow: 0 0 0 1px rgba(63,63,68,.05),0 1px 3px 0 rgba(63,63,68,.15);
-    --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color),0 1px 3px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
+    --tw-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px 0 rgba(63, 63, 68, .15);
+    --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color), 0 1px 3px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
 .outline {
@@ -1926,15 +2041,15 @@ img,video {
 }
 
 .transition {
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms
 }
 
 .ease-in-out {
-    transition-timing-function: cubic-bezier(0.4,0,0.2,1)
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .hover\:underline:hover {
@@ -1943,7 +2058,7 @@ img,video {
 
 @media (min-width: 768px) {
     .md\:col-span-1 {
-        grid-column:span 1/span 1
+        grid-column: span 1/span 1
     }
 
     .md\:col-span-3 {
@@ -1963,19 +2078,19 @@ img,video {
     }
 
     .md\:grid-cols-4 {
-        grid-template-columns: repeat(4,minmax(0,1fr))
+        grid-template-columns: repeat(4, minmax(0, 1fr))
     }
 
     .md\:grid-cols-3 {
-        grid-template-columns: repeat(3,minmax(0,1fr))
+        grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 
     .md\:grid-cols-5 {
-        grid-template-columns: repeat(5,minmax(0,1fr))
+        grid-template-columns: repeat(5, minmax(0, 1fr))
     }
 
     .md\:grid-cols-2 {
-        grid-template-columns: repeat(2,minmax(0,1fr))
+        grid-template-columns: repeat(2, minmax(0, 1fr))
     }
 
     .md\:justify-start {
@@ -2030,18 +2145,22 @@ img,video {
 
 @media only screen and (max-width: 480px) {
     .Toastify__toast-container {
-        width:100vw;
+        width: 100vw;
         padding: 0;
         left: 0;
         margin: 0
     }
 
-    .Toastify__toast-container--top-left,.Toastify__toast-container--top-center,.Toastify__toast-container--top-right {
+    .Toastify__toast-container--top-left,
+    .Toastify__toast-container--top-center,
+    .Toastify__toast-container--top-right {
         top: 0;
         transform: translateX(0)
     }
 
-    .Toastify__toast-container--bottom-left,.Toastify__toast-container--bottom-center,.Toastify__toast-container--bottom-right {
+    .Toastify__toast-container--bottom-left,
+    .Toastify__toast-container--bottom-center,
+    .Toastify__toast-container--bottom-right {
         bottom: 0;
         transform: translateX(0)
     }
@@ -2104,13 +2223,13 @@ img,video {
 
 @media only screen and (max-width: 480px) {
     .Toastify__toast {
-        margin-bottom:0
+        margin-bottom: 0
     }
 }
 
 .Toastify__close-button {
     color: #fff;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     outline: none;
     border: none;
     padding: 0;
@@ -2132,7 +2251,8 @@ img,video {
     width: 14px
 }
 
-.Toastify__close-button:hover,.Toastify__close-button:focus {
+.Toastify__close-button:hover,
+.Toastify__close-button:focus {
     opacity: 1
 }
 
@@ -2154,7 +2274,7 @@ img,video {
     height: 5px;
     z-index: 9999;
     opacity: .7;
-    background-color: rgba(255,255,255,.7);
+    background-color: rgba(255, 255, 255, .7);
     transform-origin: left
 }
 
@@ -2181,7 +2301,12 @@ img,video {
 }
 
 @keyframes Toastify__bounceInRight {
-    from,60%,75%,90%,to {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
     }
 
@@ -2221,7 +2346,12 @@ img,video {
 }
 
 @keyframes Toastify__bounceInLeft {
-    from,60%,75%,90%,to {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
     }
 
@@ -2261,7 +2391,12 @@ img,video {
 }
 
 @keyframes Toastify__bounceInUp {
-    from,60%,75%,90%,to {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
     }
 
@@ -2293,7 +2428,8 @@ img,video {
         transform: translate3d(0, -10px, 0)
     }
 
-    40%,45% {
+    40%,
+    45% {
         opacity: 1;
         transform: translate3d(0, 20px, 0)
     }
@@ -2305,7 +2441,12 @@ img,video {
 }
 
 @keyframes Toastify__bounceInDown {
-    from,60%,75%,90%,to {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
     }
 
@@ -2337,7 +2478,8 @@ img,video {
         transform: translate3d(0, 10px, 0)
     }
 
-    40%,45% {
+    40%,
+    45% {
         opacity: 1;
         transform: translate3d(0, -20px, 0)
     }
@@ -2348,11 +2490,13 @@ img,video {
     }
 }
 
-.Toastify__bounce-enter--top-left,.Toastify__bounce-enter--bottom-left {
+.Toastify__bounce-enter--top-left,
+.Toastify__bounce-enter--bottom-left {
     animation-name: Toastify__bounceInLeft
 }
 
-.Toastify__bounce-enter--top-right,.Toastify__bounce-enter--bottom-right {
+.Toastify__bounce-enter--top-right,
+.Toastify__bounce-enter--bottom-right {
     animation-name: Toastify__bounceInRight
 }
 
@@ -2364,11 +2508,13 @@ img,video {
     animation-name: Toastify__bounceInUp
 }
 
-.Toastify__bounce-exit--top-left,.Toastify__bounce-exit--bottom-left {
+.Toastify__bounce-exit--top-left,
+.Toastify__bounce-exit--bottom-left {
     animation-name: Toastify__bounceOutLeft
 }
 
-.Toastify__bounce-exit--top-right,.Toastify__bounce-exit--bottom-right {
+.Toastify__bounce-exit--top-right,
+.Toastify__bounce-exit--bottom-right {
     animation-name: Toastify__bounceOutRight
 }
 
@@ -2552,11 +2698,13 @@ img,video {
     }
 }
 
-.Toastify__slide-enter--top-left,.Toastify__slide-enter--bottom-left {
+.Toastify__slide-enter--top-left,
+.Toastify__slide-enter--bottom-left {
     animation-name: Toastify__slideInLeft
 }
 
-.Toastify__slide-enter--top-right,.Toastify__slide-enter--bottom-right {
+.Toastify__slide-enter--top-right,
+.Toastify__slide-enter--bottom-right {
     animation-name: Toastify__slideInRight
 }
 
@@ -2568,11 +2716,13 @@ img,video {
     animation-name: Toastify__slideInUp
 }
 
-.Toastify__slide-exit--top-left,.Toastify__slide-exit--bottom-left {
+.Toastify__slide-exit--top-left,
+.Toastify__slide-exit--bottom-left {
     animation-name: Toastify__slideOutLeft
 }
 
-.Toastify__slide-exit--top-right,.Toastify__slide-exit--bottom-right {
+.Toastify__slide-exit--top-right,
+.Toastify__slide-exit--bottom-right {
     animation-name: Toastify__slideOutRight
 }
 

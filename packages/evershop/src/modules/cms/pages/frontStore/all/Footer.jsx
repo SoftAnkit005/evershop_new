@@ -31,32 +31,32 @@ function Footer({ themeConfig: { copyRight } }) {
                                 <h5 className='footer-title'>Follow Us On</h5>
                                 <ul className='list-unstyled m-0 p-0'>
                                     <li>
-                                        <a href='https://www.facebook.com/DrBhanusaliwellnesscare'>
+                                        <a href='https://www.facebook.com/DrBhanusaliwellnesscare' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/facebook.svg`} alt='Facebook' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://x.com/BhanusaliW'>
+                                        <a href='https://x.com/BhanusaliW' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/twitter.svg`} alt='Twitter' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.instagram.com/dr.bhanusaliwellnesscare/'>
+                                        <a href='https://www.instagram.com/dr.bhanusaliwellnesscare/' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/instagram.svg`} alt='Instagram' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.youtube.com/channel/UC8y20B0YMniVdUqnfbwDjzg'>
+                                        <a href='https://www.youtube.com/channel/UC8y20B0YMniVdUqnfbwDjzg' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/youtube.svg`} alt='Youtube' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.linkedin.com/in/bhanusali-wellness-b72a25234/'>
+                                        <a href='https://www.linkedin.com/in/bhanusali-wellness-b72a25234/' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/linkedin.svg`} alt='Linkedin' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://api.whatsapp.com/send?phone=919909993597&text=I%20come%20from%20drbwc.com'>
+                                        <a href='https://api.whatsapp.com/send?phone=919909993597&text=I%20come%20from%20drbwc.com' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/whatsapp.svg`} alt='Whatsapp' />
                                         </a>
                                     </li>
@@ -133,11 +133,11 @@ function Footer({ themeConfig: { copyRight } }) {
                         </div>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Email</h5>
-                            <p className='footer-link'>info@DrBWC.com</p>
+                            <p className='footer-link'><a href='mailto:info@DrBWC.com'>info@DrBWC.com</a></p>
                         </div>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Toll free number</h5>
-                            <p className='footer-link'>18004195973</p>
+                            <p className='footer-link'><a href='callto:18004195973'>18004195973</a></p>
                         </div>
                     </div>
                     {/* 

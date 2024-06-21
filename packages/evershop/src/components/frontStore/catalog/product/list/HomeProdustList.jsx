@@ -32,7 +32,7 @@ export default function HomeProductList({ products = [] }) {
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
                       <p className='font-16 text-white'>{p.companydetails}</p>
-                      <div className='mt-5'>
+                      <div className=''>
                         <a href='products' className='btn-white'>View All Products</a>
                       </div>
                     </div>
@@ -45,8 +45,8 @@ export default function HomeProductList({ products = [] }) {
                       <h1 className='products-title-white'>Auto Wellness Program</h1>
                       <h2 className='doc-name-white'>DR.BWC</h2>
                       <h3 className='products-subtitle-white'>{p.name}</h3>
-                      <div className='mt-5'>
-                        <a href='#' className='btn-white'>View All Products</a>
+                      <div className='mt-3'>
+                        <a href='products' className='btn-white'>View All Products</a>
                       </div>
                     </div>
                   </div>
@@ -57,6 +57,7 @@ export default function HomeProductList({ products = [] }) {
                   </div>
                 </>
               )}
+
             </div>
           </div>
         </div>

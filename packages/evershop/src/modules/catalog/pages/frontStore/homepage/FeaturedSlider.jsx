@@ -9,7 +9,7 @@ export default function FeaturedSlider({ collection }) {
 
   return (
 
-    <div className="mb-5">
+    <div className="">
       <div className="products">
         <h3 className="mt-3 mb-3 text-center uppercase h5 tracking-widest d-none">
           {collection.name}

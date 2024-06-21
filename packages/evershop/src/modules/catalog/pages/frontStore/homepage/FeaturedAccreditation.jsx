@@ -37,7 +37,7 @@ export default function FeaturedAccreditation() {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 4
+                    slidesToShow: 3
                 }
             }
         ]
@@ -97,7 +97,6 @@ export default function FeaturedAccreditation() {
                         <div className='accreditation-image'>
                             <img src='Assets/Images/accreditation_fourteen.jpg' alt='Accreditation fourteen' />
                         </div>
-
                     </Slider>
                 </div>
             </div>

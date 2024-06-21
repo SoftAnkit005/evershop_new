@@ -285,7 +285,7 @@ export default function FranchiseOpportunity() {
                 </div>
                 <div className='relaxation-wrapper'>
                     <div className='container'>
-                        <div className='row align-items-center'>
+                        <div className='row'>
                             <div className='col-12 col-sm-12 col-md-4 col-lg-4'>
                                 <div className='relaxation-card'>
                                     <div className='relaxation-card-img'>

@@ -18,9 +18,9 @@ export default function HomeSlider({ products = [] }) {
 
 
   return (
-    <div className="carousel-slider">
-      <MainBanner images={images} />
-    </div>
+    // <div className="carousel-slider">
+    <MainBanner images={images} />
+    // </div>
   );
 }
 
