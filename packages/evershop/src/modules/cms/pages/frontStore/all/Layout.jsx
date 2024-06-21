@@ -53,7 +53,7 @@ export default function Layout({ searchPageUrl }) {
       <LoadingBar />
 
       <div className='text-center offer-top discount-coupon'>
-        <div className='container'>
+        <div className='w-100'>
           <marquee direction="right" loop>
             <ul className='mb-0 d-flex align-items-center'>
               <li>

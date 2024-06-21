@@ -46,6 +46,18 @@ export function companydetails({ companydetails }) {
         </div>
         <div className='delivery-list'>
           <div className='info-icon'>
+            <img src={`${finalURL}/Assets/Images/replce.svg`} alt='Warranty' />
+          </div>
+          <p className='font-16 lh-sm mt-4'>No Replacement</p>
+        </div>
+        <div className='delivery-list'>
+          <div className='info-icon'>
+            <img src={`${finalURL}/Assets/Images/top-brand.svg`} alt='Warranty' />
+          </div>
+          <p className='font-16 lh-sm mt-4'>Top Brand</p>
+        </div>
+        <div className='delivery-list'>
+          <div className='info-icon'>
             <img src={`${finalURL}/Assets/Images/drbwc_deliverd.svg`} alt='Warranty' />
           </div>
           <p className='font-16 lh-sm mt-4'>Dr.BWC <br />Deliverd</p>

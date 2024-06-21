@@ -84,7 +84,7 @@ export default function Filter({
   return (
     <FilterDispatch.Provider value={contextValue}>
       <div
-        className={`product-filter-tool hidden md:block ${isOpen ? 'opening' : 'closed'
+        className={`product-filter-tool md:block ${isOpen ? 'opening' : 'closed'
           }`}
       >
         <div className="filter-heading">

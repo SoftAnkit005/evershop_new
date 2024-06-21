@@ -18,7 +18,7 @@ export default function Layout({ logoutUrl }) {
     }
   };
   return (
-    <div>
+    <div className='my-account-page'>
       <h1 className="text-center">{_('My Account')}</h1>
       <div className="page-width mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
         <div className="col-span-1 md:col-span-2">

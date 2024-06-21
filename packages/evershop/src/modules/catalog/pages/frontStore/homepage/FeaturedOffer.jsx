@@ -23,7 +23,7 @@ export default function FeaturedOffer() {
                     <h3 className='products-subtitle-black'>Sale Offers</h3>
                     <p className='products-details-black'>They have already used our services.</p>
                 </div>
-                <div className='row align-items-center mt-0 mt-md-5 mt-lg-5'>
+                <div className='row align-items-center'>
                     <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                         <div className='offer-image'>
                             <img src='Assets/Images/offer_one.png' alt='Offer One' className='w-100' />
