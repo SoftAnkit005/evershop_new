@@ -12,6 +12,9 @@ function MainBanner({ images }) {
     centerPadding: "60px",
     slidesToShow: 1,
     slidesToScroll: 1,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
     dots: true,
     customPaging: (i) => (
       <div className="custom-dot">
