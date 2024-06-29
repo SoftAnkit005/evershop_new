@@ -6,12 +6,12 @@ import "../../../../Styles/Styles.scss";
 
 export default function CategoryView() {
   return (
-    <div className="container">
-      <div className='row'>
-        <Area id="leftColumn" className="col-12 col-sm-12 col-md-3 col-lg-3" />
-        <Area id="rightColumn" className="col-12 col-sm-12 col-md-9 col-lg-9" />
-      </div>
+    <div className='row product-container'>
+      <Area id="leftColumn" className="col-12 col-sm-12 col-md-3 col-lg-2 pe-5 pb-5" />
+      <Area id="rightColumn" className="col-12 col-sm-12 col-md-9 col-lg-10 products-rightColumn" />
     </div>
+    /* <div className="container">
+    </div> */
   );
 }
 

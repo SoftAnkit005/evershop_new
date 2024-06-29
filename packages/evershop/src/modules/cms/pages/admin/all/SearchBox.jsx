@@ -164,6 +164,6 @@ SearchBox.defaultProps = {
 };
 
 export const layout = {
-  areaId: 'header',
+  areaId: '', // header
   sortOrder: 20
 };

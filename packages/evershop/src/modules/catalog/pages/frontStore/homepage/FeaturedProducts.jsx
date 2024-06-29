@@ -52,7 +52,7 @@ FeaturedProducts.propTypes = {
 };
 
 export const layout = {
-  areaId: 'content',
+  areaId: '',
   sortOrder: 11
 };
 

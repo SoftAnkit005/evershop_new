@@ -122,7 +122,7 @@ body{
 }
 
 .btn-brown{
-    padding: 18px 45px !important;
+    padding: 10px 30px !important;
     background: var(--brown) !important;
     border-radius: 10px !important;
     @include Katide;
@@ -140,7 +140,7 @@ body{
 }
 
 .admin-navigation{
-    top: 75px !important;
+    top: 100px !important;
 }
 
 .w-33{
@@ -210,7 +210,7 @@ body{
 
 .text-interactive{
     background-color: #f6f6f6;
-    padding: 15px;
+    padding: 10px;
     font-family: "katide" !important;
     font-style: normal;
     font-weight: 400;
@@ -218,14 +218,14 @@ body{
     line-height: normal;
     letter-spacing: 0.03em;
     text-transform: capitalize;
-    margin: 12px 0;
+    margin: 0;
     display: block;
     color: #000 !important;
     border-radius: 10px;
 }
 
 .card{
-    border-radius: 16px !important;
+    border-radius: 5px !important;
 }
 
 .grid-thumbnail {
@@ -254,7 +254,7 @@ body{
 }
 
 .category td{
-    padding: 2rem !important;
+    padding: 1rem !important;
 }
 
 .attribute-group .form-field-container{

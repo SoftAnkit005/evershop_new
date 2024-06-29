@@ -18,7 +18,7 @@
     bottom: 0;
     right: 0px;
     z-index: 100;
-    width: 20%;
+    width: 100%;
     .search-input {
       // background-color: #2d2d2d;
       padding: 15px;
@@ -35,10 +35,10 @@
           right: 15px;
         }
         input[type="text"]{
-          font-size: 16px;
+          font-size: 16px !important;
           padding: 12px 15px !important;
-          background: rgba(0,0,0,0.5) !important;
-          color: #FFF;
+          background-color: rgba(0,0,0,0.5) !important;
+          color: #FFF !important;
         }
         ::placeholder {
           color: #FFF;
@@ -46,13 +46,21 @@
       }
       .close-icon {
         position: absolute;
-        top: 60px;
-        right: 15px;
+        top: 62px;
+        right: 25px;
+        width: fit-content;
         font-size: 2rem;
         cursor: pointer;
         color: #fff;
         z-index: 99;
       }
     }
+  }
+}
+
+
+@media screen and (max-width:575px) {
+  .search-box .search-input-container .search-input .close-icon{
+    top: 15px;
   }
 }

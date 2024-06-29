@@ -25,7 +25,7 @@ export function companydetails({ companydetails }) {
         </div>
       </div>
 
-      <div className='delivery-info'>
+      <div className='delivery-info border-bottom'>
         <div className='delivery-list'>
           <div className='info-icon'>
             <img src={`${finalURL}/Assets/Images/warranty_care.svg`} alt='Warranty' />

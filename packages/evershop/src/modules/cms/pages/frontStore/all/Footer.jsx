@@ -64,7 +64,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
                         <div className='footer-menu usefull-menu'>
                             <h5 className='footer-title'>Usefull links</h5>
                             <ul className='list-unstyled m-0 p-0'>
@@ -92,7 +92,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
                         <div className='footer-menu categories-menu'>
                             <h5 className='footer-title'>Categories</h5>
                             <ul className='list-unstyled m-0 p-0'>
@@ -126,7 +126,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>About Company</h5>
                             <p className='footer-link'>VIP Road,Vesu,Surat Gujrat,395007 India</p>
@@ -140,7 +140,6 @@ function Footer({ themeConfig: { copyRight } }) {
                             <p className='footer-link'><a href='callto:18004195973'>18004195973</a></p>
                         </div>
                     </div>
-                    {/* 
                     <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Payment option</h5>
@@ -174,7 +173,6 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                */}
                 </div>
             </div>
             <p className='copyright'>{copyRight}</p>

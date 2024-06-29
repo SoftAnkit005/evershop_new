@@ -12,9 +12,12 @@ export default function FeaturedAccreditation() {
 
     const settings = {
         infinite: true,
+        arrows: false,
         centerPadding: "60px",
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 575,
@@ -49,7 +52,7 @@ export default function FeaturedAccreditation() {
         <section className='accreditation'>
             <div className='container'>
                 <div className='text-center'>
-                    <h3 className='products-subtitle-black'>Our Accreditation</h3>
+                    <h3 className='products-subtitle-black text-uppercase text-theme-red'>Our Accreditation</h3>
                     <p className='products-details-black'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div className='accreditation-item'>

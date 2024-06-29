@@ -11,9 +11,9 @@ export default function Products({
   return (
     <div>
       <ProductList products={items} countPerRow={3} />
-      <span className="product-count font-16">
+      {/* <div className="product-count font-16 text-end">
         {_('${count} products', { count: items.length })}
-      </span>
+      </div> */}
     </div>
   );
 }

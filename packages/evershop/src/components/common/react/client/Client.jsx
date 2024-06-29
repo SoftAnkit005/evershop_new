@@ -16,7 +16,7 @@ export function App({ children }) {
       <Provider value={client}>
         <Alert>
           <Head />
-          <Area id="body" className="wrapper" />
+          <Area id="body" className="wrapper overflow-x-hidden" />
         </Alert>
       </Provider>
       {children}

@@ -22,48 +22,49 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   let className;
   switch (countPerRow) {
     case 3:
-      className = 'row wishlist-section';
+      className = 'row wishlist-section p-0 pt-5 p-md-5 pe-md-0';
       break;
     case 4:
-      className = 'row wishlist-section';
+      className = 'row wishlist-section p-0 pt-5 p-md-5 pe-md-0';
       break;
     case 5:
-      className = 'row wishlist-section';
+      className = 'row wishlist-section p-0 pt-5 p-md-5 pe-md-0';
       break;
     default:
-      className = 'row wishlist-section';
+      className = 'row wishlist-section p-0 pt-5 p-md-5 pe-md-0';
   }
-
 
   return (
     <div className={className}>
       {products.map((p) => (
-        <Area
-          id="productListingItem"
-          className="card col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-4 mb-5"
-          product={p}
-          key={p.productId}
-          coreComponents={[
-            {
-              component: { default: Thumbnail },
-              props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId },
-              sortOrder: 10,
-              id: 'thumbnail'
-            },
-            {
-              component: { default: Name },
-              props: { name: p.name, url: p.url, id: p.productId },
-              sortOrder: 20,
-              id: 'name'
-            },
-            {
-              component: { default: Price },
-              props: { ...p.price },
-              sortOrder: 30,
-              id: 'price'
-            }
-          ]}
-        />
+        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-2 mb-5 px-3'>
+          <Area
+            id="productListingItem"
+            className="card  shadow-sm px-0"
+            product={p}
+            key={p.productId}
+            coreComponents={[
+              {
+                component: { default: Thumbnail },
+                props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId },
+                sortOrder: 10,
+                id: 'thumbnail'
+              },
+              {
+                component: { default: Name },
+                props: { name: p.name, url: p.url, id: p.productId },
+                sortOrder: 20,
+                id: 'name'
+              },
+              {
+                component: { default: Price },
+                props: { ...p.price },
+                sortOrder: 30,
+                id: 'price'
+              }
+            ]}
+          />
+        </div>
       ))}
     </div>
   );

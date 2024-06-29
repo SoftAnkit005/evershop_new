@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Icon from '@heroicons/react/outline/UserIcon';
+import { FaUser } from "react-icons/fa";
 
 export default function UserIcon({ customer, accountUrl, loginUrl }) {
   return (
     <div className="self-center">
       <a href={customer ? accountUrl : loginUrl} aria-label={customer ? "Go to account" : "Log in"}>
-        <Icon width={25} height={25} />
+        <FaUser className='text-theme-brown' width={20} height={20} />
       </a>
     </div>
   );

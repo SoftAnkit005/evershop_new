@@ -47,17 +47,16 @@ export default function FeaturedInstagram() {
     return (
         <section className='testimonial'>
             <div className='container'>
-                {/* <div className='text-center'>
-                    <h3 className='products-subtitle-black'>Instagram</h3>
-                    <p className='products-details-black'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div> */}
+                <div className='text-center'>
+                    <h3 className='products-subtitle-black text-uppercase text-theme-red'>Instagram</h3>
+                </div>
                 <div className='instagram-info'>
                     <img src='Assets/Images/instagram_id.svg' alt='Instagram ID' />
                     <h3>INSTAGRAM</h3>
                     <h3 className='text-black'>@dr.bhanusaliwellnesscare</h3>
                     <p>Follow us for exciting offers & stay updated with our latest technology!</p>
                 </div>
-                <Slider {...settings}>
+                { /* <Slider {...settings}>
                     <div className='insta-slide'>
                         <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100' />
                     </div>
@@ -94,7 +93,7 @@ export default function FeaturedInstagram() {
                     <div className='insta-slide'>
                         <img src='Assets/Images/insta_post_twelve.jpg' alt='Instagram Post' className='w-100' />
                     </div>
-                </Slider>
+                </Slider> */}
             </div>
         </section>
     );

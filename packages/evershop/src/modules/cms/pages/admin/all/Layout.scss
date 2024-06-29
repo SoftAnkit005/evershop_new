@@ -57,20 +57,20 @@ table {
   background-color: rgba(246, 246, 247, 0.9882352941);
 }
 .header {
-  height: 5.6rem;
+  height: 100px !important;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 3rem !important;
   box-sizing: border-box;
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #2D2D2D;
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.15);
   z-index: 100;
 }
 .content-wrapper {
-  margin-top: 5.6rem;
+  margin-top: 100px;
   min-height: 100vh;
   .main-content {
     overflow: hidden;
