@@ -59,13 +59,14 @@ function renderDevelopment(request, response) {
                 <body>
                 <div id="app" className="bg-background"></div>
                  ${normalizeAssets(assetsByChunkName[route.id])
-      .filter((p) => p.endsWith('.js'))
-      .map(
-        (p) =>
-          `<script defer src="/${response.statusCode === 404 ? notFoundFile : p
-          }"></script>`
-      )
-      .join('\n')}
+                   .filter((p) => p.endsWith('.js'))
+                   .map(
+                     (p) =>
+                       `<script defer src="/${
+                         response.statusCode === 404 ? notFoundFile : p
+                       }"></script>`
+                   )
+                   .join('\n')}
                 </body >
             </html >
   `);

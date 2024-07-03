@@ -134,15 +134,15 @@ export default function CorporateGifts() {
         </div>
       </section>
 
-      <section className='about-bhanusali'>
+      <section className='about-bhanusali mb-5'>
         <div className='container'>
           <div className='row align-items-center'>
-            <div className='col-12 col-sm-12 col-md-4 col-lg-4'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-4'>
               <div className='about-img'>
                 <img src='Assets/Images/about_img.png' alt='Gift' className='w-85' />
               </div>
             </div>
-            <div className='col-12 col-sm-12 col-md-8 col-lg-8'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-8'>
               <div className='about-content text-start'>
                 <h3 className="font-36 pb-1">about bhanusali wellness corporate gifts</h3>
                 <p className="products-details-black text-start pb-5 pt-3">Our curated assortment of gifts makes it effortless to reward loyalty, show appreciation, recognize talent, or celebrate a new venture. Massager Accessories items for the home and office, there is a perfect gift to meet all your needs.</p>
@@ -160,7 +160,7 @@ export default function CorporateGifts() {
             <h3 className="font-48 pb-1">Why you choose massagers as a cooperate gift?</h3>
             <p className="products-details-white text-lightwhite">Bhanusali Wellness is a proficient company that provides state-of-the-art massages accessories for its users.</p>
           </div>
-          <div className='row'>
+          <div className='row align-items-center'>
             <div className='col-12 col-sm-12 col-md-4 col-lg-4'>
               <div className='why-choose-content mt-4'>
                 <h2 className='font-48'>01</h2>
@@ -186,14 +186,14 @@ export default function CorporateGifts() {
       <section className='about-bhanusali mt-5 mb-0'>
         <div className='container'>
           <div className='row align-items-center'>
-            <div className='col-12 col-sm-12 col-md-8'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-8'>
               <div className='about-content text-start'>
                 <h3 className="font-36 pb-1">Give us a call</h3>
                 <p className="products-details-black text-start pb-5 pt-3">If you’re looking to go above and beyond for your next corporate gift, you’ve come to the right place. massage Accessories for your clients & Employees will provide the onsite stress relief and relaxation for the companies you do business with.</p>
                 <a href='/contact-us' className='btn-brown mt-5'>call now</a>
               </div>
             </div>
-            <div className='col-12 col-sm-12 col-md-4'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-4'>
               <div className='about-img'>
                 <img src='Assets/Images/call_us.png' alt='Gift' className='w-85' />
               </div>

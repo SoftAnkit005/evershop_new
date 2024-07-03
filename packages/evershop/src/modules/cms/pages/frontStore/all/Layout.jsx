@@ -52,8 +52,8 @@ export default function Layout({ searchPageUrl }) {
     <>
       <LoadingBar />
 
-      <div className='text-center offer-top discount-coupon'>
-        <div className='w-100 discount-coupon-content'>
+      <div className='text-center offer-top discount-coupon bg-dark'>
+        <div className='w-100'>
           <marquee direction="right" loop>
             <ul className='mb-0 d-flex align-items-center'>
               <li>
@@ -71,50 +71,7 @@ export default function Layout({ searchPageUrl }) {
       </div>
       <header className='header'>
         <div className='container-fluid'>
-          <div className="navbar navbar-expand-lg pb-3 position-relative">
-            <div className="search-input-container search-container-lg-view">
-              <div className="search-input">
-                <Input
-                  prefix={
-                    <svg
-                      onClick={() => {
-                        const url = new URL(searchPageUrl, window.location.origin);
-                        url.searchParams.set('keyword', InputRef.current.value);
-
-                        window.location.href = url;
-                      }}
-                      xmlns="http://www.w3.org/2000/svg"
-                      style={{ width: '1.8rem', height: '1.8rem' }}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  }
-                  placeholder={typeablePlaceholder}
-                  ref={InputRef}
-                  value={keyword || ''}
-                  onChange={(e) => {
-                    setKeyword(e.target.value);
-                  }}
-                  onKeyPress={(event) => {
-                    if (event.key === 'Enter') {
-                      // Redirect to search page with search query as the keyword in the url
-                      const url = new URL(searchPageUrl, window.location.origin);
-                      url.searchParams.set('keyword', InputRef.current.value);
-
-                      window.location.href = url;
-                    }
-                  }}
-                />
-              </div>
-            </div>
+          <div className="navbar navbar-expand-lg pb-3">
             <Area
               id="header"
               noOuter
@@ -123,21 +80,56 @@ export default function Layout({ searchPageUrl }) {
                   component: { default: Area },
                   props: {
                     id: 'icon-wrapper',
-                    className: 'd-flex align-items-center position-absolute end-0 auth-icon gap-md-4'
+                    className: 'd-flex align-items-center auth-icon'
                   },
                   sortOrder: 20
                 }
               ]}
             />
           </div>
-          <div className='col-xxl-10 m-auto'>
-            <Area id="header-menu" noOuter coreComponents={[]} />
-          </div>
         </div>
       </header>
-      { /* <div className='mobile-menu'>
-        <Area id="header-menu" noOuter coreComponents={[]} />
-      </div> */ }
+      <div className='mobile-menu'>
+        <div className="search-input-container">
+          <div className="search-input">
+
+            <Input
+              prefix={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ width: '1.8rem', height: '1.8rem' }}
+                  fill="#FFF"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              }
+              placeholder={typeablePlaceholder}
+              ref={InputRef}
+              value={keyword || ''}
+              onChange={(e) => {
+                setKeyword(e.target.value);
+              }}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  // Redirect to search page with search query as the keyword in the url
+                  const url = new URL(searchPageUrl, window.location.origin);
+                  url.searchParams.set('keyword', InputRef.current.value);
+
+                  window.location.href = url;
+                }
+              }}
+            />
+          </div>
+        </div>
+        <Area id="header" noOuter coreComponents={[]} />
+      </div>
       <main className="content">
         <Area id="content" className="" noOuter />
       </main>

@@ -18,7 +18,7 @@ export default function CategoryInfo({
         )}
         <div className="category__info">
           <div>
-
+            
             <div className="category__description font-24">
               <CKEditor content={description} />
             </div>
@@ -40,7 +40,7 @@ CategoryInfo.propTypes = {
 };
 
 export const layout = {
-  areaId: '',  // content
+  areaId: 'content',
   sortOrder: 5
 };
 

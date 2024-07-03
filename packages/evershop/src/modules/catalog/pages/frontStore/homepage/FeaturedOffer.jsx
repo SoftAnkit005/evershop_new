@@ -40,6 +40,6 @@ export default function FeaturedOffer() {
     );
 }
 export const layout = {
-    areaId: 'content',
+    areaId: '',  // content
     sortOrder: 12
 };

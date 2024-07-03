@@ -6,7 +6,7 @@ import './CKEditor.scss';
 
 export function CKEditor({ content }) {
   return (
-    <div className="ck-content font-18 mt-4" style={{ color: '#101010', fontWeight: 400 }}>
+    <div className="ck-content font-18 mt-4" style={{ lineHeight: '30px', color: '#101010', fontWeight: 400 }}>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
 

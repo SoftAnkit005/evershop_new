@@ -239,7 +239,7 @@ html textarea {
     display: block;
     width: 100%;
     position: relative;
-    // z-index: 10;
+    z-index: 10;
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin: 1px;
     border-radius: 4px
@@ -420,7 +420,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 .field-prefix,
 .field-suffix {
     position: relative;
-    z-index: 12;
+    z-index: 10;
     padding: 0 1.25rem;
     align-self: center;
     display: inline-flex
@@ -442,8 +442,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 }
 
 .dropdown .field-suffix {
-    right: 0px;
-    width: fit-content;
+    right: 0;
     padding-right: 0 1rem 0 0
 }
 
@@ -489,9 +488,9 @@ input[readonly]+.field-border:after {
 }
 
 @media screen and (min-width: 768px) {
-    // .main-menu-mobile {
-    //     display: none
-    // }
+    .main-menu-mobile {
+        display: none
+    }
 }
 
 .main-menu-mobile .menu-icon svg {
@@ -501,11 +500,11 @@ input[readonly]+.field-border:after {
 
 .main-menu-mobile .nav {
     position: absolute;
-    top: 75px;
+    top: 100%;
     right: -2.5rem;
     padding: 2.5rem;
-    width: 70vw;
-    // background-color: #fff;
+    width: 100vw;
+    background-color: #fff;
     z-index: 1000
 }
 
@@ -1015,10 +1014,9 @@ input[readonly]+.field-border:after {
 }
 
 .product-filter-tool .filter-item-title {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    // border-bottom: 1px solid var(--divider);
-    border-bottom: none;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--divider);
     text-transform: uppercase;
     letter-spacing: .05em
 }
@@ -1028,8 +1026,7 @@ input[readonly]+.field-border:after {
 }
 
 .product-filter-tool .filter-heading {
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--divider);
+    margin-bottom: 20px
 }
 
 .filter-option {
@@ -1049,8 +1046,8 @@ input[readonly]+.field-border:after {
 }
 
 .product-sorting svg {
-    width: 24px;
-    height: 24px
+    width: 2rem;
+    height: 2rem
 }
 
 input[type=range] {
@@ -1194,7 +1191,7 @@ input[type=range]:nth-child(1)::-webkit-slider-thumb {
 }
 
 .products-pagination {
-    margin-top: 0
+    margin-top: 5rem
 }
 
 .products-pagination .page-item {
@@ -1326,9 +1323,6 @@ p {
     body h6 {
         font-size: 1.4rem
     }
-    .main-menu-mobile .nav {
-        right: -1.7rem !important;
-    }
 }
 
 @media(min-width: 768px)and (max-width: 1535px) {
@@ -1440,6 +1434,7 @@ h6 {
 
 .footer {
     background-color: #f6f6f6;
+    // margin-top: 9rem;
     padding-top: 1rem;
     padding-block-end: 1rem;
     border-top: 1px solid #ddd
@@ -2733,8 +2728,7 @@ video {
 }
 
 .logo {
-    // margin: auto;
-    position: relative;
+    display: flex
 }
 
 .logo a.logo-icon {

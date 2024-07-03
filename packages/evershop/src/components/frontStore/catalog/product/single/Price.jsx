@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { BiSolidOffer } from 'react-icons/bi';
-// import Offers from 'Assets/Images/offers.svg'
 
 export function Price({ regular, special }) {
   return (
     <>
-      <p className='fs-4 fw-medium flex items-center'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
+      <p className='font-18 text-brawn pb-0'>special rate</p>
       <h4 className="font-24 text-black mt-2">
         {special.value === regular.value && (
           <div className='d-flex align-items-center'>
@@ -24,7 +22,7 @@ export function Price({ regular, special }) {
           </div>
         )}
       </h4>
-      <p className="font-18 m-0 text-black">EMI <span className='font-16 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
+      <p className="font-18 text-black">EMI <span className='font-16 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
       <hr />
     </>
   );

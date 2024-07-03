@@ -7,9 +7,9 @@ export default function Products({ products: { items } }) {
   return (
     <div>
       <ProductList products={items} countPerRow={4} />
-      <div className="product-count font-16 text-end">
+      <span className="product-count font-16">
         {_('${count} products', { count: items.length })}
-      </div>
+      </span>
     </div>
   );
 }

@@ -16,6 +16,9 @@ export default function AdminLayout() {
         </div>
         <div className="main-content">
           <Area id="content" className="main-content-inner" />
+          <div className="footer">
+            <p className="copyright text-center">Copyright © 2021 Dr.Bwc</p>
+          </div>
         </div>
       </div>
     </>

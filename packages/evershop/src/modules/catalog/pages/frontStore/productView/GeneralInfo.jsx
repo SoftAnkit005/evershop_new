@@ -65,15 +65,15 @@ export default function GeneralInfo({ product }) {
           },
           sortOrder: 20,
           id: 'brand'
+        },
+        {
+          component: { default: video },
+          props: {
+            video: product.video
+          },
+          sortOrder: 20,
+          id: 'brand'
         }
-        // {
-        //   component: { default: video },
-        //   props: {
-        //     video: product.video
-        //   },
-        //   sortOrder: 20,
-        //   id: 'brand'
-        // }
       ]}
     />
   );

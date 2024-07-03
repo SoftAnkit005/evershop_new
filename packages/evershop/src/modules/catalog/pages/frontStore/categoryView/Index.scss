@@ -418,7 +418,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 }
 
 .dropdown .field-prefix {
-    right: 0;
+    left: 0;
     padding-left: 0 0 0 1rem
 }
 
@@ -526,7 +526,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 .main-menu-mobile .nav {
     position: absolute;
     top: 100%;
-    // right: -2.5rem;
+    right: -2.5rem;
     padding: 2.5rem;
     width: 100vw;
     background-color: #fff;
@@ -1294,10 +1294,6 @@ p {
     margin-bottom: 1rem
 }
 
-.attribute-filter{
-    border-bottom: 1px solid var(--divider);
-}
-
 @media screen and (max-width: 767px) {
     body {
         font-size:1.4rem;
@@ -1326,14 +1322,6 @@ p {
 
     body .h6,body h6 {
         font-size: 1.4rem
-    }
-    .product-filter-tool .filter-heading{
-        text-align: center;
-    }
-    .attribute-filter{
-        width: 50%;
-        float: left;
-        padding: 5px;
     }
 }
 
@@ -1403,9 +1391,9 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 600
 }
 
-// .wrapper .content {
-//     min-height: calc(100vh - 50px)
-// }
+.wrapper .content {
+    min-height: calc(100vh - 50px)
+}
 
 // .header {
 //     padding: 2.5rem;
@@ -1439,9 +1427,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .footer {
     background-color: #f6f6f6;
+    // margin-top: 9rem;
     padding-top: 1rem;
-    padding-block-end:1rem;
-    border-top: 1px solid #ddd
+    padding-block-end:1rem;border-top: 1px solid #ddd
 }
 
 .footer .card-icons svg {
@@ -1476,8 +1464,7 @@ table.listing td,table.listing th {
 table.listing th {
     border: 0;
     padding-top: 2rem;
-    padding-bottom: 2rem;
-    font-size:18px !important;
+    padding-bottom: 2rem
 }
 
 button.outline {
@@ -2653,6 +2640,9 @@ img,video {
     animation-name: Toastify__slideOutDown
 }
 
+.logo {
+    display: flex
+}
 
 .logo a.logo-icon {
     margin-right: .5rem

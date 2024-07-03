@@ -9,9 +9,9 @@ export default function FeaturedProducts({ collection }) {
   return (
     <div className="">
       <div className="products">
-        <h3 className="fae-head">
+        {/* <h3 className="fae-head">
           {collection.name}
-        </h3>
+        </h3> */}
 
         <HomeProductList products={collection.products.items} countPerRow={4} />
       </div>
@@ -52,7 +52,7 @@ FeaturedProducts.propTypes = {
 };
 
 export const layout = {
-  areaId: '',
+  areaId: 'content',
   sortOrder: 11
 };
 

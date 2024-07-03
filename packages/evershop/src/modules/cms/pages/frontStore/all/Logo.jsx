@@ -23,7 +23,7 @@ export default function Logo({
 
 
   return (
-    <div className="logo m-xl-auto">
+    <div className="logo">
       {src && (
         <a href="/" className="logo-icon">
           <img src={src} alt={alt} width={width} height={height} />
@@ -63,7 +63,7 @@ Logo.defaultProps = {
 
 export const layout = {
   areaId: 'header',
-  sortOrder: 10
+  sortOrder: 1
 };
 
 export const query = `

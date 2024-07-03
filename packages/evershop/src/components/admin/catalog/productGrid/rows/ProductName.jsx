@@ -5,7 +5,7 @@ export default function ProductNameRow({ url, name }) {
   return (
     <td>
       <div>
-        <a className="hover:underline" href={url}>
+        <a className="hover:underline font-semibold" href={url}>
           {name}
         </a>
       </div>

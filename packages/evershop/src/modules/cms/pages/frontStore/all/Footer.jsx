@@ -21,7 +21,7 @@ function Footer({ themeConfig: { copyRight } }) {
         <>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
+                    <div className='col-12 col-sm-12 col-md-12 col-lg-4'>
                         <div className='footer-menu'>
                             <div className='footer-logo mb-4'>
                                 <img src={`${finalURL}/Assets/Images/header_logo.svg`} alt='Footer Logo' />
@@ -64,7 +64,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-12 col-md-3 col-lg-2'>
                         <div className='footer-menu usefull-menu'>
                             <h5 className='footer-title'>Usefull links</h5>
                             <ul className='list-unstyled m-0 p-0'>
@@ -92,7 +92,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-12 col-md-3 col-lg-2'>
                         <div className='footer-menu categories-menu'>
                             <h5 className='footer-title'>Categories</h5>
                             <ul className='list-unstyled m-0 p-0'>
@@ -126,7 +126,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-12 col-md-3 col-lg-2'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>About Company</h5>
                             <p className='footer-link'>VIP Road,Vesu,Surat Gujrat,395007 India</p>
@@ -140,7 +140,7 @@ function Footer({ themeConfig: { copyRight } }) {
                             <p className='footer-link'><a href='callto:18004195973'>18004195973</a></p>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
+                    <div className='col-12 col-sm-12 col-md-3 col-lg-2'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Payment option</h5>
                         </div>
@@ -171,6 +171,12 @@ function Footer({ themeConfig: { copyRight } }) {
                                     <a href="#"><img src={`${finalURL}/Assets/Images/Paytm.png`} alt='Paytm' /></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div className='footer-menu mt-5'>
+                            <h5 className='footer-title'>WHY SHOP WITH US?</h5>
+                        </div>
+                        <div className='footer-link'>
+                            <p className='m-0'>We Provide Free Shipping throughout PAN India and Minimal cost for International Shipping</p>
                         </div>
                     </div>
                 </div>

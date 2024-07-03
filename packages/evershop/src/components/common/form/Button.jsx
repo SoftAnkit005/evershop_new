@@ -13,10 +13,10 @@ function Button({
   isLoading = false,
   type = 'button'
 }) {
-  const className = ['btn-brown mt-4', variant];
+  const className = ['btn-brown w-100 mt-4', variant];
   if (outline === true) className.push('outline');
   if (isLoading === true) className.push('loading');
-  className.push('btn-white');
+  className.push('btn-white'); 
 
   const onActionFunc = (e) => {
     e.preventDefault();

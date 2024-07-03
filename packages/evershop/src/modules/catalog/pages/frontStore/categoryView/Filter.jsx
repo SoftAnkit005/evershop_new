@@ -88,7 +88,7 @@ export default function Filter({
           }`}
       >
         <div className="filter-heading">
-          <span className="fs-2 fw-medium">{_('SHOP BY')}</span>
+          <span className="font-16">{_('SHOP BY')}</span>
         </div>
         <Area
           id="productFilter"

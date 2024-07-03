@@ -7,7 +7,6 @@ import "../../../../Styles/Styles.scss"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../categoryView/Index.scss"
-import YouTube from 'react-youtube';
 
 function Current({ image }) {
 
@@ -16,7 +15,7 @@ function Current({ image }) {
     <div
       id="product-current-image"
       style={{ background: '#f6f6f6' }}
-      className="product-image product-single-page-image flex justify-center items-center w-100"
+      className="product-image product-single-page-image flex justify-center items-center"
     >
       {image && (
         <img src={image.single} alt={image.alt} className="self-center" />
@@ -33,9 +32,12 @@ Current.propTypes = {
   }).isRequired
 };
 
-export default function Images({ product: { uuid, video, image, gallery = [] } }) {
+export default function Images({ product: { uuid, image, gallery = [] } }) {
   const [current, setCurrent] = React.useState(image);
   const [thumbs, setThumbs] = React.useState(gallery);
+
+
+
 
 
 
@@ -52,60 +54,35 @@ export default function Images({ product: { uuid, video, image, gallery = [] } }
   }, [uuid]);
 
 
-  const getVideoId = (url) => {
-    const match = url.match(/[?&]v=([^&]+)/);
-    return match ? match[1] : null;
-  };
-  const opts = {
-    width: '100%',
-    height: '450',
-    playerVars: {
-      autoplay: 1
-    }
-  }
-  const videoId = getVideoId(video);
+
 
   return (
-    <>
-      <div className="product-single-media position-relative">
-        <ul className="more-view-thumbnail product-gallery">
-          {thumbs.map((i, j) => (
-            <li key={j} className="flex justify-center items-center mb-3 border-theme-brown">
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setCurrent({ ...i });
-                }}
-                className="p-4"
-              >
-                <img className="self-center" src={i.thumb} alt={i.alt} />
-              </a>
-            </li>
-          ))}
-        </ul>
-        <Current image={current} />
-      </div>
-      {(!videoId) ?
-        <></>
-        :
-        <section className='related-products me-lg-3 me-md-0'>
-          <div className='row align-items-center'>
-            <div className='col-12'>
-              {/* <h4 className="font-20 pb-0 text-brawn mb-4">Video</h4> */}
-              <YouTube opts={opts} videoId={videoId} />
-            </div>
-          </div>
-        </section>
-      }
-    </>
+    <div className="product-single-media position-relative">
+      <Current image={current} />
+      <ul className="more-view-thumbnail product-gallery">
+        {thumbs.map((i, j) => (
+          <li key={j} className="flex justify-center items-center mb-5">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrent({ ...i });
+              }}
+              className=""
+            >
+              <img className="self-center" src={i.thumb} alt={i.alt} />
+            </a>
+          </li>
+        ))}
+      </ul>
+
+    </div>
   );
 }
 
 Images.propTypes = {
   product: PropTypes.shape({
     uuid: PropTypes.string.isRequired,
-    video: PropTypes.string.isRequired,
     image: PropTypes.shape({
       alt: PropTypes.string,
       single: PropTypes.string.isRequired
@@ -125,19 +102,18 @@ export const layout = {
 };
 
 export const query = `
-      query Query {
-        product(id: getContextValue('productId')) {
-        uuid
-      video
+  query Query {
+    product (id: getContextValue('productId')) {
+      uuid
       image {
         alt
         thumb
-      single
+        single
       }
       gallery {
         alt
         thumb
-      single
+        single
       }
   }
 }`;
