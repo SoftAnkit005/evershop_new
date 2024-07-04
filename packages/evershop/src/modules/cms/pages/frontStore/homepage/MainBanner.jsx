@@ -14,6 +14,8 @@ function MainBanner({ images }) {
     slidesToScroll: 1,
     speed: 500,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     cssEase: 'linear',
     dots: true,
     customPaging: (i) => (

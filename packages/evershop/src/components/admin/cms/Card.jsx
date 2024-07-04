@@ -67,9 +67,9 @@ Card.defaultProps = {
 
 const Session = function Session({ actions = [], title, children }) {
   return (
-    <div className="card-section border-b box-border">
+    <div className="card-section border-b box-border p-1">
       {(title || actions.length > 0) && (
-        <div className="flex justify-between card-section-header mb-1 items-center">
+        <div className="flex justify-between card-section-header items-center">
           {title && <h3 className="font-20">{title}</h3>}
           {actions.length > 0 && (
             <div className="flex space-x-075">

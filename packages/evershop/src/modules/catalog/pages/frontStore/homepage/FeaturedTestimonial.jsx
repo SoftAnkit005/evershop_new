@@ -1,19 +1,19 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../../../../Styles/Styles.scss";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import { FaRegStar, FaStar } from "react-icons/fa6";
+
 
 export default function FeaturedTestimonial() {
 
     const settings = {
         infinite: true,
         centerPadding: "60px",
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         arrows: false,
@@ -43,7 +43,7 @@ export default function FeaturedTestimonial() {
 
 
     return (
-        <section className='testimonial bg-theme-gray client-review'>
+        <section className='testimonial bg-theme-gray client-review text-center'>
             <div className='container'>
                 <div className='text-center'>
                     <h2 className='products-title-black'>Testimonial</h2>
@@ -54,40 +54,50 @@ export default function FeaturedTestimonial() {
                 <div className="slider-container">
                     <Slider {...settings}>
                         <div>
-                            <div className='card p-4 py-5 m-3'>
+                            <div className='card p-4 py-5 mx-3'>
                                 <div className='card-body text-center'>
-                                    <p className='fs-5 text-theme-grey'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
-                                    {/* <img src='Assets/Images/client_one.png' alt='Testimonial Post' className='client-img' height={50} /> */}
+                                    <p className='fs-4 lh-lg'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
+                                    {/* <div className='d-flex justify-content-center'>
+                                        <FaStar className='rating-star' />
+                                        <FaStar className='rating-star' />
+                                        <FaStar className='rating-star' />
+                                        <FaStar className='rating-star' />
+                                        <FaRegStar className='rating-star' />
+                                    </div>
+                                    <img src='Assets/Images/client_one.png' alt='Testimonial Post' className='client-img' height={50} /> */}
                                     <h3 className='fs-4 font-bold mt-2'>Slmon ningeri</h3>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div className='card p-4 py-5 m-3'>
+                            <div className='card p-4 py-5 mx-3'>
                                 <div className='card-body text-center'>
-                                    <p className='fs-5 text-theme-grey'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
+                                    <p className='fs-4 lh-lg'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
                                     <h3 className='fs-4 font-bold mt-2'>Slmon ningeri</h3>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div className='card p-4 py-5 m-3'>
+                            <div className='card p-4 py-5 mx-3'>
                                 <div className='card-body text-center'>
-                                    <p className='fs-5 text-theme-grey'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
+                                    <p className='fs-4 lh-lg'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
                                     <h3 className='fs-4 font-bold mt-2'>Slmon ningeri</h3>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div className='card p-4 py-5 m-3'>
+                            <div className='card p-4 py-5 mx-3'>
                                 <div className='card-body text-center'>
-                                    <p className='fs-5 text-theme-grey'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
+                                    <p className='fs-4 lh-lg'>“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”</p>
                                     <h3 className='fs-4 font-bold mt-2'>Slmon ningeri</h3>
                                 </div>
                             </div>
                         </div>
                     </Slider>
                 </div>
+                <a className="btn-light-brown m-auto" href="#">
+                    <span className="wd-btn-text" data-elementor-setting-key="text">Leave a review</span>
+                </a>
             </div>
         </section>
     );

@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+// import Slider from 'react-slick';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
+import React from 'react';
 import "../../../../Styles/Styles.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import Slider from 'react-slick';
 import { FaRegHeart, FaRegMessage } from "react-icons/fa6";
-
 
 export default function FeaturedInstagram() {
 
@@ -47,7 +46,7 @@ export default function FeaturedInstagram() {
 
 
     return (
-        <section className='testimonial'>
+        <section className='testimonial p-0'>
             <div className='position-relative d-flex justify-content-center align-items-center'>
                 {/* <div className='text-center'>
                     <h3 className='products-subtitle-black'>Instagram</h3>
@@ -59,45 +58,6 @@ export default function FeaturedInstagram() {
                     <h3 className='text-theme-grey fs-5 p-0'>@dr.bhanusaliwellnesscare</h3>
                     <p>Follow us for exciting offers & stay updated with our latest technology!</p>
                 </div>
-                {/* <Slider {...settings}>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_two.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_three.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_four.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_five.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_six.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_seven.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_eight.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_nine.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_ten.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_eleven.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                    <div className='insta-slide'>
-                        <img src='Assets/Images/insta_post_twelve.jpg' alt='Instagram Post' className='w-100' />
-                    </div>
-                </Slider> */}
-
                 <div className='row m-0 '>
                     <div className='col-xs-12 col-sm-6 col-md-4 col-lg-2 instagram-picture'>
                         <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100 h-100' />
@@ -184,6 +144,46 @@ export default function FeaturedInstagram() {
                         </div>
                     </div>
                 </div>
+
+                { /* <Slider {...settings}>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_two.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_three.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_four.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_five.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_six.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_seven.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_eight.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_nine.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_ten.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_eleven.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                    <div className='insta-slide'>
+                        <img src='Assets/Images/insta_post_twelve.jpg' alt='Instagram Post' className='w-100' />
+                    </div>
+                </Slider> */}
+
             </div>
         </section>
     );

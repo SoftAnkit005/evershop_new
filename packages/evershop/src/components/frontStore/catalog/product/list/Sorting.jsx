@@ -5,6 +5,7 @@ import { Select } from '@components/common/form/fields/Select';
 import { useAppDispatch } from '@components/common/context/app';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import options from '@components/frontStore/catalog/product/list/SortOptions';
+import { IoArrowUpOutline, IoArrowDownOutline } from "react-icons/io5";
 
 export default function Sorting() {
   const AppContextDispatch = useAppDispatch();
@@ -60,10 +61,11 @@ export default function Sorting() {
   return (
     <div className="product-sorting mb-1">
       <div className="product-sorting-inner flex justify-end items-center space-x-05">
-        <div>
-          <span className='font-16'>{_('Sort By')}:</span>
-        </div>
-        <div style={{ width: '160px' }}>
+        {/* <div>
+          <span span className='font-16'>{_('Sort By')}:</span>
+        </div> */}
+        <div div style={{ width: '130px' }
+        }>
           <Select
             className="form-control font-16"
             onChange={async (e) => {
@@ -72,47 +74,20 @@ export default function Sorting() {
             value={sortBy}
             options={options.map((o) => ({ value: o.code, text: o.name }))}
             disableDefaultOption={false}
-            placeholder={_('Default')}
+            placeholder={_('Sort by')}
           />
-        </div>
+        </div >
         <div className="sort-direction self-center">
           <a onClick={(e) => onChangeDirection(e)} href="#">
             {sortOrder === 'desc' ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-arrow-up"
-              >
-                <line x1="12" y1="19" x2="12" y2="5" />
-                <polyline points="5 12 12 5 19 12" />
-              </svg>
+              <IoArrowUpOutline className='text-dark' />
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-arrow-down"
-              >
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <polyline points="19 12 12 19 5 12" />
-              </svg>
+              <IoArrowDownOutline className='text-dark' />
+
             )}
           </a>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }

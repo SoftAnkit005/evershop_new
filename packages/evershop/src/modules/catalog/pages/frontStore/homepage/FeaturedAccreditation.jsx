@@ -12,10 +12,10 @@ export default function FeaturedAccreditation() {
 
     const settings = {
         infinite: true,
+        arrows: false,
         centerPadding: "60px",
         slidesToShow: 5,
         slidesToScroll: 1,
-        arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
@@ -26,7 +26,7 @@ export default function FeaturedAccreditation() {
                 }
             },
             {
-                breakpoint: 992,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2
                 }
@@ -40,7 +40,7 @@ export default function FeaturedAccreditation() {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 4
+                    slidesToShow: 3
                 }
             }
         ]
@@ -53,7 +53,6 @@ export default function FeaturedAccreditation() {
             <div className='container'>
                 <div className='text-center'>
                     <h3 className='products-subtitle-black text-uppercase mb-5'>Our Accreditation</h3>
-                    {/* <p className='products-details-black'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
                 </div>
                 <div className='accreditation-item'>
 

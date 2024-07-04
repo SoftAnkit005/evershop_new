@@ -85,7 +85,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
   return (
     <div className="add-to-cart mt-2">
       <div className='special-price'>
-        <h1 className='font-18 text-brawn'>special price</h1>
+        <h1 className='font-20 text-brawn'>special price</h1>
         <p>In Stock</p>
       </div>
       <div className='d-flex align-items-center'>

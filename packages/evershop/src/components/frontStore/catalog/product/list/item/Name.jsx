@@ -5,7 +5,7 @@ function Name({ name, url }) {
   return (
     <div className="ps-4">
       <a href={url} className='text-decoration-none'>
-        <span className='font-20'>{name}</span>
+        <span className='font-16 text-dark'>{name}</span>
       </a>
     </div>
   );

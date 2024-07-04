@@ -4,6 +4,7 @@ Represents a menu item
 type MenuItem {
   name: String!
   url: String!
+  parent_id: Int
   children: [MenuItem]
 }
 

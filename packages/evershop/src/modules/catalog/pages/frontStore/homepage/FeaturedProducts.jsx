@@ -53,7 +53,7 @@ FeaturedProducts.propTypes = {
 
 export const layout = {
   areaId: 'content',
-  sortOrder: 11
+  sortOrder: 10
 };
 
 export const query = `

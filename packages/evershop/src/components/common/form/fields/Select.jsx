@@ -3,6 +3,8 @@ import React from 'react';
 import Error from '@components/common/form/fields/Error';
 import '../Field.scss';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
+import { BiMenuAltLeft } from "react-icons/bi";
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -60,15 +62,7 @@ const Select = React.forwardRef((props, ref) => {
         </select>
         <div className="field-border border-0" />
         <div className="field-suffix">
-          <svg
-            viewBox="0 0 20 20"
-            width="1rem"
-            height="1.25rem"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <path d="m10 16-4-4h8l-4 4zm0-12 4 4H6l4-4z" />
-          </svg>
+          <BiMenuAltLeft />
         </div>
       </div>
       {instruction && (
