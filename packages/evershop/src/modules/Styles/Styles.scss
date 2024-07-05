@@ -2633,6 +2633,9 @@ ul.navbar-nav::after {
     }
 }
 
+.products .products-list:first-child {
+    top: -4px !important;
+}
 
 .header-menu .active {
     // border-bottom: 4px solid transparent;
