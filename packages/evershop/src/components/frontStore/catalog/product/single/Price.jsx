@@ -6,13 +6,13 @@ import { BiSolidOffer } from 'react-icons/bi';
 export function Price({ regular, special }) {
   return (
     <>
-      <p className='fs-4 fw-medium flex items-center'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
+      <p className='fs-4 fw-medium flex items-center mb-0'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
       <h4 className="font-24 text-black mt-2">
         {special.value === regular.value && (
           <div className='d-flex align-items-center'>
             <span className="sale-price">{regular.text}</span>
             <h5 className='font-14 text-danger ms-3 mb-0'>20% OFF</h5>
-            <span className='font-16 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
+            <span className='font-14 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
           </div>
         )}
         {special.value < regular.value && (
@@ -20,11 +20,11 @@ export function Price({ regular, special }) {
             <span className="sale-price">{special.text}</span>{' '}
             <span className="regular-price">{regular.text}</span>
             <h5 className='font-14 text-danger ms-3 mb-0'>20% OFF</h5>
-            <span className='font-16 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
+            <span className='font-14 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
           </div>
         )}
       </h4>
-      <p className="font-18 m-0 text-black">EMI <span className='font-16 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
+      <p className="font-18 m-0 text-black">EMI <span className='font-14 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
       <hr />
     </>
   );

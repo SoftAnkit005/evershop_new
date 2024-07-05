@@ -25,10 +25,10 @@ export default function Menu({ menu: { items } }) {
   );
 
   return (
-    <div className='header-menu py-3'>
+    <div className='header-menu'>
       <ul className="list-unstyled d-flex mb-0">
         {items.map((item, index) => (
-          <li className={`nav-item p-0 m-0 ${item.children.length > 0 ? 'dropdown' : ''}`} key={index}>
+          <li className={`nav-item pt-2 pb-3 m-0 ${item.children.length > 0 ? 'dropdown' : ''}`} key={index}>
             <a className={`nav-link menulist ${item.children.length > 0 ? 'dropdown-toggle' : ''} ${currentPath === item.url ? 'active' : ''}`} href={item.url} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {item.name}
             </a>

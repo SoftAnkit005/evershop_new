@@ -16,7 +16,7 @@ function Current({ image }) {
     <div
       id="product-current-image"
       style={{ background: '#f6f6f6' }}
-      className="product-image product-single-page-image flex justify-center items-center w-100"
+      className="product-image product-single-page-image flex justify-center items-center w-100 mx-5"
     >
       {image && (
         <img src={image.single} alt={image.alt} className="self-center" />

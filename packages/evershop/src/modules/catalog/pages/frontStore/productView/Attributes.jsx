@@ -8,11 +8,11 @@ function Attributes({ product: { attributes } }) {
 
   return (
     <div className="pb-0">
-      <ul className="list-disc list-inside border p-4 mb-5 rounded-4 mt-4">
+      <ul className="list-disc list-inside border p-3 rounded-4 mt-4">
         {attributes.map((attribute) => (
           <li key={attribute.attributeCode} className='d-flex'>
-            <strong className='font-16 p-0 text-black'>{attribute.attributeName}: </strong>{' '}
-            <span className='font-16 p-0 text-muted ms-3'>{attribute.optionText}</span>
+            <strong className='font-14 p-0 text-black'>{attribute.attributeName}: </strong>{' '}
+            <span className='font-14 p-0 text-muted ms-3'>{attribute.optionText}</span>
           </li>
         ))}
       </ul>

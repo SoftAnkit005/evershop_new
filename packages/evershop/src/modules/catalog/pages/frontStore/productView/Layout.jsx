@@ -4,17 +4,19 @@ import Area from '@components/common/Area';
 export default function ProductPageLayout() {
 
   return (
-    <div className="product-detail mt-5 mb-0 pt-5">
+    <div className="product-detail my-5 mb-0 py-5">
       <Area id="productPageTop" className="product-page-top" />
       <div className="product-page-middle">
         <div className='container'>
           <div className='row'>
-            <div className="col-12 col-sm-12 col-lg-6">
+            <div className="col-12 col-sm-12 col-lg-5 productImages">
               <Area id="productPageMiddleLeft" />
             </div>
-            <div className='col-12 col-sm-12 col-lg-6'>
+            <div className='col-12 col-sm-12 col-lg-5 productDescription'>
               <Area id="productPageMiddleRight" />
-              <Area id="productPagePrice" />
+            </div>
+            <div className='col-12 col-sm-12 col-lg-2 productPrice'>
+              <Area id="productPagePrice" className='border p-4' />
             </div>
           </div>
         </div>
