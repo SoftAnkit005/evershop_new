@@ -3,7 +3,7 @@ import React from 'react';
 
 function Price({ regular, special }) {
   return (
-    <div className="card-footer">
+    <div className="">
       {regular.value === special.value && (
         <div>
           <span className="font-20 text-black">{regular.text}</span>

@@ -71,7 +71,7 @@ export function CategoryFilter({ currentFilters, categories, updateFilter }) {
             <li key={c.uuid} className="mt-05 mr-05">
               <a
                 href="#"
-                className="font-16 text-black d-flex align-items-center pb-0 text-decoration-none"
+                className="font-16 text-black d-flex align-items-center pb-0 text-decoration-none filter-item"
                 onClick={(e) => onChange(e, c.categoryId)}
               >
                 {isChecked && (

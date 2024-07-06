@@ -108,11 +108,9 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
             outline
             isLoading={loading}
             onAction={() => {
-              document
-                .getElementById('productForm')
-                .dispatchEvent(
-                  new Event('submit', { cancelable: true, bubbles: true })
-                );
+              document.getElementById('productForm').dispatchEvent(
+                new Event('submit', { cancelable: true, bubbles: true })
+              );
             }}
           />
         )}

@@ -82,7 +82,7 @@ export function AttributeFilter({
                 <li key={o.optionId} className="mt-2">
                   <a
                     href="#"
-                    className="font-16 text-black d-flex align-items-center pb-0 text-decoration-none"
+                    className="font-16 text-black d-flex align-items-center pb-0 text-decoration-none filter-item"
                     onClick={(e) => onChange(e, a.attributeCode, o.optionId)}
                   >
                     {isChecked && (

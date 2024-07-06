@@ -123,7 +123,7 @@ export default function Layout({ searchPageUrl }) {
                   component: { default: Area },
                   props: {
                     id: 'icon-wrapper',
-                    className: 'd-flex align-items-center position-absolute end-0 auth-icon gap-md-4'
+                    className: 'd-flex align-items-center position-absolute end-0 auth-icon gap-sm-4'
                   },
                   sortOrder: 20
                 }

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Name } from '@components/frontStore/catalog/product/list/item/Name';
 import { Thumbnail } from '@components/frontStore/catalog/product/list/item/Thumbnail';
 import { Price } from '@components/frontStore/catalog/product/list/item/Price';
 import Area from '@components/common/Area';
 import { get } from '@evershop/evershop/src/lib/util/get';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
+import { AddToCart } from './item/AddToCart';
 
 export default function ProductList({ products = [], countPerRow = 3 }) {
   if (products.length === 0) {
@@ -18,6 +19,11 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
       </div>
     );
   }
+
+  useEffect(() => {
+    console.log(products)
+  }, [])
+
 
   let className;
   switch (countPerRow) {
@@ -37,10 +43,10 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   return (
     <div className={className}>
       {products.map((p) => (
-        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-2 mb-5 px-3'>
+        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-2 mb-5 px-3'>
           <Area
             id="productListingItem"
-            className="card  shadow-sm px-0"
+            className="card px-0"
             product={p}
             key={p.productId}
             coreComponents={[
@@ -60,6 +66,12 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
                 component: { default: Price },
                 props: { ...p.price },
                 sortOrder: 30,
+                id: 'price'
+              },
+              {
+                component: { default: AddToCart },
+                props: { stockAvaibility: p.inventory.isInStock },
+                sortOrder: 40,
                 id: 'price'
               }
             ]}

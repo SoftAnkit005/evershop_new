@@ -36,6 +36,9 @@ Products.propTypes = {
               text: PropTypes.string
             })
           }),
+          inventory: PropTypes.shape({
+            isInStock: PropTypes.bool.isRequired
+          }).isRequired,
           image: PropTypes.shape({
             alt: PropTypes.string,
             listing: PropTypes.string
@@ -84,6 +87,9 @@ export const fragments = `
         value
         text
       }
+    }
+    inventory {
+      isInStock
     }
     image {
       alt

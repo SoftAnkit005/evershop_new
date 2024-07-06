@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.cdnfonts.com/css/romelio-sans');
+@import url(https://db.onlinewebfonts.com/c/4053a87d20fec1db9a470262d76cb0a1?family=Romelio+Sans);
 
 
 body {
@@ -139,7 +139,7 @@ body {
 
     .field-prefix {
         display: block;
-
+        z-index: 100;
         svg {
             position: absolute;
             right: 10px;
@@ -372,7 +372,7 @@ ul.navbar-nav::after {
     border-radius: 12px;
     border: 0 !important;
     top: 100%;
-    width: 100%;
+    // width: 100%;
     left: 0;
 
     li {
@@ -540,7 +540,7 @@ ul.navbar-nav::after {
 }
 
 .doc-name-white {
-    font-family: 'Romelio Sans', sans-serif;
+    font-family: "Romelio Sans";
     font-weight: 400;
     font-size: 36px;
     line-height: 48px;
@@ -962,6 +962,12 @@ ul.navbar-nav::after {
 }
 
 
+.spPrice {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    padding: 1.5rem;
+}
+
+
 .fade-left {
     position: relative;
 
@@ -1177,8 +1183,7 @@ ul.navbar-nav::after {
 .btn-brown {
     padding: 18px 45px !important;
     background: var(--brown) !important;
-    border-radius: 10px !important;
-
+    border-radius: 5px !important;
     font-weight: 500 !important;
     font-size: 16px !important;
     line-height: 20px !important;
@@ -1817,7 +1822,7 @@ ul.navbar-nav::after {
             padding: 0;
             
             .card-img {
-                background-color: #ECEFF1;
+                // background-color: #ECEFF1;
                 width: 100%;
                 border-radius: 0;
                 // height: 300px;
@@ -2633,11 +2638,20 @@ ul.navbar-nav::after {
     }
 }
 
+.filter-item svg{
+    min-height: 24px !important;
+    min-width: 24px !important;
+}
+
 .products .products-list:first-child {
     top: -4px !important;
 }
 
 .header-menu .active {
+    color: #CDA646 !important;
+}
+
+.header-menu .simple-menu.active {
     // border-bottom: 4px solid transparent;
     // border-bottom-width: 4px;
     // border-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #CDA646 100%, #CDA646 100.01%);
@@ -2859,6 +2873,12 @@ select {
     .btn-brown {
         width: 100% !important;
         padding: 10px !important;
+
+        span{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        }
     }
 }
 
@@ -2909,6 +2929,32 @@ select {
     //     left: 0;
     //     background: linear-gradient(0.25turn, rgba(56, 2, 155, 0), #CDA646, rgba(56, 2, 155, 0));
     // }
+}
+
+.in-stock{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 6px;
+    color: #37A510;
+    background: rgba(55, 165, 16, 0.2);
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 8px;
+    width: fit-content;
+}
+
+.out-of-stock {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 6px;
+    color: #a51010;
+    background: rgb(165 16 16 / 20%);
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 8px;
+    width: fit-content;
 }
 
 .add-to-cart {
@@ -3403,6 +3449,13 @@ select {
         }
     }
 
+    .wishlist-section .card .card-body .card-img {
+        img {
+            width: 225px ;
+            height: 225px ;
+        }
+    }
+
     .policy-content {
         padding: 80px 25px 80px 50px;
 
@@ -3874,7 +3927,7 @@ select {
     .main-menu-mobile {
         .nav {
             display: block;
-            right: auto !important;
+            // right: auto !important;
             padding: 0px !important;
             background-color: #212121 !important;
             // left: -320px !important;
@@ -4835,7 +4888,7 @@ select {
     .main-menu-mobile {
         .nav {
             display: block;
-            right: auto !important;
+            // right: auto !important;
             padding: 0px !important;
             background-color: #212121 !important;
             // left: -635px !important;
@@ -4941,6 +4994,10 @@ select {
         .slick-dots {
             bottom: 49%;
         }
+    }
+
+    .search-box .search-input-container .search-input{
+        padding: 0px !important;
     }
 
     .mobile-menu {
@@ -5747,6 +5804,7 @@ select {
             bottom: 44%;
         }
     }
+
 
     .mobile-menu {
         .search-input {
@@ -6906,7 +6964,7 @@ select {
 
     .product-image {
         width: 90%;
-        margin-left: auto;
+        // margin-left: auto;
     }
 
     .product-gallery {
@@ -7495,7 +7553,7 @@ select {
     }
 
     .product-gallery li {
-        flex: 0 0 25%;
+        // flex: 0 0 25%;
         // max-width: 25%;
     }
 
@@ -7517,6 +7575,10 @@ select {
     
     .product-single-page-image{
         margin: 0;
+    }
+    .product-gallery{
+        order: 2;
+        margin-top: 10px;
     }
 
     .product-page-middle{
@@ -7582,6 +7644,11 @@ select {
 
     .about-team .team-title h3 {
         margin-bottom: 20px;
+    }
+
+    .spPrice {
+        border: none !important; 
+        padding: 0px;
     }
 
 }

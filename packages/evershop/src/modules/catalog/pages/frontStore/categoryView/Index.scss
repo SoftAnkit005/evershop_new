@@ -456,30 +456,29 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 
 .search-box .search-input-container {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 110px;
+    left: auto;
     bottom: 0;
-    right: 0;
+    right: 0px;
     z-index: 100;
-    background-color: rgba(0,0,0,.2);
-    width: 100%
+    width: 100%;
 }
 
 .search-box .search-input-container .search-input {
-    background-color: #fff;
-    padding: 5rem;
+    // background-color: #fff;
+    // padding: 5rem;
     display: flex;
     justify-content: center
 }
 
-.search-box .search-input-container .search-input .form-field-container {
-    width: 80%
-}
+// .search-box .search-input-container .search-input .form-field-container {
+//     width: 80%
+// }
 
 .search-box .search-input-container .search-input .close-icon {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    // top: 2rem;
+    // right: 2rem;
     font-size: 2rem;
     cursor: pointer
 }
@@ -512,7 +511,7 @@ input[type=checkbox]:checked+.checkbox-checked svg {
     position: relative
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1199px) {
     .main-menu-mobile {
         display:none
     }
@@ -525,11 +524,11 @@ input[type=checkbox]:checked+.checkbox-checked svg {
 
 .main-menu-mobile .nav {
     position: absolute;
-    top: 100%;
+    // top: 100%;
     // right: -2.5rem;
     padding: 2.5rem;
-    width: 100vw;
-    background-color: #fff;
+    // width: 100vw;
+    // background-color: #fff;
     z-index: 1000
 }
 
