@@ -12,10 +12,10 @@ export default function ProductPageLayout() {
             <div className="col-12 col-sm-12 col-lg-5 productImages">
               <Area id="productPageMiddleLeft" />
             </div>
-            <div className='col-12 col-sm-12 col-lg-5 productDescription'>
+            <div className='col-12 col-sm-12 col-lg-4 productDescription'>
               <Area id="productPageMiddleRight" />
             </div>
-            <div className='col-12 col-sm-12 col-lg-2 productPrice'>
+            <div className='col-12 col-sm-12 col-lg-3 productPrice'>
               <Area id="productPagePrice" className='spPrice' />
             </div>
           </div>

@@ -2896,6 +2896,26 @@ select {
     }
 }
 
+.prodList{
+    .prod-name{
+        padding: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .prod-desc p{
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 !important;
+        margin: 0 0 7px 0;
+    }
+}
+
 .delivery-list {
     width: 20%;
     text-align: center;
@@ -2968,18 +2988,18 @@ select {
         justify-content: space-between;
         width: 100%;
 
-        p {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 13px;
-            color: #37A510;
-            background: rgba(55, 165, 16, 0.2);
-            border-radius: 5px;
-            margin: 0;
-            padding: 10px 12px;
-            width: fit-content;
-        }
+        // p {
+        //     font-style: normal;
+        //     font-weight: 500;
+        //     font-size: 15px;
+        //     line-height: 13px;
+        //     color: #37A510;
+        //     background: rgba(55, 165, 16, 0.2);
+        //     border-radius: 5px;
+        //     margin: 0;
+        //     padding: 10px 12px;
+        //     width: fit-content;
+        // }
     }
 }
 

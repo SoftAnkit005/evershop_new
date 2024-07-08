@@ -86,7 +86,11 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
     <div className="add-to-cart mt-2">
       <div className='special-price'>
         <h1 className='font-20 text-brawn'>special price</h1>
-        <p>In Stock</p>
+        {(stockAvaibility === true) ?
+          <p className='in-stock'>In Stock</p>
+          :
+          <p className='out-of-stock'>Out Of Stock</p>
+        }
       </div>
       <div className='d-flex align-items-center'>
         <p className='font-16 pb-0 mb-0 text-black mt-4 me-4'>Quantity</p>

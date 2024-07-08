@@ -36,12 +36,13 @@ const inputProps = function buidProps(props) {
 
 const Input = React.forwardRef((props, ref) => {
   const { label, name, instruction, prefix, suffix, error } = props;
+  console.log(error)
   return (
     <div className={`form-field-container ${error ? 'has-error' : null}`}>
       {label && <label htmlFor={name}>{label}</label>}
       <div className="form-group mb-4">
         {prefix && <div className="field-prefix align-middle">{prefix}</div>}
-        <input type="text" {...inputProps(props)} ref={ref} className='form-control'/>
+        <input type="text" {...inputProps(props)} ref={ref} className='form-control' />
         <div className="field-border" />
         {suffix && <div className="field-suffix">{suffix}</div>}
       </div>

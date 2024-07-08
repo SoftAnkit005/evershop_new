@@ -11,7 +11,6 @@ export default function Menu({ menu: { items } }) {
       const currentPath = path.replace(window.location.origin, '');
       setCurrentPath(currentPath);
     }
-    console.log(items)
   }, []);
   const renderSubMenu = (children) => (
     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">

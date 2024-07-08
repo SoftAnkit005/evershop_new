@@ -43,7 +43,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   return (
     <div className={className}>
       {products.map((p) => (
-        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-2 mb-5 px-3'>
+        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-2 mb-5 px-3' >
           <Area
             id="productListingItem"
             className="card px-0"
@@ -58,7 +58,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
               },
               {
                 component: { default: Name },
-                props: { name: p.name, url: p.url, id: p.productId },
+                props: { name: p.name, url: p.url, id: p.productId, desc: p.description },
                 sortOrder: 20,
                 id: 'name'
               },
@@ -70,15 +70,16 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
               },
               {
                 component: { default: AddToCart },
-                props: { stockAvaibility: p.inventory.isInStock },
+                props: { stockAvaibility: p.inventory.isInStock, product: p },
                 sortOrder: 40,
                 id: 'price'
               }
             ]}
           />
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 }
 
@@ -102,7 +103,8 @@ ProductList.propTypes = {
       image: PropTypes.shape({
         alt: PropTypes.string,
         listing: PropTypes.string
-      })
+      }),
+      description: PropTypes.string
     })
   ).isRequired,
   countPerRow: PropTypes.number.isRequired

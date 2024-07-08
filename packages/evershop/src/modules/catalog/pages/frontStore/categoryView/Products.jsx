@@ -96,6 +96,7 @@ export const fragments = `
       url: listing
     }
     url
+    description
   }
 `;
 

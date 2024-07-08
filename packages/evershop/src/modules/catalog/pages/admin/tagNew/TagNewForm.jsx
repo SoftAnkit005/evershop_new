@@ -16,13 +16,13 @@ function Grid({ action }) {
 
   const onSuccess = async () => {
     console.log(condition.value[0])
-    const result = await fetch("http://localhost:3000/api/tagdata", {
+    const result = await fetch(" https://drbwc.com/api/tagdata ", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        "name":  name,
+        "name": name,
         "product_id": condition.value[0]
       })
     });
@@ -47,19 +47,19 @@ function Grid({ action }) {
           action="/api/tagdata"
           onSuccess={onSuccess}
         >
-          <div className="form-field-container">            
-              <div className="form-group mb-3">
-                <p className="pb-1">Name</p>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="form-control"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-            
+          <div className="form-field-container">
+            <div className="form-group mb-3">
+              <p className="pb-1">Name</p>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="form-control"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+
             <div className="form-group mb-3">
               <p className="pb-1">Select Products</p>
               <ProductConditionSelector
