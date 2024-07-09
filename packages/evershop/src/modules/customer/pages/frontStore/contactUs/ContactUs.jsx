@@ -16,7 +16,7 @@ export default function ContactUs() {
                     <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
                         <div className='contact-details'>
                             <h4 className="font-20">about bhanusali wellness care</h4>
-                            <p className="font-16 text-black fw-semibold">DR.BWC is established in 2000 and has continued to grow and expand into India’s leading massage brands. Dr. BWC, The Brand represents value for money and strive for customers around the pan India. Network with best massage experience at affordable prices.</p>
+                            <p className="font-14 text-theme-grey">DR.BWC is established in 2000 and has continued to grow and expand into India’s leading massage brands. Dr. BWC, The Brand represents value for money and strive for customers around the pan India. Network with best massage experience at affordable prices.</p>
                             <hr />
                             <h4 className="font-20">contact us</h4>
                             <div className='row'>

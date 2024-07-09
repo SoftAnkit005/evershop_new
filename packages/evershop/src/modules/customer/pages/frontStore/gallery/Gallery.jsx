@@ -8,7 +8,7 @@ export default function Gallery() {
         <div className='row'>
           <div className='text-center'>
             <h3 className='font-30'>Gallery</h3>
-            <p className='font-16 text-black fw-semibold'>Bhanusali Wellness is a proficient company that provides state-of-the-art massages accessories for its users.</p>
+            <p className='font-14 text-theme-grey mb-3'>Bhanusali Wellness is a proficient company that provides state-of-the-art massages accessories for its users.</p>
           </div>
           <div className='row mt-4'>
             <div className='col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5'>

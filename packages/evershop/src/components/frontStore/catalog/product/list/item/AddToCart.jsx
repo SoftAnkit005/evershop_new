@@ -54,7 +54,7 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
           <div className='font-16 pb-0'>{_('QTY: ${qty}', { qty })}</div>
         </div>
       </div>
-      <a className="add-cart-popup-button btn-brown" href={cartUrl}>
+      <a className="btn-brown add-cart-popup-button" href={cartUrl}>
         {_('VIEW CART (${count})', { count })}
       </a>
       <a

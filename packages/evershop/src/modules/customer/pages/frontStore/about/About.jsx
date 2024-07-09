@@ -11,6 +11,8 @@ export default function About() {
     centerPadding: "60px",
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 575,
@@ -44,7 +46,7 @@ export default function About() {
     <>
       <section className='about-page'>
         <div className='container'>
-          <div className='row'>
+          <div className='row align-items-center'>
             <div className='col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5'>
               <div className='about-img'>
                 <img src='Assets/Images/about.png' alt='About' />
@@ -52,20 +54,20 @@ export default function About() {
             </div>
             <div className='col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7'>
               <div className='text-left'>
-                <h3 className='font-30'>about Dr.BWC</h3>
-                <p className='font-16 text-black fw-semibold'>Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
-                <p className='font-16 text-black fw-semibold'>Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
-                <p className='font-16 text-black fw-semibold'>Dr. BWC’s goal is to convert the “i”llness to “We”llness for all .</p>
-                <p className='font-16 text-black fw-semibold'>The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
+                <h3 className='products-subtitle-black text-uppercase my-5'>about Dr.BWC</h3>
+                <p className='font-14 text-theme-grey'>Dr. BWC’s has recently launched its first mega segment- Health and Fitness with Relaxation. Led by the visionary leadership of Dr. Kaushal Bhanusali & Dr. Alpa Bhanusali, the company is moving ahead, with an objective to help people achieve better health, more relaxation and smarter personality.</p>
+                <p className='font-14 text-theme-grey mt-4'>Our basket of services is customized for anybody who is facing challenges in life and is stuck up with any health concern of lack of proper decision making. We empower him or her to hope, move ahead in life in an informed way and enjoy life to the fullest.</p>
+                <p className='font-14 text-theme-grey mt-4'>Dr. BWC’s goal is to convert the “i”llness to “We”llness for all .</p>
+                <p className='font-14 text-theme-grey mt-4'>The focus is on Recovery, Rehabilitation and Relaxation by Innovative Smart Intelligent Robotic Automatic Massage Products.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className='about-team'>
+      <section className='about-team py-5'>
         <div className='container'>
-          <div className='team-title'>
-            <h3>about out team</h3>
+          <div className='team-title text-center'>
+            <h3 className='products-subtitle-black text-uppercase my-5'>about out team</h3>
           </div>
           <div className='row'>
             <div className='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
@@ -136,11 +138,11 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className='testimonial mt-0 mb-5 about-slider'>
+      <section className='testimonial mt-0 mb-5 about-slider pt-5'>
         <div className='container'>
-          <div className='instagram-info bg-transparent'>
-            <h3>Happy customers</h3>
-            <p className='text-black fw-semibold'>Convallis ullamcorper aliquet ultrices orci cum vestibulum lobortis erat.</p>
+          <div className='bg-transparent text-center'>
+            <h3 className='products-subtitle-black text-uppercase mt-5'>Happy customers</h3>
+            <p className='products-details-black'>Convallis ullamcorper aliquet ultrices orci cum vestibulum lobortis erat.</p>
           </div>
           <Slider {...settings}>
             <div className='insta-slide'>

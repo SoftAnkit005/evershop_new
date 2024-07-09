@@ -1063,7 +1063,7 @@ ul.navbar-nav::after {
 
 .font-14 {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.03em;
     text-transform: capitalize;
@@ -3121,18 +3121,18 @@ select {
 }
 
 .about-team {
-    .team-title {
-        h3 {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 30px;
-            line-height: normal;
-            text-transform: capitalize;
-            color: var(--black);
-            margin: 48px auto;
-            text-align: center;
-        }
-    }
+    // .team-title {
+    //     h3 {
+    //         font-style: normal;
+    //         font-weight: 600;
+    //         font-size: 30px;
+    //         line-height: normal;
+    //         text-transform: capitalize;
+    //         color: var(--black);
+    //         margin: 48px auto;
+    //         text-align: center;
+    //     }
+    // }
 
     .card {
         border: 0;

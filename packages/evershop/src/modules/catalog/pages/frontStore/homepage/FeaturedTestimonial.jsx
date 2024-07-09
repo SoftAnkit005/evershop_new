@@ -95,9 +95,9 @@ export default function FeaturedTestimonial() {
                         </div>
                     </Slider>
                 </div>
-                <a className="btn-light-brown m-auto" href="#">
+                {/* <a className="btn-light-brown m-auto" href="#">
                     <span className="wd-btn-text" data-elementor-setting-key="text">Leave a review</span>
-                </a>
+                </a> */}
             </div>
         </section>
     );

@@ -60,7 +60,7 @@ const Select = React.forwardRef((props, ref) => {
               )
             )}
         </select>
-        <div className="field-border border-0" />
+        {/* <div className="field-border border-0" /> */}
         <div className="field-suffix">
           <BiMenuAltLeft />
         </div>

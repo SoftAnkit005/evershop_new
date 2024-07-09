@@ -18,7 +18,6 @@ export default function CategoryInfo({
         )}
         <div className="category__info">
           <div>
-
             <div className="category__description font-24">
               <CKEditor content={description} />
             </div>

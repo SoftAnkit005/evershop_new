@@ -9,10 +9,11 @@ import CategoryTree from '@components/admin/catalog/productEdit/category/Categor
 
 function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video }) {
 
+  console.log(usefor);
 
   return (
     <div className="flex flex-wrap">
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="sku"
           name="sku"
@@ -22,7 +23,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
       <div className='w-33'>
         <Field
           id="price"
@@ -43,7 +44,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           placeholder="Weight"
           label="Weight"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
           suffix={setting.weightUnit}
         />
       </div>
@@ -51,11 +52,11 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="usefor"
           name="usefor"
-          value={usefor?.value}
+          value={usefor}
           placeholder="Use For"
           label="Use For"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 
@@ -63,7 +64,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="powersource"
           name="powersource"
-          value={powersource?.value}
+          value={powersource}
           placeholder="Power Source"
           label="Power Source"
           type="text"
@@ -75,7 +76,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="material"
           name="material"
-          value={material?.value}
+          value={material}
           placeholder="Material"
           label="Material"
           type="text"
@@ -83,27 +84,27 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="itemweight"
           name="itemweight"
-          value={itemweight?.value}
+          value={itemweight}
           placeholder="Item Weight"
           label="Item Weight"
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
 
       <div className='w-33'>
         <Field
           id="brand"
           name="brand"
-          value={brand?.value}
+          value={brand}
           placeholder="Brand"
           label="Brand"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 
@@ -111,67 +112,67 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="color"
           name="color"
-          value={color?.value}
+          value={color}
           placeholder="Color"
           label="Color"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="specialfeature"
           name="specialfeature"
-          value={specialfeature?.value}
+          value={specialfeature}
           placeholder="Special Feature"
           label="Special Feature"
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
 
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="specificusesforproduct"
           name="specificusesforproduct"
-          value={specificusesforproduct?.value}
+          value={specificusesforproduct}
           placeholder="Specific Uses For Product"
           label="Specific Uses For Product"
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
 
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="productbenefits"
           name="productbenefits"
-          value={productbenefits?.value}
+          value={productbenefits}
           placeholder="Product Benefits"
           label="Product Benefits"
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
 
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="productdimensions"
           name="productdimensions"
-          value={productdimensions?.value}
+          value={productdimensions}
           placeholder="Product Dimensions"
           label="Product Dimensions"
           type="text"
           validationRules={['notEmpty']}
         />
-      </div>
+      </div> */}
 
       <div className='w-33'>
         <Field
           id="companydetails"
           name="companydetails"
-          value={companydetails?.value}
+          value={companydetails}
           placeholder="Company Details"
           label="Company Details"
           type="textarea"
@@ -183,11 +184,11 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="video"
           name="video"
-          value={video?.value}
+          value={video}
           placeholder="Video Link"
           label="Video Link"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 

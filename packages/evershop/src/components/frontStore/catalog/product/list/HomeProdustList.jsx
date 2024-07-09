@@ -13,6 +13,7 @@ export default function HomeProductList({ products = [] }) {
     );
   }
 
+  console.log(products);
   return (
     <>
       {products.map((p, index) => (
@@ -28,7 +29,7 @@ export default function HomeProductList({ products = [] }) {
                       <h3 className='products-subtitle-white'>{p.name}</h3>
                       <p className='font-16 text-white'>{p.companydetails}</p>
                       <div className='mt-3'>
-                        <a href='products' className='btn-white'>View All Products</a>
+                        <a href={p.url} className='btn-white'>View All Products</a>
                       </div>
                     </div>
                   </div>

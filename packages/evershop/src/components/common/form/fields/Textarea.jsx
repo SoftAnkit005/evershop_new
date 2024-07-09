@@ -36,7 +36,7 @@ function TextArea({
           value={_value}
           onChange={onChangeFunc}
         />
-        <div className="field-border" />
+        {/* <div className="field-border" /> */}
       </div>
       {instruction && (
         <div className="field-instruction mt-sm">{instruction}</div>

@@ -48,7 +48,7 @@ const MultiSelect = React.forwardRef((props, ref) => {
               )
             )}
         </select>
-        <div className="field-border border-0" />
+        {/* <div className="field-border border-0" /> */}
         <div className="field-suffix">
           <svg
             viewBox="0 0 20 20"
