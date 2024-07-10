@@ -47,25 +47,10 @@
     "material": {
       "type": "string"
     },
-    "itemweight": {
-      "type": "string"
-    },
     "brand": {
       "type": "string"
     },  
     "color": {
-      "type": "string"
-    },
-    "specialfeature": {
-      "type": "string"
-    },
-    "productdimensions": {
-      "type": "string"
-    },
-    "specificusesforproduct": {
-      "type": "string"
-    },
-    "productbenefits": {
       "type": "string"
     },
     "companydetails": {

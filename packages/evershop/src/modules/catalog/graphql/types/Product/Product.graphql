@@ -10,15 +10,15 @@ type Product {
   usefor: String!
   powersource: String!
   material: String!
-  itemweight: String!
+  itemweight: String
   brand: String!
   color: String!
-  specialfeature: String!
-  specificusesforproduct: String!
-  productbenefits: String!
-  productdimensions: String!
-  companydetails: String!
-  video: String!
+  specialfeature: String
+  specificusesforproduct: String
+  productbenefits: String
+  productdimensions: String
+  companydetails: String
+  video: String
   weight: Weight!
   taxClass: Int
   description: String

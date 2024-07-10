@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "errorMessage": {
+        "type": "Name should not be empty"
+      }
+    },
+    "view": {
+      "type": "string",
+      "errorMessage": {
+        "type": "Review should not be empty"
+      }
+    }
+  },
+  "additionalProperties": true
+}

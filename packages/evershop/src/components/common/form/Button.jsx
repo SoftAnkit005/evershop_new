@@ -32,8 +32,7 @@ function Button({
         }}
         className={className.join(' ')}
       >
-        <span>{title}</span>
-        {isLoading === true && (
+        {(isLoading === true)?
           <svg
             style={{
               background: 'rgb(255, 255, 255, 0)',
@@ -49,7 +48,7 @@ function Button({
               cx="50"
               cy="50"
               fill="none"
-              stroke="#5c5f62"
+              stroke="#fff"
               strokeWidth="10"
               r="43"
               strokeDasharray="202.63272615654165 69.54424205218055"
@@ -64,7 +63,11 @@ function Button({
               />
             </circle>
           </svg>
-        )}
+          :
+        <span>{title}</span>
+        }
+        {/* {isLoading === true && (
+        )} */}
       </button>
     );
   } else {

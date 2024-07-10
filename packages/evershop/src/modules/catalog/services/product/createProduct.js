@@ -30,14 +30,14 @@ function validateProductDataBeforeInsert(data) {
     'usefor',
     'brand',
     'powersource',
-    'specificusesforproduct',
-    'productbenefits',
-    'productdimensions',
     'companydetails',
     'video',
-    'itemweight',
     'group_id',
     'visibility'
+    // 'specificusesforproduct',
+    // 'productbenefits',
+    // 'productdimensions',
+    // 'itemweight',
   ];
   const jsonSchema = getValueSync(
     'createProductDataJsonSchema',

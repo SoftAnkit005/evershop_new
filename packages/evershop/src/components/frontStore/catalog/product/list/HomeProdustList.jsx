@@ -13,7 +13,6 @@ export default function HomeProductList({ products = [] }) {
     );
   }
 
-  console.log(products);
   return (
     <>
       {products.map((p, index) => (

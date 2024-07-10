@@ -9,11 +9,9 @@ import CategoryTree from '@components/admin/catalog/productEdit/category/Categor
 
 function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video }) {
 
-  console.log(usefor);
-
   return (
     <div className="flex flex-wrap">
-      {/* <div className='w-33'>
+      <div className='w-33'>
         <Field
           id="sku"
           name="sku"
@@ -23,7 +21,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           type="text"
           validationRules={['notEmpty']}
         />
-      </div> */}
+      </div>
       <div className='w-33'>
         <Field
           id="price"

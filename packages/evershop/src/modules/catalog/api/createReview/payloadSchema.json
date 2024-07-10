@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "skipEscape": true
+    },
+    "review": {
+      "type": "string",
+      "skipEscape": true
+    }
+  },
+  "additionalProperties": true
+}
