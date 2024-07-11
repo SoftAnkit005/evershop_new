@@ -52,12 +52,12 @@ export default function FeaturedInstagram() {
                     <h3 className='products-subtitle-black'>Instagram</h3>
                     <p className='products-details-black'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div> */}
-                <div className='instagram-info'>
+                <a href='https://www.instagram.com/dr.bhanusaliwellnesscare/' alt='instagram card' className='instagram-info' target="_blank">
                     <img src='Assets/Images/instagram_id.svg' alt='Instagram ID' />
                     <h3>INSTAGRAM</h3>
                     <h3 className='text-theme-grey fs-5 p-0'>@dr.bhanusaliwellnesscare</h3>
                     <p>Follow us for exciting offers & stay updated with our latest technology!</p>
-                </div>
+                </a>
                 <div className='row m-0 '>
                     <div className='col-xs-12 col-sm-6 col-md-4 col-lg-2 instagram-picture'>
                         <img src='Assets/Images/insta_post_one.jpg' alt='Instagram Post' className='w-100 h-100' />
