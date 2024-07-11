@@ -9,20 +9,23 @@ import { useState } from 'react';
 // import { FaRegStar, FaStar } from "react-icons/fa6";
 
 
-export default function Review({c}) {
+export default function Review() {
     const [reviewData, setreviewData] = useState([])
+    
     useEffect(() => {
-        const myHeaders = new Headers();        
-        const requestOptions = {
-          method: "GET",
-          headers: myHeaders,
-          redirect: "follow"
-        };
-
-        fetch("https://drbwc.com/api/getreviewdata", requestOptions)
-            .then((response) => response.text())
-            .then((result) => setreviewData(JSON.parse(result)))
-            .catch((error) => console.error(error));
+        async function fetchMyAPI() {
+            const result = await fetch("https://drbwc.com/api/getreviewdata", {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                redirect: "follow"
+            });
+            const data = await result.json();
+            setreviewData(data)
+        }
+      
+        fetchMyAPI();
     }, [])
 
     const settings = {

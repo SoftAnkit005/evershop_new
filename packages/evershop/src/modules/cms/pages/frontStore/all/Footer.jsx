@@ -175,7 +175,7 @@ function Footer({ themeConfig: { copyRight } }) {
                     </div>
                 </div>
             </div>
-            <p className='copyright'>{copyRight}</p>
+            <p class="copyright">Copyright @ 2022 Bhanusaliwellness | Designed By <a className='copyright-developers' target="_blank" href='https://softieons.com/' alt="softieons team">Softieons</a></p>
         </>
     );
 }
