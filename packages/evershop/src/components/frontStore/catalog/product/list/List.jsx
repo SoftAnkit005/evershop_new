@@ -20,10 +20,6 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
     );
   }
 
-  useEffect(() => {
-    console.log(products)
-  }, [])
-
 
   let className;
   switch (countPerRow) {

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 function Footer({ themeConfig: { copyRight }, menu }) {
 
     const [finalURL, setFinalURL] = useState('');
+    const [sortedMenu, setsortedMenu] = useState([])
 
     useEffect(() => {
         const currentURL = window.location.href;
@@ -13,6 +14,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
         const newPath = newURL.substring(pathStartIndex);
         const finalURL = window.location.origin + newPath;
         setFinalURL(finalURL);
+        setsortedMenu(menu.items.sort((a, b) => a.position - b.position))
     }, []);
     
     return (
@@ -98,7 +100,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                 <li>
                                     <a href='/' className='footer-link fade-left'>Home</a>
                                 </li>
-                                {menu.items.sort((a, b) => a.position - b.position).map((item) => 
+                                {sortedMenu.map((item) => 
                                     <li>
                                         <a href={item.url} className='footer-link fade-left'>{item.name}</a>
                                     </li>

@@ -15,7 +15,6 @@ export default function AttributeNewForm({ action }) {
         toast.error('Something wrong. Please reload the page!');
       }}
       onSuccess={(response) => {
-        console.log(response);
         if (response.error) {
           toast.error(
             get(

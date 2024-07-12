@@ -85,11 +85,6 @@ function AddToCart({ stockAvaibility, product }) {
   const [toastId, setToastId] = useState();
   const [error, setError] = useState();
 
-  useEffect(() => {
-    console.log(product)
-  }, [])
-
-
   const onSuccess = (response) => {
     if (!response.error) {
       setToastId(
