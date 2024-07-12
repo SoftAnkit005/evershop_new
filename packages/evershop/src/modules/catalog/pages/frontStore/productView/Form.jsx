@@ -92,6 +92,14 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
           <p className='out-of-stock'>Out Of Stock</p>
         }
       </div>
+      <div>
+        <div className="row mt-5 mx-0">
+          <div className="col-4 font-13 p-0 text-muted">Ships from</div>
+          <div className="col-8 font-13 p-0 text-black">Dr Bhanusalis Wellness Care</div>
+          <div className="col-4 font-13 p-0 text-muted">Sold by</div>
+          <div className="col-8 font-13 p-0 text-black">Dr Bhanusalis Wellness Care</div>
+        </div>
+      </div>
       <div className='d-flex align-items-center'>
         <p className='font-16 pb-0 mb-0 text-black mt-4 me-4'>Quantity</p>
         <Field

@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export function CategoryFilter({ currentFilters, categories, updateFilter }) {
-  useEffect(() => {
-    console.log(categories);
-  }, [])
-  
+
   const onChange = (e, categoryId) => {
     e.preventDefault();
     // Check if the attribute is already in the filter
