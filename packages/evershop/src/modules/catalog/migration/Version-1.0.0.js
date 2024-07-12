@@ -357,7 +357,7 @@ module.exports = exports = async (connection) => {
   "status" boolean NOT NULL,
   "parent_id" INT DEFAULT NULL,
   "include_in_nav" boolean NOT NULL,
-  "position" smallint DEFAULT NULL,
+  "position" INT NOT NULL,
   "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
   "updated_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
    CONSTRAINT "CATEGORY_UUID_UNIQUE" UNIQUE ("uuid")

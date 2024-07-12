@@ -10,6 +10,7 @@ type Category {
   description: String
   urlKey: String
   metaTitle: String
+  position:Int
   metaDescription: String
   metaKeywords: String
   image: CategoryImage

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-function Footer({ themeConfig: { copyRight } }) {
+function Footer({ themeConfig: { copyRight }, menu }) {
 
     const [finalURL, setFinalURL] = useState('');
 
@@ -14,8 +14,7 @@ function Footer({ themeConfig: { copyRight } }) {
         const finalURL = window.location.origin + newPath;
         setFinalURL(finalURL);
     }, []);
-
-
+    
     return (
 
         <>
@@ -99,30 +98,11 @@ function Footer({ themeConfig: { copyRight } }) {
                                 <li>
                                     <a href='/' className='footer-link fade-left'>Home</a>
                                 </li>
-                                <li>
-                                    <a href='/massage-chair' className='footer-link fade-left'>Massage Chair</a>
-                                </li>
-                                <li>
-                                    <a href='/thermal-heating-bed' className='footer-link fade-left'>Thermal Heading Bed</a>
-                                </li>
-                                <li>
-                                    <a href='/thermal-heating-bed' className='footer-link fade-left'>Foot & Leg Massager</a>
-                                </li>
-                                <li>
-                                    <a href='/salon-spa-jacuzzi' className='footer-link fade-left'>Salon Spa Jacuzzi</a>
-                                </li>
-                                <li>
-                                    <a href='/gym-products' className='footer-link fade-left'>Gym Products</a>
-                                </li>
-                                <li>
-                                    <a href='/new-arrivals' className='footer-link fade-left'>New Arrivals</a>
-                                </li>
-                                <li>
-                                    <a href='/corporate-gifts' className='footer-link fade-left'>Corporate Gifts</a>
-                                </li>
-                                <li>
-                                    <a href='/franchise-opportunity' className='footer-link fade-left'>Franchise Opportunity</a>
-                                </li>
+                                {menu.items.sort((a, b) => a.position - b.position).map((item) => 
+                                    <li>
+                                        <a href={item.url} className='footer-link fade-left'>{item.name}</a>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -184,14 +164,29 @@ function Footer({ themeConfig: { copyRight } }) {
 Footer.propTypes = {
     themeConfig: PropTypes.shape({
         copyRight: PropTypes.string
-
-    })
+    }),
+    menu: PropTypes.shape({
+        items: PropTypes.arrayOf(
+          PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired
+          })
+        ).isRequired
+      }).isRequired
 };
 
 Footer.defaultProps = {
     themeConfig: {
         copyRight: 'Copyright @ 2022 Bhanusaliwellness | Designed By Softieons'
-    }
+    },
+    menu: PropTypes.shape({
+        items: PropTypes.arrayOf(
+          PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired
+          })
+        ).isRequired
+      }).isRequired
 };
 
 
@@ -202,9 +197,19 @@ export const layout = {
 };
 
 export const query = `
-    query query {
-      themeConfig {
-        copyRight,
+    query {
+      menu {
+        items {
+            name
+            url
+            parent_id
+            position
+            children {
+                name
+                url
+                parent_id        
+            }
+        }
       }
     }
   `;

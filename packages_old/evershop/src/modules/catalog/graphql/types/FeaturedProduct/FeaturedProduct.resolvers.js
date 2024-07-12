@@ -4,7 +4,7 @@ const { getConfig } = require('@evershop/evershop/src/lib/util/getConfig');
 
 module.exports = {
   Query: {
-    featuredProducts: async (root, { limit = 4 }, { pool }) => {
+    featuredProducts: async (root, { limit = 7 }, { pool }) => {
       const query = select('product.product_id')
         .select('product.sku')
         .select('product.price')

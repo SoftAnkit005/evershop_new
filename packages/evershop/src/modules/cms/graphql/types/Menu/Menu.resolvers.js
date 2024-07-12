@@ -10,6 +10,7 @@ module.exports = {
         .select('request_path')
         .select('url_key')
         .select('parent_id')
+        .select('position')
         .from('category', 'cat');
       query
         .leftJoin('category_description', 'des')
@@ -34,7 +35,8 @@ module.exports = {
         name: i.name,
         url: i.request_path || buildUrl('categoryView', { uuid: i.uuid }),
         parent_id: i.parent_id === null ? 0 : i.parent_id,
-        children: []
+        children: [],
+        position:i.position === null ? 0 : i.position,
       }));
 
       const menuMap = {};

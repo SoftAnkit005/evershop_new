@@ -120,6 +120,18 @@ export default function General({
     {
       component: { default: Field },
       props: {
+        id: 'position',
+        name: 'position',
+        label: 'position',
+        validationRules: ['notEmpty'],
+        type: 'text'
+      },
+      sortOrder: 16,
+      id: 'position'
+    },
+    {
+      component: { default: Field },
+      props: {
         id: 'categoryId',
         name: 'category_id',
         type: 'hidden'
@@ -193,6 +205,7 @@ export const query = `
       name
       description
       status
+      position
       parent {
         categoryId
         name

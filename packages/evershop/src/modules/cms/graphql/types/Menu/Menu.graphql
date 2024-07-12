@@ -6,6 +6,7 @@ type MenuItem {
   url: String!
   parent_id: Int
   children: [MenuItem]
+  position: Int
 }
 
 """

@@ -10,6 +10,7 @@ export default function Menu({ menu: { items } }) {
       const path = window.location.href;
       const currentPath = path.replace(window.location.origin, '');
       setCurrentPath(currentPath);
+      console.log(items.sort((a, b) => a.position - b.position));
     }
   }, []);
   const renderSubMenu = (children) => (
@@ -27,7 +28,7 @@ export default function Menu({ menu: { items } }) {
   return (
     <div className='header-menu'>
       <ul className="list-unstyled d-flex mb-0">
-        {items.map((item, index) => (
+        {items.sort((a, b) => a.position - b.position).map((item, index) => (
           <li className={`nav-item pt-2 pb-3 m-0 ${item.children.length > 0 ? 'dropdown' : ''}`} key={index}>
             <a className={`nav-link menulist ${item.children.length > 0 ? 'dropdown-toggle' : 'simple-menu'} ${currentPath === item.url ? 'active' : ''}`} href={item.url} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {item.name}
@@ -63,6 +64,7 @@ export const query = `
         name
         url
         parent_id
+        position
         children {
           name
           url
