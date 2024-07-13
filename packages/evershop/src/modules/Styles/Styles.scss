@@ -651,7 +651,7 @@ ul.navbar-nav::after {
 }
 
 .text-theme-red{
-    color: #932D00;
+    color: #B12704 !important;
 }
 
 .text-theme-brown{
@@ -972,6 +972,23 @@ ul.navbar-nav::after {
 .spPrice {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
     padding: 1.5rem;
+    border-radius: 10px;
+
+    .add-to-cart{
+        .form-field-container{
+            margin-top: 0 !important;
+        }
+        select{
+            width: 40px;
+            padding: 2px 5px !important;
+            border: 1px solid black !important;
+            font-size: 14px !important; 
+        }
+        .field-suffix{
+            padding: 0;
+            padding-right: 5px;
+        }
+    }
 }
 
 
@@ -1074,6 +1091,19 @@ ul.navbar-nav::after {
     .text-center {
         padding: 0 0 48px 0
     }
+}
+
+.text-cadetblue{
+    color: cadetblue !important;
+}
+
+.font-12 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    margin: 0;
 }
 
 .font-13 {
@@ -2915,10 +2945,12 @@ select {
         line-height: 20px;
         letter-spacing: 0.03em;
         text-transform: capitalize;
-        color: #909090;
+        // color: #909090;
         margin: 0;
         padding: 0 0 15px 0;
     }
+
+    
 }
 
 .prodList{
@@ -2947,8 +2979,8 @@ select {
 }
 
 .info-icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
 }
 
@@ -7028,6 +7060,12 @@ select {
         }
     }
 
+    .product-page-middle {
+        .container {
+            max-width: 98% !important;
+        }
+    }
+
     .mobile-menu {
         margin: 25px 0;
         display: block;
@@ -7165,7 +7203,7 @@ select {
 
     .product-page-middle {
         .container {
-            max-width: 85%;
+            max-width: 90%;
         }
     }
 
@@ -7259,6 +7297,7 @@ select {
         }
     }
 }
+
 
 // tejas css start
 .products-list:nth-child(2n) {

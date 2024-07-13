@@ -11,6 +11,9 @@ import Button from '@components/common/form/Button';
 import './Form.scss';
 import { useAppDispatch, useAppState } from '@components/common/context/app';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
+import { LuMapPin } from "react-icons/lu";
+import { Select } from '@components/common/form/fields/Select';
+
 
 function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
   return (
@@ -82,9 +85,15 @@ ToastMessage.propTypes = {
 };
 
 function AddToCart({ stockAvaibility, loading = false, error }) {
+  const deliveryDate = new Date().getDate() + 4;
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let deliveryMonth = months[new Date().getMonth()];
+
   return (
-    <div className="add-to-cart mt-2">
-      <div className='special-price'>
+    <div className="add-to-cart mt-4">
+        <div className="font-12 p-0">Delivery: <span className='font-semibold'>{deliveryDate} - {deliveryDate + 2} {deliveryMonth}</span></div>
+        <div className='font-12 mt-2 d-flex align-items-center text-cadetblue'><LuMapPin className='me-1'/> Pan India Delivery</div>
+      <div className='special-price mt-4'>
         {(stockAvaibility === true) ?
           <p className='in-stock'>In Stock</p>
           :
@@ -92,16 +101,16 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
         }
       </div>
       <div>
-        <div className="row mt-5 mx-0">
-          <div className="col-4 font-13 p-0 text-muted">Ships from</div>
-          <div className="col-8 font-13 p-0 text-black">Dr Bhanusalis Wellness Care</div>
-          <div className="col-4 font-13 p-0 text-muted">Sold by</div>
-          <div className="col-8 font-13 p-0 text-black">Dr Bhanusalis Wellness Care</div>
+        <div className="row mt-4 mx-0">
+          <div className="col-4 font-12 p-0 text-muted">Ships from</div>
+          <div className="col-8 font-12 p-0 text-black">Dr Bhanusalis Wellness Care</div>
+          <div className="col-4 font-12 p-0 text-muted">Sold by</div>
+          <div className="col-8 font-12 p-0 text-black">Dr Bhanusalis Wellness Care</div>
         </div>
       </div>
-      <div className='d-flex align-items-center'>
-        <p className='font-16 pb-0 mb-0 text-black mt-4 me-4'>Quantity</p>
-        <Field
+      <div className='d-flex align-items-center mt-4'>
+        <p className='font-13 text-dark pb-0 mb-0 font-semibold me-2'>Quantity: </p>
+        {/* <Field
           type="text"
           value="1"
           validationRules={['notEmpty']}
@@ -109,7 +118,19 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
           name="qty"
           placeholder={_('Qty')}
           formId="productForm"
-        />
+        /> */}
+        <Select
+            className="form-control qty"
+            name="qty"
+            options={[
+              { value: 1, text: '1' },
+              { value: 2, text: '2' },
+              { value: 3, text: '3' },
+            ]}
+            validationRules={['notEmpty']}
+            placeholder="0"
+            formId="productForm"
+          />
       </div>
       {error && <div className="text-critical mt-1">{error}</div>}
       <div className="mt-1 add-card">
@@ -190,14 +211,7 @@ export default function ProductForm({ product, action }) {
       isJSON
     >
       <input type="hidden" name="sku" value={product.sku} />
-      <h1 className='font-20 text-brawn pb-2'>special price</h1>
-      <h4 className="font-24 text-black mt-2">
-        <div className='d-flex align-items-center pb-2'>
-            <span className="sale-price">₹{product.price.special.value.toFixed(2)}</span>
-            <h5 className='font-14 text-danger ms-3 mb-0'>20% OFF</h5>
-            <span className='font-14 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
-        </div>
-      </h4>
+      <h4 className="font-24 text-black"> <span className="sale-price fw-medium d-flex align-items-start"><span className='fs-4 lh-1'>₹</span>{product.price.special.value.toFixed(2)}</span> </h4>
       <Area
         id="productSinglePageForm"
         coreComponents={[

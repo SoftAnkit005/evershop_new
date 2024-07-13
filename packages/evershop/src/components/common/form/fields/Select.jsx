@@ -3,7 +3,7 @@ import React from 'react';
 import Error from '@components/common/form/fields/Error';
 import '../Field.scss';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
-import { BiMenuAltLeft } from "react-icons/bi";
+import { GoTriangleDown } from "react-icons/go";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -62,7 +62,7 @@ const Select = React.forwardRef((props, ref) => {
         </select>
         {/* <div className="field-border border-0" /> */}
         <div className="field-suffix">
-          <BiMenuAltLeft />
+          <GoTriangleDown />
         </div>
       </div>
       {instruction && (

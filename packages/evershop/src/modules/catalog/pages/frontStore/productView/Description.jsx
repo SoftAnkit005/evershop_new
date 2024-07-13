@@ -5,8 +5,8 @@ import React from 'react';
 
 export default function Description({ product: { description } }) {
   return (
-    <div className="mt-2 md:mt-3 border-bottom">
-      <div className="product-description">
+    <div className="border-bottom">
+      <div className="product-description col-12 col-lg-10 m-auto">
         <CKEditor content={description} />
       </div>
     </div>

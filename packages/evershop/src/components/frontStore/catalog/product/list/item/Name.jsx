@@ -8,9 +8,9 @@ function Name({ name, url, desc }) {
       <a href={url} className='text-decoration-none'>
         <span className='font-16 text-dark prod-name'>{name}</span>
       </a>
-      <div className='prod-desc'>
+      {/* <div className='prod-desc'>
         <CKEditor content={desc} />
-      </div>
+      </div> */}
     </div>
   );
 }

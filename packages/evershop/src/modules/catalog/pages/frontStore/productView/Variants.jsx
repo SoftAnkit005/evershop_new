@@ -90,7 +90,7 @@ export default function Variants({
   };
 
   return (
-    <div className="variant variant-container grid grid-cols-1 gap-1 mt-2">
+    <div className="variant variant-container grid grid-cols-1 gap-1 mt-3">
       {attributes.map((a, i) => {
         const options = a.options.filter(
           (v, j, s) =>

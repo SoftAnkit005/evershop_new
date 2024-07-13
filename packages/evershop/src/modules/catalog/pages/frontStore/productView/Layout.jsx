@@ -9,16 +9,18 @@ export default function ProductPageLayout() {
       <div className="product-page-middle">
         <div className='container'>
           <div className='row'>
-            <div className="col-12 col-sm-12 col-lg-5 productImages">
+            <div className="col-12 col-sm-12 col-lg-5 col-xxl-6 productImages">
               <Area id="productPageMiddleLeft" />
             </div>
-            <div className='col-12 col-sm-12 col-lg-4 productDescription'>
+            <div className='col-12 col-sm-12 col-lg-4 col-xxl-4 productDescription'>
               <Area id="productPageMiddleRight" />
             </div>
-            <div className='col-12 col-sm-12 col-lg-3 productPrice'>
+            <div className='col-12 col-sm-12 col-lg-3 col-xxl-2 productPrice'>
               <Area id="productPagePrice" className='spPrice' />
             </div>
           </div>
+          <hr />
+          <h4 className="font-20 p-0 text-brawn">product description</h4>
           <Area id="productPageDetails" />
         </div>
       </div>

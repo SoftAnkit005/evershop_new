@@ -461,18 +461,22 @@ export default function CkeditorField({
       {editorLoaded && (
         <CKEditor
           config={{
-            toolbar: [
-              'heading',
-              '|',
-              'bold',
-              'italic',
-              'link',
-              'bulletedList',
-              'numberedList',
-              'blockQuote',
-              'insertTable',
-              'codeBlock'
-            ]
+            toolbar: {
+              items: [
+                  'undo', 'redo',
+                  '|',
+                  'heading',
+                  '|',
+                  'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                  '|',
+                  'bold', 'italic', 'strikethrough', 'subscript', 'superscript', 'code',
+                  '|',
+                  'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                  '|',
+                  'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent'
+              ],
+              shouldNotGroupWhenFull: false
+          }
           }}
           editor={ClassicEditor}
           data={value}

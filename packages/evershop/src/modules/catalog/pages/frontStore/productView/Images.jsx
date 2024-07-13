@@ -70,14 +70,14 @@ export default function Images({ product: { uuid, video, image, gallery = [] } }
       <div className="product-single-media position-relative">
         <ul className="more-view-thumbnail product-gallery">
           {thumbs.map((i, j) => (
-            <li key={j} className="flex justify-center items-center mb-3 border-theme-brown">
+            <li key={j} className="flex justify-center items-center mb-3 border-theme-brown rounded-4">
               <a
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   setCurrent({ ...i });
                 }}
-                className="p-4"
+                className="p-2"
               >
                 <img className="self-center" src={i.thumb} alt={i.alt} />
               </a>
