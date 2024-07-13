@@ -85,7 +85,6 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
   return (
     <div className="add-to-cart mt-2">
       <div className='special-price'>
-        <h1 className='font-20 text-brawn'>special price</h1>
         {(stockAvaibility === true) ?
           <p className='in-stock'>In Stock</p>
           :
@@ -191,6 +190,14 @@ export default function ProductForm({ product, action }) {
       isJSON
     >
       <input type="hidden" name="sku" value={product.sku} />
+      <h1 className='font-20 text-brawn pb-2'>special price</h1>
+      <h4 className="font-24 text-black mt-2">
+        <div className='d-flex align-items-center pb-2'>
+            <span className="sale-price">₹{product.price.special.value.toFixed(2)}</span>
+            <h5 className='font-14 text-danger ms-3 mb-0'>20% OFF</h5>
+            <span className='font-14 mt-0 pb-0 ms-3'>Incl. of all taxes</span>
+        </div>
+      </h4>
       <Area
         id="productSinglePageForm"
         coreComponents={[
@@ -216,6 +223,16 @@ ProductForm.propTypes = {
     inventory: PropTypes.shape({
       isInStock: PropTypes.bool.isRequired
     }).isRequired,
+    price: PropTypes.shape({
+      regular: PropTypes.shape({
+        value: PropTypes.number.isRequired,
+        text: PropTypes.string.isRequired
+      }).isRequired,
+      special: PropTypes.shape({
+        value: PropTypes.number.isRequired,
+        text: PropTypes.string.isRequired
+      }).isRequired
+    }),
     name: PropTypes.string.isRequired,
     sku: PropTypes.string.isRequired
   }).isRequired
@@ -232,6 +249,16 @@ export const query = `
       productId
       sku
       name
+      price {
+        regular {
+          value
+          currency
+        }
+        special {
+          value
+          currency
+        }
+      }
       gallery {
         thumb
       }

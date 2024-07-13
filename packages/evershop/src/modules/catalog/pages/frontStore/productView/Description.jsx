@@ -20,8 +20,8 @@ Description.propTypes = {
 };
 
 export const layout = {
-  areaId: 'productPageMiddleRight',
-  sortOrder: 30
+  areaId: 'productPageDetails',
+  sortOrder: 10
 };
 
 export const query = `

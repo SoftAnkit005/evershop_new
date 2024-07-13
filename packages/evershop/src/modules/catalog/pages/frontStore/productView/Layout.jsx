@@ -19,8 +19,8 @@ export default function ProductPageLayout() {
               <Area id="productPagePrice" className='spPrice' />
             </div>
           </div>
+          <Area id="productPageDetails" />
         </div>
-
       </div>
       <Area id="productPageBottom" className="product-page-top" />
     </div>
