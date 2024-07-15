@@ -32,7 +32,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                 <h5 className='footer-title'>Follow Us On</h5>
                                 <ul className='list-unstyled m-0 p-0'>
                                     <li>
-                                        <a href='https://www.facebook.com/DrBhanusaliwellnesscare' target='_blank'>
+                                        <a href='https://www.facebook.com/profile.php?id=100083215367869&mibextid=ZbWKwL' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/facebook.svg`} alt='Facebook' />
                                         </a>
                                     </li>
@@ -42,7 +42,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.instagram.com/dr.bhanusaliwellnesscare/' target='_blank'>
+                                        <a href='https://www.instagram.com/dr.bwc?igsh=NmF5ZmhuZXJkNzZw' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/instagram.svg`} alt='Instagram' />
                                         </a>
                                     </li>
@@ -52,7 +52,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.linkedin.com/in/bhanusali-wellness-b72a25234/' target='_blank'>
+                                        <a href='https://www.linkedin.com/in/dr-bwc-a3428a1a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/linkedin.svg`} alt='Linkedin' />
                                         </a>
                                     </li>
@@ -61,11 +61,31 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                             <img src={`${finalURL}/Assets/Images/whatsapp.svg`} alt='Whatsapp' />
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href='' target='_blank'>
+                                            <img src={`${finalURL}/Assets/Images/flipkart.svg`} alt='Flipkart' />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='' target='_blank'>
+                                            <img src={`${finalURL}/Assets/Images/amazon.svg`} alt='Amazon' />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='' target='_blank'>
+                                            <img src={`${finalURL}/Assets/Images/justdial.svg`} alt='Justdial' />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='' target='_blank'>
+                                            <img src={`${finalURL}/Assets/Images/gem.svg`} alt='Government e Marketplace' />
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
                         <div className='footer-menu usefull-menu'>
                             <h5 className='footer-title'>Usefull links</h5>
                             <ul className='list-unstyled m-0 p-0'>
@@ -93,12 +113,15 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
                         <div className='footer-menu categories-menu'>
                             <h5 className='footer-title'>Categories</h5>
                             <ul className='list-unstyled m-0 p-0'>
                                 <li>
                                     <a href='/' className='footer-link fade-left'>Home</a>
+                                </li>
+                                <li>
+                                    <a href='https://germanhomeopathic.in/automatic-thermal-massager' className='footer-link fade-left'>Automatic Thermal Massager</a>
                                 </li>
                                 {sortedMenu.map((item) => 
                                     <li>
@@ -108,7 +131,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 col-md-4 col-lg-2'>
+                    <div className='col-12 col-sm-4 col-md-4 col-lg-3'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>About Company</h5>
                             <p className='footer-link'>VIP Road,Vesu,Surat Gujrat,395007 India</p>
@@ -122,7 +145,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                             <p className='footer-link'><a href='callto:18004195973'>18004195973</a></p>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
+                    {/* <div className='col-12 col-sm-12 col-md-12 col-lg-3'>
                         <div className='footer-menu'>
                             <h5 className='footer-title'>Payment option</h5>
                         </div>
@@ -154,10 +177,10 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <p class="copyright">Copyright @ 2022 Bhanusaliwellness | Designed By <a className='copyright-developers' target="_blank" href='https://softieons.com/' alt="softieons team">Softieons</a></p>
+            <p class="copyright">Copyright @ 2022 Dr.BWC | Designed By <a className='copyright-developers' target="_blank" href='https://softieons.com/' alt="softieons team">Softieons</a></p>
         </>
     );
 }

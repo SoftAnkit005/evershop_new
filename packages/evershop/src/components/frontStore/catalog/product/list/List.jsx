@@ -20,7 +20,6 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
     );
   }
 
-
   let className;
   switch (countPerRow) {
     case 3:
@@ -54,7 +53,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
               },
               {
                 component: { default: Name },
-                props: { name: p.name, url: p.url, id: p.productId, desc: p.description },
+                props: { name: p.name, url: p.url, id: p.productId, desc: p.companydetails },
                 sortOrder: 20,
                 id: 'name'
               },
@@ -100,7 +99,8 @@ ProductList.propTypes = {
         alt: PropTypes.string,
         listing: PropTypes.string
       }),
-      description: PropTypes.string
+      description: PropTypes.string,
+      companydetails: PropTypes.string,
     })
   ).isRequired,
   countPerRow: PropTypes.number.isRequired

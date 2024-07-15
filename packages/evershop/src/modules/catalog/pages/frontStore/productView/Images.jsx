@@ -8,6 +8,8 @@ import "../../../../Styles/Styles.scss"
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../categoryView/Index.scss"
 import YouTube from 'react-youtube';
+import ReactImageMagnify from 'react-image-magnify';
+
 
 function Current({ image }) {
 
@@ -18,9 +20,23 @@ function Current({ image }) {
       style={{ background: '#f6f6f6' }}
       className="product-image product-single-page-image flex justify-center items-center w-100"
     >
-      {image && (
+      <ReactImageMagnify {...{
+          smallImage: {
+              alt: 'Wristwatch by Ted Baker London',
+              isFluidWidth: true,
+              src: image.single
+          },
+          largeImage: {
+              src: image.single,
+              height: 1800,
+              width: 1800
+          },
+          enlargedImageContainerDimensions:{width: '150%', height: '150%'}
+          
+      }} />
+      {/* {image && (
         <img src={image.single} alt={image.alt} className="self-center" />
-      )}
+      )} */}
       {!image && <ProductNoThumbnail width={250} height={250} />}
     </div>
   );

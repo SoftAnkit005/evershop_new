@@ -189,6 +189,6 @@ export default function FeaturedInstagram() {
     );
 }
 export const layout = {
-    areaId: 'content',
+    areaId: '',  //content
     sortOrder: 15
 };

@@ -17,6 +17,7 @@ function Current({ image }) {
       style={{ minHeight: height, background: '#f6f6f6' }}
       className="product-image product-single-page-image flex justify-center items-center"
     >
+      <ReactImageZoom width={250} height={250} zoomWidth={500} img={image.single} />
       {image && (
         <img src={image.single} alt={image.alt} className="self-center" />
       )}
