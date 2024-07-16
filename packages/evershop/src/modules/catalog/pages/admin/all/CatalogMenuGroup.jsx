@@ -14,7 +14,6 @@ export default function CatalogMenuGroup({
   collectionGrid,
   tagGrid,
   reviewGrid,
-  docsGrid
 }) {
   return (
     <NavigationItemGroup
@@ -51,11 +50,6 @@ export default function CatalogMenuGroup({
           url: reviewGrid,
           title: 'Reviews'
         },
-        {
-          Icon: IoDocuments,
-          url: docsGrid,
-          title: 'Documents'
-        }
       ]}
     />
   );
@@ -68,7 +62,6 @@ CatalogMenuGroup.propTypes = {
   productGrid: PropTypes.string.isRequired,
   tagGrid: PropTypes.string.isRequired,
   reviewGrid: PropTypes.string.isRequired,
-  docsGrid: PropTypes.string.isRequired,
 };
 
 export const layout = {
@@ -84,6 +77,5 @@ export const query = `
     collectionGrid: url(routeId: "collectionGrid")
     tagGrid: url(routeId: "tagGrid")
     reviewGrid: url(routeId: "reviewGrid")
-    docsGrid: url(routeId: "reviewGrid")
   }
 `;
