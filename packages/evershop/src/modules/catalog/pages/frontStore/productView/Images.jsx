@@ -8,6 +8,8 @@ import "../../../../Styles/Styles.scss"
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 import "../categoryView/Index.scss"
 import YouTube from 'react-youtube';
+import ImageMagnifier from './imageMagnifier/ImageMagnifier';
+
 
 
 function Current({ image }) {
@@ -17,25 +19,26 @@ function Current({ image }) {
     <div
       id="product-current-image"
       style={{ background: '#f6f6f6' }}
-      className="product-image product-single-page-image flex justify-center items-center w-100"
+      className="product-image product-single-page-image flex justify-center items-center w-100 "
     >
       {/* <ReactImageMagnify {...{
-          smallImage: {
-              alt: 'Wristwatch by Ted Baker London',
+          imageProps: {
+              alt: '',
               isFluidWidth: true,
-              src: image.single
-          },
-          largeImage: {
               src: image.single,
-              height: 1800,
-              width: 1800
+              width:500,
+              height:500,
           },
-          enlargedImageContainerDimensions:{width: '150%', height: '150%'}
-          
+          magnifiedImageProps: {
+              src: image.single,
+              width: 1800,
+              height: 1200
+          },
       }} /> */}
-      {image && (
+      <ImageMagnifier imgsrc={image.single}/>
+      {/* {image && (
         <img src={image.single} alt={image.alt} className="self-center" />
-      )}
+      )} */}
       {!image && <ProductNoThumbnail width={250} height={250} />}
     </div>
   );

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Icon from '@heroicons/react/solid/esm/DocumentIcon';
+import { RiPagesFill } from "react-icons/ri";
 import NavigationItemGroup from '@components/admin/cms/NavigationItemGroup';
 
 export default function CmsMenuGroup({ cmsPageGrid }) {
@@ -10,7 +10,7 @@ export default function CmsMenuGroup({ cmsPageGrid }) {
       name="CMS"
       items={[
         {
-          Icon,
+          Icon: RiPagesFill,
           url: cmsPageGrid,
           title: 'Pages'
         }

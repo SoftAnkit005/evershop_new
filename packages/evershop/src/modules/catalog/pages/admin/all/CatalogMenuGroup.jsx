@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import AttributeIcon from '@heroicons/react/solid/esm/HashtagIcon';
-import CategoryIcon from '@heroicons/react/solid/esm/LinkIcon';
-import CollectionIcon from '@heroicons/react/solid/esm/TagIcon';
 import ProductIcon from '@heroicons/react/solid/esm/ArchiveIcon';
+import { BiSolidCategory,BiSolidCollection } from "react-icons/bi";
+import { MdEditAttributes, MdRateReview } from "react-icons/md";
+import { IoMdPricetags } from "react-icons/io";
 import NavigationItemGroup from '@components/admin/cms/NavigationItemGroup';
+import { IoDocuments } from 'react-icons/io5';
 
 export default function CatalogMenuGroup({
   productGrid,
@@ -12,7 +13,8 @@ export default function CatalogMenuGroup({
   attributeGrid,
   collectionGrid,
   tagGrid,
-  reviewGrid
+  reviewGrid,
+  docsGrid
 }) {
   return (
     <NavigationItemGroup
@@ -25,29 +27,34 @@ export default function CatalogMenuGroup({
           title: 'Products'
         },
         {
-          Icon: CategoryIcon,
+          Icon: BiSolidCategory,
           url: categoryGrid,
           title: 'Categories'
         },
         {
-          Icon: CollectionIcon,
+          Icon: BiSolidCollection ,
           url: collectionGrid,
           title: 'Collections'
         },
         {
-          Icon: AttributeIcon,
+          Icon: MdEditAttributes,
           url: attributeGrid,
           title: 'Attributes'
         },
         {
-          Icon: ProductIcon,
+          Icon: IoMdPricetags,
           url: tagGrid,
           title: 'Tags'
         },
         {
-          Icon: ProductIcon,
+          Icon: MdRateReview,
           url: reviewGrid,
           title: 'Reviews'
+        },
+        {
+          Icon: IoDocuments,
+          url: docsGrid,
+          title: 'Documents'
         }
       ]}
     />
@@ -60,7 +67,8 @@ CatalogMenuGroup.propTypes = {
   collectionGrid: PropTypes.string.isRequired,
   productGrid: PropTypes.string.isRequired,
   tagGrid: PropTypes.string.isRequired,
-  reviewGrid: PropTypes.string.isRequired
+  reviewGrid: PropTypes.string.isRequired,
+  docsGrid: PropTypes.string.isRequired,
 };
 
 export const layout = {
@@ -76,5 +84,6 @@ export const query = `
     collectionGrid: url(routeId: "collectionGrid")
     tagGrid: url(routeId: "tagGrid")
     reviewGrid: url(routeId: "reviewGrid")
+    docsGrid: url(routeId: "reviewGrid")
   }
 `;

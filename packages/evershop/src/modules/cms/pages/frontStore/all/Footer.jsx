@@ -62,12 +62,12 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='' target='_blank'>
+                                        <a href='https://dl.flipkart.com/dl/product/p/itme?pid=MCHGSKPKFQHDGZYH&lid=LSTMCHGSKPKFQHDGZYHIZ2E4O' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/flipkart.svg`} alt='Flipkart' />
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='' target='_blank'>
+                                        <a href='https://www.amazon.in/Automatic-Robotic-Gravity-Massage-Heating/dp/B0CMH545YP/ref=mp_s_a_1_5?crid=31AFPQPAYXBVN&keywords=dr+bwc+massage+chair&qid=1703226247&sprefix=dr+bwc+massage+chair%2Caps%2C198&sr=8-5' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/amazon.svg`} alt='Amazon' />
                                         </a>
                                     </li>
@@ -123,8 +123,8 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                 <li>
                                     <a href='https://germanhomeopathic.in/automatic-thermal-massager' className='footer-link fade-left'>Automatic Thermal Massager</a>
                                 </li>
-                                {sortedMenu.map((item) => 
-                                    <li>
+                                {sortedMenu.map((item, i) => 
+                                    <li key={i}>
                                         <a href={item.url} className='footer-link fade-left'>{item.name}</a>
                                     </li>
                                 )}
@@ -180,7 +180,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                     </div> */}
                 </div>
             </div>
-            <p class="copyright">Copyright @ 2022 Dr.BWC | Designed By <a className='copyright-developers' target="_blank" href='https://softieons.com/' alt="softieons team">Softieons</a></p>
+            <p className="copyright">Copyright @ 2022 Dr.BWC | Designed By <a className='copyright-developers' target="_blank" href='https://softieons.com/' alt="softieons team">Softieons</a></p>
         </>
     );
 }

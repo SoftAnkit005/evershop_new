@@ -1,0 +1,10 @@
+extend type Document {
+  editUrl: String
+  updateApi: String!
+  deleteApi: String!
+  addProductUrl: String
+}
+
+extend type Product {
+  removeFromDocumentUrl: String
+}

@@ -1,0 +1,5 @@
+{
+  "methods": ["GET"],
+  "path": "/docs",
+  "access": "private"
+}
