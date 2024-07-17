@@ -7,7 +7,7 @@ import { Card } from '@components/admin/cms/Card';
 import CkeditorField from '@components/common/form/fields/Ckeditor';
 import CategoryTree from '@components/admin/catalog/productEdit/category/CategoryTree';
 
-function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video }) {
+function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video, amazon, flipkart }) {
 
 
   return (
@@ -191,6 +191,30 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
+      <div className='w-33'>
+        <Field
+          id="amazon"
+          name="amazon"
+          value={amazon?.value}
+          placeholder="amazon Link"
+          label="amazon Link"
+          type="text"
+          validationRules={['notEmpty']}
+        />
+      </div>
+
+      <div className='w-33'>
+        <Field
+          id="flipkart"
+          name="flipkart"
+          value={flipkart?.value}
+          placeholder="flipkart Link"
+          label="flipkart Link"
+          type="text"
+          validationRules={['notEmpty']}
+        />
+      </div>
+
     </div>
   );
 }
@@ -210,6 +234,8 @@ SKUPriceWeight.propTypes = {
   productdimensions: PropTypes.string,
   companydetails: PropTypes.string,
   video: PropTypes.string,
+  amazon: PropTypes.string,
+  flipkart: PropTypes.string,
   weight: PropTypes.number,
   setting: PropTypes.shape({
     storeCurrency: PropTypes.string,
@@ -232,7 +258,9 @@ SKUPriceWeight.defaultProps = {
   productbenefits: undefined,
   productdimensions: undefined,
   companydetails: undefined,
-  video: undefined
+  video: undefined,
+  amazon: undefined,
+  flipkart: undefined
 };
 
 function Category({ product }) {
@@ -372,6 +400,8 @@ export default function General({
                 productdimensions: product?.productdimensions,
                 companydetails: product?.companydetails,
                 video: product?.companydetails,
+                amazon: product?.amazon,
+                flipkart: product?.flipkart,
                 setting
               },
               sortOrder: 20,
@@ -451,6 +481,8 @@ General.propTypes = {
     productdimensions: PropTypes.string,
     companydetails: PropTypes.string,
     video: PropTypes.string,
+    amazon: PropTypes.string,
+    flipkart: PropTypes.string,
     weight: PropTypes.shape({
       unit: PropTypes.string,
       value: PropTypes.number
@@ -486,7 +518,9 @@ General.defaultProps = {
   productbenefits: undefined,
   productdimensions: undefined,
   companydetails: undefined,
-  video: undefined
+  video: undefined,
+  amazon: undefined,
+  flipkart: undefined
 };
 
 export const layout = {
@@ -513,6 +547,8 @@ export const query = `
       productdimensions
       companydetails
       video
+      amazon
+      flipkart
       taxClass
       price {
         regular {

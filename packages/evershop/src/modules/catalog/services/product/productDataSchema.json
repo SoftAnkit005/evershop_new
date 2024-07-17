@@ -59,6 +59,12 @@
     "video": {
       "type": "string"
     },
+    "amazon": {
+      "type": "string"
+    },
+    "flipkart": {
+      "type": "string"
+    },
     "price": {
       "type": ["string", "number"],
       "pattern": "^\\d+(\\.\\d{1,2})?$",

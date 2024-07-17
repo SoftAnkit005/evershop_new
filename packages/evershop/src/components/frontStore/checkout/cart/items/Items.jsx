@@ -95,7 +95,7 @@ function Items({ items, setting: { displayCheckoutPriceIncludeTax } }) {
                         href="#"
                         className="text-decoration-none"
                       >
-                        <span className='text-black'>{_('Remove')}</span>
+                        <span className='text-cadetblue font-12 text-decoration-underline'>{_('Remove')}</span>
                       </a>
                     </div>
                   </div>

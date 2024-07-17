@@ -62,11 +62,13 @@ export const query = `
   query {
     menu {
       items {
+      category_id
         name
         url
         parent_id
         position
         children {
+        category_id
           name
           url
           parent_id        

@@ -19,6 +19,8 @@ type Product {
   productdimensions: String
   companydetails: String
   video: String
+  amazon: String
+  flipkart: String
   weight: Weight!
   taxClass: Int
   description: String

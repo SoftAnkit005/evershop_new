@@ -10,7 +10,6 @@ import { companydetails } from '@components/frontStore/catalog/product/single/co
 import { video } from '@components/frontStore/catalog/product/single/video';
 
 export default function GeneralInfo({ product }) {
-
   return (
     <Area
       id="productViewGeneralInfo"
@@ -28,7 +27,9 @@ export default function GeneralInfo({ product }) {
           component: { default: Price },
           props: {
             regular: product.price.regular,
-            special: product.price.special
+            special: product.price.special,
+            amazonLink:product.amazon,
+            flipkartLink:product.flipkart,
           },
           sortOrder: 10,
           id: 'productSinglePrice'
@@ -88,6 +89,8 @@ GeneralInfo.propTypes = {
     specificusesforproduct: PropTypes.string.isRequired,
     companydetails: PropTypes.string.isRequired,
     video: PropTypes.string.isRequired,
+    amazon: PropTypes.string.isRequired,
+    flipkart: PropTypes.string.isRequired,
     material: PropTypes.string.isRequired,
     itemweight: PropTypes.string.isRequired,
     brand: PropTypes.string.isRequired,
@@ -130,6 +133,8 @@ export const query = `
       productdimensions
       companydetails
       video
+      amazon
+      flipkart
       price {
         regular {
           value

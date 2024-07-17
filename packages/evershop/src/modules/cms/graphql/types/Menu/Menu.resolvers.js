@@ -37,7 +37,7 @@ module.exports = {
         parent_id: i.parent_id === null ? 0 : i.parent_id,
         children: [],
         position:i.position === null ? 0 : i.position,
-      }));
+      })).sort((a, b) => a.position - b.position);
 
       const menuMap = {};
       menuItems.forEach(item => {
@@ -46,18 +46,16 @@ module.exports = {
 
       const tree = [];
       menuItems.forEach(item => {
-        
         if (item.parent_id === 0) {
           tree.push(item);
         } else {
           const parentItem = menuMap[item.category_id];
           tree.forEach(treeitem => {
-            if(treeitem.category_id === parentItem.parent_id)
+            if(parentItem.parent_id === treeitem.category_id)
               {
                 treeitem.children.push(item);
               }
           });
-        
         }
       });
 

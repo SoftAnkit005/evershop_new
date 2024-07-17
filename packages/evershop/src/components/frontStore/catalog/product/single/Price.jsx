@@ -1,9 +1,20 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BiSolidOffer } from 'react-icons/bi';
 // import Offers from 'Assets/Images/offers.svg'
 
-export function Price({ regular, special }) {
+export function Price({ regular, special, amazonLink, flipkartLink }) {
+  const [finalURL, setFinalURL] = useState('');
+
+  useEffect(() => {
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace(currentURL, '');
+    const pathStartIndex = newURL.indexOf('/', 8);
+    const newPath = newURL.substring(pathStartIndex);
+    const finalURL = window.location.origin + newPath;
+    setFinalURL(finalURL);
+  }, []);
+
   return (
     <>
       <p className='fs-4 fw-medium flex items-center mb-0'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
@@ -37,6 +48,18 @@ export function Price({ regular, special }) {
         <div className='d-flex align-items-center p-2'>
           <span className='font-13 font-semibold text-theme-red ms-2'>No Cost EMI: <span className='fw-normal text-lowercase text-dark'>Avail No Cost EMI on select cards for orders above ₹3000</span></span>
         </div>
+      </div>
+      <div className='d-flex align-items-center'>
+        {(flipkartLink !== null)?
+          <a href={flipkartLink} target='_blank'><img className='mt-3' src={`${finalURL}/Assets/Images/flipkart-logo.png`}  alt='flipkart' style={{height:'30px'}}/></a>
+          :
+          <></>
+        }
+        {(amazonLink !== null)?
+          <a href={amazonLink} target='_blank'><img className='mt-3 ms-3' src={`${finalURL}/Assets/Images/amazon-logo.png`}  alt='flipkart' style={{height:'30px'}}/></a>
+          :
+          <></>
+        }
       </div>
       <hr className='my-4'/>
     </>
