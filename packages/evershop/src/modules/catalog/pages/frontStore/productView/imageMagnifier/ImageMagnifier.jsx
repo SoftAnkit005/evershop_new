@@ -18,7 +18,7 @@ function ImageMagnifier(props) {
     function mouseMove(e){
         const rect = gfgImg.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
-        console.log(gfgImg.current.width);
+      
         zoomPreview.current.style.display = "block";
         zoomPreview.current.style.backgroundImage = `url(${props.imgsrc})`; 
         zoomPreview.current.style.backgroundSize = gfgImg.current.width * (ofsX / 2) + "px " + gfgImg.current.width * (ofsY / 2) + "px"; 
