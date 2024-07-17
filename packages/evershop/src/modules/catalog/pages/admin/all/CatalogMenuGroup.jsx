@@ -5,7 +5,6 @@ import { BiSolidCategory,BiSolidCollection } from "react-icons/bi";
 import { MdEditAttributes, MdRateReview } from "react-icons/md";
 import { IoMdPricetags } from "react-icons/io";
 import NavigationItemGroup from '@components/admin/cms/NavigationItemGroup';
-import { IoDocuments } from 'react-icons/io5';
 
 export default function CatalogMenuGroup({
   productGrid,

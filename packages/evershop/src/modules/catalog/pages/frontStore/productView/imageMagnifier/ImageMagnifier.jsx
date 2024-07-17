@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import './imageMagnifier.css'
 
 function ImageMagnifier(props) {
-    let img = document.getElementById("gfg-img"); 
     const zoomPreview = useRef(null)
     const gfgImg = useRef(null)
     
@@ -19,9 +18,10 @@ function ImageMagnifier(props) {
     function mouseMove(e){
         const rect = gfgImg.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
+        console.log(gfgImg.current.width);
         zoomPreview.current.style.display = "block";
         zoomPreview.current.style.backgroundImage = `url(${props.imgsrc})`; 
-        zoomPreview.current.style.backgroundSize = img.width * (ofsX / 2) + "px " + img.height * (ofsY / 2) + "px"; 
+        zoomPreview.current.style.backgroundSize = gfgImg.current.width * (ofsX / 2) + "px " + gfgImg.current.width * (ofsY / 2) + "px"; 
         let posX = e.clientX - rect.left; 
         let posY = e.clientY - rect.top; 
         zoomPreview.current.style.backgroundPosition = "-" + posX * (ofsX / 2) + "px -" + posY * (ofsY / 2) + "px"; 
@@ -33,7 +33,7 @@ function ImageMagnifier(props) {
     }
   return (
     <div className="magnify-main">
-      <img src={props.imgsrc} onMouseMove={(e) => mouseMove(e)} onMouseOut={(e) => mouseOut(e)} ref={gfgImg} id="gfg-img" />
+      <img src={props.imgsrc} onMouseMove={(e) => mouseMove(e)} onMouseOut={(e) => mouseOut(e)} ref={gfgImg} />
       <div className="zoom-preview" ref={zoomPreview} ></div>
     </div>
   );
