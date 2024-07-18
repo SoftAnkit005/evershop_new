@@ -27,18 +27,18 @@ function Grid({ action }) {
       })
     });
     const data = await result.json();
-    console.log(data)
-    if (data.success) {
-      console.log('response success =========================================>', data);
-      toast.success('Tag added successfully!')
-      location.replace("https://drbwc.com/admin/tag")
-    } else {
-      console.log('response error =========================================>', data);
+    if (data.error) {
+      // console.log('response error =========================================>', data);
       toast.error('Something wrong. Please reload the page!')
       setError(data.message);
+    } else {
+      // console.log('response success =========================================>', data);
+      toast.success('Tag added successfully!');
+      setTimeout(() => {
+        location.replace("https://drbwc.com/admin/tag")
+      }, 1500);
     }
   }
-  console.log(action)
   return (
     <div className="grid grid-cols-4 gap-1">
       <div className="card shadow p-2">
