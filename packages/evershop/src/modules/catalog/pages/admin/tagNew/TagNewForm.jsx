@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import SkuConditionSelector from '@components/admin/promotion/couponEdit/SkuConditionSelector';
 import ProductConditionSelector from '@components/admin/promotion/couponEdit/ProductConditionSelector';
 import { Form } from '@components/common/form/Form';
+import { toast } from 'react-toastify';
 
 function Grid({ action }) {
   const [selectedOption, setSelectedOption] = useState('');
@@ -15,7 +16,6 @@ function Grid({ action }) {
   const [error, setError] = React.useState(null);
 
   const onSuccess = async () => {
-    console.log(condition.value[0])
     const result = await fetch(" https://drbwc.com/api/tagdata ", {
       method: 'POST',
       headers: {
@@ -30,9 +30,11 @@ function Grid({ action }) {
     console.log(data)
     if (data.success) {
       console.log('response success =========================================>', data);
-      window.location.reload();
+      toast.success('Tag added successfully!')
+      location.replace("https://drbwc.com/admin/tag")
     } else {
-      console.log('response success =========================================>', data);
+      console.log('response error =========================================>', data);
+      toast.error('Something wrong. Please reload the page!')
       setError(data.message);
     }
   }
@@ -49,7 +51,7 @@ function Grid({ action }) {
         >
           <div className="form-field-container">
             <div className="form-group mb-3">
-              <p className="pb-1">Name</p>
+              <p className="pb-1">Tag Name</p>
               <input
                 type="text"
                 name="name"
