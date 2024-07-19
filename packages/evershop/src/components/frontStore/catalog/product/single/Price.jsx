@@ -19,7 +19,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
    
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://drbwc.com/api/getcoupondata");
+        const response = await axios.get(`${finalurl}/api/getcoupondata`);
         setCouponData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -64,7 +64,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
                     <div className='d-flex align-items-center border-bottom p-2'>
                       <span className='font-13 fw-normal text-dark'>{item.description}</span>
                     </div>
-                  ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products[0].value[0] === sku) ? (
+                  ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products[0].value[0] !== undefined && item.target_products.products[0].value[0] === sku) ? (
                     <div className='d-flex align-items-center border-bottom p-2'>
                       <span className='font-13 fw-normal text-dark'>{item.description}</span>
                     </div>
