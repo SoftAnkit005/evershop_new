@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Area from '@components/common/Area';
 import './GeneralInfo.scss';
 import { Name } from '@components/frontStore/catalog/product/single/Name';
@@ -27,6 +27,7 @@ export default function GeneralInfo({ product }) {
           component: { default: Price },
           props: {
             regular: product.price.regular,
+            sku: product.sku,
             special: product.price.special,
             amazonLink:product.amazon,
             flipkartLink:product.flipkart,
@@ -84,6 +85,7 @@ GeneralInfo.propTypes = {
   product: PropTypes.shape({
     name: PropTypes.string.isRequired,
     sku: PropTypes.string.isRequired,
+    productId: PropTypes.number.isRequired,
     usefor: PropTypes.string.isRequired,
     powersource: PropTypes.string.isRequired,
     specificusesforproduct: PropTypes.string.isRequired,
@@ -120,9 +122,9 @@ export const query = `
   query Query {
     product (id: getContextValue('productId')) {
       name
+      productId
       sku
       usefor
-      powersource
       specificusesforproduct
       productbenefits
       material

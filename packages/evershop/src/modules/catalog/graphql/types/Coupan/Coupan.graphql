@@ -1,0 +1,81 @@
+"""
+The `Coupons` type represents a category object.
+"""
+type Coupon {
+  coupon_id: Int!
+  uuid: String!
+}
+
+
+"""
+The `FilterInput` type represents a filter input object. Operations must be one of the following: eq, neq, gt, gteq, lt, lteq, like, nlike, in, nin.
+"""
+enum FilterOperation {
+  eq
+  neq
+  gt
+  gteq
+  lt
+  lteq
+  like
+  nlike
+  in
+  nin
+}
+
+input FilterInput {
+  key: String!
+  operation: FilterOperation!
+  value: String
+}
+
+"""
+The `Filter` type represents a filter object.
+"""
+type Filter {
+  key: String!
+  operation: String!
+  value: String!
+}
+
+"""
+The `FilterOption` type represents a filter option object.
+"""
+type FilterOption {
+  optionId: Int!
+  optionText: String!
+}
+
+"""
+The `FilterAttribute` type represents a filter attribute object.
+"""
+type FilterAttribute {
+  attributeName: String!
+  attributeCode: String!
+  attributeId: Int!
+  options: [FilterOption] 
+}
+
+"""
+Returns a collection of coupons.
+"""
+type CouponCollection {
+  items: [Coupon]
+  currentPage: Int!
+  total: Int!
+  currentFilters: [Filter]
+}
+
+type PriceRange {
+  min: Float!
+  max: Float!
+}
+
+extend type Product {
+  coupon: Coupon,
+}
+
+extend type Query {
+  coupons(filters: [FilterInput]): CouponCollection
+  coupon(id: Int): Coupon
+}

@@ -194,11 +194,11 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="amazon"
           name="amazon"
-          value={amazon?.value}
+          value={amazon}
           placeholder="amazon Link"
           label="amazon Link"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 
@@ -206,11 +206,11 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         <Field
           id="flipkart"
           name="flipkart"
-          value={flipkart?.value}
+          value={flipkart}
           placeholder="flipkart Link"
           label="flipkart Link"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
       </div>
 

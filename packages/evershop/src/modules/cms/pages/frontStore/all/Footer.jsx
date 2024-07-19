@@ -47,7 +47,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='https://www.youtube.com/channel/UC8y20B0YMniVdUqnfbwDjzg' target='_blank'>
+                                        <a href='https://youtube.com/@drbwc?si=ZnYNbRJqidVOIij0' target='_blank'>
                                             <img src={`${finalURL}/Assets/Images/youtube.svg`} alt='Youtube' />
                                         </a>
                                     </li>

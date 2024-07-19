@@ -1,18 +1,31 @@
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { BiSolidOffer } from 'react-icons/bi';
 // import Offers from 'Assets/Images/offers.svg'
 
-export function Price({ regular, special, amazonLink, flipkartLink }) {
+export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
   const [finalURL, setFinalURL] = useState('');
+  const [couponData, setCouponData] = useState(null);
+  const [offerCount, setofferCount] = useState(0)
 
   useEffect(() => {
     const currentURL = window.location.href;
     const newURL = currentURL.replace(currentURL, '');
     const pathStartIndex = newURL.indexOf('/', 8);
     const newPath = newURL.substring(pathStartIndex);
-    const finalURL = window.location.origin + newPath;
-    setFinalURL(finalURL);
+    const finalurl = window.location.origin + newPath;
+    setFinalURL(finalurl);
+   
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${finalurl}/api/getcoupondata`);
+        setCouponData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
   }, []);
 
   return (
@@ -39,15 +52,31 @@ export function Price({ regular, special, amazonLink, flipkartLink }) {
       </h4>
       <p className="font-18 m-0 text-black">EMI <span className='font-12 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
       <div className="border rounded-3 mt-3">
-        <div className='d-flex align-items-center border-bottom p-2'>
-          <BiSolidOffer className='fs-1 ms-2 text-theme-red' /> <span className='font-13 font-semibold text-theme-red ms-2'>Sale Extra <span className='fw-normal text-lowercase text-dark'>with 3 offers</span></span>
-        </div>
-        <div className='d-flex align-items-center border-bottom p-2'>
-          <span className='font-13 font-semibold text-theme-red ms-2'>Bank Offer: <span className='fw-normal text-lowercase text-dark'>Flat INR 4000 Instant Discount on HDFC Bank 12,18 month Credit Car</span></span>
-        </div>
-        <div className='d-flex align-items-center p-2'>
-          <span className='font-13 font-semibold text-theme-red ms-2'>No Cost EMI: <span className='fw-normal text-lowercase text-dark'>Avail No Cost EMI on select cards for orders above ₹3000</span></span>
-        </div>
+        {(couponData !== null && couponData !== undefined)?
+          <>
+            <div className='d-flex align-items-center border-bottom p-2'>
+              <BiSolidOffer className='fs-1 ms-2 text-theme-red' /> <span className='font-13 fw-normal text-dark'>Sale with extra</span><span className='font-13 font-semibold text-theme-red ms-2'> Offers</span>
+            </div>
+            {couponData.map((item, index) => (
+              <div key={index}>
+                {(item.discount_type === "fixed_discount_to_entire_order") ? 
+                  (
+                    <div className='d-flex align-items-center border-bottom p-2'>
+                      <span className='font-13 fw-normal text-dark'>{item.description}</span>
+                    </div>
+                  ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products[0].value[0] === sku) ? (
+                    <div className='d-flex align-items-center border-bottom p-2'>
+                      <span className='font-13 fw-normal text-dark'>{item.description}</span>
+                    </div>
+                  ) : (
+                    <></>
+                )}
+              </div>
+            ))}
+          </>
+          :
+          <></>
+        }
       </div>
       <div className='d-flex align-items-center'>
         {(flipkartLink !== null)?

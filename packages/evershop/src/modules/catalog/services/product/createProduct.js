@@ -31,6 +31,7 @@ function validateProductDataBeforeInsert(data) {
     'brand',
     'powersource',
     'companydetails',
+    'category_id',
     'video',
     'amazon',
     'flipkart',
