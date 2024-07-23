@@ -157,3 +157,9 @@ export const layout = {
   areaId: 'body',
   sortOrder: 1
 };
+
+export const query = `
+  query Query {
+    searchPageUrl: url(routeId: "catalogSearch")
+  }
+`;

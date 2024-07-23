@@ -19,7 +19,10 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
    
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${finalurl}/api/getcoupondata`);
+        const options = {
+          headers: {"content-type": "application/json"}
+        }
+        const response = await axios.get(`${finalurl}/api/getcoupondata`,options);
         setCouponData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

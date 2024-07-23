@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-param-reassign */
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import produce from 'immer';
 import Area from '@components/common/Area';
@@ -13,6 +13,7 @@ import { useAppDispatch, useAppState } from '@components/common/context/app';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { LuMapPin } from "react-icons/lu";
 import { Select } from '@components/common/form/fields/Select';
+import axios from 'axios';
 
 
 function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
@@ -90,67 +91,69 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
   let deliveryMonth = months[new Date().getMonth()];
 
   return (
-    <div className="add-to-cart mt-4">
-        <div className="font-12 p-0">Delivery: <span className='font-semibold'>{deliveryDate} - {deliveryDate + 2} {deliveryMonth}</span></div>
-        <div className='font-12 mt-2 d-flex align-items-center text-cadetblue'><LuMapPin className='me-1'/> Pan India Delivery</div>
-      <div className='special-price mt-4'>
-        {(stockAvaibility === true) ?
-          <p className='in-stock'>In Stock</p>
-          :
-          <p className='out-of-stock'>Out Of Stock</p>
-        }
-      </div>
-      <div>
-        <div className="row mt-4 mx-0">
-          <div className="col-4 font-12 p-0 text-muted">Ships from</div>
-          <div className="col-8 font-12 p-0 text-black">Dr Bhanusalis Wellness Care</div>
-          <div className="col-4 font-12 p-0 text-muted">Sold by</div>
-          <div className="col-8 font-12 p-0 text-black">Dr Bhanusalis Wellness Care</div>
+    <>
+      <div className="add-to-cart mt-4">
+          <div className="font-12 p-0">Delivery: <span className='font-semibold'>{deliveryDate} - {deliveryDate + 2} {deliveryMonth}</span></div>
+          <div className='font-12 mt-2 d-flex align-items-center text-cadetblue'><LuMapPin className='me-1'/> Pan India Delivery</div>
+          <div className='font-12 text-dark mt-2'> Or fastest delivery in <span className='font-12 text-black font-semibold'>72 hours</span></div>
+        <div className='special-price mt-4'>
+          {(stockAvaibility === true) ?
+            <p className='in-stock'>In Stock</p>
+            :
+            <p className='out-of-stock'>Out Of Stock</p>
+          }
+        </div>
+        <div>
+          <div className="row mt-4 mx-0">
+            <div className="col-4 font-12 p-0 text-muted">Ships from</div>
+            <div className="col-8 font-12 p-0 text-black">&nbsp;  Dr.BWC</div>
+            <div className="col-4 font-12 p-0 text-muted">Sold by</div>
+            <div className="col-8 font-12 p-0 text-black">&nbsp;  Dr.BWC</div>
+          </div>
+        </div>
+        <div className='d-flex align-items-center mt-4'>
+          <p className='font-13 text-dark pb-0 mb-0 font-semibold me-2'>Quantity: </p>
+          {/* <Field
+            type="text"
+            value="1"
+            validationRules={['notEmpty']}
+            className="qty"
+            name="qty"
+            placeholder={_('Qty')}
+            formId="productForm"
+          /> */}
+          <Select
+              className="form-control qty"
+              name="qty"
+              options={[
+                { value: 1, text: '1' },
+                { value: 2, text: '2' },
+                { value: 3, text: '3' },
+              ]}
+              validationRules={['notEmpty']}
+              placeholder="0"
+              formId="productForm"
+            />
+        </div>
+        {error && <div className="text-critical mt-1">{error}</div>}
+        <div className="mt-1 add-card">
+          {stockAvaibility === true && (
+            <Button
+              title={_('ADD TO CART')}
+              outline
+              onAction={() => {
+                document.getElementById('productForm').dispatchEvent(
+                  new Event('submit', { cancelable: true, bubbles: true })
+                );
+              }}
+            />
+          )}
+          {stockAvaibility === false && (
+            <Button title={_('SOLD OUT')} onAction={() => { }} />
+          )}
         </div>
       </div>
-      <div className='d-flex align-items-center mt-4'>
-        <p className='font-13 text-dark pb-0 mb-0 font-semibold me-2'>Quantity: </p>
-        {/* <Field
-          type="text"
-          value="1"
-          validationRules={['notEmpty']}
-          className="qty"
-          name="qty"
-          placeholder={_('Qty')}
-          formId="productForm"
-        /> */}
-        <Select
-            className="form-control qty"
-            name="qty"
-            options={[
-              { value: 1, text: '1' },
-              { value: 2, text: '2' },
-              { value: 3, text: '3' },
-            ]}
-            validationRules={['notEmpty']}
-            placeholder="0"
-            formId="productForm"
-          />
-      </div>
-      {error && <div className="text-critical mt-1">{error}</div>}
-      <div className="mt-1 add-card">
-        {stockAvaibility === true && (
-          <Button
-            title={_('ADD TO CART')}
-            outline
-            isLoading={loading}
-            onAction={() => {
-              document.getElementById('productForm').dispatchEvent(
-                new Event('submit', { cancelable: true, bubbles: true })
-              );
-            }}
-          />
-        )}
-        {stockAvaibility === false && (
-          <Button title={_('SOLD OUT')} onAction={() => { }} />
-        )}
-      </div>
-    </div>
+    </>
   );
 }
 
@@ -161,6 +164,63 @@ AddToCart.propTypes = {
 };
 
 AddToCart.defaultProps = {
+  error: undefined
+};
+
+function BuyNow({ sku }) {
+  const [url, seturl] = useState("https://drbwc.com")
+   useEffect(() => {
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace(currentURL, '');
+    const pathStartIndex = newURL.indexOf('/', 8);
+    const newPath = newURL.substring(pathStartIndex);
+    const finalurl = window.location.origin + newPath;
+    seturl(finalurl);
+  }, [])
+
+  const buyNow = async () => {
+    try {
+      const result = await fetch(`${url}/api/cart/mine/items`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "sku": sku,
+          "qty": "1"
+        })
+      });
+
+      const data = await result.json();
+      if (data.length !== 0) {
+        window.location.reload();
+      } else {
+        setError(data.message);
+      }
+      window.location = url+"/checkout";
+    } catch (error) {
+      setError('An unexpected error occurred.');
+    }
+  };
+
+  return (
+    <>
+      <div className="mt-1 add-card">
+        <button onClick={buyNow} type="button" className='btn-brown mt-2 primary outline btn-white'>BUY NOW</button>
+      </div>
+    </>
+  );
+}
+
+BuyNow.propTypes = {
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
+  stockAvaibility: PropTypes.bool.isRequired,
+  sku: PropTypes.string.isRequired,
+  productId: PropTypes.number.isRequired
+};
+
+BuyNow.defaultProps = {
   error: undefined
 };
 
@@ -220,7 +280,18 @@ export default function ProductForm({ product, action }) {
             props: {
               stockAvaibility: product.inventory.isInStock,
               loading,
-              error
+              error,
+            },
+            sortOrder: 50,
+            id: 'productSingleBuyButton'
+          },
+          {
+            component: { default: BuyNow },
+            props: {
+              stockAvaibility: product.inventory.isInStock,
+              sku: product.sku,
+              productId: product.productId,
+              action:action
             },
             sortOrder: 50,
             id: 'productSingleBuyButton'
