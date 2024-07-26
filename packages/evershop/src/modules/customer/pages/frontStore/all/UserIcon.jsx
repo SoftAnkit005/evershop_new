@@ -5,8 +5,8 @@ import { FaUser } from "react-icons/fa";
 export default function UserIcon({ customer, accountUrl, loginUrl }) {
   return (
     <div className="self-center">
-      <a href={customer ? accountUrl : loginUrl} aria-label={customer ? "Go to account" : "Log in"}>
-        <FaUser className='text-theme-brown' width={20} height={20} />
+      <a className='' href={customer ? accountUrl : loginUrl} aria-label={customer ? "Go to account" : "Log in"}>
+        <FaUser className='text-theme-brown fs-1' />
       </a>
     </div>
   );
