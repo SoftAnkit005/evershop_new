@@ -81,7 +81,11 @@ export function Field(props) {
   const onChangeFunc = (newValue) => {
     let fieldVal;
     if (typeof newValue === 'object' && newValue !== null && newValue.target) {
-      fieldVal = newValue.target.value;
+      if(props.id === "urlKey"){
+        fieldVal = newValue.target.value.toLowerCase();  
+      }else{
+        fieldVal = newValue.target.value;
+      }
     } else {
       fieldVal = newValue;
     }

@@ -124,7 +124,7 @@ export default function Layout({ searchPageUrl }) {
                   <ul className='bg-dark list-unstyled'>
                     {searchList?.map((item) => 
                       <li>
-                        <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.category_name).split(' ').join('-').toLowerCase()}/${(item.product_name).split(' ').join('-').toLowerCase()}`}>{item.product_name}
+                        <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.parent_category_url_key !== null)?item.parent_category_url_key+'/':''}${item.category_url_key}/${item.product_url_key}`}>{item.product_name}
                           <p className='mb-0 mt-1'>{item.category_name}</p>
                         </a>
                       </li>

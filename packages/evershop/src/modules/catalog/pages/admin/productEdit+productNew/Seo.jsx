@@ -58,8 +58,10 @@ export default function SEO({ product }) {
       f.props.value = get(product, `${f.props.id}`);
     }
     return f;
+
   });
 
+  console.log(fields);
   return (
     <Card title="Search engine optimize">
       <Card.Session>
