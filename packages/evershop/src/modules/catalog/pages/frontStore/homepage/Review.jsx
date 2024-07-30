@@ -6,26 +6,32 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import axios from "axios";
 // import { FaRegStar, FaStar } from "react-icons/fa6";
 
 export default function Review() {
-//   const [reviewData, setreviewData] = useState([]);
+  const [reviewData, setreviewData] = useState([]);
 
-//   useEffect(() => {
-//     async function fetchMyAPI() {
-//       const result = await fetch("https://drbwc.com/api/getreviewdata", {
-//         method: "GET",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         redirect: "follow",
-//       });
-//       const data = await result.json();
-//       setreviewData(data);
-//     }
+  useEffect(() => {
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace(currentURL, '');
+    const pathStartIndex = newURL.indexOf('/', 8);
+    const newPath = newURL.substring(pathStartIndex);
+    const finalURL = window.location.origin + newPath;
 
-//     fetchMyAPI();
-//   }, []);
+    const fetchMyAPI = async () => {
+      try {
+        const header = {
+          headers: {"content-type": "application/json"}
+        }
+        const response = await axios.get(`${finalURL}/api/getreviewdata`, header);
+        setreviewData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    fetchMyAPI();
+  }, []);
 
   const settings = {
     infinite: true,
@@ -70,7 +76,7 @@ export default function Review() {
 
         <div className="slider-container">
           <Slider {...settings}>
-            {/* {reviewData !== undefined && reviewData !== null ? (
+            {reviewData !== undefined && reviewData !== null ? (
               reviewData.map((item) => (
                 <div>
                   <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
@@ -83,36 +89,9 @@ export default function Review() {
               <>
                 <div>No Reviews</div>
               </>
-            )} */}
-            <div>
-                <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
-                  <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title="I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate." > I have purchased zero gravity massage chair & I have visited the company. all products are german engineered. </p>
-                  <h3 className="fs-4 font-bold mt-2 text-capitalize">Aadit Patel</h3>
-                </div>
-            </div>
-            <div>
-                <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
-                  <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title="I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate." > I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate. </p>
-                  <h3 className="fs-4 font-bold mt-2 text-capitalize">Salmon Ningeri</h3>
-                </div>
-            </div>
-            <div>
-                <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
-                  <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title="I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate." > I have purchase massage chair very happy with product and service. Very good company. Genuine person. </p>
-                  <h3 className="fs-4 font-bold mt-2 text-capitalize">Vijay Accountant</h3>
-                </div>
-            </div>
-            <div>
-                <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
-                  <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title="I have purchased foot massager which is best in quality as well as geniune company dealing with products u appreciate." > Folding Massage Bed, Very Good product and I am happy and satisfied for sales and services. </p>
-                  <h3 className="fs-4 font-bold mt-2 text-capitalize">Vandana Rawal</h3>
-                </div>
-            </div>
+            )}
           </Slider>
         </div>
-        {/* <a className="btn-light-brown m-auto" href="#">
-            <span className="wd-btn-text" data-elementor-setting-key="text">Leave a review</span>
-        </a> */}
       </div>
     </section>
   );

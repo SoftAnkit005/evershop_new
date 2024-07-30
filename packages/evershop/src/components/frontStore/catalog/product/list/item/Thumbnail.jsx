@@ -3,10 +3,13 @@ import React, { useEffect, useState } from 'react';
 import '@components/frontStore/catalog/product/list/item/Thumbnail.scss';
 import ProductNoThumbnail from '@components/common/ProductNoThumbnail';
 import axios from 'axios';
+import { FaHeart, FaRegHeart } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
 
 function Thumbnail({ url, imageUrl, alt, productId }) {
   const [tag, setTag] = useState('');
+  const [Wishlistclicked, setWishlistClicked] = useState(false);
 
   useEffect(() => {
     async function getTag() {
@@ -19,9 +22,20 @@ function Thumbnail({ url, imageUrl, alt, productId }) {
     }
     getTag();
   }, [productId]);
+
+  const handleClick = () => {
+    if(Wishlistclicked){
+      setWishlistClicked(false)
+      toast("Removed from wishlist",{ autoClose: 2000 });
+    } else {
+      toast("Added to wishlist", { autoClose: 2000 });
+      setWishlistClicked(true);
+    }
+  };
+
   return (
     <div className='card-body'>
-      
+      <button className={`position-absolute top-0 end-0 fs-2 p-4 text-danger pointer-event z-1 wishlist-button ${Wishlistclicked ? 'clicked' : ''}`} onClick={handleClick} >{(Wishlistclicked)?<FaHeart />:<FaRegHeart />}</button>
       {tag && <p className='static-note'>{tag}</p>}
       <div className="card-img">
         {imageUrl && (

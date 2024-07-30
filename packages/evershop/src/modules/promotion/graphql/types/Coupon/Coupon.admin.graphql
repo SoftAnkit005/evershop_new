@@ -5,6 +5,7 @@ type Coupon {
   couponId: Int
   uuid: String!
   status: Int!
+  coupon_heading: String
   description: String!
   discountAmount: Float!
   freeShipping: Int!

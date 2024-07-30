@@ -38,7 +38,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   return (
     <div className={className}>
       {products.map((p) => (
-        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-2 mb-5 px-3' >
+        <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-5 px-4' >
           <Area
             id="productListingItem"
             className="card px-0"

@@ -52,25 +52,30 @@ export default function Layout({ searchPageUrl }) {
 
   const [value] = useDebounce(keyword, 1500);
   const [searchList, setsearchList] = useState([])
+  const isInitialRender = useRef(true);
 
   useEffect(() => {
-    const searchProduct = async () => {
-      try {
-        const options = {
-          headers: {"content-type": "application/json"}
+    if (isInitialRender.current || keyword === "") {
+      // Skip the effect on the initial render
+      isInitialRender.current = false;
+    } else {
+      const searchProduct = async () => {
+        try {
+          const options = {
+            headers: {"content-type": "application/json"}
+          }
+          const body = {
+            keyword: keyword,
+          };
+          const response = await axios.post(`${finalURL}/api/getsearchdata`, body ,options);
+          setsearchList(response.data);
+          console.log(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
         }
-        const body = {
-          keyword: keyword,
-        };
-        const response = await axios.post(`${finalURL}/api/getsearchdata`, body ,options);
-        setsearchList(response.data);
-        console.log(response.data);
-        // location.replace(`${finalURL}/api/getsearchdata`)
-      } catch (error) {
-        console.error('Error fetching data:', error);
       }
+      searchProduct();
     }
-    searchProduct();
   }, [value])
   
 
@@ -102,7 +107,7 @@ export default function Layout({ searchPageUrl }) {
               <div className="search-input">
                 <Input
                   prefix={
-                    <a href="#" className={`close-icon ${(keyword !== null && keyword !== "")?"d-block":"d-none"}`} style={{width:'22px'}} onClick={(e) => { e.preventDefault(); setsearchList([]); setKeyword(null); InputRef.current.value = "" }} aria-label="Close" > <XIcon className='fs-6 text-white' /> </a>
+                    <a href="#" className={`close-icon ${(keyword !== null && keyword !== "")?"d-block":"d-none"}`} style={{width:'22px'}} onClick={(e) => { e.preventDefault(); setsearchList([]); setKeyword(""); InputRef.current.value = "" }} aria-label="Close" > <XIcon className='fs-6 text-white' /> </a>
                   }
                   placeholder={typeablePlaceholder}
                   ref={InputRef}
@@ -124,7 +129,8 @@ export default function Layout({ searchPageUrl }) {
                   <ul className='bg-dark list-unstyled'>
                     {searchList?.map((item) => 
                       <li>
-                        <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.parent_category_url_key !== null)?item.parent_category_url_key+'/':''}${item.category_url_key}/${item.product_url_key}`}>{item.product_name}
+                        <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.parent_category_url_key !== null)?item.parent_category_url_key+'/':''}${item.category_url_key}/${item.product_url_key}`}>
+                          <p className='ellipsis-1'>{item.product_name}</p>
                           <p className='mb-0 mt-1'>{item.category_name}</p>
                         </a>
                       </li>

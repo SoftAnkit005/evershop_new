@@ -1,13 +1,20 @@
+import { Card } from '@components/admin/cms/Card';
+import Button from '@components/common/form/Button';
+import { Form } from '@components/common/form/Form';
+import { useModal } from '@components/common/modal/useModal';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { BiSolidOffer } from 'react-icons/bi';
+import { IoClose } from 'react-icons/io5';
 // import Offers from 'Assets/Images/offers.svg'
 
 export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
   const [finalURL, setFinalURL] = useState('');
   const [couponData, setCouponData] = useState(null);
-  const [offerCount, setofferCount] = useState(0)
+  const [modalHeading, setmodalHeading] = useState("")
+  const [modalData, setmodalData] = useState("")
+  const modal = useModal();
 
   useEffect(() => {
     const currentURL = window.location.href;
@@ -65,11 +72,13 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
                 {(item.discount_type === "fixed_discount_to_entire_order") ? 
                   (
                     <div className='d-flex align-items-center border-bottom p-2'>
-                      <span className='font-13 fw-normal text-dark'>{item.description}</span>
+                      <span className='font-13 fw-normal text-dark'>{item.coupon_heading} | &nbsp;</span> 
+                      <button className='text-cadetblue font-12' onClick={() => { modal.openModal(); setmodalHeading(item.coupon); setmodalData(item.description)}} >Details</button>
                     </div>
                   ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products !== undefined && item.target_products.products[0].value[0] === sku) ? (
                     <div className='d-flex align-items-center border-bottom p-2'>
-                      <span className='font-13 fw-normal text-dark'>{item.description}</span>
+                      <span className='font-13 fw-normal text-dark'>{item.coupon_heading} | &nbsp;</span>
+                      <button className='text-cadetblue font-12' onClick={() => { modal.openModal(); setmodalHeading(item.coupon); setmodalData(item.description)}} >Details</button>
                     </div>
                   ) : (
                     <></>
@@ -94,6 +103,31 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
         }
       </div>
       <hr className='my-4'/>
+
+      {modal.state.showing && (
+          <div className={modal.className} onAnimationEnd={modal.onAnimationEnd}>
+            <div
+              className="modal-wrapper flex self-center justify-center items-center"
+              tabIndex={-1}
+              role="dialog"
+            >
+              <div className="modal">
+                <Form id="variantForm" submitBtn={false}>
+                  <Card title={
+                        <div className='d-flex justify-content-between align-items-center'>
+                          <span>{modalHeading}</span>
+                          <button onClick={() => modal.closeModal()}><IoClose /></button>
+                        </div>
+                      }>
+                    <Card.Session>
+                      <p class="font-13 fw-normal text-dark p-4">{modalData}</p>
+                    </Card.Session>
+                  </Card>
+                </Form>
+              </div>
+            </div>
+          </div>
+        )}
     </>
   );
 }

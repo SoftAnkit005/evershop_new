@@ -26,6 +26,18 @@ export default function General({ coupon = {} }) {
         {
           component: { default: Field },
           props: {
+            name: 'coupon_heading',
+            value: get(coupon, 'coupon_heading'),
+            validationRules: ['notEmpty'],
+            type: 'text',
+            label: 'Coupon Heading',
+            placeholder: 'Coupon Code Heading'
+          },
+          sortOrder: 15
+        },
+        {
+          component: { default: Field },
+          props: {
             name: 'description',
             value: get(coupon, 'description'),
             type: 'textarea',
@@ -73,6 +85,7 @@ export default function General({ coupon = {} }) {
 General.propTypes = {
   coupon: PropTypes.shape({
     coupon: PropTypes.string,
+    coupon_heading:PropTypes.string,
     status: PropTypes.number,
     description: PropTypes.string,
     discountAmount: PropTypes.number,
@@ -96,6 +109,7 @@ export const query = `
     coupon(id: getContextValue('couponId', null)) {
       coupon
       status
+      coupon_heading
       description
       discountAmount
       freeShipping
