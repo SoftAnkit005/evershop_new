@@ -1,0 +1,44 @@
+.product-banner{
+    background: radial-gradient(50% 70% at 36% 58%, #8a715f 15%, #160e09 100%);
+    padding: 48px 0;
+    position: relative;
+    
+    .products-img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+.about-product{
+    padding: 48px 0;
+    position: relative;
+
+    .products-img{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.product-experience{
+    padding: 60px 0;
+    background: radial-gradient(50% 70% at 36% 58%, #8a715f 15%, #160e09 100%);
+    position: relative;
+
+    .products-img{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .products-subtitle-white:after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 5px;
+        bottom: 0;
+        left: 40%;
+        margin: auto;
+        background: #fff;
+    }
+}

@@ -121,7 +121,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                     <a href='/' className='footer-link fade-left'>Home</a>
                                 </li>
                                 <li>
-                                    <a href='https://germanhomeopathic.in/automatic-thermal-massager' className='footer-link fade-left'>Automatic Thermal Massager</a>
+                                    <a href='/automatic-thermal-massage-bed' className='footer-link fade-left'>Automatic Thermal Massager</a>
                                 </li>
                                 {sortedMenu.map((item, i) => 
                                     <li key={i}>
