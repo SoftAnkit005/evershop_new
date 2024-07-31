@@ -895,6 +895,35 @@ ul.navbar-nav::after {
                 // box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.2);
             }
         }
+        .product-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(0 0 0 / 20%); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+            cursor: pointer;
+        }
+        .product-image {
+            width: 300px !important;
+            height: 300px !important;
+            margin: 0 auto;
+            display: flex !important;
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--bs-box-shadow-lg)!important;
+
+            .play-icon{
+                font-size: 55px;
+                position: absolute;
+                color: red;
+                left: 122px;
+                top: 122px;
+            }
+        }
     }
 
     .slick-next {

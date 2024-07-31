@@ -1,6 +1,13 @@
+.hr-line{
+    width: 150px;
+    height: 5px;
+    opacity: 1;
+    margin: auto;
+}
+
 .product-banner{
     background: radial-gradient(50% 70% at 36% 58%, #8a715f 15%, #160e09 100%);
-    padding: 48px 0;
+    padding: 60px 20px;
     position: relative;
     
     .products-img {
@@ -9,9 +16,20 @@
         margin: 0 auto;
     }
 }
-.about-product{
-    padding: 48px 0;
+.products-heading{
+    font-weight: 500;
+    font-size: 46px;
+    width: 75%;
+    line-height: 45px;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 0 0 25px 0;
+    margin: 0;
+}
+.about-product, .product-benefits, .intensity-control, .smart-sliding{
+    padding: 48px 20px;
     position: relative;
+
 
     .products-img{
         width: 100%;
@@ -20,25 +38,23 @@
     }
 }
 
-.product-experience{
-    padding: 60px 0;
+.product-experience, .spine-scanning{
+    padding: 60px 20px;
     background: radial-gradient(50% 70% at 36% 58%, #8a715f 15%, #160e09 100%);
     position: relative;
 
-    .products-img{
-        width: 500px;
-        height: 500px;
-        margin: 0 auto;
+    .spine-scanning-img{width: 100%; max-width: 850px;}
+    .member-img{
+        transition: transform .5s;
     }
+    .member-img:hover{
+        transform: scale(1.05);
+    }
+}
 
-    .products-subtitle-white:after{
-        content: "";
-        position: absolute;
-        width: 150px;
-        height: 5px;
-        bottom: 0;
-        left: 40%;
-        margin: auto;
-        background: #fff;
+@media only screen and (max-width: 600px) {
+    .products-heading{
+        font-size: 30px;
+        width: 100% !important;
     }
 }
