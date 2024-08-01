@@ -1,38 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
 import React, { useEffect } from "react";
 import "../../../../Styles/Styles.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import axios from "axios";
+import PropTypes from "prop-types";
 // import { FaRegStar, FaStar } from "react-icons/fa6";
 
-export default function Review() {
-  const [reviewData, setreviewData] = useState([]);
-
-  useEffect(() => {
-    const currentURL = window.location.href;
-    const newURL = currentURL.replace(currentURL, '');
-    const pathStartIndex = newURL.indexOf('/', 8);
-    const newPath = newURL.substring(pathStartIndex);
-    const finalURL = window.location.origin + newPath;
-
-    const fetchMyAPI = async () => {
-      try {
-        const header = {
-          headers: {"content-type": "application/json"}
-        }
-        const response = await axios.get(`${finalURL}/api/getreviewdata`, header);
-        setreviewData(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
-    fetchMyAPI();
-  }, []);
-
+export default function Review({ reviews }) {
+  console.log("review", reviews);
   const settings = {
     infinite: true,
     centerPadding: "60px",
@@ -76,11 +52,11 @@ export default function Review() {
 
         <div className="slider-container">
           <Slider {...settings}>
-            {reviewData !== undefined && reviewData !== null ? (
-              reviewData.map((item) => (
-                <div>
+            {reviews.items !== undefined && reviews.items !== null ? (
+              reviews.items.map((item, index) => (
+                <div key={index}>
                   <div className="card p-4 py-5 mx-3 justify-content-between" style={{ minHeight: "250px", height: "250px" }} >
-                    <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title={item.view} > {item.view} </p>
+                    <p className="fs-4 lh-lg review-card" data-toggle="tooltip" data-placement="bottom" title={item.view} > {" "} {item.view}{" "} </p>
                     <h3 className="fs-4 font-bold mt-2">{item.name}</h3>
                   </div>
                 </div>
@@ -100,3 +76,24 @@ export const layout = {
   areaId: "content",
   sortOrder: 13,
 };
+
+Review.propTypes = {
+  reviews: PropTypes.shape({
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        view: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};
+
+export const query = `
+  query {
+  reviews {
+      items {
+        name
+        view
+      }
+  }
+}`;

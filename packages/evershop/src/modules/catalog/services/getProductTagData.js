@@ -15,12 +15,19 @@ async function getProductTagData(product_id) {
     const query = select().from('tags');
    
 
-    const tag = await query.where('product_id', '=', product_id).load(connection);
-    if (!tag) {
-      throw new Error('Invalid Product id');
-    }
+    // New 
+    const tags  = query.execute(connection);;
+    return tags;
+
+    // Old
+    // const tag = await query.where('product_id', '=', product_id).load(connection);
+    // if (!tags) {
+    //   throw new Error('Invalid Product id');
+    // }
+     // return tag;
   
-    return tag;
+    
+   
   } catch (e) {
     await rollback(connection);
     throw e;

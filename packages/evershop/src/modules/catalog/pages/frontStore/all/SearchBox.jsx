@@ -29,33 +29,33 @@ export default function SearchBox({ searchPageUrl }) {
     setFinalURL(finalURL);
   }, []);
 
-  const [value] = useDebounce(keyword, 1500);
-  const [searchList, setsearchList] = useState([]);
-  const isInitialRender = useRef(true);
+  // const [value] = useDebounce(keyword, 1500);
+  // const [searchList, setsearchList] = useState([]);
+  // const isInitialRender = useRef(true);
 
-  useEffect(() => {
-    if (isInitialRender.current || keyword === "") {
-      // Skip the effect on the initial render
-      isInitialRender.current = false;
-    } else {
-      const searchProduct = async () => {
-        try {
-          const options = {
-            headers: {"content-type": "application/json"}
-          }
-          const body = {
-            keyword: keyword,
-          };
-          const response = await axios.post(`${finalURL}/api/getsearchdata`, body ,options);
-          setsearchList(response.data);
-          console.log(response.data);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-      searchProduct();
-    }
-  }, [value])
+  // useEffect(() => {
+  //   if (isInitialRender.current || keyword === "") {
+  //     // Skip the effect on the initial render
+  //     isInitialRender.current = false;
+  //   } else {
+  //     const searchProduct = async () => {
+  //       try {
+  //         const options = {
+  //           headers: {"content-type": "application/json"}
+  //         }
+  //         const body = {
+  //           keyword: keyword,
+  //         };
+  //         const response = await axios.post(`${finalURL}/api/getsearchdata`, body ,options);
+  //         setsearchList(response.data);
+  //         console.log(response.data);
+  //       } catch (error) {
+  //         console.error('Error fetching data:', error);
+  //       }
+  //     }
+  //     searchProduct();
+  //   }
+  // }, [value])
 
   return (
     <div className="search-box">
@@ -66,17 +66,10 @@ export default function SearchBox({ searchPageUrl }) {
         <div className="search-input-container">
           <div className="search-input">
             <a href="#" className="close-icon" style={{width:'22px'}} onClick={(e) => { e.preventDefault(); setsearchList([]); setKeyword(""); InputRef.current.value = "" }} aria-label="Close" > <XIcon className='fs-2 text-white' /> </a>
-            <Input
-              placeholder={_('Search')}
-              ref={InputRef}
-              value={keyword}
-              onChange={(e) => {
-                setKeyword(e.target.value);
-              }}
-            />
+            <Input placeholder={_('Search')} ref={InputRef} value={keyword} onChange={(e) => { setKeyword(e.target.value); }} />
           </div>
           <div className='search-list'>
-            <ul className='bg-dark list-unstyled'>
+            {/* <ul className='bg-dark list-unstyled'>
               {searchList?.map((item) => 
                 <li>
                   <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.parent_category_url_key !== null)?item.parent_category_url_key+'/':''}${item.category_url_key}/${item.product_url_key}`}>
@@ -85,7 +78,7 @@ export default function SearchBox({ searchPageUrl }) {
                   </a>
                 </li>
               )}
-            </ul>
+            </ul> */}
           </div>
         </div>
       )}

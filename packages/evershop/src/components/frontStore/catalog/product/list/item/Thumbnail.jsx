@@ -8,20 +8,21 @@ import { toast } from 'react-toastify';
 
 
 function Thumbnail({ url, imageUrl, alt, productId }) {
-  const [tag, setTag] = useState('');
+  // const [tag, setTag] = useState('');
   const [Wishlistclicked, setWishlistClicked] = useState(false);
 
-  useEffect(() => {
-    async function getTag() {
-      const tagData = await fetchTagData(productId);
-      if (tagData && tagData.name) {
-        setTag(tagData.name);
-      } else {
-        setTag('');
-      }
-    }
-    getTag();
-  }, [productId]);
+  // useEffect(() => {
+  //   async function getTag() {
+  //     const tagData = await fetchTagData(productId);
+      
+  //     // if (tagData && tagData.name) {
+  //     //   setTag(tagData.name);
+  //     // } else {
+  //     //   setTag('');
+  //     // }
+  //   }
+  //   getTag();
+  // }, [productId]);
 
   const handleClick = () => {
     if(Wishlistclicked){
@@ -36,7 +37,7 @@ function Thumbnail({ url, imageUrl, alt, productId }) {
   return (
     <div className='card-body'>
       <button className={`position-absolute top-0 end-0 fs-2 p-4 text-danger pointer-event z-1 wishlist-button ${Wishlistclicked ? 'clicked' : ''}`} onClick={handleClick} >{(Wishlistclicked)?<FaHeart />:<FaRegHeart />}</button>
-      {tag && <p className='static-note'>{tag}</p>}
+      {/* {tag && <p className='static-note'>{tag}</p>} */}
       <div className="card-img">
         {imageUrl && (
           <a href={url}>
@@ -56,16 +57,16 @@ function Thumbnail({ url, imageUrl, alt, productId }) {
 
 
   
-async function fetchTagData(productId) {
-  try {
-    const response = await axios.get(`/api/getproducttag/${productId}`);
-    console.log(response)
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching tag data:', error);
-    return null;
-  }
-}
+// async function fetchTagData(productId) {
+//   try {
+//     const response = await axios.get(`/api/getproducttag/0`);
+//     console.log("tagData",response.data);
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching tag data:', error);
+//     return null;
+//   }
+// }
 
 Thumbnail.propTypes = {
   alt: PropTypes.string,

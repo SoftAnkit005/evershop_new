@@ -11,32 +11,32 @@ import { IoClose } from 'react-icons/io5';
 
 export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
   const [finalURL, setFinalURL] = useState('');
-  const [couponData, setCouponData] = useState(null);
+  // const [couponData, setCouponData] = useState(null);
   const [modalHeading, setmodalHeading] = useState("")
   const [modalData, setmodalData] = useState("")
   const modal = useModal();
 
-  useEffect(() => {
-    const currentURL = window.location.href;
-    const newURL = currentURL.replace(currentURL, '');
-    const pathStartIndex = newURL.indexOf('/', 8);
-    const newPath = newURL.substring(pathStartIndex);
-    const finalurl = window.location.origin + newPath;
-    setFinalURL(finalurl);
+  // useEffect(() => {
+  //   const currentURL = window.location.href;
+  //   const newURL = currentURL.replace(currentURL, '');
+  //   const pathStartIndex = newURL.indexOf('/', 8);
+  //   const newPath = newURL.substring(pathStartIndex);
+  //   const finalurl = window.location.origin + newPath;
+  //   setFinalURL(finalurl);
    
-    const fetchData = async () => {
-      try {
-        const options = {
-          headers: {"content-type": "application/json"}
-        }
-        const response = await axios.get(`${finalurl}/api/getcoupondata`,options);
-        setCouponData(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  }, []);
+  //   const fetchData = async () => {
+  //     try {
+  //       const options = {
+  //         headers: {"content-type": "application/json"}
+  //       }
+  //       const response = await axios.get(`${finalurl}/api/getcoupondata`,options);
+  //       setCouponData(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <>
@@ -62,7 +62,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
       </h4>
       <p className="font-18 m-0 text-black">EMI <span className='font-12 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
       <div className="border rounded-3 mt-3">
-        {(couponData !== null && couponData !== undefined)?
+        {/* {(couponData !== null && couponData !== undefined)?
           <>
             <div className='d-flex align-items-center border-bottom p-2'>
               <BiSolidOffer className='fs-1 ms-2 text-theme-red' /> <span className='font-13 fw-normal text-dark'>Sale with extra</span><span className='font-13 font-semibold text-theme-red ms-2'> Offers</span>
@@ -88,7 +88,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
           </>
           :
           <></>
-        }
+        } */}
       </div>
       <div className='d-flex align-items-center'>
         {(flipkartLink !== null)?
@@ -115,12 +115,12 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku }) {
                 <Form id="variantForm" submitBtn={false}>
                   <Card title={
                         <div className='d-flex justify-content-between align-items-center'>
-                          <span>{modalHeading}</span>
+                          {/* <span>{modalHeading}</span> */}
                           <button onClick={() => modal.closeModal()}><IoClose /></button>
                         </div>
                       }>
                     <Card.Session>
-                      <p class="font-13 fw-normal text-dark p-4">{modalData}</p>
+                      {/* <p class="font-13 fw-normal text-dark p-4">{modalData}</p> */}
                     </Card.Session>
                   </Card>
                 </Form>
@@ -142,3 +142,4 @@ Price.propTypes = {
     text: PropTypes.string.isRequired
   }).isRequired
 };
+
