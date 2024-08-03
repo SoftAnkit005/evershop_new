@@ -6,9 +6,11 @@ const { pool } = require('@evershop/evershop/src/lib/postgres/connection');
 const { getValue } = require('@evershop/evershop/src/lib/util/registry');
 
 class ProductCollection {
-  constructor(baseQuery) {
+  constructor(baseQuery, isForList = true) {
     this.baseQuery = baseQuery;
-    this.baseQuery.orderBy('product.product_id', 'DESC');
+    if(isForList){
+      this.baseQuery.orderBy('product.product_id', 'DESC');
+    }
   }
 
   /**

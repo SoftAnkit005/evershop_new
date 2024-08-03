@@ -41,7 +41,7 @@ export default function About() {
               </div>
               <div className='col-12 col-sm-12 col-md-6 col-lg-6'>
                 <div className='products-img'>
-                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover">
+                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover rounded-1">
                     <source src='Assets/videos/thermal_massage_bed.mp4' type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -59,25 +59,25 @@ export default function About() {
             </div>
             <div className='row my-5'>
               <div className='col-6 col-lg-3 position-relative'>
-                <div className='overflow-hidden my-3'>
+                <div className='overflow-hidden my-3 rounded-1'>
                   <img className='member-img' src='Assets/Images/office_employee.jpg' alt='office employee' />
                   <h5 className="position-absolute text-white text-center w-100 py-5 bottom-0">Office Employee</h5>
                 </div>
               </div>
               <div className='col-6 col-lg-3 position-relative'>
-                <div className='overflow-hidden my-3'>
+                <div className='overflow-hidden my-3 rounded-1'>
                   <img className='member-img' src='Assets/Images/home_maker.jpg' alt='home maker' />
                   <h5 className="position-absolute text-white text-center w-100 py-5 bottom-0">Home Makers</h5>
                 </div>
               </div>
               <div className='col-6 col-lg-3 position-relative'>
-                <div className='overflow-hidden my-3'>
+                <div className='overflow-hidden my-3 rounded-1'>
                   <img className='member-img' src='Assets/Images/student.jpg' alt='student' />
                   <h5 className="position-absolute text-white text-center w-100 py-5 bottom-0">Students</h5>
                 </div>
               </div>
               <div className='col-6 col-lg-3 position-relative'>
-                <div className='overflow-hidden my-3'>
+                <div className='overflow-hidden my-3 rounded-1'>
                   <img className='member-img' src='Assets/Images/parents.jpg' alt='parents' />
                   <h5 className="position-absolute text-white text-center w-100 py-5 bottom-0">Parents</h5>
                 </div>
@@ -127,7 +127,7 @@ export default function About() {
                 </div>
               </div>
               <div className='col-12 col-sm-12 col-lg-6 my-3'>
-                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover">
+                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover rounded-1">
                     <source src='Assets/videos/thermal_massage_bed.mp4' type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>  
@@ -143,7 +143,7 @@ export default function About() {
               <h3 className='products-heading text-uppercase text-center m-auto position-relative'>Customised Spine Scanning</h3>
               <hr className='hr-line bg-white text-white'/>
               <p className='fs-3 text-white text-center my-4'>As every individual has distinctive height, the length of their spine likewise varies. When you lie down on the Dr. BWC Master V4, it analyses the user’s body type automatically and provides you with an effective spine thermal massage with a customized spine scanning function for each body type.</p>
-              <img className='spine-scanning-img m-auto' src='Assets/Images/spine_scanning.png' alt='office employee' />
+              <img className='spine-scanning-img m-auto rounded-1' src='Assets/Images/spine_scanning.png' alt='office employee' />
             </div>
           </div>
         </div>
@@ -162,11 +162,11 @@ export default function About() {
                 <p className="font-16 my-4">It presses the spinal region [cervical vertebrae], [back of head vertebrae], [waist vertebrae] and pelvis, etc.</p>
               </div>
               <div className='col-12 col-sm-12 col-lg-6 my-3'>
-                <img className='spine-scanning-img m-auto' src='Assets/Images/massage_program.png' alt='massage_program' />
+                <img className='spine-scanning-img m-auto rounded-1' src='Assets/Images/massage_program.png' alt='massage_program' />
               </div>
 
               <div className='col-12 col-sm-12 col-lg-6 my-3 mt-5'>
-                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover">
+                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover rounded-1">
                     <source src='Assets/videos/thermal_massage_bed.mp4' type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -184,7 +184,7 @@ export default function About() {
                 <p className="font-16">A music therapy that combines a selection of 10 natural sounds like classic, functional, and natural that keeps our mind at rest. In addition, the user can add up to 100 sounds.</p>
               </div>
               <div className='col-12 col-sm-12 col-lg-6 my-3 mt-5'>
-                <img className='spine-scanning-img m-auto' src='Assets/Images/hardware_configuration.gif' alt='massage_program' />
+                <img className='spine-scanning-img m-auto rounded-1' src='Assets/Images/hardware_configuration.gif' alt='massage_program' />
               </div>
               <div className='col-12 col-sm-12 col-lg-6 my-3 mt-5 d-flex flex-column align-items-start justify-content-center'>
                 <h3 className='products-heading text-dark text-uppercase font-semibold pb-3'>6 Levels of Intensity Control</h3>
@@ -203,7 +203,7 @@ export default function About() {
               <p className="fs-3 text-center my-4">Dr. BWC Master V4 gives a new resting place for family, with the sliding feature on its underbelly that turns into a sofa when slid in. It provides excellent space utilisation, creating a sophisticated and refined sense of modern design that matches any interior such as living room, or bedroom.</p>
             </div>
             <div className='row my-5'>
-              <video autoPlay loop muted className="w-100 h-100 object-fit-cover">
+              <video autoPlay loop muted className="w-100 h-100 object-fit-cover rounded-1">
                 <source src='Assets/videos/thermal_massage_bed.mp4' type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -214,7 +214,7 @@ export default function About() {
                 <p className="font-16 my-4">These two external projectors can be used conveniently at the problematic part in the body. It efficiently utilises time to ensure the other family members waiting-in-line can use the thermal projector for their needs.</p>
               </div>
               <div className='col-12 col-sm-12 col-lg-6 my-3 mt-5'>
-                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover">
+                  <video autoPlay loop muted className="w-100 h-100 object-fit-cover rounded-1">
                     <source src='Assets/videos/thermal_massage_bed.mp4' type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>

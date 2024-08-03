@@ -15,9 +15,9 @@ module.exports = {
     },
     coupons: async (_, { filters = [] }, { user }) => {
       const query = await getCouponBaseQuery();
-    
+          
       const root = new CouponCollection(query);
-      await root.init(filters, !!user);
+      // await root.init(filters, !!user);
       return root;
     }
   }

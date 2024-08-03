@@ -149,7 +149,7 @@ body {
 .search-input-container{
     position: absolute;
     margin: 15px 0;
-    right: 155px;
+    right: 130px;
     top: 5px;
     width: 300px;
 
@@ -917,11 +917,12 @@ ul.navbar-nav::after {
             box-shadow: var(--bs-box-shadow-lg)!important;
 
             .play-icon{
-                font-size: 55px;
+                height: 75px;
                 position: absolute;
                 color: red;
-                left: 122px;
-                top: 122px;
+                left: 112px;
+                top: 112px;
+                opacity: 0.8;
             }
         }
     }

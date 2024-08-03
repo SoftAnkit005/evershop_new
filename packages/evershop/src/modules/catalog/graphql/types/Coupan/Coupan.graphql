@@ -1,14 +1,22 @@
+scalar JSON
+
 """
-The `Coupons` type represents a category object.
+The Coupons type represents a category object.
 """
 type Coupon {
-  coupon_id: Int!
+  coupon_id: Int
   uuid: String!
+  coupon: String!
+  description: String!
+  discount_type: String
+  coupon_heading: String
+  start_date:Float  
+  end_date:Float  
+  target_products: JSON
 }
 
-
 """
-The `FilterInput` type represents a filter input object. Operations must be one of the following: eq, neq, gt, gteq, lt, lteq, like, nlike, in, nin.
+The FilterInput type represents a filter input object. Operations must be one of the following: eq, neq, gt, gteq, lt, lteq, like, nlike, in, nin.
 """
 enum FilterOperation {
   eq
@@ -30,7 +38,7 @@ input FilterInput {
 }
 
 """
-The `Filter` type represents a filter object.
+The Filter type represents a filter object.
 """
 type Filter {
   key: String!
@@ -39,7 +47,7 @@ type Filter {
 }
 
 """
-The `FilterOption` type represents a filter option object.
+The FilterOption type represents a filter option object.
 """
 type FilterOption {
   optionId: Int!
@@ -47,7 +55,7 @@ type FilterOption {
 }
 
 """
-The `FilterAttribute` type represents a filter attribute object.
+The FilterAttribute type represents a filter attribute object.
 """
 type FilterAttribute {
   attributeName: String!

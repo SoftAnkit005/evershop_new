@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 // import { FaRegStar, FaStar } from "react-icons/fa6";
 
 export default function Review({ reviews }) {
-  console.log("review", reviews);
+  // console.log("review", reviews);
   const settings = {
     infinite: true,
     centerPadding: "60px",

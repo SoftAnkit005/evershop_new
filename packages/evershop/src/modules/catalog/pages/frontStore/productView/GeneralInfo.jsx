@@ -9,7 +9,8 @@ import { brand } from '@components/frontStore/catalog/product/single/brand';
 import { companydetails } from '@components/frontStore/catalog/product/single/companydetails';
 import { video } from '@components/frontStore/catalog/product/single/video';
 
-export default function GeneralInfo({ product }) {
+export default function GeneralInfo({ product, coupons = [] }) {
+ 
   return (
     <Area
       id="productViewGeneralInfo"
@@ -31,6 +32,7 @@ export default function GeneralInfo({ product }) {
             special: product.price.special,
             amazonLink:product.amazon,
             flipkartLink:product.flipkart,
+            coupons:coupons
           },
           sortOrder: 10,
           id: 'productSinglePrice'
@@ -146,6 +148,18 @@ export const query = `
           value
           text
         }
+      }
+    }
+    coupons{
+      items{
+        coupon_id
+        coupon
+        description
+        discount_type
+        coupon_heading
+        start_date
+        end_date
+        target_products
       }
     }
   }`;

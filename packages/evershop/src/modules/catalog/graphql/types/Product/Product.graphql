@@ -34,6 +34,16 @@ type Product {
   url: String
 }
 
+
+type AllProduct {
+  productName: String
+  categoryName: String
+  parentCategoryName: String
+  productUrlKey: String
+  categoryUrlKey: String
+  parentCategoryUrlKey: String
+}
+
 """
 Returns a collection of products.
 """
@@ -47,4 +57,5 @@ type ProductCollection {
 extend type Query {
   product(id: ID): Product
   products(filters: [FilterInput]): ProductCollection
+  allProducts: [AllProduct]
 }

@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductList from '@components/frontStore/catalog/product/list/List';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function Products({
   products: {
     products: { items }
-  }
+  },
+  allTags = []
 }) {
+
   return (
     <div>
-      <ProductList products={items} countPerRow={3} />
+      <ProductList products={items} countPerRow={3} tags={allTags} />
       {/* <div className="product-count font-16 text-end">
         {_('${count} products', { count: items.length })}
       </div> */}
@@ -69,6 +71,13 @@ export const query = `
         items {
           ...Product
         }
+      }
+    }
+    allTags {
+      items {
+        id
+        name
+        productId
       }
     }
   }`;

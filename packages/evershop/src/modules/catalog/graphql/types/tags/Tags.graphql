@@ -4,7 +4,8 @@ The `Tags` type represents a category object.
 type Tag {
   id: Int!
   name: String!
-  productName: String!
+  productId: Int
+  productName: String
 }
 
 
@@ -67,6 +68,10 @@ type TagCollection {
   currentFilters: [Filter]
 }
 
+type AllTags {
+ items: [Tag]
+}
+
 type PriceRange {
   min: Float!
   max: Float!
@@ -78,5 +83,6 @@ extend type Product {
 
 extend type Query {
   tags(filters: [FilterInput]): TagCollection
+  allTags: TagCollection
   tag(id: Int): Tag
 }

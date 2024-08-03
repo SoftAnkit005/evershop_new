@@ -17,6 +17,8 @@ function Actions({ tags = [], selectedIds = [] }) {
   const { openAlert, closeAlert } = useAlertContext();
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(tags);
+
   const deleteTags = async () => {
     setIsLoading(true);
     const promises = tags

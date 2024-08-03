@@ -8,7 +8,7 @@ import { get } from '@evershop/evershop/src/lib/util/get';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { AddToCart } from './item/AddToCart';
 
-export default function ProductList({ products = [], countPerRow = 3 }) {
+export default function ProductList({ products = [], countPerRow = 3, tags }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
@@ -47,7 +47,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
             coreComponents={[
               {
                 component: { default: Thumbnail },
-                props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId },
+                props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId, tags:tags },
                 sortOrder: 10,
                 id: 'thumbnail'
               },
@@ -103,5 +103,14 @@ ProductList.propTypes = {
       companydetails: PropTypes.string,
     })
   ).isRequired,
-  countPerRow: PropTypes.number.isRequired
+  countPerRow: PropTypes.number.isRequired,
+  tags: PropTypes.shape({
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.number,
+          name: PropTypes.string,
+          productName: PropTypes.string
+        })
+      ).isRequired,
+    }).isRequired,
 };

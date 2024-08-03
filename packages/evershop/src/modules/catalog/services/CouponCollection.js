@@ -49,7 +49,7 @@ class CouponCollection {
 
   async items() {
     const items = await this.baseQuery.execute(pool);
-    return items.map((row) => camelCase(row));
+    return items;
   }
 
   async total() {
