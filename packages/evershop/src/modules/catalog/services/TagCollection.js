@@ -49,7 +49,6 @@ class TagCollection {
 
   async items() {
     const items = await this.baseQuery.execute(pool);
-    console.log("items", items)
     return items.map((row) => camelCase(row));
   }
 

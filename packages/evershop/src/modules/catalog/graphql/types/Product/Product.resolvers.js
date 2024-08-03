@@ -59,7 +59,6 @@ module.exports = {
       // const root = await query.execute(pool);
       if (root.rows !== null) {
         const products = root.rows.map((row) => camelCase(row));
-        console.log("products", products);
         rollback(connection);
         return products;
       } else {
