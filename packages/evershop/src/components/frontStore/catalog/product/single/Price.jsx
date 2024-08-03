@@ -1,8 +1,6 @@
 import { Card } from '@components/admin/cms/Card';
-import Button from '@components/common/form/Button';
 import { Form } from '@components/common/form/Form';
 import { useModal } from '@components/common/modal/useModal';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { BiSolidOffer } from 'react-icons/bi';
@@ -11,33 +9,12 @@ import { IoClose } from 'react-icons/io5';
 
 export function Price({ regular, special, amazonLink, flipkartLink, sku , coupons}) {
   
+  const currentDate = new Date().getTime();; // Timestamp to check
+  
   const [finalURL, setFinalURL] = useState('');
-  // const [couponData, setCouponData] = useState(null);
   const [modalHeading, setmodalHeading] = useState("")
   const [modalData, setmodalData] = useState("")
   const modal = useModal();
-
-  // useEffect(() => {
-  //   const currentURL = window.location.href;
-  //   const newURL = currentURL.replace(currentURL, '');
-  //   const pathStartIndex = newURL.indexOf('/', 8);
-  //   const newPath = newURL.substring(pathStartIndex);
-  //   const finalurl = window.location.origin + newPath;
-  //   setFinalURL(finalurl);
-   
-  //   const fetchData = async () => {
-  //     try {
-  //       const options = {
-  //         headers: {"content-type": "application/json"}
-  //       }
-  //       const response = await axios.get(`${finalurl}/api/getcoupondata`,options);
-  //       setCouponData(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   return (
     <>
@@ -70,13 +47,13 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
             </div>
             {coupons.items.map((item, index) => (
               <div key={index}>
-                {(item.discount_type === "fixed_discount_to_entire_order") ? 
+                {(item.discount_type === "fixed_discount_to_entire_order" && currentDate >= item.start_date && currentDate <= item.end_date) ? 
                   (
                     <div className='d-flex align-items-center border-bottom p-2'>
                       <span className='font-13 fw-normal text-dark'>{item.coupon_heading} | &nbsp;</span> 
                       <button className='text-cadetblue font-12' onClick={() => { modal.openModal(); setmodalHeading(item.coupon); setmodalData(item.description)}} >Details</button>
                     </div>
-                  ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products !== undefined && item.target_products.products[0].value[0] === sku) ? (
+                  ) : (item.discount_type === "percentage_discount_to_specific_products" && item.target_products.products !== undefined && item.target_products.products[0].value[0] === sku && currentDate >= item.start_date && currentDate <= item.end_date) ? (
                     <div className='d-flex align-items-center border-bottom p-2'>
                       <span className='font-13 fw-normal text-dark'>{item.coupon_heading} | &nbsp;</span>
                       <button className='text-cadetblue font-12' onClick={() => { modal.openModal(); setmodalHeading(item.coupon); setmodalData(item.description)}} >Details</button>
@@ -143,4 +120,3 @@ Price.propTypes = {
     text: PropTypes.string.isRequired
   }).isRequired
 };
-

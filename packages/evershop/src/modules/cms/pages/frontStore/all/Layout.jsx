@@ -41,7 +41,6 @@ export default function Layout({ allProducts =[] }) {
   const [filteredData, setFilteredData] = useState(allProducts);
 
   useEffect(() => {
-    console.log(allProducts);
     const currentURL = window.location.href; 
     const newURL = currentURL.replace(currentURL, '');
     const pathStartIndex = newURL.indexOf('/', 8);

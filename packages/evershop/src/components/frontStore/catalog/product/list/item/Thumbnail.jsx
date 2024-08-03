@@ -9,21 +9,7 @@ import { toast } from 'react-toastify';
 
 function Thumbnail({ url, imageUrl, alt, productId, tags }) {  
   
-  // const [tag, setTag] = useState('');
   const [Wishlistclicked, setWishlistClicked] = useState(false);
-
-  // useEffect(() => {
-  //   async function getTag() {
-  //     const tagData = await fetchTagData(productId);
-      
-  //     // if (tagData && tagData.name) {
-  //     //   setTag(tagData.name);
-  //     // } else {
-  //     //   setTag('');
-  //     // }
-  //   }
-  //   getTag();
-  // }, [productId]);
 
   const handleClick = () => {
     if(Wishlistclicked){
@@ -59,20 +45,6 @@ function Thumbnail({ url, imageUrl, alt, productId, tags }) {
     </div>
   );
 }
-
-
-
-  
-// async function fetchTagData(productId) {
-//   try {
-//     const response = await axios.get(`/api/getproducttag/0`);
-//     console.log("tagData",response.data);
-//     return response.data;
-//   } catch (error) {
-//     console.error('Error fetching tag data:', error);
-//     return null;
-//   }
-// }
 
 Thumbnail.propTypes = {
   alt: PropTypes.string,
