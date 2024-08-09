@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "skipEscape": true
+    },
+    "product_id": {
+      "type": "string",
+      "skipEscape": true
+    }
+  },
+  "additionalProperties": true
+}

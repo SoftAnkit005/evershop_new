@@ -12,7 +12,6 @@ export default function MiniCart({ cartUrl, cart }) {
     <div className="mini-cart-wrapper self-center">
       <a className="mini-cart-icon" href={cartUrl}>
         <BsHandbagFill className='text-theme-brown' width={20} height={20} />
-
         {miniCart.totalQty > 0 && <span>{miniCart.totalQty}</span>}
       </a>
     </div>
@@ -32,7 +31,7 @@ MiniCart.defaultProps = {
 
 export const layout = {
   areaId: 'icon-wrapper',
-  sortOrder: 10
+  sortOrder: 20
 };
 
 export const query = `

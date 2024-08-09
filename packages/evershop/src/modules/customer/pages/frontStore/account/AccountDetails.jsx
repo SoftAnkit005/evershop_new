@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import EmailIcon from '@heroicons/react/outline/MailIcon';
 import User from '@heroicons/react/outline/UserIcon';
 
 export default function AccountDetails({ account }) {
+  useEffect(() => {
+    localStorage.setItem("loggedUser", account.email);
+  }, [])
+  
   return (
     <div className="account-details">
       <div className="account-details-inner">

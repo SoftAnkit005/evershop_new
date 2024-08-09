@@ -103,9 +103,10 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
             <p className='out-of-stock'>Out Of Stock</p>
           }
         </div>
+        <p className='font-13 fw-semibold mt-4 text-theme-red'>Only 2 left in stock.</p>
         <div>
-          <div className="row mt-4 mx-0">
-            <div className="col-4 font-12 p-0 text-muted">Ships from</div>
+          <div className="row mt-2 mx-0">
+            <div className="col-4 font-12 p-0 text-muted">Fulfilled by</div>
             <div className="col-8 font-12 p-0 text-black">&nbsp;  Dr.BWC</div>
             <div className="col-4 font-12 p-0 text-muted">Sold by</div>
             <div className="col-8 font-12 p-0 text-black">&nbsp;  Dr.BWC</div>
@@ -136,7 +137,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
             />
         </div>
         {error && <div className="text-critical mt-1">{error}</div>}
-        <div className="mt-1 add-card">
+        <div className="mt-1 add-card add-to-cart">
           {stockAvaibility === true && (
             <Button
               title={_('ADD TO CART')}

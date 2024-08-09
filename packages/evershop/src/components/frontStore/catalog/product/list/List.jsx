@@ -8,7 +8,8 @@ import { get } from '@evershop/evershop/src/lib/util/get';
 import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { AddToCart } from './item/AddToCart';
 
-export default function ProductList({ products = [], countPerRow = 3, tags }) {
+export default function ProductList({ products = [], countPerRow = 3, tags, listType, account}) {
+  
   if (products.length === 0) {
     return (
       <div className="product-list">
@@ -36,7 +37,8 @@ export default function ProductList({ products = [], countPerRow = 3, tags }) {
   }
 
   return (
-    <div className={className}>
+    <div className={`${className} ${(listType === "wishlist")?'container m-auto': ''}` }>
+      {(listType === "wishlist")? <h3 class="font-30 p-0 text-center">My Wishlist</h3> : <></>}
       {products.map((p) => (
         <div className='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-5 px-4' >
           <Area
@@ -47,7 +49,7 @@ export default function ProductList({ products = [], countPerRow = 3, tags }) {
             coreComponents={[
               {
                 component: { default: Thumbnail },
-                props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId, tags:tags },
+                props: { url: p.url, imageUrl: get(p, 'image.url'), alt: p.name, productId: p.productId, tags:tags, listType:listType, wishlistedProducts:account },
                 sortOrder: 10,
                 id: 'thumbnail'
               },

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
-export function companydetails({ companydetails }) {
+export function companydetails() {
 
   const [finalURL, setFinalURL] = useState('');
 
@@ -65,13 +65,6 @@ export function companydetails({ companydetails }) {
             <img src={`${finalURL}/Assets/Images/secure_transaction.svg`} alt='Warranty' />
           </div>
           <p className='font-13 text-dark lh-sm my-3'>Secure <br />Transaction</p>
-        </div>
-      </div>
-
-      <div className='row align-items-center my-4'>
-        <div className='col-12'>
-          <h4 className="font-20 pb-0 text-brawn">About this item</h4>
-          <p className='font-13 text-dark mt-2'>{companydetails}</p>
         </div>
       </div>
     </section>

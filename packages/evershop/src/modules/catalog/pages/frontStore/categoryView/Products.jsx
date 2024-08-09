@@ -7,12 +7,13 @@ export default function Products({
   products: {
     products: { items }
   },
-  allTags = []
+  allTags = [],
+  account
 }) {
 
   return (
     <div>
-      <ProductList products={items} countPerRow={3} tags={allTags} />
+      <ProductList products={items} countPerRow={3} tags={allTags} account={account}/>
       {/* <div className="product-count font-16 text-end">
         {_('${count} products', { count: items.length })}
       </div> */}
@@ -79,6 +80,11 @@ export const query = `
         name
         productId
       }
+    }
+    account: currentCustomer {
+      fullName
+      email
+      wishlistedProducts
     }
   }`;
 

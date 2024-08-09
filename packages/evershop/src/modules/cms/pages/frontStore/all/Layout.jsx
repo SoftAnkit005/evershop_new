@@ -102,8 +102,8 @@ export default function Layout({ allProducts =[] }) {
                 />
                 <div className={`search-list ${listDisplay}`}>
                   <ul className='bg-dark list-unstyled'>
-                    {filteredData?.map((item) => 
-                      <li>
+                    {filteredData?.map((item, i) => 
+                      <li key={i}>
                         <a className='btn btn-dark border-bottom w-100 text-start p-3 text-decoration-none' href={`${finalURL}/${(item.parentCategoryUrlKey !== null)?item.parentCategoryUrlKey+'/':''}${item.categoryUrlKey}/${item.productUrlKey}`}>
                           <p className='ellipsis-1'>{item.productName}</p>
                           <p className='mb-0 mt-1'>{item.categoryName}</p>

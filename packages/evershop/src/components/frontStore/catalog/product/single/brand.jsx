@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export function brand({ usefor, powersource, material, itemweight, brand, specialfeature, specificusesforproduct, productbenefits, productdimensions }) {
+export function brand({ usefor, powersource, material, itemweight, brand, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails }) {
 
 
     return (
@@ -50,6 +50,12 @@ export function brand({ usefor, powersource, material, itemweight, brand, specia
                     </div>
                 </div>
                 <hr className='mb-0' />
+                <div className='row align-items-center my-4'>
+                    <div className='col-12'>
+                    <h4 className="font-20 pb-0 text-brawn">About this item</h4>
+                    <p className='font-13 text-dark mt-2'>{companydetails}</p>
+                    </div>
+                </div>
             </div>
         </section>
     );

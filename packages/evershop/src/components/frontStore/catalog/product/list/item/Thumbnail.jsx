@@ -7,7 +7,11 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa6';
 import { toast } from 'react-toastify';
 
 
-function Thumbnail({ url, imageUrl, alt, productId, tags }) {  
+function Thumbnail({ url, imageUrl, alt, productId, tags, listType, wishlistedProducts }) {  
+  useEffect(() => {
+    console.log(wishlistedProducts);
+  }, [])
+  
   
   const [Wishlistclicked, setWishlistClicked] = useState(false);
 
@@ -23,7 +27,11 @@ function Thumbnail({ url, imageUrl, alt, productId, tags }) {
 
   return (
     <div className='card-body'>
-      <button className={`position-absolute top-0 end-0 fs-2 p-4 text-danger pointer-event z-1 wishlist-button ${Wishlistclicked ? 'clicked' : ''}`} onClick={handleClick} >{(Wishlistclicked)?<FaHeart />:<FaRegHeart />}</button>
+      {(listType === "wishlist")?
+        <></>
+        :
+        <button className={`position-absolute top-0 end-0 fs-2 p-4 text-danger pointer-event z-1 wishlist-button ${Wishlistclicked ? 'clicked' : ''}`} onClick={handleClick} >{(Wishlistclicked)?<FaHeart />:<FaRegHeart />}</button>
+      }
       {tags?.items.map((items) => 
         (items.productId === productId)?
           <p className='static-note'>{items.name}</p>

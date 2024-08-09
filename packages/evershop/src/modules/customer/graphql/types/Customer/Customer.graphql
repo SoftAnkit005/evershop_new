@@ -8,6 +8,7 @@ type Customer {
   email: String!
   fullName: String!
   createdAt: Date!
+  wishlistedProducts: JSON
 }
 
 extend type Query {

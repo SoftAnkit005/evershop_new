@@ -46,12 +46,19 @@ export default function GeneralInfo({ product, coupons = [] }) {
           id: 'productSingleSku'
         },
         {
+          component: { default: companydetails },
+          props: { },
+          sortOrder: 20,
+          id: 'brand'
+        },
+        {
           component: { default: brand },
           props: {
             usefor: product.usefor,
             powersource: product.powersource,
             material: product.material,
             itemweight: product.itemweight,
+            companydetails: product.companydetails,
             brand: product.brand,
             color: product.color,
             specialfeature: product.specialfeature,
@@ -62,14 +69,6 @@ export default function GeneralInfo({ product, coupons = [] }) {
           sortOrder: 20,
           id: 'brand'
         },
-        {
-          component: { default: companydetails },
-          props: {
-            companydetails: product.companydetails
-          },
-          sortOrder: 20,
-          id: 'brand'
-        }
         // {
         //   component: { default: video },
         //   props: {

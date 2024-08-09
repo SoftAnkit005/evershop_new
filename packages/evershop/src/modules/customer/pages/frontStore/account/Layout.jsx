@@ -7,6 +7,7 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 export default function Layout({ logoutUrl }) {
   const logout = async (e) => {
     e.preventDefault();
+    localStorage.removeItem("loggedUser");
     const respone = await fetch(logoutUrl, {
       method: 'GET'
     });
