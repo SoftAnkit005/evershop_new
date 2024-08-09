@@ -18,7 +18,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
 
   return (
     <>
-      <p className='fs-4 fw-medium flex items-center mb-0'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
+      <p className='fs-4 fw-medium flex items-center mb-0 blink'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
       <h4 className="font-24 text-black mt-3">
         {special.value === regular.value && (
           <>
@@ -39,6 +39,13 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
         )}
       </h4>
       <p className="font-18 m-0 text-black">EMI <span className='font-12 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
+      <div className='my-3 d-flex align-items-center'>
+        <span className='font-13 font-semibold text-white bg-theme-red px-2 py-1 position-relative rounded-start coupon-badge'>Coupon: &nbsp;</span>
+        <input className='ms-4 w-auto h-auto' type="checkbox" name="coupon_check" id="coupon_check" style={{appearance:'auto', WebkitAppearance:'auto'}} />
+        <label for="coupon_check" className='font-12 mt-0 pb-0 ms-3'>Apply 10000 coupon</label>
+        <span className='text-cadetblue font-12 ms-2'>Tearms | </span>
+        <span className='text-cadetblue font-12 ms-2'>Shop Items</span>
+      </div>
       <div className="border rounded-3 mt-3">
         {(coupons.items !== null && coupons.items !== undefined)?
           <>
@@ -50,6 +57,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
                 {(item.discount_type === "fixed_discount_to_entire_order" && currentDate >= item.start_date && currentDate <= item.end_date) ? 
                   (
                     <div className='d-flex align-items-center border-bottom p-2'>
+                      <div className='font-13 font-semibold text-theme-red ms-2'>Coupon Offers : &nbsp;</div>
                       <span className='font-13 fw-normal text-dark'>{item.coupon_heading} | &nbsp;</span> 
                       <button className='text-cadetblue font-12' onClick={() => { modal.openModal(); setmodalHeading(item.coupon); setmodalData(item.description)}} >Details</button>
                     </div>

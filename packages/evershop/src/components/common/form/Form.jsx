@@ -107,6 +107,10 @@ export function Form(props) {
       PubSub.publishSync(FORM_VALIDATED, { formId: id, errors });
       if (Object.keys(errors).length === 0) {
         const formData = new FormData(document.getElementById(id));
+        console.log(id);
+        if(id === "loginForm"){
+          localStorage.setItem("loggedUser", serializeForm(formData.entries(), dataFilter).email);
+        }
         setLoading(true);
         if (onStart) {
           await onStart();

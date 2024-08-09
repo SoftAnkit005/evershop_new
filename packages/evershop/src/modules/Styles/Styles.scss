@@ -149,7 +149,7 @@ body {
 .search-input-container{
     position: absolute;
     margin: 15px 0;
-    right: 130px;
+    right: 170px;
     top: 5px;
     width: 300px;
 
@@ -688,6 +688,10 @@ ul.navbar-nav::after {
     border: 1px solid #72442F;
 }
 
+.bg-theme-red{
+    background-color: #B12704 !important;
+}
+
 .text-theme-red{
     color: #B12704 !important;
 }
@@ -700,6 +704,44 @@ ul.navbar-nav::after {
     background-color: #F6F6F6;
 }
 
+.coupon-badge{
+    &::before{
+        content: "";
+        position: absolute;
+        right: -5px;
+        bottom: 0;
+        border-style: dashed;
+        border-width: 6px;
+        border-color: rgba(255,255,255,0);
+        border-bottom: 6px solid #B12704;
+        border-top-width: 0;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        border-bottom-width: 10px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 0;
+        border-style: dashed;
+        border-width: 6px;
+        border-color: rgba(255,255,255,0);
+        border-top: 6px solid #B12704;
+        border-bottom-width: 0;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        border-top-width: 10px;
+    }
+}
 
 .offer-section {
     padding: 48px 0 0;
@@ -1166,8 +1208,23 @@ ul.navbar-nav::after {
     }
 }
 
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+    }
+    @-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
 .text-cadetblue{
-    color: cadetblue !important;
+    color: #21969a !important;
 }
 
 .font-12 {
@@ -3007,6 +3064,12 @@ select {
         justify-content: center;
         align-items: center;
         }
+    }
+}
+
+.add-to-cart{
+    .btn-white{
+        background-color: #CDA646 !important;
     }
 }
 

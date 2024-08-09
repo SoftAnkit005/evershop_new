@@ -70,10 +70,6 @@ export default function SearchBox({ allProducts =[] }) {
   );
 }
 
-SearchBox.propTypes = {
-  searchPageUrl: PropTypes.string.isRequired
-};
-
 export const layout = {
   areaId: 'icon-wrapper',
   sortOrder: 5

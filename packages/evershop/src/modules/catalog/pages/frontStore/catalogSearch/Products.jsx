@@ -51,6 +51,7 @@ export const layout = {
   sortOrder: 25
 };
 
+
 export const query = `
   query Query($filtersFromUrl: [FilterInput]) {
     products(filters: $filtersFromUrl) {
@@ -78,6 +79,9 @@ export const fragments = `
     image {
       alt
       url: listing
+    }
+    inventory {
+      isInStock
     }
     url
   }
