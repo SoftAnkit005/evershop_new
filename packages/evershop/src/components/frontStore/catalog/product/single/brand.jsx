@@ -2,14 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 export function brand({ usefor, powersource, material, itemweight, brand, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails }) {
-
-
     return (
 
-        <section className='related-products wishlist-section mt-4'>
+        <section className='related-products wishlist-section'>
             <div className='row align-items-center'>
                 <div className='col-8'>
-                    <div className='py-4'>
+                    <div className='pb-4'>
                         <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
                             <li className='font-13 text-black w-50 text-start pb-1 lh-lg fw-semibold'>Use for</li>
                             <li className='font-13 w-50 text-start pb-1 lh-lg'>{usefor}</li>
@@ -31,7 +29,7 @@ export function brand({ usefor, powersource, material, itemweight, brand, specia
                             <li className='font-13 w-50 text-start pb-1 lh-lg'>{brand}</li>
                         </ul>
 
-                        <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
+                        {/* <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
                             <li className='font-13 text-black w-50 text-start pb-1 lh-lg fw-semibold'>Special Feature</li>
                             <li className='font-13 w-50 text-start pb-1 lh-lg'>{specialfeature}</li>
                         </ul>
@@ -46,7 +44,7 @@ export function brand({ usefor, powersource, material, itemweight, brand, specia
                         <ul className='list-unstyled mb-0 d-flex align-items-center justify-content-between'>
                             <li className='font-13 text-black w-50 text-start pb-1 lh-lg fw-semibold'>Product Dimensions</li>
                             <li className='font-13 w-50 text-start pb-1 lh-lg'>{productdimensions} Centimeters</li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
                 <hr className='mb-0' />

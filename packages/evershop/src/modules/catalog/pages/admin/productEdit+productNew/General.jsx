@@ -8,7 +8,6 @@ import CkeditorField from '@components/common/form/fields/Ckeditor';
 import CategoryTree from '@components/admin/catalog/productEdit/category/CategoryTree';
 
 function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, material, itemweight, brand, color, specialfeature, specificusesforproduct, productbenefits, productdimensions, companydetails, video, amazon, flipkart  }) {
-
   return (
     <div className="flex flex-wrap">
       <div className='w-33'>
@@ -34,7 +33,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           suffix={setting.storeCurrency}
         />
       </div>
-      <div className='w-33'>
+      {/* <div className='w-33'>
         <Field
           id="weight"
           name="weight"
@@ -45,7 +44,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           // validationRules={['notEmpty']}
           suffix={setting.weightUnit}
         />
-      </div>
+      </div> */}
       <div className='w-33'>
         <Field
           id="usefor"
@@ -82,7 +81,7 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
         />
       </div>
 
-      {/* <div className='w-33'>
+      <div className='w-33'>
         <Field
           id="itemweight"
           name="itemweight"
@@ -90,9 +89,9 @@ function SKUPriceWeight({ sku, price, weight, setting, usefor, powersource, mate
           placeholder="Item Weight"
           label="Item Weight"
           type="text"
-          validationRules={['notEmpty']}
+          // validationRules={['notEmpty']}
         />
-      </div> */}
+      </div>
 
       <div className='w-33'>
         <Field

@@ -10,7 +10,7 @@ export default function Products({
   allTags = [],
   account
 }) {
-
+  
   return (
     <div>
       <ProductList products={items} countPerRow={3} tags={allTags} account={account}/>
@@ -82,6 +82,7 @@ export const query = `
       }
     }
     account: currentCustomer {
+      customerId
       fullName
       email
       wishlistedProducts
