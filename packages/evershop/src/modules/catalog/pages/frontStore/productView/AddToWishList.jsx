@@ -53,7 +53,7 @@ function AddToWishList({product, account}) {
     }else {
       account.wishlistedProducts.items.map((item) => {
         if(item === product.productId){
-          toast.warning("Product is already in wishlist !", { autoClose: 2000 });
+          toast("Product is already in wishlist !", { autoClose: 2000 });
         }else{
           addProduct();
         }
