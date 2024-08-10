@@ -1,32 +1,28 @@
-const { hookable } = require('@evershop/evershop/src/lib/util/hookable');
+const { hookable } = require("@evershop/evershop/src/lib/util/hookable");
 const {
   getValueSync,
   getValue
-} = require('@evershop/evershop/src/lib/util/registry');
+} = require("@evershop/evershop/src/lib/util/registry");
 const {
   startTransaction,
   commit,
   rollback,
   insert,
+  update,
   select,
   del
-  // insertOnUpdate
-} = require('@evershop/postgres-query-builder');
+} = require("@evershop/postgres-query-builder");
 const {
   getConnection
-} = require('@evershop/evershop/src/lib/postgres/connection');
-const { getAjv } = require('../../../base/services/getAjv');
-const wishlistDataSchema = require('./wishlistDataSchema.json');
+} = require("@evershop/evershop/src/lib/postgres/connection");
+const { getAjv } = require("../../../base/services/getAjv");
+const wishlistDataSchema = require("./wishlistDataSchema.json");
 
 function validateWishlistDataBeforeInsert(data) {
-  
   const ajv = getAjv();
-  wishlistDataSchema.required = [    
-    'user_id',
-    'product_id'
-  ];
+  wishlistDataSchema.required = ["user_id", "product_id"];
   const jsonSchema = getValueSync(
-    'createWishlistDataJsonSchema',
+    "createWishlistDataJsonSchema",
     wishlistDataSchema
   );
   const validate = ajv.compile(jsonSchema);
@@ -38,37 +34,81 @@ function validateWishlistDataBeforeInsert(data) {
   }
 }
 
+async function updateCustomerWishlist(userId, productId, add, connection) {
+  const customer = await select()
+    .from("customer")
+    .where("customer_id", "=", userId)
+    .load(connection);
 
+  if (!customer) {
+    throw new Error("Customer not found");
+  }
+
+  let wishlistedProducts = { items: [] };
+
+  if (typeof customer.wishlisted_products === "string") {
+    try {
+      wishlistedProducts = JSON.parse(customer.wishlisted_products);
+    } catch (error) {
+      throw new Error("Invalid JSON format in wishlisted_products column");
+    }
+  } else if (typeof customer.wishlisted_products === "object") {
+    wishlistedProducts = customer.wishlisted_products;
+  }
+
+  if (add) {
+    if (!wishlistedProducts.items.includes(productId)) {
+      wishlistedProducts.items.push(productId);
+    }
+  } else {
+    wishlistedProducts.items = wishlistedProducts.items.filter(
+      (id) => id !== productId
+    );
+  }
+
+  await update("customer")
+    .given({
+      wishlisted_products: JSON.stringify(wishlistedProducts)
+    })
+    .where("customer_id", "=", userId)
+    .execute(connection);
+}
 
 async function insertWishlistData(data, connection) {
+  const existingEntry = await select()
+    .from("wishlist")
+    .where("user_id", "=", data.user_id)
+    .and("product_id", "=", data.product_id)
+    .load(connection);
 
-    const existingEntry = await select()
-      .from('wishlist')
-      .where('user_id', '=', data.user_id)
-      .and('product_id', '=', data.product_id)
-      .load(connection);
   if (!existingEntry) {
-  
-   
-   await insert('wishlist').given(data).execute(connection);
-      return {
-      status: 'true',
-      message: 'Wishlist item inserted successfully.'
-      };
-      
-  } else {
-      
-    await del('wishlist')
-        .where('user_id', '=', data.user_id)
-        .and('product_id', '=', data.product_id)
-      .execute(connection);
+    await insert("wishlist").given(data).execute(connection);
+    await updateCustomerWishlist(
+      data.user_id,
+      data.product_id,
+      true,
+      connection
+    );
     return {
-      status: 'false',
-      message: 'Existing wishlist item deleted successfully.'
+      status: "200",
+      message: "Wishlist item inserted successfully."
     };
-    
-    }
-
+  } else {
+    await del("wishlist")
+      .where("user_id", "=", data.user_id)
+      .and("product_id", "=", data.product_id)
+      .execute(connection);
+    await updateCustomerWishlist(
+      data.user_id,
+      data.product_id,
+      false,
+      connection
+    );
+    return {
+      status: "200",
+      message: "Existing wishlist item deleted successfully."
+    };
+  }
 }
 
 /**
@@ -77,12 +117,11 @@ async function insertWishlistData(data, connection) {
  * @param {Object} context
  */
 async function createWishlist(data, context) {
-
   const connection = await getConnection();
   await startTransaction(connection);
   try {
-    const wishlistData = await getValue('wishlistDataBeforeCreate', data);
-   
+    const wishlistData = await getValue("wishlistDataBeforeCreate", data);
+
     // Validate Wishlist data
     validateWishlistDataBeforeInsert(wishlistData);
 
@@ -91,7 +130,7 @@ async function createWishlist(data, context) {
       connection,
       ...context
     })(wishlistData, connection);
-  
+
     await commit(connection);
     return wishlist;
   } catch (e) {
@@ -102,8 +141,8 @@ async function createWishlist(data, context) {
 
 module.exports = async (data, context) => {
   // Make sure the context is either not provided or is an object
-  if (context && typeof context !== 'object') {
-    throw new Error('Context must be an object');
+  if (context && typeof context !== "object") {
+    throw new Error("Context must be an object");
   }
   const tag = await hookable(createWishlist, context)(data, context);
   return tag;

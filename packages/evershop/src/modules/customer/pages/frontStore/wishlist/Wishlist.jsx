@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import "../../../../Styles/Styles.scss";
 import ProductList from '@components/frontStore/catalog/product/list/List';
@@ -9,11 +9,17 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 export default function Wishlist({account, products: { items }}) {
-  const filteredWishlist = items.filter(({productId}) => account.wishlistedProducts.items.includes(productId.toString()));
+  const [filteredWishlist, setfilteredWishlist] = useState(
+    (account)?items.filter(({productId}) => account.wishlistedProducts.items.includes(productId)):null
+  )  
     
     return (
       <div>
-          <ProductList products={filteredWishlist} countPerRow={4} listType = "wishlist" />
+          {(account)?
+            <ProductList products={filteredWishlist} countPerRow={4} listType = "wishlist" account={account} />
+            :
+            <></>
+          }
           {/* <div className="product-count font-16 text-end">
               {_('${count} products', { count: items.length })}
           </div> */}
@@ -28,6 +34,7 @@ export const layout = {
 
 Wishlist.propTypes = {
   account: PropTypes.shape({
+    customerId: PropTypes.number,
     fullName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     wishlistedProducts: PropTypes.shape({
@@ -67,6 +74,7 @@ Wishlist.propTypes = {
 export const query = `
   query Query {
     account: currentCustomer {
+      customerId
       fullName
       email
       wishlistedProducts

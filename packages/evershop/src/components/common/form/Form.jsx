@@ -108,9 +108,9 @@ export function Form(props) {
       if (Object.keys(errors).length === 0) {
         const formData = new FormData(document.getElementById(id));
         console.log(id);
-        if(id === "loginForm"){
-          localStorage.setItem("loggedUser", serializeForm(formData.entries(), dataFilter).email);
-        }
+        // if(id === "loginForm"){
+        //   localStorage.setItem("loggedUserEmail", serializeForm(formData.entries(), dataFilter).email);
+        // }
         setLoading(true);
         if (onStart) {
           await onStart();
