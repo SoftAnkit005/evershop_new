@@ -21,7 +21,7 @@ type Product {
   video: String
   amazon: String
   flipkart: String
-  weight: Weight!
+  weight: Weight
   taxClass: Int
   description: String
   urlKey: String

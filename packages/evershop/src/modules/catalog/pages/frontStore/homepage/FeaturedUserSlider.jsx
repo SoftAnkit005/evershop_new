@@ -25,7 +25,7 @@ export default function FeaturedUserSlider() {
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 1000,
                 settings: {
                     slidesToShow: 2
                 }

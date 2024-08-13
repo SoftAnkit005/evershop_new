@@ -121,7 +121,7 @@ function Footer({ themeConfig: { copyRight }, menu }) {
                                     <a href='/' className='footer-link fade-left'>Home</a>
                                 </li>
                                 <li>
-                                    <a href='/automatic-thermal-massage-bed' className='footer-link fade-left'>Advanced Master Before Bed</a>
+                                    <a href='/automatic-thermal-massage-bed' className='footer-link fade-left'>Advance Master V4 Thermal Heating Bed</a>
                                 </li>
                                 {sortedMenu.map((item, i) => 
                                     <li key={i}>

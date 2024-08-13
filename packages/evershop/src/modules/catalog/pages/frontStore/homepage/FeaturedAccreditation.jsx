@@ -14,7 +14,7 @@ export default function FeaturedAccreditation() {
         infinite: true,
         arrows: false,
         centerPadding: "60px",
-        slidesToShow: 5,
+        slidesToShow: 8,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -22,25 +22,25 @@ export default function FeaturedAccreditation() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 1000,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 4
                 }
             },
             {
                 breakpoint: 1199,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 5
                 }
             },
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 7
                 }
             }
         ]

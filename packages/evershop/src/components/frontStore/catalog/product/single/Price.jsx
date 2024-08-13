@@ -7,7 +7,7 @@ import { BiSolidOffer } from 'react-icons/bi';
 import { IoClose } from 'react-icons/io5';
 // import Offers from 'Assets/Images/offers.svg'
 
-export function Price({ regular, special, amazonLink, flipkartLink, sku , coupons}) {
+export function Price({ regular, special, sku , coupons}) {
   
   const currentDate = new Date().getTime();; // Timestamp to check
   
@@ -19,15 +19,15 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
   return (
     <>
       <p className='fs-4 fw-medium flex items-center mb-0 blink'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
-      <h4 className="font-24 text-black mt-3">
+      <h4 className="font-24 text-black mt-3 d-flex justify-content-between position-relative">
         {special.value === regular.value && (
-          <>
+          <div>
             <div className='d-flex align-items-start'>
               <span className="sale-price font-medium">{regular.text}</span>
               <h5 className='font-12 text-danger ms-2 mb-0'>20% OFF</h5>
             </div>
             <div className='font-12 mt-3 pb-0'>Inclusive of all taxes</div>
-          </>
+          </div>
         )}
         {special.value < regular.value && (
           <div className='d-flex align-items-center'>
@@ -37,8 +37,13 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
             <span className='font-12 mt-0 pb-0 ms-3'>Inclusive of all taxes</span>
           </div>
         )}
+        <img className='warrenty-logo position-absolute top-0 end-0' src="/Assets/Images/warrenty_logo.png" alt=""/>
       </h4>
-      <p className="font-18 m-0 text-black">EMI <span className='font-12 mt-0 pb-0 ms-3'>Starts at {regular.text} per month</span></p>
+      {(parseFloat(regular.text.replace(/[^0-9.]/g, '')) > 3000)?
+        <p className="font-18 m-0 text-black">EMI <span className='font-12 mt-0 pb-0 ms-2'>Starts at <span className='fw-semibold'>&#x20b9;{Math.floor(parseFloat(regular.text.replace(/[^0-9.]/g, ''))/9)}</span> per month</span></p>
+        :
+        <></>
+      }
       <div className='my-3 d-flex align-items-center'>
         <span className='font-13 font-semibold text-white bg-theme-red px-2 py-1 position-relative rounded-start coupon-badge'>Coupon: &nbsp;</span>
         <input className='ms-4 w-auto h-auto' type="checkbox" name="coupon_check" id="coupon_check" style={{appearance:'auto', WebkitAppearance:'auto'}} />
@@ -76,7 +81,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
           <></>
         }
       </div>
-      <div className='d-flex align-items-center'>
+      {/* <div className='d-flex align-items-center'>
         {(flipkartLink !== null)?
           <a href={flipkartLink} target='_blank'><img className='mt-3' src={`${finalURL}/Assets/Images/flipkart-logo.png`}  alt='flipkart' style={{height:'30px'}}/></a>
           :
@@ -87,7 +92,7 @@ export function Price({ regular, special, amazonLink, flipkartLink, sku , coupon
           :
           <></>
         }
-      </div>
+      </div> */}
       <hr className='my-4'/>
 
       {modal.state.showing && (

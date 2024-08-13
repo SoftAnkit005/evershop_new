@@ -3,14 +3,14 @@ import React from 'react';
 
 function Price({ regular, special }) {
   return (
-    <div className="">
+    <div className="text-center">
       {regular.value === special.value && (
         <div>
           <span className="font-20 text-black">{regular.text}</span>
         </div>
       )}
       {special.value < regular.value && (
-        <div>
+        <div className="text-center">
           <span className="font-20 text-black">
             {special.text}
           </span>{' '}

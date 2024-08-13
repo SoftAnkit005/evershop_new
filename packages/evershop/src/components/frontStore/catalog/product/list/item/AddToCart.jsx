@@ -121,7 +121,7 @@ function AddToCart({ stockAvaibility, product }) {
         <input type="hidden" name="sku" value={product.sku} />
         {(stockAvaibility === true) ?
           <>
-            <p className='in-stock'>In Stock</p>
+            <p className='in-stock m-auto'>In Stock</p>
             <div className="d-none">
               <Field
                 type="text"
@@ -146,7 +146,7 @@ function AddToCart({ stockAvaibility, product }) {
           </>
           :
           <>
-            <p className='out-of-stock'>Out Of Stock</p>
+            <p className='out-of-stock text-center'>Out Of Stock</p>
             <Button title={_('SOLD OUT')} onAction={() => { }} />
           </>
         }

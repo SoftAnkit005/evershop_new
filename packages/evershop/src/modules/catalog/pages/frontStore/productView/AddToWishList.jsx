@@ -37,6 +37,8 @@ function AddToWishList({product, account}) {
   }
 
   const handleClick = () => {
+    const checkProduct = account.wishlistedProducts.items.filter((item) => item === product.productId);
+    
     if (!account) {
       toast("Please log in to add items to your wishlist", {
         autoClose: 2000
@@ -44,29 +46,47 @@ function AddToWishList({product, account}) {
       return;
     }
 
-    console.log(account.wishlistedProducts.items.length);
-    if(account.wishlistedProducts.items.length === 0 ){
+    if(checkProduct.length === 0){
       addProduct();
       setTimeout(() => {
         window.location.reload();
       }, 300);
-    }else {
-      account.wishlistedProducts.items.map((item) => {
-        if(item === product.productId){
-          toast("Product is already in wishlist !", { autoClose: 2000 });
-        }else{
-          addProduct();
-        }
-      })
+    }else{
+      toast("Product is already in wishlist !", { autoClose: 2000 });
     }
+
+    // if(account.wishlistedProducts.items.length !== 0 ){
+    //   account.wishlistedProducts.items.map((item) => {
+    //     if(item !== product.productId){
+    //       console.log('addProduct()');
+    //     }else{
+    //       console.log('Product is already in wishlist');
+    //     }
+    //   })
+    // }else {
+    //   addProduct();
+    //   setTimeout(() => {
+    //     window.location.reload();
+    //   }, 300);
+    // }
   };
 
+  // console.log(account.wishlistedProducts.items);
 
     return (
-    <div className="pb-0">
-      <button className='text-cadetblue font-12 d-flex align-items-center fs-5' ><IoLockClosedSharp  className='me-2 text-muted fs-2'/> Secure Transaction</button>
-      <button type="button" class="btn btn-light fs-4 w-100 text-center border rounded-2 py-2 mt-4" onClick={handleClick}>Add to Wish List</button>
-    </div>
+      <>
+        <div className="pb-0">
+          <button className='text-cadetblue font-12 d-flex align-items-center fs-5' ><IoLockClosedSharp  className='me-2 text-muted fs-2'/> Secure Transaction</button>
+          <button type="button" class="btn btn-light fs-4 w-100 text-center border rounded-2 py-2 mt-4" onClick={handleClick}>Add to Wish List</button>
+        </div>
+        <div className='gst-section mt-5'>
+          <div class="font-12 text-dark mt-2"><span class="font-12 text-black font-semibold">Save upto 12%</span> with business pricing and GST input tax credit.</div>
+          <div className='d-flex align-items-center mt-2'>
+            <input className='border-grey text-dark rounded-4' type="text" placeholder="GST number" />
+            <button type="button" class="btn btn-light fs-4 ms-2 text-center border rounded-pill py-2">Submit</button>
+          </div>
+        </div>
+      </>
   );
 }
 

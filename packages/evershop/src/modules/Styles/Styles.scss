@@ -692,6 +692,10 @@ ul.navbar-nav::after {
     background-color: #B12704 !important;
 }
 
+.bg-externalLink{
+    background-color: #231F20 !important;
+}
+
 .text-theme-red{
     color: #B12704 !important;
 }
@@ -705,6 +709,7 @@ ul.navbar-nav::after {
 }
 
 .coupon-badge{
+    height: 25px;
     &::before{
         content: "";
         position: absolute;
@@ -922,8 +927,8 @@ ul.navbar-nav::after {
         width: 100%;
 
         .accreditation-image {
-            width: 250px !important;
-            height: 250px !important;
+            width: 150px !important;
+            height: 150px !important;
             margin: 0 auto;
             display: flex !important;
             text-align: center;
@@ -977,6 +982,15 @@ ul.navbar-nav::after {
     .slick-prev {
         left: -5%;
         top: 50%;
+    }
+}
+
+.product-description{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    .ck-content{
+        min-width: 1000px;
     }
 }
 
@@ -1104,6 +1118,10 @@ ul.navbar-nav::after {
             padding-right: 5px;
         }
     }
+}
+
+.warrenty-logo{
+    height: 70px;
 }
 
 
@@ -2057,8 +2075,8 @@ ul.navbar-nav::after {
                 }
 
                 img {
-                    width: 200px;
-                    // height: 200px;
+                    // width: 200px;
+                    height: 250px;
                     object-fit: fill;
                     object-position: top;
                 }
@@ -3392,6 +3410,10 @@ select {
 @media screen and (max-width:575px) {
     .pagination{
         justify-content: center !important;
+    }
+
+    .warrenty-logo{
+        height: 50px;
     }
 
     .header .container-fluid {

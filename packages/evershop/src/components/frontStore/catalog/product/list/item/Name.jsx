@@ -5,12 +5,12 @@ import React from 'react';
 function Name({ name, url, desc }) {
   return (
     <div className="pt-2 prodList">
-      <a href={url} className='text-decoration-none'>
+      <a href={url} className='text-decoration-none text-center'>
         <span className='font-16 text-dark prod-name'>{name}</span>
       </a>
-      <div className='prod-desc'>
+      {/* <div className='prod-desc'>
         <CKEditor content={desc} />
-      </div>
+      </div> */}
     </div>
   );
 }

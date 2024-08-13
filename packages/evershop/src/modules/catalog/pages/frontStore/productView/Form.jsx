@@ -213,6 +213,7 @@ function BuyNow({ sku }) {
   );
 }
 
+
 BuyNow.propTypes = {
   error: PropTypes.string,
   loading: PropTypes.bool.isRequired,
@@ -223,6 +224,34 @@ BuyNow.propTypes = {
 
 BuyNow.defaultProps = {
   error: undefined
+};
+
+function ExternalLinks({amazon,flipkart}){
+
+  return(
+    <>
+        {(flipkart !== null)?
+          <a href={flipkart} type="button" class="btn bg-externalLink text-white fs-4 w-100 border rounded-3 py-2 mt-2 d-flex align-items-center justify-content-center" target='_blank' alt="flipkart Link">Buy now @ <img src={`/Assets/Images/flipkart_logo.png`}  alt='flipkart' style={{height:'30px'}}/></a>
+          :
+          <></>
+        }
+        {(amazon !== null)?
+          <a href={amazon} type="button" class="btn bg-externalLink text-white fs-4 w-100 border rounded-3 py-2 mt-2 d-flex align-items-center justify-content-center" target='_blank' alt="amazon Link">Buy now @ <img className='ms-2 py-2' src={`/Assets/Images/amazon_logo.png`}  alt='flipkart' style={{height:'30px'}}/></a>
+          :
+          <></>
+        }
+    </>
+  )
+}
+
+ExternalLinks.propTypes = {
+  amazon: PropTypes.string,
+  flipkart: PropTypes.string,
+};
+
+ExternalLinks.defaultProps = {
+  amazon: undefined,
+  flipkart: undefined
 };
 
 export default function ProductForm({ product, action }) {
@@ -296,6 +325,15 @@ export default function ProductForm({ product, action }) {
             },
             sortOrder: 50,
             id: 'productSingleBuyButton'
+          },
+          {
+            component: { default: ExternalLinks },
+            props: {
+              flipkart: product.flipkart,
+              amazon: product.amazon,
+            },
+            sortOrder: 60,
+            id: 'productSingleBuyButton'
           }
         ]}
       />
@@ -319,6 +357,8 @@ ProductForm.propTypes = {
         text: PropTypes.string.isRequired
       }).isRequired
     }),
+    amazon: PropTypes.string,
+    flipkart: PropTypes.string,
     name: PropTypes.string.isRequired,
     sku: PropTypes.string.isRequired
   }).isRequired
@@ -335,6 +375,8 @@ export const query = `
       productId
       sku
       name
+      amazon
+      flipkart
       price {
         regular {
           value
