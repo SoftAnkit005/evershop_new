@@ -9,8 +9,7 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { AddToCart } from './item/AddToCart';
 
 export default function ProductList({ products = [], countPerRow = 3, tags, listType, account}) {  
-
-  if (products.length === 0) {
+  if (products.length === 0 || products === null) {
     return (
       <div className="product-list">
         <div>
@@ -39,8 +38,8 @@ export default function ProductList({ products = [], countPerRow = 3, tags, list
   return (
     <div className={`${className} ${(listType === "wishlist")?'container m-auto': ''}` }>
       {(listType === "wishlist")? <h3 class="font-30 p-0 text-center">My Wishlist</h3> : <></>}
-      {products.map((p) => (
-        <div className='col-12 col-sm-6 col-md-6 col-lg-6 mb-5 px-5' >
+      {products?.map((p,i) => (
+        <div key={i} className='col-12 col-sm-6 col-md-6 col-lg-6 mb-5 px-5' >
           <Area
             id="productListingItem"
             className="card px-0"
