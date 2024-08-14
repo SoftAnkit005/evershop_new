@@ -10,11 +10,9 @@ function Thumbnail({ url, imageUrl, alt, productId, tags, listType, account }) {
   const [Wishlistclicked, setWishlistClicked] = useState(false);
 
   useEffect(() => {
-    account?.wishlistedProducts.items.map((item) => (item === productId)?setWishlistClicked(true):console.log(false))
+    account?.wishlistedProducts?.items.map((item) => (item === productId)?setWishlistClicked(true):console.log(false))
   }, [])
   
-
-
   const handleClick = async () => {
     if (!account) {
       toast("Please log in to add items to your wishlist", {

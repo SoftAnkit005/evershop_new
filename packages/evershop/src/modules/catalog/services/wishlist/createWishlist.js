@@ -1,7 +1,7 @@
 const { hookable } = require("@evershop/evershop/src/lib/util/hookable");
 const {
   getValueSync,
-  getValue
+  getValue,
 } = require("@evershop/evershop/src/lib/util/registry");
 const {
   startTransaction,
@@ -10,10 +10,10 @@ const {
   insert,
   update,
   select,
-  del
+  del,
 } = require("@evershop/postgres-query-builder");
 const {
-  getConnection
+  getConnection,
 } = require("@evershop/evershop/src/lib/postgres/connection");
 const { getAjv } = require("../../../base/services/getAjv");
 const wishlistDataSchema = require("./wishlistDataSchema.json");
@@ -46,14 +46,18 @@ async function updateCustomerWishlist(userId, productId, add, connection) {
 
   let wishlistedProducts = { items: [] };
 
-  if (typeof customer.wishlisted_products === "string") {
-    try {
-      wishlistedProducts = JSON.parse(customer.wishlisted_products);
-    } catch (error) {
-      throw new Error("Invalid JSON format in wishlisted_products column");
+  if ( customer.wishlisted_products === undefined || customer.wishlisted_products === null ) {
+    wishlistedProducts = { items: [] };
+  } else {
+    if (typeof customer.wishlisted_products === "string") {
+      try {
+        wishlistedProducts = JSON.parse(customer.wishlisted_products);
+      } catch (error) {
+        throw new Error("Invalid JSON format in wishlisted_products column");
+      }
+    } else if (typeof customer.wishlisted_products === "object") {
+      wishlistedProducts = customer.wishlisted_products;
     }
-  } else if (typeof customer.wishlisted_products === "object") {
-    wishlistedProducts = customer.wishlisted_products;
   }
 
   if (add) {
@@ -68,7 +72,7 @@ async function updateCustomerWishlist(userId, productId, add, connection) {
 
   await update("customer")
     .given({
-      wishlisted_products: JSON.stringify(wishlistedProducts)
+      wishlisted_products: JSON.stringify(wishlistedProducts),
     })
     .where("customer_id", "=", userId)
     .execute(connection);
@@ -91,7 +95,7 @@ async function insertWishlistData(data, connection) {
     );
     return {
       status: "200",
-      message: "Wishlist item inserted successfully."
+      message: "Wishlist item inserted successfully.",
     };
   } else {
     await del("wishlist")
@@ -106,7 +110,7 @@ async function insertWishlistData(data, connection) {
     );
     return {
       status: "200",
-      message: "Existing wishlist item deleted successfully."
+      message: "Existing wishlist item deleted successfully.",
     };
   }
 }
@@ -128,7 +132,7 @@ async function createWishlist(data, context) {
     // Insert Wishlist data
     const wishlist = await hookable(insertWishlistData, {
       connection,
-      ...context
+      ...context,
     })(wishlistData, connection);
 
     await commit(connection);

@@ -9,13 +9,14 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 export default function Wishlist({account, products: { items }}) {
+  console.log(account);
   const [filteredWishlist, setfilteredWishlist] = useState(
-    (account)?items.filter(({productId}) => account.wishlistedProducts.items.includes(productId)):null
+    (account)?items.filter(({productId}) => account.wishlistedProducts?.items.includes(productId)):null
   )  
     
     return (
       <div>
-          {(account)?
+          {(account || account.wishlistedProducts !== null)?
             <ProductList products={filteredWishlist} countPerRow={4} listType = "wishlist" account={account} />
             :
             <></>
