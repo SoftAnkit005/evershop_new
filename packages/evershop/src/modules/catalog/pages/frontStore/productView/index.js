@@ -24,7 +24,8 @@ module.exports = async (request, response, delegate, next) => {
         '=',
         'product_inventory.product_inventory_product_id'
       );
-    query.where('product.uuid', '=', request.params.uuid);
+    // query.where('product.uuid', '=', request.params.uuid);
+    query.where('product.uuid', '=', request.locals?.customParams?.uuid);
     query.andWhere('status', '=', 1);
     const product = await query.load(pool);
 

@@ -48,7 +48,7 @@ module.exports = async function buildUrlReWrite(data) {
       .given({
         entity_type: 'category',
         entity_uuid: categoryUuid,
-        request_path: path,
+        request_path: path.toLowerCase(),
         target_path: `/category/${categoryUuid}`
       })
       .execute(pool);
