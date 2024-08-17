@@ -17,6 +17,7 @@ export default function ProductPageLayout() {
             </div>
             <div className='col-12 col-sm-12 col-lg-3 col-xxl-2 productPrice'>
               <Area id="productPagePrice" className='spPrice'/>
+              <Area id="secureTransaction" className='spPrice mt-3'/>
             </div>
           </div>
           <hr />

@@ -78,7 +78,7 @@ export default function Images({ product: { uuid, video, image, gallery = [] } }
     width: '100%',
     height: '450',
     playerVars: {
-      autoplay: 1
+      autoplay: 0
     }
   }
   const videoId = getVideoId(video);

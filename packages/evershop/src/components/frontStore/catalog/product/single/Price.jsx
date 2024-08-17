@@ -18,7 +18,7 @@ export function Price({ regular, special, sku , coupons}) {
 
   return (
     <>
-      <p className='fs-4 fw-medium flex items-center mb-0 blink'>Special rate <BiSolidOffer className='fs-1 ms-2 text-brawn' /></p>
+      <p className='fs-4 fw-medium flex items-center mb-0 blink bg-theme-red px-4 py-1 text-white w-fit rounded'>Special rate <BiSolidOffer className='fs-1 ms-2 text-white' /></p>
       <h4 className="font-24 text-black mt-3 d-flex justify-content-between position-relative">
         {special.value === regular.value && (
           <div>

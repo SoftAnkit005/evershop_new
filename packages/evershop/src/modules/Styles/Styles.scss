@@ -138,6 +138,10 @@ body {
 //     }
 // }
 
+.w-fit{
+    width: fit-content !important; 
+}
+
 .search-list{
     z-index: 1000;
     position: relative;
@@ -1242,7 +1246,8 @@ ul.navbar-nav::after {
 }
 
 .text-cadetblue{
-    color: #21969a !important;
+    color: #007185 !important;
+    font-weight: 500 !important;
 }
 
 .font-12 {

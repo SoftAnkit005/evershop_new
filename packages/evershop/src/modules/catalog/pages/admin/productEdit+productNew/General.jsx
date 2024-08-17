@@ -397,7 +397,7 @@ export default function General({
                 productbenefits: product?.productbenefits,
                 productdimensions: product?.productdimensions,
                 companydetails: product?.companydetails,
-                video: product?.companydetails,
+                video: product?.video,
                 amazon: product?.amazon,
                 flipkart: product?.flipkart,
                 setting
